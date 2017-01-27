@@ -1,0 +1,105 @@
+@import 'variable';
+.toggle-label{
+  position:fixed;
+  display:block;
+  right: 30px;
+  color: $primary-darkgray;
+  z-index: 1;
+  text-size: 20px;
+}
+.toggle-label{
+  width: 65px;
+  height: 65px;
+  position: fixed;
+  top: 15px;
+  display:block;
+}
+
+.toggle-icon,
+.toggle-icon::after,
+.toggle-icon::before{
+  position: absolute;
+  height: 4px;
+  width: 35px;
+  cursor: pointer;
+  background:$primary-dark;
+  display: block;
+  content: '';
+  transition: all .3s ease-in-out;
+}
+.toggle-icon {
+  top: 50%;
+  left: 15px;
+  transform: translate3d(0, 0px, 0);
+}
+
+.toggle-icon::after {
+  transform: translate3d(0, 10px, 0)
+}
+
+.toggle-icon::before {
+  transform: translate3d(0, -10px, 0)
+}
+
+.checked & .toggle-icon {
+  background: transparent;
+}
+.checked & .toggle-icon::after {
+  transform: rotate(45deg);
+}
+
+.checked & .toggle-icon::before {
+  transform: rotate(-45deg);
+}
+.drawer{
+  height: 100%;
+  width: 20%;
+  background-color:$primary-lightgray;
+  right: -20%;
+  top: 0;
+  position:fixed;  
+  transition: all .3s ease-in;
+}
+
+.checked & .drawer{
+  right: 0;
+}
+
+.pusher-container{
+  margin-left: 0;
+  transition: all .3s ease-in;
+}
+
+.checked & .pusher-container{
+  margin-left: -10%;
+  margin-right: 10%;
+}
+
+.nav{
+  list-style: none;
+  font-family: passion-one, sans-serif;
+  font-size: 20px;
+  position:absolute;
+  top: 40%;
+}
+
+.nav & li{
+  margin-top: 40px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.nav & li,
+{
+  width: 0px;
+  background: black;
+  height: 0px;
+  border-bottom: solid 2px black;
+}
+
+.nav & li:hover{
+  width: 20px;
+}
+
+
+

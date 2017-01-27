@@ -1,3 +1,18 @@
 {
-    "name": "April"
+    "name": "April" ,
+    "title": "APRIL WANG" ,
+    "subtitle": "I study human computer interaction." ,
+    "character": "./assets/april.svg",
+    "menu": ["ABOUT", "PROJECT", "MORE", "CONTACT"] ,
+    "content": [
+        {
+            "h": "01 ABOUT ME",
+            "p": "Hi, I'm April Wang. AKA Yi Wang."
+        }, 
+        {
+            "h": "02 PROJECT"
+        },
+        {
+            "h": "03 MORE"
+        }]
 }

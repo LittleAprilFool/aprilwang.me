@@ -1,3 +1,16 @@
-h1(id='hate') Hello World
+div.container
+    label.toggle-label
+        span.toggle-icon
+    nav.drawer
+        ul.nav
+            each me in data.menu
+                li= me
+    div.pusher-container
+        div.pusher
+            section.p1-content
+                div
+                    include ../assets/april.svg
+                h1#title #{data.title}
+                h2#subtitle #{data.subtitle}
+                h2#enter ENTER
 
-p(id='me') #{name} is super angry

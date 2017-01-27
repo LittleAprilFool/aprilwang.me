@@ -1,7 +1,8 @@
-var template = require('./src/homepage.pug')
-var data = require('./src/homepage.json')
-var style = require('./src/common.scss')
+import {addListeners} from './src/app.js'
+import template from './src/homepage.pug'
+import data from './src/homepage.json'
+import style from './src/scss/common.scss'
 
-var html = template(data)
-
+let html = template({data:data})
 document.write(html)
+addListeners()
