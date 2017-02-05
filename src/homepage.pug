@@ -3,14 +3,23 @@ div.container
         span.toggle-icon
     nav.drawer
         ul.nav
-            each me in data.menu
-                li= me
+            li#nav1 ABOUT
+            li#nav2 PROJECT
+            li#nav3 MORE
+            li#nav4 CONTACT
     div.pusher-container
         div.pusher
-            section.p1-content
+            section.p0-content#sec0
                 div
                     include ../assets/april.svg
                 h1#title #{data.title}
                 h2#subtitle #{data.subtitle}
                 h2#enter ENTER
-
+            section.p1-content#sec1
+                h1 23333
+            section.p2-content#sec2
+                h1 6666
+            section.p3-content#sec3
+                h1 00000
+            section.p4-content#sec4
+                h1 00000
