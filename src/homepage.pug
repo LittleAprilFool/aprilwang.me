@@ -1,12 +1,12 @@
 div.container
-    label.toggle-label
-        span.toggle-icon
-    nav.drawer
-        ul.nav
-            li#nav1 ABOUT
-            li#nav2 PROJECT
-            li#nav3 MORE
-            li#nav4 CONTACT
+    //- label.toggle-label
+    //-     span.toggle-icon
+    //- nav.drawer
+    //-     ul.nav
+    //-         li#nav1 ABOUT
+    //-         li#nav2 PROJECT
+    //-         li#nav3 MORE
+    //-         li#nav4 CONTACT
     div.pusher-container
         div.pusher
             section.p0-content#sec0
@@ -16,10 +16,30 @@ div.container
                 h2#subtitle #{data.subtitle}
                 h2#enter ENTER
             section.p1-content#sec1
-                h1 23333
-            section.p2-content#sec2
-                h1 6666
-            section.p3-content#sec3
-                h1 00000
-            section.p4-content#sec4
-                h1 00000
+                div#left
+                    div#avadiv
+                        <img id="avatar" src="../assets/avatar2.jpg"/>
+                    p.t1 #{data.content[0].name}
+                    p.p1 #{data.content[0].education}
+                    p.p1 #{data.content[0].affiliation}
+                    div#detail
+                        //- <a href="mailto:hi@aprilwang.me"><i class="fa fa-envelope-o"></i></a>
+                        //- <a href="https://twitter.com/AprilWang95"><i class="fa fa-twitter"></i></a> <br>
+                        //- <i class="fa fa-location-arrow"></i> #{data.content[0].location}<br>
+                        //- <i class="fa fa-download"></i> !{data.content[0].link}
+                        p ayw7 at sfu dot ca
+                        p Download CV
+                div#right
+                    p.t2 #{data.content[0].h1}
+                    p.text !{data.content[0].p11}
+                    p.text !{data.content[0].p12}
+                    p.text #{data.content[0].p13}
+                    p.t2 #{data.content[0].h2}
+                    p.text !{data.content[0].p21}
+                    p.text !{data.content[0].p22}
+            //- section.p2-content#sec2
+            //-     h1 6666
+            //- section.p3-content#sec3
+            //-     h1 00000
+            //- section.p4-content#sec4
+            //-     h1 00000

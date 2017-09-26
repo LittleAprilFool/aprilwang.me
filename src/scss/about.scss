@@ -1,0 +1,84 @@
+@import 'variable';
+#avatar {
+  height: 100px;
+}
+
+#left {
+  display: block;
+  position: absolute;
+  left: 15%;
+  width: 15%;
+  text-align: center;
+  padding-top: 8%;
+}
+
+// #left::after {
+//   width: 150%;
+//   height: 200%;
+//   background-color: $primary-lightgray;
+//   position: absolute;
+//   left: -50%;
+//   top: 0%;
+//   display:block;
+//   content:"";
+//   z-index:-1;
+//   transform: skewX(-8deg);
+// }
+
+#right {
+  display: block;
+  position: absolute;
+  left: 35%;
+  width: 50%;
+}
+
+#avadiv {
+  width:120px;
+  height:120px;
+  border-radius:120px;
+  margin:auto;
+  background-color: $primary-lightgray;
+}
+#avatar {
+  width: 100px;
+  height: 100px;
+  line-height: 0;
+  margin-top:10px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.t1 {
+    font-family: passion-one, sans-serif;
+    font-size: 40px;
+    color: $primary-highlight;
+    margin:0;
+    margin-top:10px;
+}
+
+.t2 {
+    font-family: lato, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: $primary-highlight; 
+    margin-top: 8%;
+}
+
+.p1 {
+    font-family: lato, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top:5px;
+    margin-bottom: 5px; 
+}
+
+#detail {
+    margin-top: 40px;
+    font-family: lato, sans-serif;
+    font-size: 15px;
+    font-weight: regular;
+}
+
+#right .text {
+    color: $primary-color;
+}

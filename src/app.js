@@ -1,4 +1,4 @@
-require('smoothscroll-polyfill').polyfill()
+//require('smoothscroll-polyfill').polyfill()
 
 function openNav() {
   var toggle= document.querySelector('.container')
@@ -21,8 +21,8 @@ function scrollTo(name) {
 
 
 export function addListeners() {
-  document.querySelector('.toggle-label').addEventListener('click', openNav)
-  document.querySelector('.pusher-container').addEventListener('click', closeNav) 
+  // document.querySelector('.toggle-label').addEventListener('click', openNav)
+  // document.querySelector('.pusher-container').addEventListener('click', closeNav) 
   document.querySelector('#enter').addEventListener('click', function(){scrollTo('#sec1')})
   document.querySelector('#nav1').addEventListener('click', function(){scrollTo('#sec1')})
   document.querySelector('#nav2').addEventListener('click', function(){scrollTo('#sec2')})

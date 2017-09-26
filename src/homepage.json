@@ -6,8 +6,19 @@
     "menu": ["ABOUT", "PROJECT", "MORE", "CONTACT"] ,
     "content": [
         {
-            "h": "01 ABOUT ME",
-            "p": "Hi, I'm April Wang. AKA Yi Wang."
+            "name": "APRIL WANG",
+            "education": "MSc in HCI",
+            "affiliation": "Simon Fraser University",
+            "location": "TASC-8201",
+            "h1": "About Me",
+            "p11": "Hi, I'm <strong>April Wang</strong>, aka <strong>王奕</strong>. I am a <strong>thesis-based MSc student</strong> in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>, advised by <a href='http://hci.cs.sfu.ca/'>Dr.Chilana</a>. My research interests focus on <strong>using HCI techniques to lower the learning barriers for people without professional knowledge in a particular subject</strong>.",
+            "p12": "Before starting my journey in HCI research, I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China. With a major in <strong>Digital Media and Network Technology</strong>, I received interdisciplinary training in multimedia processing, game engineering and human interface design. In addition, I have previously worked in <strong>Intel</strong> and <strong>Alibaba</strong> as a <strong>User Experience Design Intern</strong>, and <strong>NetEase Games</strong> as a <strong>Junior Software Developer</strong>.",
+            "p13": "Check my previous projects.",
+            "h2": "Publications",
+            "p21": "<strong>PACM-CSCW 2017</strong>: Vermette, L., Dembla, S., Wang, A., McGrenere, J., & Chilana, P. 2017. Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications. Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW) [to appear].",
+            "p22": "<strong>ICER 2017</strong>: Wang, A., & Chilana, P. 2017. Investigating Learning Strategies of Conversational Programmers. ACM Conference on International Computing Education Research (ICER), Tacoma, WA, August 2017 [conference poster].",
+            "mail": "<a href='mailto:hi@aprilwang.me'>hi@aprilwang.me</a>",
+            "link": "Download CV"
         }, 
         {
             "h": "02 PROJECT"

@@ -1,6 +1,7 @@
 @import 'character';
 @import 'drawer';
 @import 'variable';
+@import 'about';
 
 html {
     height: 100%;
@@ -28,6 +29,17 @@ section {
     cursor:default;
 }
 
+.tit {
+    font-family: passion-one, sans-serif;
+    font-size: 15px;
+    color: black;
+}
+
+.text {
+    font-family: lato, sans-serif;
+    font-size: 15px;
+}
+
 #title {
     font-family: passion-one, sans-serif;
     font-size: 80px;
@@ -38,6 +50,7 @@ section {
 #subtitle {
     font-family: muli, sans-serif;
     font-size: 20px;
+    margin:auto;
     color: $primary-darkgray;
 }
 
@@ -48,7 +61,7 @@ section {
     border-bottom: 2px solid black;
     width: 5%;
     margin:auto;
-    margin-top: 10px;
+    margin-top: 50px;
     transition: width 0.5s ease;
     &:hover{
         width: 6%;

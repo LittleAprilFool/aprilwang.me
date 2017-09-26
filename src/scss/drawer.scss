@@ -41,14 +41,14 @@
   transform: translate3d(0, -10px, 0)
 }
 
-.checked & .toggle-icon {
+.checked .toggle-icon {
   background: transparent;
 }
-.checked & .toggle-icon::after {
+.checked .toggle-icon::after {
   transform: rotate(45deg);
 }
 
-.checked & .toggle-icon::before {
+.checked .toggle-icon::before {
   transform: rotate(-45deg);
 }
 .drawer{
@@ -61,7 +61,7 @@
   transition: all .3s ease-in;
 }
 
-.checked & .drawer{
+.checked .drawer{
   right: 0;
 }
 
@@ -70,10 +70,10 @@
   transition: all .3s ease-in;
 }
 
-.checked & .pusher-container{
-  margin-left: -10%;
-  margin-right: 10%;
-}
+// .checked .pusher-container{
+//   margin-left: -10%;
+//   margin-right: 10%;
+// }
 
 .nav{
   list-style: none;
@@ -83,13 +83,13 @@
   top: 40%;
 }
 
-.nav & li{
+.nav li{
   margin-top: 40px;
   cursor: pointer;
   transition: 0.5s ease;
 }
 
-.nav & li,
+.nav li,
 {
   width: 0px;
   background: black;
@@ -97,7 +97,7 @@
   border-bottom: solid 2px black;
 }
 
-.nav & li:hover{
+.nav li:hover{
   width: 20px;
 }
 
