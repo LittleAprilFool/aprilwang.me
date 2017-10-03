@@ -23,7 +23,7 @@ function typingEnd() {
   setTimeout(function(){
     var rest = document.querySelector('#rest');
     rest.style.opacity = "1";
-  }, 1000)
+  }, 500)
 }
 
 function scrollTo(id) {
