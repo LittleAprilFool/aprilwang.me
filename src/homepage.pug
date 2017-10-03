@@ -65,22 +65,23 @@ div.container
                     div#meow (ฅ´ω`ฅ)
                 div.final
                     div#source.content
-                        p Thanks for scrolling all the way down here.        
+                        p Thanks for scrolling all the way down here.
                         p More about me???
                         p Emmmmmmmm...
                     div#output-wrap.content
                         span#output
                     div#rest.content
-                        p I have a rarely updated <a class="highlight" href='https://aprilwang.me/blog'>blog</a>.
+                        p I have a rarely updated <a class="highlight" target="_blank" href='https://aprilwang.me/blog'>blog</a>.
                         p Oh, and a lovely cat named <a class="highlight" id='cat'>Ace</a>.
-                        p I am in a <i class="fa fa-heart"></i> relationship with <a class="highlight" href='https://imsun.net/'>this guy</a>.
+                        p I am in a ❤ relationship with <a class="highlight" target="_blank" href='https://imsun.net/'>this guy</a>.
                         div#two
                                 include ../assets/april.svg
                                 include ../assets/trevor.svg
-                        p BTW, meet some of my highlighted friends
-                        div.friendlist
+                        div.friends
+                            p One last thing, I am honored to introduce my squad!
+                            div.friendlist
                             each link, friend in data.content[2].friends
-                                a(href=link class="friend") #{friend}
+                                a(href=link target="_blank" class="friend") #{friend}
             footer#sec3 
                 h1#small © April Y. Wang 2017
             //- section.p4-content#sec4

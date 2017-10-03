@@ -1,6 +1,5 @@
 //require('smoothscroll-polyfill').polyfill()
 import Typing from './typing.js';
-console.log(Typing);
 var page = 0;
 var onScroll = false;
 const pageMin = 0;
@@ -35,13 +34,14 @@ function scrollTo(id) {
   if (preDot) preDot.classList.remove('current')
   page = id;
   console.log(page);
+  // console.log(document.documentElement.scrollTop);
   var theDot = document.querySelector('#nav'+id)
   theDot.classList.add('current')
   if(page == 3 && typed == false) {
     var typing = new Typing({
       source: document.getElementById('source'),
       output: document.getElementById('output'),
-      delay: 80,
+      delay: 60,
       done: function() {typingEnd()}
     })
     typing.start();
@@ -71,13 +71,21 @@ function drawCat(){
   meow.style.left = Math.floor(Math.random() * 100).toString() + '%';
   meow.style.top = Math.floor(Math.random() * 100).toString() + '%';
   meow.style.color = "#bfbfbf";
-  setTimeout(function(){meow.style.color = "white"}, 1000);
+  setTimeout(function(){meow.style.color = "white"}, 500);
 }
 
 export function addListeners() {
   // document.querySelector('.toggle-label').addEventListener('click', openNav)
   // document.querySelector('.pusher-container').addEventListener('click', closeNav
-  document.onload = function(){scrollTo(0)} 
+  window.onload = function(){
+    setTimeout(function(){
+      scrollTo(0)
+    }, 200)
+  }
+  // document.onreadystatechange = function () {
+  // if (document.readyState == "interactive") {
+  //   scrollTo(0);
+  // }
   document.querySelector('#enter').addEventListener('click', function(){scrollTo(1)})
   document.querySelector('#nav0').addEventListener('click', function(){scrollTo(0)})
   document.querySelector('#nav1').addEventListener('click', function(){scrollTo(1)})
@@ -85,5 +93,6 @@ export function addListeners() {
   document.querySelector('#nav3').addEventListener('click', function(){scrollTo(3)})
   document.querySelector('#cat').addEventListener('click', function(){drawCat()});
   document.addEventListener('onmousewheel',scrollFunc, false);
+  // document.addEventListener('DOMContentLoaded', function(){document.documentElement.scrollTop=0}, false);
   window.onmousewheel = document.onmousewheel = scrollFunc;
 }

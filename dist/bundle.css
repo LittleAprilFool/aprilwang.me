@@ -273,10 +273,10 @@
   margin-top: 20px; }
 
 #but {
-  color: #eeeeee;
   display: inline;
   border-radius: 8px;
-  background: #A54C4C;
+  background: white;
+  color: #A54C4C;
   border: 1px solid #A54C4C;
   transition: all .5s ease;
   margin-right: 10px;
@@ -287,8 +287,8 @@
 
 input[type="radio"]:checked + #but {
   border: none;
-  background: white;
-  color: #A54C4C;
+  background: #A54C4C;
+  color: #eeeeee;
   border: 1px solid #A54C4C;
   outline: none; }
 
@@ -477,7 +477,11 @@ input {
   font-weight: bold; }
 
 .friendlist {
-  display: inline; }
+  display: inline;
+  padding-top: 20px; }
+
+.friends {
+  margin-top: 60px; }
 
 .friend {
   text-decoration: none;
@@ -515,7 +519,11 @@ body {
   margin: 0;
   padding: 0;
   overflow: scroll;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  cursor: default; }
+
+::-webkit-scrollbar {
+  display: none; }
 
 section {
   height: 100vh;
@@ -526,7 +534,7 @@ a {
   text-decoration: none;
   color: #A54C4C;
   font-weight: bold;
-  text-decoration: underline #A54C4C; }
+  border-bottom: solid 2px #A54C4C; }
 
 a:visited {
   text-decoration: none; }

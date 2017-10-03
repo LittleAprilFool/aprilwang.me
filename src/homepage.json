@@ -6,14 +6,14 @@
     "menu": ["ABOUT", "PROJECT", "MORE", "CONTACT"] ,
     "content": [
         {
-            "name": "APRIL WANG233",
+            "name": "APRIL WANG",
             "education": "MSc in HCI",
             "affiliation": "Simon Fraser University",
             "location": "TASC-8201",
             "meat": [
                 {
                     "h": "About Me",
-                    "p": "Hi, I'm <strong>April Wang</strong>, aka <strong>王奕</strong>. I am a <strong>thesis-based MSc student</strong> in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>, advised by <a href='http://hci.cs.sfu.ca/'>Dr.Chilana</a>. My research interests focus on <strong>using HCI techniques to lower the learning barriers for people without professional knowledge in a particular subject</strong>. <br><br> Before starting my journey in HCI research, I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China. With a major in <strong>Digital Media and Network Technology</strong>, I received interdisciplinary training in multimedia processing, game engineering and human interface design. In addition, I have previously worked in <strong>Intel</strong> and <strong>Alibaba</strong> as a <strong>User Experience Design Intern</strong>, and <strong>NetEase Games</strong> as a <strong>Junior Software Developer</strong>."
+                    "p": "Hi, I'm <strong>April Wang</strong>, aka <strong>王奕</strong>. I am a <strong>thesis-based MSc student</strong> in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>, advised by <a href='http://hci.cs.sfu.ca/' target='_blank'>Dr.Chilana</a>. My research interests focus on <strong>using HCI techniques to lower the learning barriers for people without professional knowledge in a particular subject</strong>. <br><br> Before starting my journey in HCI research, I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China. With a major in <strong>Digital Media and Network Technology</strong>, I received interdisciplinary training in multimedia processing, game engineering and human interface design. In addition, I have previously worked in <strong>Intel</strong> and <strong>Alibaba</strong> as a <strong>User Experience Design Intern</strong>, and <strong>NetEase Games</strong> as a <strong>Junior Software Developer</strong>."
                 },
                 {
                     "h": "Publications",

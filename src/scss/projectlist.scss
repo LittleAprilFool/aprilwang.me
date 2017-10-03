@@ -24,10 +24,10 @@
 }
 
 #but {
-  color: $primary-lightgray;
   display:inline;
   border-radius: 8px; 
-  background:  $primary-highlight;
+  background:white;
+  color: $primary-highlight;  
   border:1px solid $primary-highlight;
   transition: all .5s ease;
   margin-right: 10px;
@@ -38,8 +38,8 @@
 }
 input[type="radio"]:checked+#but{
   border:none;
-  background:white;
-  color: $primary-highlight;
+  background:  $primary-highlight;
+  color: $primary-lightgray;
   border:1px solid $primary-highlight;
   outline:none;
 }

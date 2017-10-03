@@ -6,6 +6,6 @@ import mixitup from 'mixitup'
 
 
 let html = template({data:data})
-document.write(html)
+document.querySelector("#app").innerHTML = html;
 addListeners()
 var mixer = mixitup('.container')

@@ -18,6 +18,11 @@ body {
     padding: 0;
     overflow: scroll;
     overflow-x: hidden;
+    cursor: default;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
 
 section {
@@ -30,7 +35,7 @@ a {
   text-decoration: none;
   color: $primary-highlight;
   font-weight: bold;
-  text-decoration: underline $primary-highlight;
+  border-bottom: solid 2px $primary-highlight;
 }
 
 a:visited {
