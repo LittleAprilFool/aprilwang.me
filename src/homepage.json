@@ -10,20 +10,72 @@
             "education": "MSc in HCI",
             "affiliation": "Simon Fraser University",
             "location": "TASC-8201",
-            "h1": "About Me",
-            "p11": "Hi, I'm <strong>April Wang</strong>, aka <strong>王奕</strong>. I am a <strong>thesis-based MSc student</strong> in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>, advised by <a href='http://hci.cs.sfu.ca/'>Dr.Chilana</a>. My research interests focus on <strong>using HCI techniques to lower the learning barriers for people without professional knowledge in a particular subject</strong>.",
-            "p12": "Before starting my journey in HCI research, I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China. With a major in <strong>Digital Media and Network Technology</strong>, I received interdisciplinary training in multimedia processing, game engineering and human interface design. In addition, I have previously worked in <strong>Intel</strong> and <strong>Alibaba</strong> as a <strong>User Experience Design Intern</strong>, and <strong>NetEase Games</strong> as a <strong>Junior Software Developer</strong>.",
-            "p13": "Check my previous projects.",
-            "h2": "Publications",
-            "p21": "<strong>PACM-CSCW 2017</strong>: Vermette, L., Dembla, S., Wang, A., McGrenere, J., & Chilana, P. 2017. Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications. Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW) [to appear].",
-            "p22": "<strong>ICER 2017</strong>: Wang, A., & Chilana, P. 2017. Investigating Learning Strategies of Conversational Programmers. ACM Conference on International Computing Education Research (ICER), Tacoma, WA, August 2017 [conference poster].",
+            "meat": [
+                {
+                    "h": "About Me",
+                    "p": "Hi, I'm <strong>April Wang</strong>, aka <strong>王奕</strong>. I am a <strong>thesis-based MSc student</strong> in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>, advised by <a href='http://hci.cs.sfu.ca/'>Dr.Chilana</a>. My research interests focus on <strong>using HCI techniques to lower the learning barriers for people without professional knowledge in a particular subject</strong>. <br><br> Before starting my journey in HCI research, I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China. With a major in <strong>Digital Media and Network Technology</strong>, I received interdisciplinary training in multimedia processing, game engineering and human interface design. In addition, I have previously worked in <strong>Intel</strong> and <strong>Alibaba</strong> as a <strong>User Experience Design Intern</strong>, and <strong>NetEase Games</strong> as a <strong>Junior Software Developer</strong>."
+                },
+                {
+                    "h": "Publications",
+                    "p": "<strong>PACM-CSCW 2017</strong>: Vermette, L., Dembla, S., Wang, A., McGrenere, J., & Chilana, P. 2017. Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications. Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW) [to appear]."
+                },
+                {
+                    "h": "Conference Posters",
+                    "p": "<strong>ICER 2017</strong>: Wang, A., & Chilana, P. 2017. Investigating Learning Strategies of Conversational Programmers. ACM Conference on International Computing Education Research (ICER), Tacoma, WA, August 2017 [conference poster]."
+                }
+            ],
             "mail": "<a href='mailto:hi@aprilwang.me'>hi@aprilwang.me</a>",
             "link": "Download CV"
         }, 
         {
-            "h": "02 PROJECT"
+            "projecttag": {"uxd":"#UX Design", "eup":"#End-User Programming", "b":"categoryB"},
+            "project": [
+                {
+                    "name": "IoT Services Orchestration Layer",
+                    "tag": ["uxd", "eup"],
+                    "abstract": "A visual graphical programming solution for developing IoT applications.",
+                    "album": "../assets/IoT-album.jpg"
+                },
+                {
+                    "name": "IoT Services Orchestration Layer",
+                    "tag": ["uxd", "eup"],
+                    "abstract": "A visual graphical programming solution for developing IoT applications.",
+                    "album": "../assets/IoT-album.jpg"
+                },
+                {
+                    "name": "IoT Services Orchestration Layer",
+                    "tag": ["uxd", "eup"],
+                    "abstract": "A visual graphical programming solution for developing IoT applications.",
+                    "album": "../assets/IoT-album.jpg"
+                },
+                {
+                    "name": "IoT Services Orchestration Layer",
+                    "tag": ["uxd", "eup"],
+                    "abstract": "A visual graphical programming solution for developing IoT applications.",
+                    "album": "../assets/IoT-album.jpg"
+                },
+                {
+                    "name": "IoT Services Orchestration Layer",
+                    "tag": ["uxd"],
+                    "abstract": "Designing the user interface for a visual graphical programming solution for developing IoT applications through drag-and-drop.",
+                    "album": "../assets/IoT-album.jpg"
+                },
+                {
+                    "name": "IoT Services Orchestration Layer",
+                    "tag": ["b"],
+                    "abstract": "Designing the user interface for a visual graphical programming solution for developing IoT applications through drag-and-drop.",
+                    "album": "../assets/IoT-album.jpg"
+                },
+                                {
+                    "name": "IoT Services Orchestration Layer",
+                    "tag": ["eup"],
+                    "abstract": "Designing the user interface for a visual graphical programming solution for developing IoT applications through drag-and-drop.",
+                    "album": "../assets/IoT-album.jpg"
+                }
+            ] 
         },
         {
-            "h": "03 MORE"
+            "h": "03 MORE",
+            "friends": {"Leo": "http://hi.leeleo.me/", "Richard":"https://blog.hlyue.com/", "Qusic": "https://qusic.me/", "Robert":"https://blog.robotshell.org/", "Senorsen": "https://www.senorsen.com/","XXJ": "https://itsxcy.net/"}
         }]
 }
