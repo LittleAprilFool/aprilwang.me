@@ -22,73 +22,73 @@ div.container
                 h1#title #{data.title}
                 h2#subtitle #{data.subtitle}
                 h2#enter ENTER
-            section.p1-content#sec1
-                div#left
-                    div#avadiv
-                        img(src="../assets/avatar2.jpg", id="avatar")
-                    p.t1 #{data.content[0].name}
-                    p.p1 #{data.content[0].education}
-                    p.p1 #{data.content[0].affiliation}
-                    div#detail
-                        //- <a href="mailto:hi@aprilwang.me"><i class="fa fa-envelope-o"></i></a>
-                        //- <a href="https://twitter.com/AprilWang95"><i class="fa fa-twitter"></i></a> <br>
-                        //- <i class="fa fa-location-arrow"></i> #{data.content[0].location}<br>
-                        //- <i class="fa fa-download"></i> !{data.content[0].link}
-                        p ayw7 at sfu dot ca
-                        p Download CV
-                div#right
-                    each val in data.content[0].meat
-                        p.t2 #{val.h}
-                        p.text !{val.p}
-            section.p2-content#sec2
-                div#project-big-title Selected Project
-                div#filter-button
-                        label(for="idall")
-                            input(type="radio" id="idall" checked="checked" name="xx")    
-                            div#but(data-filter="all") All
-                        each tag,index in data.content[1].projecttag
-                            label(for='id'+index)
-                                input(type="radio" name="xx" id='id'+index)
-                                div#but(data-filter='.'+index) #{tag}
-                div#project-list.container
-                    each project in data.content[1].project
-                        div#project-list-item.mix(class=project.tag) 
-                            div#project-list-album 
-                                img(src=project.album, alt="")
-                            div#project-list-name #{project.name}
-                            div#project-list-tag-wrap
-                                each tag in project.tag
-                                    div#project-list-tag #{data.content[1].projecttag[tag]}
-                            div#project-list-abstract #{project.abstract}
-            section.p3-content#sec4
-                div#meow-canvas
-                    div#meow (ฅ´ω`ฅ)
-                //- div.final
-                //-     div.thanks 
-                //-     div.content More about me???
-                //-     div.content Emmm
-                //-     div.content I have a rarely updated blog
-                //-     div.content Oh, and a lovely cat named Ace.
-                //-     div.content I am in a relationship with this guy
-                //-     div.content BTW, meet some of my highlighted friends!
-                div.final
-                    div#source.content
-                        p Thanks for scrolling all the way down here.        
-                        p More about me???
-                        p Emmmmmmmm...
-                    div#output-wrap.content
-                        span#output
-                    div#rest.content
-                        p I have a rarely updated <a class="highlight" href='https://aprilwang.me/blog'>blog</a>.
-                        p Oh, and a lovely cat named <a class="highlight" id='cat'>Ace</a>.
-                        p I am in a <i class="fa fa-heart"></i> relationship with <a class="highlight" href='https://imsun.net/'>this guy</a>.
-                        div#two
-                                include ../assets/april.svg
-                                include ../assets/trevor.svg
-                        p BTW, meet some of my highlighted friends
-                        div.friendlist
-                            each link, friend in data.content[2].friends
-                                a(href=link class="friend") #{friend}
+            //- section.p1-content#sec1
+            //-     div#left
+            //-         div#avadiv
+            //-             img(src="../assets/avatar2.jpg", id="avatar")
+            //-         p.t1 #{data.content[0].name}
+            //-         p.p1 #{data.content[0].education}
+            //-         p.p1 #{data.content[0].affiliation}
+            //-         div#detail
+            //-             //- <a href="mailto:hi@aprilwang.me"><i class="fa fa-envelope-o"></i></a>
+            //-             //- <a href="https://twitter.com/AprilWang95"><i class="fa fa-twitter"></i></a> <br>
+            //-             //- <i class="fa fa-location-arrow"></i> #{data.content[0].location}<br>
+            //-             //- <i class="fa fa-download"></i> !{data.content[0].link}
+            //-             p ayw7 at sfu dot ca
+            //-             p Download CV
+            //-     div#right
+            //-         each val in data.content[0].meat
+            //-             p.t2 #{val.h}
+            //-             p.text !{val.p}
+            //- section.p2-content#sec2
+            //-     div#project-big-title Selected Project
+            //-     div#filter-button
+            //-             label(for="idall")
+            //-                 input(type="radio" id="idall" checked="checked" name="xx")    
+            //-                 div#but(data-filter="all") All
+            //-             each tag,index in data.content[1].projecttag
+            //-                 label(for='id'+index)
+            //-                     input(type="radio" name="xx" id='id'+index)
+            //-                     div#but(data-filter='.'+index) #{tag}
+            //-     div#project-list.container
+            //-         each project in data.content[1].project
+            //-             div#project-list-item.mix(class=project.tag) 
+            //-                 div#project-list-album 
+            //-                     img(src=project.album, alt="")
+            //-                 div#project-list-name #{project.name}
+            //-                 div#project-list-tag-wrap
+            //-                     each tag in project.tag
+            //-                         div#project-list-tag #{data.content[1].projecttag[tag]}
+            //-                 div#project-list-abstract #{project.abstract}
+            //- section.p3-content#sec4
+            //-     div#meow-canvas
+            //-         div#meow (ฅ´ω`ฅ)
+            //-     //- div.final
+            //-     //-     div.thanks 
+            //-     //-     div.content More about me???
+            //-     //-     div.content Emmm
+            //-     //-     div.content I have a rarely updated blog
+            //-     //-     div.content Oh, and a lovely cat named Ace.
+            //-     //-     div.content I am in a relationship with this guy
+            //-     //-     div.content BTW, meet some of my highlighted friends!
+            //-     div.final
+            //-         div#source.content
+            //-             p Thanks for scrolling all the way down here.        
+            //-             p More about me???
+            //-             p Emmmmmmmm...
+            //-         div#output-wrap.content
+            //-             span#output
+            //-         div#rest.content
+            //-             p I have a rarely updated <a class="highlight" href='https://aprilwang.me/blog'>blog</a>.
+            //-             p Oh, and a lovely cat named <a class="highlight" id='cat'>Ace</a>.
+            //-             p I am in a <i class="fa fa-heart"></i> relationship with <a class="highlight" href='https://imsun.net/'>this guy</a>.
+            //-             div#two
+            //-                     include ../assets/april.svg
+            //-                     include ../assets/trevor.svg
+            //-             p BTW, meet some of my highlighted friends
+            //-             div.friendlist
+            //-                 each link, friend in data.content[2].friends
+            //-                     a(href=link class="friend") #{friend}
             footer#sec3 
                 h1#small © April Y. Wang 2017
             //- section.p4-content#sec4

@@ -77,12 +77,12 @@ function drawCat(){
 export function addListeners() {
   // document.querySelector('.toggle-label').addEventListener('click', openNav)
   // document.querySelector('.pusher-container').addEventListener('click', closeNav) 
-  document.querySelector('#enter').addEventListener('click', function(){scrollTo(1)})
-  document.querySelector('#nav0').addEventListener('click', function(){scrollTo(0)})
-  document.querySelector('#nav1').addEventListener('click', function(){scrollTo(1)})
-  document.querySelector('#nav2').addEventListener('click', function(){scrollTo(2)})
-  document.querySelector('#nav3').addEventListener('click', function(){scrollTo(3)})
-  document.querySelector('#cat').addEventListener('click', function(){drawCat()});
-  document.addEventListener('onmousewheel',scrollFunc, false);
-  window.onmousewheel = document.onmousewheel = scrollFunc;
+  // document.querySelector('#enter').addEventListener('click', function(){scrollTo(1)})
+  // document.querySelector('#nav0').addEventListener('click', function(){scrollTo(0)})
+  // document.querySelector('#nav1').addEventListener('click', function(){scrollTo(1)})
+  // document.querySelector('#nav2').addEventListener('click', function(){scrollTo(2)})
+  // document.querySelector('#nav3').addEventListener('click', function(){scrollTo(3)})
+  // document.querySelector('#cat').addEventListener('click', function(){drawCat()});
+  // document.addEventListener('onmousewheel',scrollFunc, false);
+  // window.onmousewheel = document.onmousewheel = scrollFunc;
 }
