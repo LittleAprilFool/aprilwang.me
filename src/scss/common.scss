@@ -2,6 +2,9 @@
 @import 'drawer';
 @import 'variable';
 @import 'about';
+@import 'dot';
+@import 'projectlist';
+@import 'more';
 
 html {
     height: 100%;
@@ -11,9 +14,10 @@ body {
     color: $primary-color;
     height: 100%;
     width: 100%;
-    // overflow: hidden;
     margin: 0;
     padding: 0;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 section {
@@ -22,9 +26,30 @@ section {
     margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: $primary-highlight;
+  font-weight: bold;
+  text-decoration: underline $primary-highlight;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+#sec4 {
+    height: 80vh;
+    top: 0;
+}
+
+footer {
+    height: 20vh;
+    background: $primary-highlight;
+}
+
 .p0-content {
     margin: auto;
-    padding-top: 10%;
+    padding-top: 15%;
     text-align:center;
     cursor:default;
 }
@@ -66,4 +91,26 @@ section {
     &:hover{
         width: 6%;
     }
+}
+
+#big {
+    text-align:center;
+    font-family: passion-one, sans-serif;
+    font-size: 80px;
+    color: $primary-highlight;
+    margin: 10px;
+    padding-top: 20%;
+}
+
+#small {
+    text-align:center;
+    font-family: lato, sans-serif;
+    font-size: 12px;
+    color: $primary-lightgray;
+    margin: 0;
+    padding-top:5%;
+}
+
+p {
+    cursor: default;
 }

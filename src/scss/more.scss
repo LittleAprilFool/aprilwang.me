@@ -1,0 +1,65 @@
+@import 'typing';
+@import 'variable';
+@import 'character';
+@import 'meow';
+
+#sec3 {
+  margin:auto;
+  text-align: center;
+  font-family: passion-one, sans-serif;
+  font-size: 20px;
+}
+.final {
+  text-align: center;
+  margin: auto;
+  padding-top: 5%;
+}
+.thanks {
+    font-family: passion-one, sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.content {
+    font-family: lato, sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.friendlist {
+  display:inline;
+}
+
+.friend {
+  text-decoration: none;
+  margin-right: 20px;
+  border-bottom: solid 2px $primary-highlight;
+  transition: all 0.5s ease;
+  font-size: 15px;
+}
+
+#cat:hover {
+  cursor: pointer;
+}
+
+#two{
+  display:inline;
+}
+
+#Trevor-SVG{
+  height: 100px;
+}
+
+#two > #April-SVG{
+  height: 100px;
+}
+
+
+#source {
+  display:none;
+}
+
+#rest {
+  opacity: 0;
+  transition: opacity 2s ease;
+}

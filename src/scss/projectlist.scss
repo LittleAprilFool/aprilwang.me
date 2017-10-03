@@ -1,0 +1,99 @@
+@import 'variable';
+#sec2 {
+  text-align: center;
+  margin:auto;
+}
+
+#project-big-title {
+    font-family: lato, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: $primary-highlight; 
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#project-list {
+  font-family: lato, sans-serif;
+  font-size: 15px;
+  cursor:default;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#but {
+  color: $primary-lightgray;
+  display:inline;
+  border-radius: 8px; 
+  background:  $primary-highlight;
+  border:1px solid $primary-highlight;
+  transition: all .5s ease;
+  margin-right: 10px;
+  font-family: lato, sans-serif;
+  font-size: 12px; 
+  cursor: pointer;
+  padding: 2px 8px 2px 8px;
+}
+input[type="radio"]:checked+#but{
+  border:none;
+  background:white;
+  color: $primary-highlight;
+  border:1px solid $primary-highlight;
+  outline:none;
+}
+
+#filter-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input{
+  display: none;
+}
+
+#project-list-item {
+  width: 22%;
+  padding-bottom: 5px;
+  transition: background-color 2s ease;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+
+#project-list-album img{
+  width:100%;
+  border-radius:8px 8px 0px 0px;
+}
+
+#project-list-name {
+  font-size: 14px;
+  padding: 5px;
+  font-weight: bolder;
+  padding-bottom: 0px;
+}
+
+#project-list-tag-wrap {
+  padding: 5px;
+  padding-top: 0px;
+}
+
+#project-list-tag {
+  color: $primary-highlight;
+  display: inline;
+  font-size: 10px;
+  font-weight: bold;
+  font-weight: normal;
+  margin-right: 5px;
+}
+
+#project-list-abstract {
+  color: $primary-lightdark;
+  font-size: 12px;
+  padding: 5px;
+  padding-top: 0px;
+}

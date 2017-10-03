@@ -1,0 +1,17 @@
+@import 'variable';
+#meow-canvas {
+  left: 10%;
+  position:absolute;
+  height: 70vh;
+  width: 80vw;
+  margin: 0;
+  z-index: -1;
+}
+
+#meow {
+  font-family: passion-one, sans-serif;
+  font-size: 30px;
+  position: relative;
+  color: white;
+  transition: color 0.5s ease;
+}
