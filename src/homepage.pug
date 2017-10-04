@@ -59,7 +59,7 @@ div.container
                             div#project-list-tag-wrap
                                 each tag in project.tag
                                     div#project-list-tag #{data.content[1].projecttag[tag]}
-                            div#project-list-abstract #{project.abstract}
+                            div#project-list-abstract !{project.abstract}
             section.p3-content#sec4
                 div#meow-canvas
                     div#meow (ฅ´ω`ฅ)
@@ -78,7 +78,7 @@ div.container
                                 include ../assets/april.svg
                                 include ../assets/trevor.svg
                         div.friends
-                            p One last thing, I am honored to introduce my squad!
+                            p One last thing, meet my squad!
                             div.friendlist
                             each link, friend in data.content[2].friends
                                 a(href=link target="_blank" class="friend") #{friend}

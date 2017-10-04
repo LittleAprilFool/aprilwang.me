@@ -6,7 +6,7 @@
     "menu": ["ABOUT", "PROJECT", "MORE", "CONTACT"] ,
     "content": [
         {
-            "name": "APRIL WANG",
+            "name": "April Yi Wang",
             "education": "MSc in HCI",
             "affiliation": "Simon Fraser University",
             "location": "TASC-8201",
@@ -22,55 +22,65 @@
                 {
                     "h": "Conference Posters",
                     "p": "<strong>ICER 2017</strong>: Wang, A., & Chilana, P. 2017. Investigating Learning Strategies of Conversational Programmers. ACM Conference on International Computing Education Research (ICER), Tacoma, WA, August 2017 [conference poster]."
+                },
+                {
+                    "h": "Teaching Experience",
+                    "p": "CMPT363 User Interface Design &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Teaching Assistant &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spring 2017"
                 }
             ],
             "mail": "<a href='mailto:hi@aprilwang.me'>hi@aprilwang.me</a>",
             "link": "Download CV"
         }, 
         {
-            "projecttag": {"uxd":"#UX Design", "eup":"#End-User Programming", "b":"categoryB"},
+            "projecttag": {"uxd":"#UX","d":"#Design", "p":"#Programming", "cg":"#Computer Graphics", "g":"#Game"},
             "project": [
                 {
                     "name": "IoT Services Orchestration Layer",
-                    "tag": ["uxd", "eup"],
-                    "abstract": "A visual graphical programming solution for developing IoT applications.",
+                    "tag": ["uxd", "d"],
+                    "abstract": "Designing the user interface of a block-based programming solution for developing IoT applications.",
                     "album": "../assets/IoT-album.jpg"
                 },
                 {
-                    "name": "IoT Services Orchestration Layer",
-                    "tag": ["uxd", "eup"],
-                    "abstract": "A visual graphical programming solution for developing IoT applications.",
-                    "album": "../assets/IoT-album.jpg"
+                    "name": "Real-time Rendering of Subsurface Scattering of Translucent Material",
+                    "tag": ["cg","p"],
+                    "abstract": "Implementing real-time SSS rendering techniques on human skin.",
+                    "album": "../assets/SSS-album.jpg"
                 },
                 {
-                    "name": "IoT Services Orchestration Layer",
-                    "tag": ["uxd", "eup"],
-                    "abstract": "A visual graphical programming solution for developing IoT applications.",
-                    "album": "../assets/IoT-album.jpg"
+                    "name": "Wind Simulation in MMORPG",
+                    "tag": ["cg", "p"],
+                    "abstract": "Improving the wind simulation system in <em>Tianyu Revelation Online.</em>",
+                    "album": "../assets/wind-album.jpg"
                 },
                 {
-                    "name": "IoT Services Orchestration Layer",
-                    "tag": ["uxd", "eup"],
-                    "abstract": "A visual graphical programming solution for developing IoT applications.",
-                    "album": "../assets/IoT-album.jpg"
+                    "name": "VR Game - Galaxy Destroyer",
+                    "tag": ["g", "p", "d"],
+                    "abstract": "A VR shooting game made with Unity3D. Available on Google Play.",
+                    "album": "../assets/gd-album.jpg"
                 },
                 {
-                    "name": "IoT Services Orchestration Layer",
-                    "tag": ["uxd"],
-                    "abstract": "Designing the user interface for a visual graphical programming solution for developing IoT applications through drag-and-drop.",
-                    "album": "../assets/IoT-album.jpg"
+                    "name": "Heuristic Evaluation of a Social Sharing Shopping Website",
+                    "tag": ["uxd", "d"],
+                    "abstract": "Identifying usability problems to enhance user engagement in AiTaobao.",
+                    "album": "../assets/aitaobao-album.jpg"
                 },
                 {
-                    "name": "IoT Services Orchestration Layer",
-                    "tag": ["b"],
-                    "abstract": "Designing the user interface for a visual graphical programming solution for developing IoT applications through drag-and-drop.",
-                    "album": "../assets/IoT-album.jpg"
+                    "name": "Exploring Interactive Design Methods to Support an Organized Social Group",
+                    "tag": ["uxd","d"],
+                    "abstract": "Applying interactve design methods to study users and their context of use.",
+                    "album": "../assets/pe-album.jpg"
                 },
-                                {
-                    "name": "IoT Services Orchestration Layer",
-                    "tag": ["eup"],
-                    "abstract": "Designing the user interface for a visual graphical programming solution for developing IoT applications through drag-and-drop.",
-                    "album": "../assets/IoT-album.jpg"
+                {
+                    "name": "Designing the User Interface of Campus Information Retrival Systems",
+                    "tag": ["uxd", "d"],
+                    "abstract": "Designing the user interface for campus information retrival mobile applications.",
+                    "album": "../assets/isee-album.jpg"
+                },
+                {
+                    "name": "Animation and Graphic Design",
+                    "tag": ["d"],
+                    "abstract": "Selected digital design projects I have done in the past (e.g., flat animation, 3D animation, Logo design, illustrations).",
+                    "album": "../assets/art-album.jpg"
                 }
             ] 
         },

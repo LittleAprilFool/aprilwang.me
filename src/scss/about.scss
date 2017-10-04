@@ -50,7 +50,7 @@
 
 .t1 {
     font-family: passion-one, sans-serif;
-    font-size: 40px;
+    font-size: 35px;
     color: $primary-highlight;
     margin:0;
     margin-top:10px;
@@ -62,6 +62,7 @@
     font-weight: bold;
     color: $primary-highlight; 
     margin-top: 4%;
+    margin-bottom: 0px;
 }
 
 .p1 {
@@ -78,7 +79,12 @@
     font-size: 15px;
     font-weight: regular;
 }
+#right {
+  padding-top: 20px;
+}
 
 #right .text {
     color: $primary-color;
+    margin-top:10px;
+    font-size: 14px;
 }

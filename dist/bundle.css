@@ -190,7 +190,7 @@
 
 .t1 {
   font-family: passion-one, sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   color: #A54C4C;
   margin: 0;
   margin-top: 10px; }
@@ -200,7 +200,8 @@
   font-size: 18px;
   font-weight: bold;
   color: #A54C4C;
-  margin-top: 4%; }
+  margin-top: 4%;
+  margin-bottom: 0px; }
 
 .p1 {
   font-family: lato, sans-serif;
@@ -215,8 +216,13 @@
   font-size: 15px;
   font-weight: regular; }
 
+#right {
+  padding-top: 20px; }
+
 #right .text {
-  color: #333; }
+  color: #333;
+  margin-top: 10px;
+  font-size: 14px; }
 
 .dot {
   list-style: none;
@@ -314,7 +320,7 @@ input {
   border-radius: 8px 8px 0px 0px; }
 
 #project-list-name {
-  font-size: 14px;
+  font-size: 12px;
   padding: 5px;
   font-weight: bolder;
   padding-bottom: 0px; }
