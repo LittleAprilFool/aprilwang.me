@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3c0741d8a25dddc41664"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "843fb8bc645d11cf83fe"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -612,12 +612,33 @@
 
 	var _mixitup2 = _interopRequireDefault(_mixitup);
 
+	var _router = __webpack_require__(12);
+
+	var _router2 = _interopRequireDefault(_router);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var R = new _router2.default();
 	var html = (0, _homepage2.default)({ data: _homepage4.default });
 	document.querySelector("#app").innerHTML = html;
 	(0, _app.addListeners)();
+	R.init();
 	var mixer = (0, _mixitup2.default)('.container');
+
+	R.route('/', function (id) {
+	  console.log("scroll to Page " + id);
+	  console.log("home!!");
+	  (0, _app.closeProject)();
+	});
+
+	R.route('/page', function (id) {
+	  (0, _app.scrollTo)(id.slice(2));
+	  (0, _app.closeProject)();
+	});
+
+	R.route('/project', function (id) {
+	  (0, _app.loadProject)(id);
+	});
 
 /***/ }),
 /* 4 */
@@ -628,7 +649,10 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.scrollTo = scrollTo;
+	exports.closeProject = closeProject;
 	exports.addListeners = addListeners;
+	exports.loadProject = loadProject;
 
 	var _typing = __webpack_require__(5);
 
@@ -642,6 +666,7 @@
 	var pageMin = 0;
 	var pageMax = 3;
 	var typed = false;
+	var projectOpen = false;
 
 	function openNav() {
 	  var toggle = document.querySelector('.container');
@@ -690,10 +715,13 @@
 	}
 
 	function scrollFunc(e) {
+	  if (projectOpen) return;
 	  e = e || window.event;
 	  if (!onScroll) {
+	    var delta = page - Math.sign(e.wheelDelta);
+	    if (delta < pageMin || delta > pageMax) return;
 	    onScroll = true;
-	    scrollTo(page - Math.sign(e.wheelDelta));
+	    location.hash = '/page?id' + delta;
 	    setTimeout(resetOnScroll, 1000);
 	  }
 	  if (e.preventDefault) e.preventDefault();else e.returnValue = false;
@@ -709,39 +737,55 @@
 	  }, 500);
 	}
 
+	function closeProject() {
+	  if (!projectOpen) return;
+	  projectOpen = false;
+	  document.querySelector('.project-detail').classList.remove('show');
+	  location.hash = '/page?id2';
+	}
+
 	function addListeners() {
-	  // document.querySelector('.toggle-label').addEventListener('click', openNav)
-	  // document.querySelector('.pusher-container').addEventListener('click', closeNav
-	  window.onload = function () {
-	    setTimeout(function () {
-	      scrollTo(0);
-	    }, 200);
-	  };
-	  // document.onreadystatechange = function () {
-	  // if (document.readyState == "interactive") {
-	  //   scrollTo(0);
+	  // window.onload = function(){
+	  //   setTimeout(function(){
+	  //     scrollTo(0)
+	  //   }, 200)
 	  // }
 	  document.querySelector('#enter').addEventListener('click', function () {
-	    scrollTo(1);
+	    location.hash = '/page?id1';
 	  });
 	  document.querySelector('#nav0').addEventListener('click', function () {
-	    scrollTo(0);
+	    location.hash = '/page?id0';
 	  });
 	  document.querySelector('#nav1').addEventListener('click', function () {
-	    scrollTo(1);
+	    location.hash = '/page?id1';
 	  });
 	  document.querySelector('#nav2').addEventListener('click', function () {
-	    scrollTo(2);
+	    location.hash = '/page?id2';
 	  });
 	  document.querySelector('#nav3').addEventListener('click', function () {
-	    scrollTo(3);
+	    location.hash = '/page?id3';
 	  });
 	  document.querySelector('#cat').addEventListener('click', function () {
-	    drawCat();
+	    location.hash = '/page?id4';
 	  });
+	  document.querySelector('.project-detail-close').addEventListener('click', function () {
+	    closeProject();
+	  });
+	  var projectItem = document.querySelectorAll('.project-list-item');
+	  projectItem.forEach(function (element) {
+	    element.addEventListener('click', function () {
+	      location.hash = "/project?" + this.id;
+	    });
+	  }, this);
 	  document.addEventListener('onmousewheel', scrollFunc, false);
 	  // document.addEventListener('DOMContentLoaded', function(){document.documentElement.scrollTop=0}, false);
 	  window.onmousewheel = document.onmousewheel = scrollFunc;
+	}
+
+	function loadProject(id) {
+	  var detail = document.querySelector('.project-detail');
+	  if (!projectOpen) detail.classList.add('show');
+	  projectOpen = true;
 	}
 
 /***/ }),
@@ -875,7 +919,7 @@
 
 	var pug = __webpack_require__(7);
 
-	function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (data) {pug_html = pug_html + "\u003Cdiv class=\"container\"\u003E\u003Cnav class=\"list\"\u003E\u003Cul class=\"dot\"\u003E\u003Cli class=\"current\" id=\"nav0\"\u003E\u003Ci class=\"fa fa-circle\"\u003E\u003C\u002Fi\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav1\"\u003E\u003Ci class=\"fa fa-circle\"\u003E\u003C\u002Fi\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav2\"\u003E\u003Ci class=\"fa fa-circle\"\u003E\u003C\u002Fi\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav3\"\u003E\u003Ci class=\"fa fa-circle\"\u003E\u003C\u002Fi\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E\u003C\u002Fnav\u003E\u003Cdiv class=\"pusher-container\"\u003E\u003Cdiv class=\"pusher\"\u003E\u003Csection class=\"p0-content\" id=\"sec0\"\u003E\u003Cdiv\u003E\u003Csvg version=\"1.1\" id=\"April-SVG\" xmlns=\"http:\u002F\u002Fwww.w3.org\u002F2000\u002Fsvg\" xmlns:xlink=\"http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxlink\" x=\"0px\"\n     y=\"0px\" viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\"\u003E\n\u003Cg id=\"April\"\u003E\n    \u003Cg id=\"Body\"\u003E\n        \u003Cg\u003E\n            \u003Cpath fill=\"#FFEBD7\" d=\"M100.7,165c0,0,6.8,14.4,40.8,14.4s41.6-10,41.6-10l16.8-49.2l-60-52.4l-55.2,36.8L100.7,165z\"\u002F\u003E\n            \u003Cpath fill=\"none\" d=\"M90.2,163.2c0,0,8.5,18,51,18s52-12.5,52-12.5l21-61.5l-75-65.5l-69,46L90.2,163.2z\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M126.2,14.3\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M140.1,12.4\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFEBD7\" d=\"M210.8,276.8c-2.9-41.1-11.7-83.1-40-86c-8,2.2-13.9,2.5-17.7,0.5\n                c-3.8-2-5.6-6.4-5.3-13.5l-13.5,1.5c-0.3,4-0.9,7.9-2.8,10.5c-2,2.6-5.4,4-11.7,3c-24.7,0.8-34.6,26.5-28,80L210.8,276.8z\"\u002F\u003E\n            \u003Cpath fill=\"#998675\" d=\"M210.8,274.8c-2.9-41.1-11.7-83.1-40-86c-22.2,0-44.2,2-51,2c-24.7,0.8-34.6,26.5-28,80L210.8,274.8z\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M78.8,257.8c0,7,12,10.1,12,10.1l-20,8.1h20c0,0,16-18.1,6-26.1S78.8,250.8,78.8,257.8z\"\n                \u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M238,199.8c0,7-15.6,9.3-15.6,9.3l-14.3,68.7l-10.3,3.3c0,0,12.3-81.3,22.3-89.3\n                S238,192.8,238,199.8z\"\u002F\u003E\n            \u003Cpath fill=\"#66473A\" d=\"M140.6,33.2C61.5,33.7,52.3,162,57.9,169.7c9.9,13.7,47.1,32,53.9,29.7c-11.3-20-19.4-58.4-13.9-79.9\n                c19.6-14.6,25.7-31.2,23.5-37.3c2.2,0.4,3.4,6,2.1,24.5c22.7-0.3,29.9-10.7,29.9-25.6c0.3,16.2,3.7,26.4,11.7,27.7\n                c9.8,2.9,14.4,3.8,18.1,4.3c2.3,42.8-0.9,72.6-4.3,85.3c29.5,2.9,46.3-18.2,49.1-32C232.1,157.3,214.2,32.7,140.6,33.2z\"\u002F\u003E\n            \u003Cg display=\"none\"\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M203.8,262.8h-10c-1.6,0-3-1.4-3-3v-14c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v14\n                        C206.8,261.4,205.4,262.8,203.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M217.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C220.8,261.4,219.4,262.8,217.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M187.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C190.8,261.4,189.4,262.8,187.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M103.8,262.8h-10c-1.7,0-3-1.4-3-3v-14c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v14\n                        C106.8,261.4,105.4,262.8,103.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M119.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C122.8,261.4,121.4,262.8,119.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M89.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C92.8,261.4,91.4,262.8,89.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n            \u003C\u002Fg\u003E\n        \u003C\u002Fg\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"208.2\" cy=\"259.8\" rx=\"16.8\" ry=\"16.7\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cg id=\"LeftHand\"\u003E\n        \u003Cpolygon fill=\"#A54C4C\" points=\"85.6,269.6 97.2,269 85.2,201 75.6,201.7         \"\u002F\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"92.8\" cy=\"257.8\" rx=\"15.7\" ry=\"15.3\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cpath id=\"Book_1_\" fill=\"#66473A\" d=\"M244,281H56c-1.1,0-2-0.9-2-2v-13.6c0-1.1,0.9-2,2-2h188c1.1,0,2,0.9,2,2V279\n        C246,280.1,245.1,281,244,281z\"\u002F\u003E\n\u003C\u002Fg\u003E\n\u003C\u002Fsvg\u003E\u003C\u002Fdiv\u003E\u003Ch1 id=\"title\"\u003E" + (pug.escape(null == (pug_interp = data.title) ? "" : pug_interp)) + "\u003C\u002Fh1\u003E\u003Ch2 id=\"subtitle\"\u003E" + (pug.escape(null == (pug_interp = data.subtitle) ? "" : pug_interp)) + "\u003C\u002Fh2\u003E\u003Ch2 id=\"enter\"\u003EENTER\u003C\u002Fh2\u003E\u003C\u002Fsection\u003E\u003Csection class=\"p1-content\" id=\"sec1\"\u003E\u003Cdiv id=\"left\"\u003E\u003Cdiv id=\"avadiv\"\u003E\u003Cimg src=\"..\u002Fassets\u002Favatar2.jpg\" id=\"avatar\"\u003E\u003C\u002Fdiv\u003E\u003Cp class=\"t1\"\u003E" + (pug.escape(null == (pug_interp = data.content[0].name) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp class=\"p1\"\u003E" + (pug.escape(null == (pug_interp = data.content[0].education) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp class=\"p1\"\u003E" + (pug.escape(null == (pug_interp = data.content[0].affiliation) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cdiv id=\"detail\"\u003E\u003Cp\u003Eayw7 at sfu dot ca\u003C\u002Fp\u003E\u003Cp\u003EDownload CV\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv id=\"right\"\u003E";
+	function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (data) {pug_html = pug_html + "\u003Cdiv class=\"container\"\u003E\u003Cdiv class=\"project-detail\"\u003E\u003Cdiv class=\"project-detail-close\"\u003E\u003Ci class=\"fa fa-times\" aria-hidden=\"true\"\u003E\u003C\u002Fi\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-detail-title\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].project[0].name) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-detail-content\"\u003E" + (null == (pug_interp = data.content[1].project[0].content) ? "" : pug_interp) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cnav class=\"list\"\u003E\u003Cul class=\"dot\"\u003E\u003Cli class=\"current\" id=\"nav0\"\u003E\u003Ci class=\"fa fa-circle\"\u003E\u003C\u002Fi\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav1\"\u003E\u003Ci class=\"fa fa-circle\"\u003E\u003C\u002Fi\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav2\"\u003E\u003Ci class=\"fa fa-circle\"\u003E\u003C\u002Fi\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav3\"\u003E\u003Ci class=\"fa fa-circle\"\u003E\u003C\u002Fi\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E\u003C\u002Fnav\u003E\u003Cdiv class=\"pusher-container\"\u003E\u003Cdiv class=\"pusher\"\u003E\u003Csection class=\"p0-content\" id=\"sec0\"\u003E\u003Cdiv\u003E\u003Csvg version=\"1.1\" id=\"April-SVG\" xmlns=\"http:\u002F\u002Fwww.w3.org\u002F2000\u002Fsvg\" xmlns:xlink=\"http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxlink\" x=\"0px\"\n     y=\"0px\" viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\"\u003E\n\u003Cg id=\"April\"\u003E\n    \u003Cg id=\"Body\"\u003E\n        \u003Cg\u003E\n            \u003Cpath fill=\"#FFEBD7\" d=\"M100.7,165c0,0,6.8,14.4,40.8,14.4s41.6-10,41.6-10l16.8-49.2l-60-52.4l-55.2,36.8L100.7,165z\"\u002F\u003E\n            \u003Cpath fill=\"none\" d=\"M90.2,163.2c0,0,8.5,18,51,18s52-12.5,52-12.5l21-61.5l-75-65.5l-69,46L90.2,163.2z\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M126.2,14.3\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M140.1,12.4\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFEBD7\" d=\"M210.8,276.8c-2.9-41.1-11.7-83.1-40-86c-8,2.2-13.9,2.5-17.7,0.5\n                c-3.8-2-5.6-6.4-5.3-13.5l-13.5,1.5c-0.3,4-0.9,7.9-2.8,10.5c-2,2.6-5.4,4-11.7,3c-24.7,0.8-34.6,26.5-28,80L210.8,276.8z\"\u002F\u003E\n            \u003Cpath fill=\"#998675\" d=\"M210.8,274.8c-2.9-41.1-11.7-83.1-40-86c-22.2,0-44.2,2-51,2c-24.7,0.8-34.6,26.5-28,80L210.8,274.8z\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M78.8,257.8c0,7,12,10.1,12,10.1l-20,8.1h20c0,0,16-18.1,6-26.1S78.8,250.8,78.8,257.8z\"\n                \u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M238,199.8c0,7-15.6,9.3-15.6,9.3l-14.3,68.7l-10.3,3.3c0,0,12.3-81.3,22.3-89.3\n                S238,192.8,238,199.8z\"\u002F\u003E\n            \u003Cpath fill=\"#66473A\" d=\"M140.6,33.2C61.5,33.7,52.3,162,57.9,169.7c9.9,13.7,47.1,32,53.9,29.7c-11.3-20-19.4-58.4-13.9-79.9\n                c19.6-14.6,25.7-31.2,23.5-37.3c2.2,0.4,3.4,6,2.1,24.5c22.7-0.3,29.9-10.7,29.9-25.6c0.3,16.2,3.7,26.4,11.7,27.7\n                c9.8,2.9,14.4,3.8,18.1,4.3c2.3,42.8-0.9,72.6-4.3,85.3c29.5,2.9,46.3-18.2,49.1-32C232.1,157.3,214.2,32.7,140.6,33.2z\"\u002F\u003E\n            \u003Cg display=\"none\"\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M203.8,262.8h-10c-1.6,0-3-1.4-3-3v-14c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v14\n                        C206.8,261.4,205.4,262.8,203.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M217.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C220.8,261.4,219.4,262.8,217.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M187.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C190.8,261.4,189.4,262.8,187.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M103.8,262.8h-10c-1.7,0-3-1.4-3-3v-14c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v14\n                        C106.8,261.4,105.4,262.8,103.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M119.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C122.8,261.4,121.4,262.8,119.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M89.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C92.8,261.4,91.4,262.8,89.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n            \u003C\u002Fg\u003E\n        \u003C\u002Fg\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"208.2\" cy=\"259.8\" rx=\"16.8\" ry=\"16.7\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cg id=\"LeftHand\"\u003E\n        \u003Cpolygon fill=\"#A54C4C\" points=\"85.6,269.6 97.2,269 85.2,201 75.6,201.7         \"\u002F\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"92.8\" cy=\"257.8\" rx=\"15.7\" ry=\"15.3\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cpath id=\"Book_1_\" fill=\"#66473A\" d=\"M244,281H56c-1.1,0-2-0.9-2-2v-13.6c0-1.1,0.9-2,2-2h188c1.1,0,2,0.9,2,2V279\n        C246,280.1,245.1,281,244,281z\"\u002F\u003E\n\u003C\u002Fg\u003E\n\u003C\u002Fsvg\u003E\u003C\u002Fdiv\u003E\u003Ch1 id=\"title\"\u003E" + (pug.escape(null == (pug_interp = data.title) ? "" : pug_interp)) + "\u003C\u002Fh1\u003E\u003Ch2 id=\"subtitle\"\u003E" + (pug.escape(null == (pug_interp = data.subtitle) ? "" : pug_interp)) + "\u003C\u002Fh2\u003E\u003Ch2 id=\"enter\"\u003EENTER\u003C\u002Fh2\u003E\u003C\u002Fsection\u003E\u003Csection class=\"p1-content\" id=\"sec1\"\u003E\u003Cdiv id=\"left\"\u003E\u003Cdiv id=\"avadiv\"\u003E\u003Cimg src=\"..\u002Fassets\u002Favatar2.jpg\" id=\"avatar\"\u003E\u003C\u002Fdiv\u003E\u003Cp class=\"t1\"\u003E" + (pug.escape(null == (pug_interp = data.content[0].name) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp class=\"p1\"\u003E" + (pug.escape(null == (pug_interp = data.content[0].education) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp class=\"p1\"\u003E" + (pug.escape(null == (pug_interp = data.content[0].affiliation) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cdiv id=\"detail\"\u003E\u003Cp\u003Eayw7 at sfu dot ca\u003C\u002Fp\u003E\u003Cp\u003EDownload CV\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv id=\"right\"\u003E";
 	// iterate data.content[0].meat
 	;(function(){
 	  var $$obj = data.content[0].meat;
@@ -894,7 +938,7 @@
 	  }
 	}).call(this);
 
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003Csection class=\"p2-content\" id=\"sec2\"\u003E\u003Cdiv id=\"project-big-title\"\u003ESelected Project\u003C\u002Fdiv\u003E\u003Cdiv id=\"filter-button\"\u003E\u003Clabel for=\"idall\"\u003E\u003Cinput type=\"radio\" id=\"idall\" checked=\"checked\" name=\"xx\"\u003E\u003Cdiv id=\"but\" data-filter=\"all\"\u003EAll\u003C\u002Fdiv\u003E\u003C\u002Flabel\u003E";
+	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003Csection class=\"p2-content\" id=\"sec2\"\u003E\u003Cdiv class=\"project-big-title\"\u003ESelected Project\u003C\u002Fdiv\u003E\u003Cdiv id=\"filter-button\"\u003E\u003Clabel for=\"idall\"\u003E\u003Cinput type=\"radio\" id=\"idall\" checked=\"checked\" name=\"xx\"\u003E\u003Cdiv id=\"but\" data-filter=\"all\"\u003EAll\u003C\u002Fdiv\u003E\u003C\u002Flabel\u003E";
 	// iterate data.content[1].projecttag
 	;(function(){
 	  var $$obj = data.content[1].projecttag;
@@ -913,64 +957,64 @@
 	  }
 	}).call(this);
 
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"container\" id=\"project-list\"\u003E";
+	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-list container\"\u003E";
 	// iterate data.content[1].project
 	;(function(){
 	  var $$obj = data.content[1].project;
 	  if ('number' == typeof $$obj.length) {
 	      for (var pug_index2 = 0, $$l = $$obj.length; pug_index2 < $$l; pug_index2++) {
 	        var project = $$obj[pug_index2];
-	pug_html = pug_html + "\u003Cdiv" + (pug.attr("class", pug.classes(["mix",project.tag], [false,true]), false, true)+" id=\"project-list-item\"") + "\u003E \u003Cdiv id=\"project-list-album\"\u003E \u003Cimg" + (pug.attr("src", project.album, true, true)+" alt=\"\"") + "\u003E\u003C\u002Fdiv\u003E\u003Cdiv id=\"project-list-name\"\u003E" + (pug.escape(null == (pug_interp = project.name) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cdiv id=\"project-list-tag-wrap\"\u003E";
+	pug_html = pug_html + "\u003Cdiv" + (pug.attr("class", pug.classes(["project-list-item","mix",project.tag], [false,false,true]), false, true)+pug.attr("id", project.id, true, true)) + "\u003E \u003Cdiv class=\"project-list-album\"\u003E \u003Cimg" + (pug.attr("src", project.album, true, true)+" alt=\"\"") + "\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-list-name\"\u003E" + (pug.escape(null == (pug_interp = project.name) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-list-tag-wrap\"\u003E";
 	// iterate project.tag
 	;(function(){
 	  var $$obj = project.tag;
 	  if ('number' == typeof $$obj.length) {
 	      for (var pug_index3 = 0, $$l = $$obj.length; pug_index3 < $$l; pug_index3++) {
 	        var tag = $$obj[pug_index3];
-	pug_html = pug_html + "\u003Cdiv id=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
+	pug_html = pug_html + "\u003Cdiv class=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
 	      }
 	  } else {
 	    var $$l = 0;
 	    for (var pug_index3 in $$obj) {
 	      $$l++;
 	      var tag = $$obj[pug_index3];
-	pug_html = pug_html + "\u003Cdiv id=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
+	pug_html = pug_html + "\u003Cdiv class=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
 	    }
 	  }
 	}).call(this);
 
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003Cdiv id=\"project-list-abstract\"\u003E" + (null == (pug_interp = project.abstract) ? "" : pug_interp) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-list-abstract\"\u003E" + (null == (pug_interp = project.abstract) ? "" : pug_interp) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 	      }
 	  } else {
 	    var $$l = 0;
 	    for (var pug_index2 in $$obj) {
 	      $$l++;
 	      var project = $$obj[pug_index2];
-	pug_html = pug_html + "\u003Cdiv" + (pug.attr("class", pug.classes(["mix",project.tag], [false,true]), false, true)+" id=\"project-list-item\"") + "\u003E \u003Cdiv id=\"project-list-album\"\u003E \u003Cimg" + (pug.attr("src", project.album, true, true)+" alt=\"\"") + "\u003E\u003C\u002Fdiv\u003E\u003Cdiv id=\"project-list-name\"\u003E" + (pug.escape(null == (pug_interp = project.name) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cdiv id=\"project-list-tag-wrap\"\u003E";
+	pug_html = pug_html + "\u003Cdiv" + (pug.attr("class", pug.classes(["project-list-item","mix",project.tag], [false,false,true]), false, true)+pug.attr("id", project.id, true, true)) + "\u003E \u003Cdiv class=\"project-list-album\"\u003E \u003Cimg" + (pug.attr("src", project.album, true, true)+" alt=\"\"") + "\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-list-name\"\u003E" + (pug.escape(null == (pug_interp = project.name) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-list-tag-wrap\"\u003E";
 	// iterate project.tag
 	;(function(){
 	  var $$obj = project.tag;
 	  if ('number' == typeof $$obj.length) {
 	      for (var pug_index4 = 0, $$l = $$obj.length; pug_index4 < $$l; pug_index4++) {
 	        var tag = $$obj[pug_index4];
-	pug_html = pug_html + "\u003Cdiv id=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
+	pug_html = pug_html + "\u003Cdiv class=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
 	      }
 	  } else {
 	    var $$l = 0;
 	    for (var pug_index4 in $$obj) {
 	      $$l++;
 	      var tag = $$obj[pug_index4];
-	pug_html = pug_html + "\u003Cdiv id=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
+	pug_html = pug_html + "\u003Cdiv class=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
 	    }
 	  }
 	}).call(this);
 
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003Cdiv id=\"project-list-abstract\"\u003E" + (null == (pug_interp = project.abstract) ? "" : pug_interp) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-list-abstract\"\u003E" + (null == (pug_interp = project.abstract) ? "" : pug_interp) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 	    }
 	  }
 	}).call(this);
 
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003Csection class=\"p3-content\" id=\"sec4\"\u003E\u003Cdiv id=\"meow-canvas\"\u003E\u003Cdiv id=\"meow\"\u003E(ฅ´ω`ฅ)\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"final\"\u003E\u003Cdiv class=\"content\" id=\"source\"\u003E\u003Cp\u003EThanks for scrolling all the way down here.\u003C\u002Fp\u003E\u003Cp\u003EMore about me???\u003C\u002Fp\u003E\u003Cp\u003EEmmmmmmmm...\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"content\" id=\"output-wrap\"\u003E\u003Cspan id=\"output\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"content\" id=\"rest\"\u003E\u003Cp\u003EI have a rarely updated \u003Ca class=\"highlight\" target=\"_blank\" href='https:\u002F\u002Faprilwang.me\u002Fblog'\u003Eblog\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\u003Cp\u003EOh, and a lovely cat named \u003Ca class=\"highlight\" id='cat'\u003EAce\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\u003Cp\u003EI am in a ❤ relationship with \u003Ca class=\"highlight\" target=\"_blank\" href='https:\u002F\u002Fimsun.net\u002F'\u003Ethis guy\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\u003Cdiv id=\"two\"\u003E\u003Csvg version=\"1.1\" id=\"April-SVG\" xmlns=\"http:\u002F\u002Fwww.w3.org\u002F2000\u002Fsvg\" xmlns:xlink=\"http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxlink\" x=\"0px\"\n     y=\"0px\" viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\"\u003E\n\u003Cg id=\"April\"\u003E\n    \u003Cg id=\"Body\"\u003E\n        \u003Cg\u003E\n            \u003Cpath fill=\"#FFEBD7\" d=\"M100.7,165c0,0,6.8,14.4,40.8,14.4s41.6-10,41.6-10l16.8-49.2l-60-52.4l-55.2,36.8L100.7,165z\"\u002F\u003E\n            \u003Cpath fill=\"none\" d=\"M90.2,163.2c0,0,8.5,18,51,18s52-12.5,52-12.5l21-61.5l-75-65.5l-69,46L90.2,163.2z\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M126.2,14.3\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M140.1,12.4\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFEBD7\" d=\"M210.8,276.8c-2.9-41.1-11.7-83.1-40-86c-8,2.2-13.9,2.5-17.7,0.5\n                c-3.8-2-5.6-6.4-5.3-13.5l-13.5,1.5c-0.3,4-0.9,7.9-2.8,10.5c-2,2.6-5.4,4-11.7,3c-24.7,0.8-34.6,26.5-28,80L210.8,276.8z\"\u002F\u003E\n            \u003Cpath fill=\"#998675\" d=\"M210.8,274.8c-2.9-41.1-11.7-83.1-40-86c-22.2,0-44.2,2-51,2c-24.7,0.8-34.6,26.5-28,80L210.8,274.8z\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M78.8,257.8c0,7,12,10.1,12,10.1l-20,8.1h20c0,0,16-18.1,6-26.1S78.8,250.8,78.8,257.8z\"\n                \u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M238,199.8c0,7-15.6,9.3-15.6,9.3l-14.3,68.7l-10.3,3.3c0,0,12.3-81.3,22.3-89.3\n                S238,192.8,238,199.8z\"\u002F\u003E\n            \u003Cpath fill=\"#66473A\" d=\"M140.6,33.2C61.5,33.7,52.3,162,57.9,169.7c9.9,13.7,47.1,32,53.9,29.7c-11.3-20-19.4-58.4-13.9-79.9\n                c19.6-14.6,25.7-31.2,23.5-37.3c2.2,0.4,3.4,6,2.1,24.5c22.7-0.3,29.9-10.7,29.9-25.6c0.3,16.2,3.7,26.4,11.7,27.7\n                c9.8,2.9,14.4,3.8,18.1,4.3c2.3,42.8-0.9,72.6-4.3,85.3c29.5,2.9,46.3-18.2,49.1-32C232.1,157.3,214.2,32.7,140.6,33.2z\"\u002F\u003E\n            \u003Cg display=\"none\"\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M203.8,262.8h-10c-1.6,0-3-1.4-3-3v-14c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v14\n                        C206.8,261.4,205.4,262.8,203.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M217.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C220.8,261.4,219.4,262.8,217.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M187.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C190.8,261.4,189.4,262.8,187.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M103.8,262.8h-10c-1.7,0-3-1.4-3-3v-14c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v14\n                        C106.8,261.4,105.4,262.8,103.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M119.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C122.8,261.4,121.4,262.8,119.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M89.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C92.8,261.4,91.4,262.8,89.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n            \u003C\u002Fg\u003E\n        \u003C\u002Fg\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"208.2\" cy=\"259.8\" rx=\"16.8\" ry=\"16.7\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cg id=\"LeftHand\"\u003E\n        \u003Cpolygon fill=\"#A54C4C\" points=\"85.6,269.6 97.2,269 85.2,201 75.6,201.7         \"\u002F\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"92.8\" cy=\"257.8\" rx=\"15.7\" ry=\"15.3\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cpath id=\"Book_1_\" fill=\"#66473A\" d=\"M244,281H56c-1.1,0-2-0.9-2-2v-13.6c0-1.1,0.9-2,2-2h188c1.1,0,2,0.9,2,2V279\n        C246,280.1,245.1,281,244,281z\"\u002F\u003E\n\u003C\u002Fg\u003E\n\u003C\u002Fsvg\u003E\u003C?xml version=\"1.0\" encoding=\"utf-8\"?\u003E\n\u003C!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --\u003E\n\u003Csvg version=\"1.1\" id=\"Trevor-SVG\" xmlns=\"http:\u002F\u002Fwww.w3.org\u002F2000\u002Fsvg\" xmlns:xlink=\"http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\"\u003E\n\u003Cg id=\"Trevor\"\u003E\n\t\u003Cg id=\"Body\"\u003E\n\t\t\u003Cpath fill=\"#998675\" d=\"M211.8,269.2c-2.9-41.1-10.8-81-42-84c-13.2-1.8-43.1-1.2-49,0c-24.2,5-34.6,26.5-28,80L211.8,269.2z\"\u002F\u003E\n\t\t\u003Cg\u003E\n\t\t\t\u003Cpath fill=\"#FFE4C5\" d=\"M142.3,173.8c18.3,0,47.8-2.1,59.9-16.3c16-19,11.7-53.4,13.1-73.7c2.5-35.5-75-49.5-75-49.5\n\t\t\t\ts-69.5,9-69,46c0.3,20.1,0.6,53.9,15,73.3C98.4,169.9,122.8,173.8,142.3,173.8z\"\u002F\u003E\n\t\t\t\u003Cpath fill=\"#66473A\" d=\"M72.8,111.6c0,0-4-33.8-1-47.3s28-26.2,53.5-37l-10.8,14c10.4-15.8,26.2-11.3,39.1-23l-4.9,16\n\t\t\t\tc3.9-8.7,13.7-1.1,26-5l-5,8c0,0,36.5,7.5,42,19s2.3,57.3,2.3,57.3l-11.3-33.3c-43.4-26.1-96.1-8.1-116.5-4\n\t\t\t\tC86.3,76.2,80.5,97.2,72.8,111.6z\"\u002F\u003E\n\t\t\u003C\u002Fg\u003E\n\t\u003C\u002Fg\u003E\n\t\u003Cpath id=\"Keyboard\" fill=\"#66473A\" d=\"M244,280H56c-1.1,0-2-0.9-2-2v-13.6c0-1.1,0.9-2,2-2h188c1.1,0,2,0.9,2,2V278\n\t\tC246,279.1,245.1,280,244,280z\"\u002F\u003E\n\t\u003Cg id=\"RightHand\"\u003E\n\t\t\u003Cpath id=\"Finger6\" fill=\"#FFD0A0\" d=\"M197.8,263.8L197.8,263.8c-4.4,0-8-3.6-8-8v-4c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v4\n\t\t\tC205.8,260.1,202.2,263.8,197.8,263.8z\"\u002F\u003E\n\t\t\u003Cpath id=\"Finger5\" fill=\"#FFD0A0\" d=\"M213.3,263.8L213.3,263.8c-4.4,0-8-3.6-8-8v0c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v0\n\t\t\tC221.3,260.1,217.7,263.8,213.3,263.8z\"\u002F\u003E\n\t\t\u003Cpath id=\"Finger4\" fill=\"#FFD0A0\" d=\"M181.8,263.8L181.8,263.8c-4.4,0-8-3.6-8-8v0c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v0\n\t\t\tC189.8,260.1,186.2,263.8,181.8,263.8z\"\u002F\u003E\n\t\u003C\u002Fg\u003E\n\t\u003Cg id=\"LeftHand\"\u003E\n\t\t\u003Cpath id=\"Finger3\" fill=\"#FFD0A0\" d=\"M103.3,263.8L103.3,263.8c-4.4,0-8-3.6-8-8v-4c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v4\n\t\t\tC111.3,260.1,107.7,263.8,103.3,263.8z\"\u002F\u003E\n\t\t\u003Cpath id=\"Finger2\" fill=\"#FFD0A0\" d=\"M119.3,263.8L119.3,263.8c-4.4,0-8-3.6-8-8v0c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v0\n\t\t\tC127.3,260.1,123.7,263.8,119.3,263.8z\"\u002F\u003E\n\t\t\u003Cpath id=\"Finger1\" fill=\"#FFD0A0\" d=\"M89.3,263.8L89.3,263.8c-4.4,0-8-3.6-8-8v0c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v0\n\t\t\tC97.3,260.1,93.7,263.8,89.3,263.8z\"\u002F\u003E\n\t\u003C\u002Fg\u003E\n\u003C\u002Fg\u003E\n\u003C\u002Fsvg\u003E\n\u003C\u002Fdiv\u003E\u003Cdiv class=\"friends\"\u003E\u003Cp\u003EOne last thing, meet my squad!\u003C\u002Fp\u003E\u003Cdiv class=\"friendlist\"\u003E\u003C\u002Fdiv\u003E";
+	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003Csection class=\"p3-content\" id=\"sec4\"\u003E\u003Cdiv id=\"meow-canvas\"\u003E\u003Cdiv id=\"meow\"\u003E(ฅ´ω`ฅ)\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"final\"\u003E\u003Cdiv class=\"content\" id=\"source\"\u003E\u003Cp\u003EThanks for scrolling all the way down here.\u003C\u002Fp\u003E\u003Cp\u003EMore about me???\u003C\u002Fp\u003E\u003Cp\u003EEmmmmmmmm...\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"content\" id=\"output-wrap\"\u003E\u003Cspan id=\"output\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"content\" id=\"rest\"\u003E\u003Cp\u003EI have a rarely updated \u003Ca class=\"highlight\" target=\"_blank\" href='https:\u002F\u002Faprilwang.me\u002Fblog'\u003Eblog\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\u003Cp\u003EOh, and a lovely cat named \u003Ca class=\"highlight\" href='#\u002Ftest' id='cat'\u003EAce\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\u003Cp\u003EI am in a ❤ relationship with \u003Ca class=\"highlight\" target=\"_blank\" href='https:\u002F\u002Fimsun.net\u002F'\u003Ethis guy\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\u003Cdiv id=\"two\"\u003E\u003Csvg version=\"1.1\" id=\"April-SVG\" xmlns=\"http:\u002F\u002Fwww.w3.org\u002F2000\u002Fsvg\" xmlns:xlink=\"http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxlink\" x=\"0px\"\n     y=\"0px\" viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\"\u003E\n\u003Cg id=\"April\"\u003E\n    \u003Cg id=\"Body\"\u003E\n        \u003Cg\u003E\n            \u003Cpath fill=\"#FFEBD7\" d=\"M100.7,165c0,0,6.8,14.4,40.8,14.4s41.6-10,41.6-10l16.8-49.2l-60-52.4l-55.2,36.8L100.7,165z\"\u002F\u003E\n            \u003Cpath fill=\"none\" d=\"M90.2,163.2c0,0,8.5,18,51,18s52-12.5,52-12.5l21-61.5l-75-65.5l-69,46L90.2,163.2z\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M126.2,14.3\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M140.1,12.4\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFEBD7\" d=\"M210.8,276.8c-2.9-41.1-11.7-83.1-40-86c-8,2.2-13.9,2.5-17.7,0.5\n                c-3.8-2-5.6-6.4-5.3-13.5l-13.5,1.5c-0.3,4-0.9,7.9-2.8,10.5c-2,2.6-5.4,4-11.7,3c-24.7,0.8-34.6,26.5-28,80L210.8,276.8z\"\u002F\u003E\n            \u003Cpath fill=\"#998675\" d=\"M210.8,274.8c-2.9-41.1-11.7-83.1-40-86c-22.2,0-44.2,2-51,2c-24.7,0.8-34.6,26.5-28,80L210.8,274.8z\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M78.8,257.8c0,7,12,10.1,12,10.1l-20,8.1h20c0,0,16-18.1,6-26.1S78.8,250.8,78.8,257.8z\"\n                \u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M238,199.8c0,7-15.6,9.3-15.6,9.3l-14.3,68.7l-10.3,3.3c0,0,12.3-81.3,22.3-89.3\n                S238,192.8,238,199.8z\"\u002F\u003E\n            \u003Cpath fill=\"#66473A\" d=\"M140.6,33.2C61.5,33.7,52.3,162,57.9,169.7c9.9,13.7,47.1,32,53.9,29.7c-11.3-20-19.4-58.4-13.9-79.9\n                c19.6-14.6,25.7-31.2,23.5-37.3c2.2,0.4,3.4,6,2.1,24.5c22.7-0.3,29.9-10.7,29.9-25.6c0.3,16.2,3.7,26.4,11.7,27.7\n                c9.8,2.9,14.4,3.8,18.1,4.3c2.3,42.8-0.9,72.6-4.3,85.3c29.5,2.9,46.3-18.2,49.1-32C232.1,157.3,214.2,32.7,140.6,33.2z\"\u002F\u003E\n            \u003Cg display=\"none\"\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M203.8,262.8h-10c-1.6,0-3-1.4-3-3v-14c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v14\n                        C206.8,261.4,205.4,262.8,203.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M217.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C220.8,261.4,219.4,262.8,217.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M187.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C190.8,261.4,189.4,262.8,187.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M103.8,262.8h-10c-1.7,0-3-1.4-3-3v-14c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v14\n                        C106.8,261.4,105.4,262.8,103.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M119.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C122.8,261.4,121.4,262.8,119.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M89.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C92.8,261.4,91.4,262.8,89.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n            \u003C\u002Fg\u003E\n        \u003C\u002Fg\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"208.2\" cy=\"259.8\" rx=\"16.8\" ry=\"16.7\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cg id=\"LeftHand\"\u003E\n        \u003Cpolygon fill=\"#A54C4C\" points=\"85.6,269.6 97.2,269 85.2,201 75.6,201.7         \"\u002F\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"92.8\" cy=\"257.8\" rx=\"15.7\" ry=\"15.3\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cpath id=\"Book_1_\" fill=\"#66473A\" d=\"M244,281H56c-1.1,0-2-0.9-2-2v-13.6c0-1.1,0.9-2,2-2h188c1.1,0,2,0.9,2,2V279\n        C246,280.1,245.1,281,244,281z\"\u002F\u003E\n\u003C\u002Fg\u003E\n\u003C\u002Fsvg\u003E\u003C?xml version=\"1.0\" encoding=\"utf-8\"?\u003E\n\u003C!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --\u003E\n\u003Csvg version=\"1.1\" id=\"Trevor-SVG\" xmlns=\"http:\u002F\u002Fwww.w3.org\u002F2000\u002Fsvg\" xmlns:xlink=\"http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\"\u003E\n\u003Cg id=\"Trevor\"\u003E\n\t\u003Cg id=\"Body\"\u003E\n\t\t\u003Cpath fill=\"#998675\" d=\"M211.8,269.2c-2.9-41.1-10.8-81-42-84c-13.2-1.8-43.1-1.2-49,0c-24.2,5-34.6,26.5-28,80L211.8,269.2z\"\u002F\u003E\n\t\t\u003Cg\u003E\n\t\t\t\u003Cpath fill=\"#FFE4C5\" d=\"M142.3,173.8c18.3,0,47.8-2.1,59.9-16.3c16-19,11.7-53.4,13.1-73.7c2.5-35.5-75-49.5-75-49.5\n\t\t\t\ts-69.5,9-69,46c0.3,20.1,0.6,53.9,15,73.3C98.4,169.9,122.8,173.8,142.3,173.8z\"\u002F\u003E\n\t\t\t\u003Cpath fill=\"#66473A\" d=\"M72.8,111.6c0,0-4-33.8-1-47.3s28-26.2,53.5-37l-10.8,14c10.4-15.8,26.2-11.3,39.1-23l-4.9,16\n\t\t\t\tc3.9-8.7,13.7-1.1,26-5l-5,8c0,0,36.5,7.5,42,19s2.3,57.3,2.3,57.3l-11.3-33.3c-43.4-26.1-96.1-8.1-116.5-4\n\t\t\t\tC86.3,76.2,80.5,97.2,72.8,111.6z\"\u002F\u003E\n\t\t\u003C\u002Fg\u003E\n\t\u003C\u002Fg\u003E\n\t\u003Cpath id=\"Keyboard\" fill=\"#66473A\" d=\"M244,280H56c-1.1,0-2-0.9-2-2v-13.6c0-1.1,0.9-2,2-2h188c1.1,0,2,0.9,2,2V278\n\t\tC246,279.1,245.1,280,244,280z\"\u002F\u003E\n\t\u003Cg id=\"RightHand\"\u003E\n\t\t\u003Cpath id=\"Finger6\" fill=\"#FFD0A0\" d=\"M197.8,263.8L197.8,263.8c-4.4,0-8-3.6-8-8v-4c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v4\n\t\t\tC205.8,260.1,202.2,263.8,197.8,263.8z\"\u002F\u003E\n\t\t\u003Cpath id=\"Finger5\" fill=\"#FFD0A0\" d=\"M213.3,263.8L213.3,263.8c-4.4,0-8-3.6-8-8v0c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v0\n\t\t\tC221.3,260.1,217.7,263.8,213.3,263.8z\"\u002F\u003E\n\t\t\u003Cpath id=\"Finger4\" fill=\"#FFD0A0\" d=\"M181.8,263.8L181.8,263.8c-4.4,0-8-3.6-8-8v0c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v0\n\t\t\tC189.8,260.1,186.2,263.8,181.8,263.8z\"\u002F\u003E\n\t\u003C\u002Fg\u003E\n\t\u003Cg id=\"LeftHand\"\u003E\n\t\t\u003Cpath id=\"Finger3\" fill=\"#FFD0A0\" d=\"M103.3,263.8L103.3,263.8c-4.4,0-8-3.6-8-8v-4c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v4\n\t\t\tC111.3,260.1,107.7,263.8,103.3,263.8z\"\u002F\u003E\n\t\t\u003Cpath id=\"Finger2\" fill=\"#FFD0A0\" d=\"M119.3,263.8L119.3,263.8c-4.4,0-8-3.6-8-8v0c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v0\n\t\t\tC127.3,260.1,123.7,263.8,119.3,263.8z\"\u002F\u003E\n\t\t\u003Cpath id=\"Finger1\" fill=\"#FFD0A0\" d=\"M89.3,263.8L89.3,263.8c-4.4,0-8-3.6-8-8v0c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v0\n\t\t\tC97.3,260.1,93.7,263.8,89.3,263.8z\"\u002F\u003E\n\t\u003C\u002Fg\u003E\n\u003C\u002Fg\u003E\n\u003C\u002Fsvg\u003E\n\u003C\u002Fdiv\u003E\u003Cdiv class=\"friends\"\u003E\u003Cp\u003EOne last thing, meet my squad!\u003C\u002Fp\u003E\u003Cdiv class=\"friendlist\"\u003E\u003C\u002Fdiv\u003E";
 	// iterate data.content[2].friends
 	;(function(){
 	  var $$obj = data.content[2].friends;
@@ -1262,7 +1306,7 @@
 /* 9 */
 /***/ (function(module, exports) {
 
-	module.exports = {"name":"April","title":"APRIL WANG","subtitle":"I study human computer interaction.","character":"./assets/april.svg","menu":["ABOUT","PROJECT","MORE","CONTACT"],"content":[{"name":"April Yi Wang","education":"MSc in HCI","affiliation":"Simon Fraser University","location":"TASC-8201","meat":[{"h":"About Me","p":"Hi, I'm <strong>April Wang</strong>, aka <strong>王奕</strong>. I am a <strong>thesis-based MSc student</strong> in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>, advised by <a href='http://hci.cs.sfu.ca/' target='_blank'>Dr.Chilana</a>. My research interests focus on <strong>using HCI techniques to lower the learning barriers for people without professional knowledge in a particular subject</strong>. <br><br> Before starting my journey in HCI research, I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China. With a major in <strong>Digital Media and Network Technology</strong>, I received interdisciplinary training in multimedia processing, game engineering and human interface design. In addition, I have previously worked in <strong>Intel</strong> and <strong>Alibaba</strong> as a <strong>User Experience Design Intern</strong>, and <strong>NetEase Games</strong> as a <strong>Junior Software Developer</strong>."},{"h":"Publications","p":"<strong>PACM-CSCW 2017</strong>: Vermette, L., Dembla, S., Wang, A., McGrenere, J., & Chilana, P. 2017. Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications. Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW) [to appear]."},{"h":"Conference Posters","p":"<strong>ICER 2017</strong>: Wang, A., & Chilana, P. 2017. Investigating Learning Strategies of Conversational Programmers. ACM Conference on International Computing Education Research (ICER), Tacoma, WA, August 2017 [conference poster]."},{"h":"Teaching Experience","p":"CMPT363 User Interface Design &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Teaching Assistant &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spring 2017"}],"mail":"<a href='mailto:hi@aprilwang.me'>hi@aprilwang.me</a>","link":"Download CV"},{"projecttag":{"uxd":"#UX","d":"#Design","p":"#Programming","cg":"#Computer Graphics","g":"#Game"},"project":[{"name":"IoT Services Orchestration Layer","tag":["uxd","d"],"abstract":"Designing the user interface of a block-based programming solution for developing IoT applications.","album":"../assets/IoT-album.jpg"},{"name":"Real-time Rendering of Subsurface Scattering of Translucent Material","tag":["cg","p"],"abstract":"Implementing real-time SSS rendering techniques on human skin.","album":"../assets/SSS-album.jpg"},{"name":"Wind Simulation in MMORPG","tag":["cg","p"],"abstract":"Improving the wind simulation system in <em>Tianyu Revelation Online.</em>","album":"../assets/wind-album.jpg"},{"name":"VR Game - Galaxy Destroyer","tag":["g","p","d"],"abstract":"A VR shooting game made with Unity3D. Available on Google Play.","album":"../assets/gd-album.jpg"},{"name":"Heuristic Evaluation of a Social Sharing Shopping Website","tag":["uxd","d"],"abstract":"Identifying usability problems to enhance user engagement in AiTaobao.","album":"../assets/aitaobao-album.jpg"},{"name":"Exploring Interactive Design Methods to Support an Organized Social Group","tag":["uxd","d"],"abstract":"Applying interactve design methods to study users and their context of use.","album":"../assets/pe-album.jpg"},{"name":"Designing the User Interface of Campus Information Retrival Systems","tag":["uxd","d"],"abstract":"Designing the user interface for campus information retrival mobile applications.","album":"../assets/isee-album.jpg"},{"name":"Animation and Graphic Design","tag":["d"],"abstract":"Selected digital design projects I have done in the past (e.g., flat animation, 3D animation, Logo design, illustrations).","album":"../assets/art-album.jpg"}]},{"h":"03 MORE","friends":{"Leo":"http://hi.leeleo.me/","Richard":"https://blog.hlyue.com/","Qusic":"https://qusic.me/","Robert":"https://blog.robotshell.org/","Senorsen":"https://www.senorsen.com/","XXJ":"https://itsxcy.net/"}}]}
+	module.exports = {"name":"April","title":"APRIL WANG","subtitle":"I study human computer interaction.","character":"./assets/april.svg","menu":["ABOUT","PROJECT","MORE","CONTACT"],"content":[{"name":"April Yi Wang","education":"MSc in HCI","affiliation":"Simon Fraser University","location":"TASC-8201","meat":[{"h":"About Me","p":"Hi, I'm <strong>April</strong>, aka <strong>王奕</strong>. I am a <strong>thesis-based MSc student</strong> in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>, advised by <a href='http://hci.cs.sfu.ca/' target='_blank'>Dr.Chilana</a>. My research interests focus on <strong>using HCI techniques to lower the learning barriers for people without professional knowledge in a particular subject</strong>. <br><br> Before starting my journey in HCI research, I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China. With a major in <strong>Digital Media and Network Technology</strong>, I received interdisciplinary training in multimedia processing, game engineering and human interface design. In addition, I have previously worked in <strong>Intel</strong> and <strong>Alibaba</strong> as a <strong>User Experience Design Intern</strong>, and <strong>NetEase Games</strong> as a <strong>Junior Software Developer</strong>."},{"h":"Publications","p":"<strong>PACM-CSCW 2017</strong>: Vermette, L., Dembla, S., Wang, A., McGrenere, J., & Chilana, P. 2017. Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications. Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW) [to appear]."},{"h":"Conference Posters","p":"<strong>ICER 2017</strong>: Wang, A., & Chilana, P. 2017. Investigating Learning Strategies of Conversational Programmers. ACM Conference on International Computing Education Research (ICER), Tacoma, WA, August 2017 [conference poster]."},{"h":"Teaching Experience","p":"CMPT363 User Interface Design &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Teaching Assistant &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spring 2017"}],"mail":"<a href='mailto:hi@aprilwang.me'>hi@aprilwang.me</a>","link":"Download CV"},{"projecttag":{"uxd":"#UX","d":"#Design","p":"#Programming","cg":"#Computer Graphics","g":"#Game"},"project":[{"id":"id0","name":"IoT Services Orchestration Layer","tag":["uxd","d"],"abstract":"Designing the user interface of a block-based programming solution for developing IoT applications.","album":"../assets/IoT-album.jpg","content":"UNDER CONSTRUCTION"},{"id":"id1","name":"Real-time Rendering of Subsurface Scattering of Translucent Material","tag":["cg","p"],"abstract":"Implementing real-time SSS rendering techniques on human skin.","album":"../assets/SSS-album.jpg"},{"id":"id2","name":"Wind Simulation in MMORPG","tag":["cg","p"],"abstract":"Improving the wind simulation system in <em>Tianyu Revelation Online.</em>","album":"../assets/wind-album.jpg"},{"id":"id3","name":"VR Game - Galaxy Destroyer","tag":["g","p","d"],"abstract":"A VR shooting game made with Unity3D. Available on Google Play.","album":"../assets/gd-album.jpg"},{"id":"id4","name":"Heuristic Evaluation of a Social Sharing Shopping Website","tag":["uxd","d"],"abstract":"Identifying usability problems to enhance user engagement in AiTaobao.","album":"../assets/aitaobao-album.jpg"},{"id":"id5","name":"Exploring Interactive Design Methods to Support an Organized Social Group","tag":["uxd","d"],"abstract":"Applying interactve design methods to study users and their context of use.","album":"../assets/pe-album.jpg"},{"id":"id6","name":"Designing the User Interface of Campus Information Retrival Systems","tag":["uxd","d"],"abstract":"Designing the user interface for campus information retrival mobile applications.","album":"../assets/isee-album.jpg"},{"id":"id7","name":"Animation and Graphic Design","tag":["d"],"abstract":"Selected digital design projects I have done in the past (e.g., flat animation, 3D animation, Logo design, illustrations).","album":"../assets/art-album.jpg"}]},{"h":"03 MORE","friends":{"Leo":"http://hi.leeleo.me/","Richard":"https://blog.hlyue.com/","Qusic":"https://qusic.me/","Robert":"https://blog.robotshell.org/","Senorsen":"https://www.senorsen.com/","XXJ":"https://itsxcy.net/"}}]}
 
 /***/ }),
 /* 10 */
@@ -11933,6 +11977,32 @@
 	    mixitup.NAME = 'mixitup';
 	    mixitup.CORE_VERSION = '3.2.1';
 	})(window);
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	module.exports = function Router() {
+	  this.routes = {};
+	  this.curUrl = '';
+	  this.route = function (path, callback) {
+	    this.routes[path] = callback || function () {};
+	  };
+	  this.refresh = function () {
+	    var str = location.hash.slice(1) || '/';
+	    if (str.search('\\?') != -1) {
+	      this.path = str.slice(0, str.search('\\?'));
+	      this.param = str.slice(str.search('\\?') + 1);
+	      this.routes[this.path](this.param);
+	    } else this.routes[str]();
+	  };
+	  this.init = function () {
+	    window.addEventListener('load', this.refresh.bind(this), false);
+	    window.addEventListener('hashchange', this.refresh.bind(this), false);
+	  };
+	};
 
 /***/ })
 /******/ ]);

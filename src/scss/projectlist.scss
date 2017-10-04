@@ -4,7 +4,7 @@
   margin:auto;
 }
 
-#project-big-title {
+.project-big-title {
     font-family: lato, sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -12,7 +12,7 @@
     padding-top: 20px;
     padding-bottom: 10px;
 }
-#project-list {
+.project-list {
   font-family: lato, sans-serif;
   font-size: 15px;
   cursor:default;
@@ -21,6 +21,60 @@
   width: 80%;
   margin: auto;
   margin-top: 20px;
+}
+
+.project-detail {
+  height: 100%;
+  width: 100%;
+  background-color:$primary-lightgray;
+  top: 0;
+  left: 100%;
+  position:fixed;  
+  transition: all .5s ease-in;
+  z-index: 1;
+  text-align: center;
+}
+
+.project-detail.show{
+  left: 0px;
+}
+
+.project-detail-title{
+  font-family: passion-one, sans-serif;
+  font-size: 30px; 
+  color:$primary-highlight;
+  margin:auto; 
+}
+
+.project-detail-content{
+  font-family: passion-one, sans-serif;
+  font-size: 100px; 
+  color:$primary-highlight;
+  margin:auto;
+  margin-top: 10%;
+}
+
+.pusher-container{
+  margin-left: 0;
+  transition: all .5s ease-in;
+}
+
+.pusher-container.hide{
+  margin-right: 100%;
+}
+
+.project-detail-close{
+  transition: all 1s ease;
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.project-detail-close:hover{
+  transform: rotate(90deg)
 }
 
 #but {
@@ -53,7 +107,7 @@ input{
   display: none;
 }
 
-#project-list-item {
+.project-list-item {
   width: 22%;
   padding-bottom: 5px;
   transition: background-color 2s ease;
@@ -65,24 +119,24 @@ input{
 }
 
 
-#project-list-album img{
+.project-list-album img{
   width:100%;
   border-radius:8px 8px 0px 0px;
 }
 
-#project-list-name {
+.project-list-name {
   font-size: 12px;
   padding: 5px;
   font-weight: bolder;
   padding-bottom: 0px;
 }
 
-#project-list-tag-wrap {
+.project-list-tag-wrap {
   padding: 5px;
   padding-top: 0px;
 }
 
-#project-list-tag {
+.project-list-tag {
   color: $primary-highlight;
   display: inline;
   font-size: 10px;
@@ -91,7 +145,7 @@ input{
   margin-right: 5px;
 }
 
-#project-list-abstract {
+.project-list-abstract {
   color: $primary-lightdark;
   font-size: 12px;
   padding: 5px;

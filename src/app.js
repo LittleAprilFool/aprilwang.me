@@ -5,6 +5,7 @@ var onScroll = false;
 const pageMin = 0;
 const pageMax = 3;
 var typed = false;
+var projectOpen = false;
 
 function openNav() {
   var toggle= document.querySelector('.container')
@@ -25,7 +26,7 @@ function typingEnd() {
   }, 500)
 }
 
-function scrollTo(id) {
+export function scrollTo(id) {
   if((id<pageMin)|(id >pageMax))
     return;
   var nextSection = document.querySelector('#sec'+id)
@@ -55,10 +56,15 @@ function resetOnScroll() {
 }
 
 function scrollFunc(e) {
+  if (projectOpen)
+  return
   e = e || window.event;
   if(!onScroll) {
+    var delta = page-Math.sign(e.wheelDelta)
+    if((delta < pageMin)||(delta > pageMax)) 
+    return
     onScroll = true;
-    scrollTo(page - Math.sign(e.wheelDelta));
+    location.hash='/page?id'+delta;
     setTimeout(resetOnScroll,1000);
   }
   if (e.preventDefault) e.preventDefault();
@@ -74,25 +80,38 @@ function drawCat(){
   setTimeout(function(){meow.style.color = "white"}, 500);
 }
 
+export function closeProject() {
+  if(!projectOpen) return
+  projectOpen = false
+  document.querySelector('.project-detail').classList.remove('show')
+  location.hash ='/page?id2'
+}
+
 export function addListeners() {
-  // document.querySelector('.toggle-label').addEventListener('click', openNav)
-  // document.querySelector('.pusher-container').addEventListener('click', closeNav
-  window.onload = function(){
-    setTimeout(function(){
-      scrollTo(0)
-    }, 200)
-  }
-  // document.onreadystatechange = function () {
-  // if (document.readyState == "interactive") {
-  //   scrollTo(0);
+  // window.onload = function(){
+  //   setTimeout(function(){
+  //     scrollTo(0)
+  //   }, 200)
   // }
-  document.querySelector('#enter').addEventListener('click', function(){scrollTo(1)})
-  document.querySelector('#nav0').addEventListener('click', function(){scrollTo(0)})
-  document.querySelector('#nav1').addEventListener('click', function(){scrollTo(1)})
-  document.querySelector('#nav2').addEventListener('click', function(){scrollTo(2)})
-  document.querySelector('#nav3').addEventListener('click', function(){scrollTo(3)})
-  document.querySelector('#cat').addEventListener('click', function(){drawCat()});
+  document.querySelector('#enter').addEventListener('click', function(){location.hash='/page?id1'})
+  document.querySelector('#nav0').addEventListener('click', function(){location.hash='/page?id0'})
+  document.querySelector('#nav1').addEventListener('click', function(){location.hash='/page?id1'})
+  document.querySelector('#nav2').addEventListener('click', function(){location.hash='/page?id2'})
+  document.querySelector('#nav3').addEventListener('click', function(){location.hash='/page?id3'})
+  document.querySelector('#cat').addEventListener('click', function(){location.hash='/page?id4'});
+  document.querySelector('.project-detail-close').addEventListener('click', function(){closeProject()})
+  var projectItem = document.querySelectorAll('.project-list-item')
+  projectItem.forEach(function(element) {
+    element.addEventListener('click', function(){location.hash = "/project?" + this.id})
+  }, this);
   document.addEventListener('onmousewheel',scrollFunc, false);
   // document.addEventListener('DOMContentLoaded', function(){document.documentElement.scrollTop=0}, false);
   window.onmousewheel = document.onmousewheel = scrollFunc;
+}
+
+export function loadProject(id) {
+  var detail = document.querySelector('.project-detail')
+  if(!projectOpen)
+    detail.classList.add('show')
+    projectOpen = true;
 }

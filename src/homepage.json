@@ -13,7 +13,7 @@
             "meat": [
                 {
                     "h": "About Me",
-                    "p": "Hi, I'm <strong>April Wang</strong>, aka <strong>王奕</strong>. I am a <strong>thesis-based MSc student</strong> in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>, advised by <a href='http://hci.cs.sfu.ca/' target='_blank'>Dr.Chilana</a>. My research interests focus on <strong>using HCI techniques to lower the learning barriers for people without professional knowledge in a particular subject</strong>. <br><br> Before starting my journey in HCI research, I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China. With a major in <strong>Digital Media and Network Technology</strong>, I received interdisciplinary training in multimedia processing, game engineering and human interface design. In addition, I have previously worked in <strong>Intel</strong> and <strong>Alibaba</strong> as a <strong>User Experience Design Intern</strong>, and <strong>NetEase Games</strong> as a <strong>Junior Software Developer</strong>."
+                    "p": "Hi, I'm <strong>April</strong>, aka <strong>王奕</strong>. I am a <strong>thesis-based MSc student</strong> in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>, advised by <a href='http://hci.cs.sfu.ca/' target='_blank'>Dr.Chilana</a>. My research interests focus on <strong>using HCI techniques to lower the learning barriers for people without professional knowledge in a particular subject</strong>. <br><br> Before starting my journey in HCI research, I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China. With a major in <strong>Digital Media and Network Technology</strong>, I received interdisciplinary training in multimedia processing, game engineering and human interface design. In addition, I have previously worked in <strong>Intel</strong> and <strong>Alibaba</strong> as a <strong>User Experience Design Intern</strong>, and <strong>NetEase Games</strong> as a <strong>Junior Software Developer</strong>."
                 },
                 {
                     "h": "Publications",
@@ -35,48 +35,57 @@
             "projecttag": {"uxd":"#UX","d":"#Design", "p":"#Programming", "cg":"#Computer Graphics", "g":"#Game"},
             "project": [
                 {
+                    "id": "id0",
                     "name": "IoT Services Orchestration Layer",
                     "tag": ["uxd", "d"],
                     "abstract": "Designing the user interface of a block-based programming solution for developing IoT applications.",
-                    "album": "../assets/IoT-album.jpg"
+                    "album": "../assets/IoT-album.jpg",
+                    "content": "UNDER CONSTRUCTION"
                 },
                 {
+                    "id": "id1",
                     "name": "Real-time Rendering of Subsurface Scattering of Translucent Material",
                     "tag": ["cg","p"],
                     "abstract": "Implementing real-time SSS rendering techniques on human skin.",
                     "album": "../assets/SSS-album.jpg"
                 },
                 {
+                    "id":"id2",
                     "name": "Wind Simulation in MMORPG",
                     "tag": ["cg", "p"],
                     "abstract": "Improving the wind simulation system in <em>Tianyu Revelation Online.</em>",
                     "album": "../assets/wind-album.jpg"
                 },
                 {
+                    "id":"id3",
                     "name": "VR Game - Galaxy Destroyer",
                     "tag": ["g", "p", "d"],
                     "abstract": "A VR shooting game made with Unity3D. Available on Google Play.",
                     "album": "../assets/gd-album.jpg"
                 },
                 {
+                    "id":"id4",
                     "name": "Heuristic Evaluation of a Social Sharing Shopping Website",
                     "tag": ["uxd", "d"],
                     "abstract": "Identifying usability problems to enhance user engagement in AiTaobao.",
                     "album": "../assets/aitaobao-album.jpg"
                 },
                 {
+                    "id":"id5",
                     "name": "Exploring Interactive Design Methods to Support an Organized Social Group",
                     "tag": ["uxd","d"],
                     "abstract": "Applying interactve design methods to study users and their context of use.",
                     "album": "../assets/pe-album.jpg"
                 },
                 {
+                    "id":"id6",
                     "name": "Designing the User Interface of Campus Information Retrival Systems",
                     "tag": ["uxd", "d"],
                     "abstract": "Designing the user interface for campus information retrival mobile applications.",
                     "album": "../assets/isee-album.jpg"
                 },
                 {
+                    "id":"id7",
                     "name": "Animation and Graphic Design",
                     "tag": ["d"],
                     "abstract": "Selected digital design projects I have done in the past (e.g., flat animation, 3D animation, Logo design, illustrations).",
