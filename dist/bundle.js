@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "843fb8bc645d11cf83fe"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9827e1a9d9364ac4b5d3"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -621,24 +621,26 @@
 	var R = new _router2.default();
 	var html = (0, _homepage2.default)({ data: _homepage4.default });
 	document.querySelector("#app").innerHTML = html;
-	(0, _app.addListeners)();
-	R.init();
-	var mixer = (0, _mixitup2.default)('.container');
+	setTimeout(function () {
+	  (0, _app.addListeners)();
+	  R.init();
+	  var mixer = (0, _mixitup2.default)('.container');
 
-	R.route('/', function (id) {
-	  console.log("scroll to Page " + id);
-	  console.log("home!!");
-	  (0, _app.closeProject)();
-	});
+	  R.route('/', function (id) {
+	    console.log("scroll to Page " + id);
+	    console.log("home!!");
+	    (0, _app.closeProject)();
+	  });
 
-	R.route('/page', function (id) {
-	  (0, _app.scrollTo)(id.slice(2));
-	  (0, _app.closeProject)();
-	});
+	  R.route('/page', function (id) {
+	    (0, _app.scrollTo)(id.slice(2));
+	    (0, _app.closeProject)();
+	  });
 
-	R.route('/project', function (id) {
-	  (0, _app.loadProject)(id);
-	});
+	  R.route('/project', function (id) {
+	    (0, _app.loadProject)(id);
+	  });
+	}, 500);
 
 /***/ }),
 /* 4 */
