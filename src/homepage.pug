@@ -12,34 +12,31 @@ div.container
         div.project-detail-close <i class="fa fa-times" aria-hidden="true"></i>
         div.project-detail-title #{data.content[1].project[0].name}
         div.project-detail-content !{data.content[1].project[0].content}
-    nav.list
-        ul.dot
-            li#nav0.current <i class="fa fa-circle"></i>
-            li#nav1 <i class="fa fa-circle"></i>
-            li#nav2 <i class="fa fa-circle"></i>
-            li#nav3 <i class="fa fa-circle"></i>
+    //- nav.list
+    //-     ul.dot
+    //-         li#nav0.current <i class="fa fa-circle"></i>
+    //-         li#nav1 <i class="fa fa-circle"></i>
+    //-         li#nav2 <i class="fa fa-circle"></i>
+    //-         li#nav3 <i class="fa fa-circle"></i>
+    div.personal-container
+        div.personal
+            div#avadiv
+                img(src="../assets/avatar.jpg", id="avatar")
+            p.name #{data.content[0].name}
+            p.edu #{data.content[0].education}
+            p.affli #{data.content[0].affiliation}      
+
+        div.menu
+            ul.nav
+                li#nav1 ABOUT
+                li#nav2 PUBLICATION
+                li#nav3 PROJECT
+                li#nav4 CV
+                li#nav5 MORE
+
     div.pusher-container
         div.pusher
-            section.p0-content#sec0
-                div
-                    include ../assets/april.svg
-                h1#title #{data.title}
-                h2#subtitle #{data.subtitle}
-                h2#enter ENTER
             section.p1-content#sec1
-                div#left
-                    div#avadiv
-                        img(src="../assets/avatar2.jpg", id="avatar")
-                    p.t1 #{data.content[0].name}
-                    p.p1 #{data.content[0].education}
-                    p.p1 #{data.content[0].affiliation}
-                    div#detail
-                        //- <a href="mailto:hi@aprilwang.me"><i class="fa fa-envelope-o"></i></a>
-                        //- <a href="https://twitter.com/AprilWang95"><i class="fa fa-twitter"></i></a> <br>
-                        //- <i class="fa fa-location-arrow"></i> #{data.content[0].location}<br>
-                        //- <i class="fa fa-download"></i> !{data.content[0].link}
-                        p ayw7 at sfu dot ca
-                        p Download CV
                 div#right
                     each val in data.content[0].meat
                         p.t2 #{val.h}
@@ -64,29 +61,29 @@ div.container
                                 each tag in project.tag
                                     div.project-list-tag #{data.content[1].projecttag[tag]}
                             div.project-list-abstract !{project.abstract}
-            section.p3-content#sec4
-                div#meow-canvas
-                    div#meow (ฅ´ω`ฅ)
-                div.final
-                    div#source.content
-                        p Thanks for scrolling all the way down here.
-                        p More about me???
-                        p Emmmmmmmm...
-                    div#output-wrap.content
-                        span#output
-                    div#rest.content
-                        p I have a rarely updated <a class="highlight" target="_blank" href='https://aprilwang.me/blog'>blog</a>.
-                        p Oh, and a lovely cat named <a class="highlight" href='#/test' id='cat'>Ace</a>.
-                        p I am in a ❤ relationship with <a class="highlight" target="_blank" href='https://imsun.net/'>this guy</a>.
-                        div#two
-                                include ../assets/april.svg
-                                include ../assets/trevor.svg
-                        div.friends
-                            p One last thing, meet my squad!
-                            div.friendlist
-                            each link, friend in data.content[2].friends
-                                a(href=link target="_blank" class="friend") #{friend}
-            footer#sec3 
-                h1#small © April Y. Wang 2017
+            //- section.p3-content#sec4
+            //-     div#meow-canvas
+            //-         div#meow (ฅ´ω`ฅ)
+            //-     div.final
+            //-         div#source.content
+            //-             p Thanks for scrolling all the way down here.
+            //-             p More about me???
+            //-             p Emmmmmmmm...
+            //-         div#output-wrap.content
+            //-             span#output
+            //-         div#rest.content
+            //-             p I have a rarely updated <a class="highlight" target="_blank" href='https://aprilwang.me/blog'>blog</a>.
+            //-             p Oh, and a lovely cat named <a class="highlight" href='#/test' id='cat'>Ace</a>.
+            //-             //- p I am in a ❤ relationship with <a class="highlight" target="_blank" href='https://imsun.net/'>this guy</a>.
+            //-             div#two
+            //-                     include ../assets/april.svg
+            //-                     //- include ../assets/trevor.svg
+            //-             //- div.friends
+            //-             //-     p One last thing, meet my squad!
+            //-             //-     div.friendlist
+            //-             //-     each link, friend in data.content[2].friends
+            //-             //-         a(href=link target="_blank" class="friend") #{friend}
+    //- footer#sec3 
+    //-     h1#small © April Y. Wang 2017
             //- section.p4-content#sec4
             //-     h1 00000
