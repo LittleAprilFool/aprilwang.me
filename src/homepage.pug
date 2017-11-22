@@ -1,89 +1,115 @@
 div.container
-    //- label.toggle-label
-    //-     span.toggle-icon
-    //- nav.drawer
-    //-     ul.nav
-    //-         li#nav1 ABOUT
-    //-         li#nav2 PROJECT
-    //-         li#nav3 MORE
-    //-         li#nav4 CONTACT
-
-    div.project-detail
-        div.project-detail-close <i class="fa fa-times" aria-hidden="true"></i>
-        div.project-detail-title #{data.content[1].project[0].name}
-        div.project-detail-content !{data.content[1].project[0].content}
-    //- nav.list
-    //-     ul.dot
-    //-         li#nav0.current <i class="fa fa-circle"></i>
-    //-         li#nav1 <i class="fa fa-circle"></i>
-    //-         li#nav2 <i class="fa fa-circle"></i>
-    //-         li#nav3 <i class="fa fa-circle"></i>
-    div.personal-container
-        div.personal
-            div#avadiv
-                img(src="../assets/avatar.jpg", id="avatar")
-            p.name #{data.content[0].name}
-            p.edu #{data.content[0].education}
-            p.affli #{data.content[0].affiliation}      
-
-        div.menu
-            ul.nav
-                li#nav1 ABOUT
-                li#nav2 PUBLICATION
-                li#nav3 PROJECT
-                li#nav4 CV
-                li#nav5 MORE
+    div.menu
+        ul.nav
+            li#nav1 
+                a(href='#/home') HOME
+            li#nav2
+                a(href='#/publication') PUBLICATION
+            li#nav3
+                a(href='#/project') PROJECT
+            li#nav4 
+                a(target='_blank' href='/assets/cv-general.pdf') CV
+            li#nav5 
+                a(href='#/more') MORE
 
     div.pusher-container
+        div.personal-container.hide
+            div.personal
+                .info
+                    div#avadiv
+                        img(src="../assets/avatar.jpg", id="avatar")
+                    p.name #{data.content[0].name}
+                    p.edu #{data.content[0].education}
+                    p.affli #{data.content[0].affiliation}   
+                .icons
+                    a(href='mailto:ayw7@sfu.ca')
+                        <i class="fa fa-envelope-o"></i>
+                    a(target="_blank" href='https://twitter.com/AprilWang95')
+                        <i class="fa fa-twitter"></i>
+                    a(target="_blank" href='https://github.com/LittleAprilFool')
+                        <i class="fa fa-github"></i>
         div.pusher
-            section.p1-content#sec1
-                div#right
-                    each val in data.content[0].meat
-                        p.t2 #{val.h}
-                        p.text !{val.p}
-            section.p2-content#sec2
-                div.project-big-title Selected Project
+            section.right.home.hide
+                p.title !{data.content[0].meat[0].h}
+                p.text !{data.content[0].meat[0].p}
+                p.title !{data.content[0].meat[1].h}
+                .newslist
+                    each news in data.content[0].meat[1].p
+                        .newsitem
+                            p.date !{news.date}
+                            p.news !{news.news}
+            section.right.publication.hide
+                each item in data.content[1].content
+                    p.title !{item.title}
+                    each one in item.item
+                        p.text !{one}
+            section.project.hide
                 div#filter-button
                         label(for="idall")
                             input(type="radio" id="idall" checked="checked" name="xx")    
                             div#but(data-filter="all") All
-                        each tag,index in data.content[1].projecttag
+                        each tag,index in data.content[2].projecttag
                             label(for='id'+index)
                                 input(type="radio" name="xx" id='id'+index)
                                 div#but(data-filter='.'+index) #{tag}
                 div.project-list.container
-                    each project in data.content[1].project
+                    each project in data.content[2].project
                         div.project-list-item.mix(class=project.tag id=project.id) 
                             div.project-list-album 
                                 img(src=project.album, alt="")
                             div.project-list-name #{project.name}
                             div.project-list-tag-wrap
                                 each tag in project.tag
-                                    div.project-list-tag #{data.content[1].projecttag[tag]}
+                                    div.project-list-tag #{data.content[2].projecttag[tag]}
                             div.project-list-abstract !{project.abstract}
-            //- section.p3-content#sec4
-            //-     div#meow-canvas
-            //-         div#meow (ฅ´ω`ฅ)
-            //-     div.final
-            //-         div#source.content
-            //-             p Thanks for scrolling all the way down here.
-            //-             p More about me???
-            //-             p Emmmmmmmm...
-            //-         div#output-wrap.content
-            //-             span#output
-            //-         div#rest.content
-            //-             p I have a rarely updated <a class="highlight" target="_blank" href='https://aprilwang.me/blog'>blog</a>.
-            //-             p Oh, and a lovely cat named <a class="highlight" href='#/test' id='cat'>Ace</a>.
-            //-             //- p I am in a ❤ relationship with <a class="highlight" target="_blank" href='https://imsun.net/'>this guy</a>.
-            //-             div#two
-            //-                     include ../assets/april.svg
-            //-                     //- include ../assets/trevor.svg
-            //-             //- div.friends
-            //-             //-     p One last thing, meet my squad!
-            //-             //-     div.friendlist
-            //-             //-     each link, friend in data.content[2].friends
-            //-             //-         a(href=link target="_blank" class="friend") #{friend}
-    //- footer#sec3 
-    //-     h1#small © April Y. Wang 2017
+            section.project-detail.hide
+                each project, index in data.content[2].project
+                    .project-detail-item(class=project.id)
+                        .project-detail-bar
+                            <i class="fa fa-angle-left"></i>
+                            .project-detail-list list
+                        .project-detail-title !{project.name}
+                        .project-detail-content !{project.html}
+            section.more
+                div#two
+                    include ../assets/april.svg
+                p Say Hi~~~ <i class="fa fa-heart"></i>
+                
+                p Let me tell you more about myself
+
+                p I have a rarely updated <a class="highlight" target="_blank" href='https://aprilwang.me/blog'>blog</a>
+                
+                p Oh, and a lovely cat named Ace
+                
+                div.single-image
+                    img(src="./assets/ace.jpg", alt="")
+
+                p I was fascinated in baking, but not any more...
+                .bakery
+                    img(src="./assets/cake1.jpg")
+                    img(src="./assets/cake3.jpg")
+                    img(src="./assets/cake4.jpg")  
+
+                p I play table tennis since I was 8 years old
+                p But still in the intermediate level <i class="fa fa-meh-o"></i> 
+                
+                p I love traveling 
+                p  <i class="fa fa-plane"></i> <i class="fa fa-plane"></i> <i class="fa fa-plane"></i>
+
+                iframe(src="http://arcg.is/2mVfJp1" height="600" width="1000", frameborder="0")
+                
+                div.friends
+                    p Now that you have scrolled all the way down here (●′ω`●)
+                    p One last thing, meet my squad!
+                    div.friendlist
+                        each link, friend in data.content[3].friends
+                            a(href=link target="_blank" class="friend") #{friend}
+                      
+                        //- p I am in a ❤ relationship with <a class="highlight" target="_blank" href='https://imsun.net/'>this guy</a>.
+                        
+                                //- include ../assets/trevor.svg
+                        //- 
+    footer.footer
+        h1#small © April Y. Wang 2017
             //- section.p4-content#sec4
             //-     h1 00000

@@ -1,9 +1,7 @@
-@import 'typing';
 @import 'variable';
 @import 'character';
-@import 'meow';
 
-#sec3 {
+.more {
   margin:auto;
   text-align: center;
   font-family: passion-one, sans-serif;
@@ -43,12 +41,17 @@
   font-size: 15px;
 }
 
+.more p {
+  font-weight: 400;
+  margin-top: 20px;
+}
+
 #cat:hover {
   cursor: pointer;
 }
 
 #two{
-  display:inline;
+  margin-top: 80px;
 }
 
 #Trevor-SVG{
@@ -56,6 +59,7 @@
 }
 
 #two > #April-SVG{
+  margin-top: 60px;
   height: 100px;
 }
 
@@ -67,4 +71,37 @@
 #rest {
   opacity: 0;
   transition: opacity 2s ease;
+}
+
+.single-image{
+  margin: auto;
+  margin-top: 20px;
+  border: 10px solid $primary-lightgray;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.single-image img{
+  max-width: 150px;
+}
+
+.more iframe{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bakery img{
+  height: 150px;
+  border: 10px solid $primary-lightgray;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.bakery {
+  margin-top: 20px;
+}
+
+.friends {
+  margin-bottom: 50px;
 }

@@ -1,0 +1,23 @@
+@import 'personal';
+@import 'about';
+@import 'publication';
+@import 'projectlist';
+@import 'projectdetail';
+@import 'more';
+
+.container {
+  position: relative;
+  overflow: scroll;
+  min-height: 100%;
+}
+
+.pusher-container {
+  margin-top: 6%;
+  padding-bottom: 40px;
+  top: 0px;
+}
+
+.right {
+  margin-left: 450px;
+}
+

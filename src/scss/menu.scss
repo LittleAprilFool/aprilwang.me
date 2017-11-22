@@ -1,0 +1,37 @@
+@import 'variable';
+.menu{
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  height: 6%;
+  padding-top: 1%;
+  margin: auto;
+  background: white;
+  z-index: 1;
+}
+
+.sitetitle {
+  font-family: lato, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: $primary-highlight; 
+  display: inline;
+  padding-left: 12%;
+}
+
+.menu ul{
+  display: inline;
+  padding-left: 60%;
+}
+
+.menu li{
+  list-style-type: none;
+  display: inline;
+  margin-left: 20px;
+  padding-bottom: 3px;
+  font-size: 12px;
+}
+
+.menu li:hover{
+  border-bottom: 3px solid $primary-highlight;
+}
