@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9827e1a9d9364ac4b5d3"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9027d0856e2562896880"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -583,36 +583,35 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(3);
+	module.exports = __webpack_require__(2);
 
 
 /***/ }),
 /* 1 */,
-/* 2 */,
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _app = __webpack_require__(4);
+	var _app = __webpack_require__(3);
 
-	var _homepage = __webpack_require__(6);
+	var _homepage = __webpack_require__(4);
 
 	var _homepage2 = _interopRequireDefault(_homepage);
 
-	var _homepage3 = __webpack_require__(9);
+	var _homepage3 = __webpack_require__(7);
 
 	var _homepage4 = _interopRequireDefault(_homepage3);
 
-	var _common = __webpack_require__(10);
+	var _common = __webpack_require__(16);
 
 	var _common2 = _interopRequireDefault(_common);
 
-	var _mixitup = __webpack_require__(11);
+	var _mixitup = __webpack_require__(17);
 
 	var _mixitup2 = _interopRequireDefault(_mixitup);
 
-	var _router = __webpack_require__(12);
+	var _router = __webpack_require__(18);
 
 	var _router2 = _interopRequireDefault(_router);
 
@@ -627,323 +626,340 @@
 	  var mixer = (0, _mixitup2.default)('.container');
 
 	  R.route('/', function (id) {
-	    console.log("scroll to Page " + id);
 	    console.log("home!!");
-	    (0, _app.closeProject)();
-	  });
-
-	  R.route('/page', function (id) {
-	    (0, _app.scrollTo)(id.slice(2));
-	    (0, _app.closeProject)();
 	  });
 
 	  R.route('/project', function (id) {
 	    (0, _app.loadProject)(id);
 	  });
+
+	  R.route('/home', function (id) {
+	    (0, _app.loadHome)();
+	  });
+
+	  R.route('/publication', function (id) {
+	    (0, _app.loadPublication)();
+	  });
+
+	  R.route('/more', function (id) {
+	    (0, _app.loadMore)();
+	  });
 	}, 500);
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 3 */
+/***/ (function(module, exports) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.scrollTo = scrollTo;
-	exports.closeProject = closeProject;
-	exports.addListeners = addListeners;
+	exports.loadHome = loadHome;
+	exports.loadPublication = loadPublication;
+	exports.loadMore = loadMore;
 	exports.loadProject = loadProject;
+	exports.addListeners = addListeners;
+	//require('smoothscroll-polyfill').polyfill()
+	// import Typing from './typing.js';
+	// var page = 0;
+	// var onScroll = false;
+	// const pageMin = 0;
+	// const pageMax = 2;
+	// var typed = false;
+	// var projectOpen = false;
 
-	var _typing = __webpack_require__(5);
+	// function openNav() {
+	//   var toggle= document.querySelector('.container')
+	//   if(toggle.classList.contains('checked'))
+	//     toggle.classList.remove('checked')
+	//   else toggle.classList.add('checked')
+	// }
 
-	var _typing2 = _interopRequireDefault(_typing);
+	// function closeNav() {
+	//   var toggle = document.querySelector('.container')
+	//   if(toggle.classList.contains('checked'))
+	//     toggle.classList.remove('checked')
+	// }
+	// function typingEnd() {
+	//   setTimeout(function(){
+	//     var rest = document.querySelector('#rest');
+	//     rest.style.opacity = "1";
+	//   }, 500)
+	// }
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	// export function scrollTo(id) {
+	//   if((id<pageMin)|(id >pageMax))
+	//     return;
+	//   var nextSection = document.querySelector('#sec'+id)
+	//   nextSection.scrollIntoView({behavior:'smooth'})
+	//   var preDot = document.querySelector('.current')
+	//   if (preDot) preDot.classList.remove('current')
+	//   page = id;
+	//   console.log(page);
+	//   // console.log(document.documentElement.scrollTop);
+	//   var theDot = document.querySelector('#nav'+id)
+	//   theDot.classList.add('current')
+	//   // if(page == 3 && typed == false) {
+	//   //   var typing = new Typing({
+	//   //     source: document.getElementById('source'),
+	//   //     output: document.getElementById('output'),
+	//   //     delay: 60,
+	//   //     done: function() {typingEnd()}
+	//   //   })
+	//   //   typing.start();
+	//   //   typed = true;
+	//   // }
+	// //  closeNav()
+	// }
 
-	var page = 0; //require('smoothscroll-polyfill').polyfill()
+	// function resetOnScroll() {
+	//   onScroll = false;
+	// }
 
-	var onScroll = false;
-	var pageMin = 0;
-	var pageMax = 3;
-	var typed = false;
-	var projectOpen = false;
+	// function scrollFunc(e) {
+	//   if (projectOpen)
+	//   return
+	//   e = e || window.event;
+	//   if(!onScroll) {
+	//     var delta = page-Math.sign(e.wheelDelta)
+	//     if((delta < pageMin)||(delta > pageMax)) 
+	//     return
+	//     onScroll = true;
+	//     location.hash='/page?id'+delta;
+	//     setTimeout(resetOnScroll,1000);
+	//   }
+	//   if (e.preventDefault) e.preventDefault();
+	//     else e.returnValue = false;
+	// }
 
-	function openNav() {
-	  var toggle = document.querySelector('.container');
-	  if (toggle.classList.contains('checked')) toggle.classList.remove('checked');else toggle.classList.add('checked');
+
+	// function drawCat(){
+	//   var meow = document.querySelector("#meow");
+	//   meow.style.left = Math.floor(Math.random() * 100).toString() + '%';
+	//   meow.style.top = Math.floor(Math.random() * 100).toString() + '%';
+	//   meow.style.color = "#bfbfbf";
+	//   setTimeout(function(){meow.style.color = "white"}, 500);
+	// }
+
+	// export function closeProject() {
+	//   if(!projectOpen) return
+	//   projectOpen = false
+	//   document.querySelector('.project-detail').classList.remove('show')
+	//   location.hash ='/page?id2'
+	// }
+
+	// function route() {
+	//   console.log(location.hash)
+	//   if (location.hash == '#/home')
+	//     document.querySelector('.publication').classList.add('hide');
+	//   if (location.hash == '#/publication') {
+	//     console.log("hh")
+	//     document.querySelector('.home').classList.add('hide');
+	//   }
+
+	// }
+
+	// export function addListeners() {
+	//   window.addEventListener("hashchange", route, false);
+	// window.onload = function(){
+	//   setTimeout(function(){
+	//     scrollTo(0)
+	//   }, 200)
+	// }
+	// document.querySelector('#enter').addEventListener('click', function(){location.hash='/page?id1'})
+	// document.querySelector('#nav0').addEventListener('click', function(){location.hash='/page?id0'})
+	// document.querySelector('#nav1').addEventListener('click', function(){location.hash='/page?id1'})
+	// document.querySelector('#nav2').addEventListener('click', function(){location.hash='/page?id2'})
+	// document.querySelector('#nav3').addEventListener('click', function(){location.hash='/page?id3'})
+	// document.querySelector('#cat').addEventListener('click', function(){location.hash='/page?id4'});
+	// document.querySelector('.project-detail-close').addEventListener('click', function(){closeProject()})
+	// var projectItem = document.querySelectorAll('.project-list-item')
+	// projectItem.forEach(function(element) {
+	//   element.addEventListener('click', function(){location.hash = "/project?" + this.id})
+	// }, this);
+	// document.addEventListener('onmousewheel',scrollFunc, false);
+	// document.addEventListener('DOMContentLoaded', function(){document.documentElement.scrollTop=0}, false);
+	// window.onmousewheel = document.onmousewheel = scrollFunc;
+	// }
+
+	// export function loadProject(id) {
+	//   var detail = document.querySelector('.project-detail')
+	//   if(!projectOpen)
+	//     detail.classList.add('show')
+	//     projectOpen = true;
+	// }
+
+	function clean(dom) {
+	  if (dom.classList.contains('hide') == false) dom.classList.add('hide');
 	}
 
-	function closeNav() {
-	  var toggle = document.querySelector('.container');
-	  if (toggle.classList.contains('checked')) toggle.classList.remove('checked');
-	}
-	function typingEnd() {
-	  setTimeout(function () {
-	    var rest = document.querySelector('#rest');
-	    rest.style.opacity = "1";
-	  }, 500);
+	function cleanAll() {
+	  var sidebar = document.querySelector('.personal-container');
+	  var home = document.querySelector('.home');
+	  var publication = document.querySelector('.publication');
+	  var project = document.querySelector('.project');
+	  var projectDetail = document.querySelector('.project-detail');
+	  var more = document.querySelector('.more');
+	  // var footer = document.querySelector('.footer')
+	  clean(sidebar);
+	  clean(home);
+	  clean(publication);
+	  clean(project);
+	  clean(projectDetail);
+	  clean(more);
 	}
 
-	function scrollTo(id) {
-	  if (id < pageMin | id > pageMax) return;
-	  var nextSection = document.querySelector('#sec' + id);
-	  nextSection.scrollIntoView({ behavior: 'smooth' });
-	  var preDot = document.querySelector('.current');
-	  if (preDot) preDot.classList.remove('current');
-	  page = id;
-	  console.log(page);
-	  // console.log(document.documentElement.scrollTop);
-	  var theDot = document.querySelector('#nav' + id);
-	  theDot.classList.add('current');
-	  if (page == 3 && typed == false) {
-	    var typing = new _typing2.default({
-	      source: document.getElementById('source'),
-	      output: document.getElementById('output'),
-	      delay: 60,
-	      done: function done() {
-	        typingEnd();
-	      }
-	    });
-	    typing.start();
-	    typed = true;
+	function setVisible(dom) {
+	  dom.classList.remove('hide');
+	}
+
+	function setProjectVisible(id) {
+	  var projectDetailItem = document.querySelectorAll('.project-detail-item');
+	  projectDetailItem.forEach(function (element) {
+	    clean(element);
+	    if (element.classList.contains(id)) {
+	      element.classList.remove('hide');
+	    }
+	  });
+	}
+
+	function loadHome() {
+	  var sidebar = document.querySelector('.personal-container');
+	  var home = document.querySelector('.home');
+	  // var footer = document.querySelector('.footer')
+	  cleanAll();
+	  setVisible(sidebar);
+	  setVisible(home);
+	  // setVisible(footer)
+	}
+
+	function loadPublication() {
+	  var sidebar = document.querySelector('.personal-container');
+	  var publication = document.querySelector('.publication');
+	  cleanAll();
+	  setVisible(sidebar);
+	  setVisible(publication);
+	}
+
+	function loadMore() {
+	  var more = document.querySelector('.more');
+	  cleanAll();
+	  setVisible(more);
+	}
+
+	function loadProject(id) {
+	  var project = document.querySelector('.project');
+	  var projectDetail = document.querySelector('.project-detail');
+	  if (id) {
+	    cleanAll();
+	    setVisible(projectDetail);
+	    setProjectVisible(id);
+	  } else {
+	    cleanAll();
+	    setVisible(project);
 	  }
-	  //  closeNav()
-	}
-
-	function resetOnScroll() {
-	  onScroll = false;
-	}
-
-	function scrollFunc(e) {
-	  if (projectOpen) return;
-	  e = e || window.event;
-	  if (!onScroll) {
-	    var delta = page - Math.sign(e.wheelDelta);
-	    if (delta < pageMin || delta > pageMax) return;
-	    onScroll = true;
-	    location.hash = '/page?id' + delta;
-	    setTimeout(resetOnScroll, 1000);
-	  }
-	  if (e.preventDefault) e.preventDefault();else e.returnValue = false;
-	}
-
-	function drawCat() {
-	  var meow = document.querySelector("#meow");
-	  meow.style.left = Math.floor(Math.random() * 100).toString() + '%';
-	  meow.style.top = Math.floor(Math.random() * 100).toString() + '%';
-	  meow.style.color = "#bfbfbf";
-	  setTimeout(function () {
-	    meow.style.color = "white";
-	  }, 500);
-	}
-
-	function closeProject() {
-	  if (!projectOpen) return;
-	  projectOpen = false;
-	  document.querySelector('.project-detail').classList.remove('show');
-	  location.hash = '/page?id2';
 	}
 
 	function addListeners() {
-	  // window.onload = function(){
-	  //   setTimeout(function(){
-	  //     scrollTo(0)
-	  //   }, 200)
-	  // }
-	  document.querySelector('#enter').addEventListener('click', function () {
-	    location.hash = '/page?id1';
-	  });
-	  document.querySelector('#nav0').addEventListener('click', function () {
-	    location.hash = '/page?id0';
-	  });
-	  document.querySelector('#nav1').addEventListener('click', function () {
-	    location.hash = '/page?id1';
-	  });
-	  document.querySelector('#nav2').addEventListener('click', function () {
-	    location.hash = '/page?id2';
-	  });
-	  document.querySelector('#nav3').addEventListener('click', function () {
-	    location.hash = '/page?id3';
-	  });
-	  document.querySelector('#cat').addEventListener('click', function () {
-	    location.hash = '/page?id4';
-	  });
-	  document.querySelector('.project-detail-close').addEventListener('click', function () {
-	    closeProject();
-	  });
 	  var projectItem = document.querySelectorAll('.project-list-item');
 	  projectItem.forEach(function (element) {
 	    element.addEventListener('click', function () {
 	      location.hash = "/project?" + this.id;
 	    });
 	  }, this);
-	  document.addEventListener('onmousewheel', scrollFunc, false);
-	  // document.addEventListener('DOMContentLoaded', function(){document.documentElement.scrollTop=0}, false);
-	  window.onmousewheel = document.onmousewheel = scrollFunc;
-	}
-
-	function loadProject(id) {
-	  var detail = document.querySelector('.project-detail');
-	  if (!projectOpen) detail.classList.add('show');
-	  projectOpen = true;
+	  var projectReturnList = document.querySelectorAll('.project-detail-list');
+	  projectReturnList.forEach(function (element) {
+	    element.addEventListener('click', function () {
+	      location.hash = "/project";
+	    });
+	  });
 	}
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
+	var pug = __webpack_require__(5);
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-	;(function (root, factory) {
-	  if (( false ? 'undefined' : _typeof(exports)) === 'object') {
-	    module.exports = factory();
-	  } else if (true) {
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function ($) {
-	      return root.Typing = factory($);
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	  } else {
-	    root.Typing = factory();
-	  }
-	})(undefined, function () {
-	  function Typing(opts) {
-	    this.opts = opts || {};
-	    this.source = opts.source;
-	    this.output = opts.output;
-	    this.delay = opts.delay || 120;
-	    this.chain = {
-	      parent: null,
-	      dom: this.output,
-	      val: []
-	    };
-	    this._stop = true;
-
-	    if (!(typeof this.opts.done == 'function')) this.opts.done = function () {};
-	  }
-
-	  Typing.fn = Typing.prototype = {
-	    toArray: function toArray(eles) {
-	      var result = [];
-	      for (var i = 0; i < eles.length; i++) {
-	        result.push(eles[i]);
-	      }
-	      return result;
-	    },
-
-	    init: function init() {
-	      this.chain.val = this.convert(this.source, this.chain.val);
-	    },
-
-	    convert: function convert(dom, arr) {
-	      var that = this,
-	          children = this.toArray(dom.childNodes);
-
-	      for (var i = 0; i < children.length; i++) {
-	        var node = children[i];
-	        if (node.nodeType === 3) {
-	          arr = arr.concat(node.nodeValue.split(''));
-	        } else if (node.nodeType === 1) {
-	          var val = [];
-	          val = that.convert(node, val);
-	          arr.push({
-	            'dom': node,
-	            'val': val
-	          });
-	        }
-	      }
-
-	      return arr;
-	    },
-
-	    print: function print(dom, val, callback) {
-	      setTimeout(function () {
-	        dom.appendChild(document.createTextNode(val));
-	        callback();
-	      }, this.delay);
-	    },
-
-	    play: function play(ele) {
-	      if (this._stop) return;
-	      if (!ele) return;
-	      if (!ele.val.length) {
-	        if (ele.parent) this.play(ele.parent);else this.opts.done();
-	        return;
-	      }
-
-	      var curr = ele.val.shift();
-	      var that = this;
-
-	      if (typeof curr === 'string') {
-	        this.print(ele.dom, curr, function () {
-	          that.play(ele);
-	        });
-	      } else {
-	        var dom = document.createElement(curr.dom.nodeName);
-	        var attrs = that.toArray(curr.dom.attributes);
-	        for (var i = 0; i < attrs.length; i++) {
-	          var attr = attrs[i];
-	          dom.setAttribute(attr.name, attr.value);
-	        }
-	        ele.dom.appendChild(dom);
-	        curr.parent = ele;
-	        curr.dom = dom;
-	        this.play(curr.val.length ? curr : curr.parent);
-	      }
-	    },
-
-	    start: function start() {
-	      this._stop = false;
-	      this.init();
-	      this.play(this.chain);
-	    },
-
-	    pause: function pause() {
-	      this._stop = true;
-	    },
-
-	    resume: function resume() {
-	      this._stop = false;
-	      this.play(this.chain);
-	    }
-	  };
-
-	  Typing.version = '2.1';
-
-	  return Typing;
-	});
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var pug = __webpack_require__(7);
-
-	function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (data) {pug_html = pug_html + "\u003Cdiv class=\"container\"\u003E\u003Cdiv class=\"project-detail\"\u003E\u003Cdiv class=\"project-detail-close\"\u003E\u003Ci class=\"fa fa-times\" aria-hidden=\"true\"\u003E\u003C\u002Fi\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-detail-title\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].project[0].name) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-detail-content\"\u003E" + (null == (pug_interp = data.content[1].project[0].content) ? "" : pug_interp) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cnav class=\"list\"\u003E\u003Cul class=\"dot\"\u003E\u003Cli class=\"current\" id=\"nav0\"\u003E\u003Ci class=\"fa fa-circle\"\u003E\u003C\u002Fi\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav1\"\u003E\u003Ci class=\"fa fa-circle\"\u003E\u003C\u002Fi\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav2\"\u003E\u003Ci class=\"fa fa-circle\"\u003E\u003C\u002Fi\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav3\"\u003E\u003Ci class=\"fa fa-circle\"\u003E\u003C\u002Fi\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E\u003C\u002Fnav\u003E\u003Cdiv class=\"pusher-container\"\u003E\u003Cdiv class=\"pusher\"\u003E\u003Csection class=\"p0-content\" id=\"sec0\"\u003E\u003Cdiv\u003E\u003Csvg version=\"1.1\" id=\"April-SVG\" xmlns=\"http:\u002F\u002Fwww.w3.org\u002F2000\u002Fsvg\" xmlns:xlink=\"http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxlink\" x=\"0px\"\n     y=\"0px\" viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\"\u003E\n\u003Cg id=\"April\"\u003E\n    \u003Cg id=\"Body\"\u003E\n        \u003Cg\u003E\n            \u003Cpath fill=\"#FFEBD7\" d=\"M100.7,165c0,0,6.8,14.4,40.8,14.4s41.6-10,41.6-10l16.8-49.2l-60-52.4l-55.2,36.8L100.7,165z\"\u002F\u003E\n            \u003Cpath fill=\"none\" d=\"M90.2,163.2c0,0,8.5,18,51,18s52-12.5,52-12.5l21-61.5l-75-65.5l-69,46L90.2,163.2z\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M126.2,14.3\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M140.1,12.4\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFEBD7\" d=\"M210.8,276.8c-2.9-41.1-11.7-83.1-40-86c-8,2.2-13.9,2.5-17.7,0.5\n                c-3.8-2-5.6-6.4-5.3-13.5l-13.5,1.5c-0.3,4-0.9,7.9-2.8,10.5c-2,2.6-5.4,4-11.7,3c-24.7,0.8-34.6,26.5-28,80L210.8,276.8z\"\u002F\u003E\n            \u003Cpath fill=\"#998675\" d=\"M210.8,274.8c-2.9-41.1-11.7-83.1-40-86c-22.2,0-44.2,2-51,2c-24.7,0.8-34.6,26.5-28,80L210.8,274.8z\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M78.8,257.8c0,7,12,10.1,12,10.1l-20,8.1h20c0,0,16-18.1,6-26.1S78.8,250.8,78.8,257.8z\"\n                \u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M238,199.8c0,7-15.6,9.3-15.6,9.3l-14.3,68.7l-10.3,3.3c0,0,12.3-81.3,22.3-89.3\n                S238,192.8,238,199.8z\"\u002F\u003E\n            \u003Cpath fill=\"#66473A\" d=\"M140.6,33.2C61.5,33.7,52.3,162,57.9,169.7c9.9,13.7,47.1,32,53.9,29.7c-11.3-20-19.4-58.4-13.9-79.9\n                c19.6-14.6,25.7-31.2,23.5-37.3c2.2,0.4,3.4,6,2.1,24.5c22.7-0.3,29.9-10.7,29.9-25.6c0.3,16.2,3.7,26.4,11.7,27.7\n                c9.8,2.9,14.4,3.8,18.1,4.3c2.3,42.8-0.9,72.6-4.3,85.3c29.5,2.9,46.3-18.2,49.1-32C232.1,157.3,214.2,32.7,140.6,33.2z\"\u002F\u003E\n            \u003Cg display=\"none\"\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M203.8,262.8h-10c-1.6,0-3-1.4-3-3v-14c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v14\n                        C206.8,261.4,205.4,262.8,203.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M217.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C220.8,261.4,219.4,262.8,217.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M187.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C190.8,261.4,189.4,262.8,187.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M103.8,262.8h-10c-1.7,0-3-1.4-3-3v-14c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v14\n                        C106.8,261.4,105.4,262.8,103.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M119.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C122.8,261.4,121.4,262.8,119.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M89.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C92.8,261.4,91.4,262.8,89.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n            \u003C\u002Fg\u003E\n        \u003C\u002Fg\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"208.2\" cy=\"259.8\" rx=\"16.8\" ry=\"16.7\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cg id=\"LeftHand\"\u003E\n        \u003Cpolygon fill=\"#A54C4C\" points=\"85.6,269.6 97.2,269 85.2,201 75.6,201.7         \"\u002F\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"92.8\" cy=\"257.8\" rx=\"15.7\" ry=\"15.3\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cpath id=\"Book_1_\" fill=\"#66473A\" d=\"M244,281H56c-1.1,0-2-0.9-2-2v-13.6c0-1.1,0.9-2,2-2h188c1.1,0,2,0.9,2,2V279\n        C246,280.1,245.1,281,244,281z\"\u002F\u003E\n\u003C\u002Fg\u003E\n\u003C\u002Fsvg\u003E\u003C\u002Fdiv\u003E\u003Ch1 id=\"title\"\u003E" + (pug.escape(null == (pug_interp = data.title) ? "" : pug_interp)) + "\u003C\u002Fh1\u003E\u003Ch2 id=\"subtitle\"\u003E" + (pug.escape(null == (pug_interp = data.subtitle) ? "" : pug_interp)) + "\u003C\u002Fh2\u003E\u003Ch2 id=\"enter\"\u003EENTER\u003C\u002Fh2\u003E\u003C\u002Fsection\u003E\u003Csection class=\"p1-content\" id=\"sec1\"\u003E\u003Cdiv id=\"left\"\u003E\u003Cdiv id=\"avadiv\"\u003E\u003Cimg src=\"..\u002Fassets\u002Favatar2.jpg\" id=\"avatar\"\u003E\u003C\u002Fdiv\u003E\u003Cp class=\"t1\"\u003E" + (pug.escape(null == (pug_interp = data.content[0].name) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp class=\"p1\"\u003E" + (pug.escape(null == (pug_interp = data.content[0].education) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp class=\"p1\"\u003E" + (pug.escape(null == (pug_interp = data.content[0].affiliation) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cdiv id=\"detail\"\u003E\u003Cp\u003Eayw7 at sfu dot ca\u003C\u002Fp\u003E\u003Cp\u003EDownload CV\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv id=\"right\"\u003E";
-	// iterate data.content[0].meat
+	function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (data) {pug_html = pug_html + "\u003Cdiv class=\"container\"\u003E\u003Cdiv class=\"menu\"\u003E\u003Cul class=\"nav\"\u003E\u003Cli id=\"nav1\"\u003E \u003Ca href=\"#\u002Fhome\"\u003EHOME\u003C\u002Fa\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav2\"\u003E\u003Ca href=\"#\u002Fpublication\"\u003EPUBLICATION\u003C\u002Fa\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav3\"\u003E\u003Ca href=\"#\u002Fproject\"\u003EPROJECT\u003C\u002Fa\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav4\"\u003E \u003Ca target=\"_blank\" href=\"\u002Fassets\u002Fcv-general.pdf\"\u003ECV\u003C\u002Fa\u003E\u003C\u002Fli\u003E\u003Cli id=\"nav5\"\u003E \u003Ca href=\"#\u002Fmore\"\u003EMORE\u003C\u002Fa\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"pusher-container\"\u003E\u003Cdiv class=\"personal-container hide\"\u003E\u003Cdiv class=\"personal\"\u003E\u003Cdiv class=\"info\"\u003E\u003Cdiv id=\"avadiv\"\u003E\u003Cimg src=\"..\u002Fassets\u002Favatar.jpg\" id=\"avatar\"\u003E\u003C\u002Fdiv\u003E\u003Cp class=\"name\"\u003E" + (pug.escape(null == (pug_interp = data.content[0].name) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp class=\"edu\"\u003E" + (pug.escape(null == (pug_interp = data.content[0].education) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp class=\"affli\"\u003E" + (pug.escape(null == (pug_interp = data.content[0].affiliation) ? "" : pug_interp)) + "   \u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"icons\"\u003E\u003Ca href=\"mailto:ayw7@sfu.ca\"\u003E\u003Ci class=\"fa fa-envelope-o\"\u003E\u003C\u002Fi\u003E\u003C\u002Fa\u003E\u003Ca target=\"_blank\" href=\"https:\u002F\u002Ftwitter.com\u002FAprilWang95\"\u003E\u003Ci class=\"fa fa-twitter\"\u003E\u003C\u002Fi\u003E\u003C\u002Fa\u003E\u003Ca target=\"_blank\" href=\"https:\u002F\u002Fgithub.com\u002FLittleAprilFool\"\u003E\u003Ci class=\"fa fa-github\"\u003E\u003C\u002Fi\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"pusher\"\u003E\u003Csection class=\"right home hide\"\u003E\u003Cp class=\"title\"\u003E" + (null == (pug_interp = data.content[0].meat[0].h) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003Cp class=\"text\"\u003E" + (null == (pug_interp = data.content[0].meat[0].p) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003Cp class=\"title\"\u003E" + (null == (pug_interp = data.content[0].meat[1].h) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003Cdiv class=\"newslist\"\u003E";
+	// iterate data.content[0].meat[1].p
 	;(function(){
-	  var $$obj = data.content[0].meat;
+	  var $$obj = data.content[0].meat[1].p;
 	  if ('number' == typeof $$obj.length) {
 	      for (var pug_index0 = 0, $$l = $$obj.length; pug_index0 < $$l; pug_index0++) {
-	        var val = $$obj[pug_index0];
-	pug_html = pug_html + "\u003Cp class=\"t2\"\u003E" + (pug.escape(null == (pug_interp = val.h) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp class=\"text\"\u003E" + (null == (pug_interp = val.p) ? "" : pug_interp) + "\u003C\u002Fp\u003E";
+	        var news = $$obj[pug_index0];
+	pug_html = pug_html + "\u003Cdiv class=\"newsitem\"\u003E\u003Cp class=\"date\"\u003E" + (null == (pug_interp = news.date) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003Cp class=\"news\"\u003E" + (null == (pug_interp = news.news) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E";
 	      }
 	  } else {
 	    var $$l = 0;
 	    for (var pug_index0 in $$obj) {
 	      $$l++;
-	      var val = $$obj[pug_index0];
-	pug_html = pug_html + "\u003Cp class=\"t2\"\u003E" + (pug.escape(null == (pug_interp = val.h) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp class=\"text\"\u003E" + (null == (pug_interp = val.p) ? "" : pug_interp) + "\u003C\u002Fp\u003E";
+	      var news = $$obj[pug_index0];
+	pug_html = pug_html + "\u003Cdiv class=\"newsitem\"\u003E\u003Cp class=\"date\"\u003E" + (null == (pug_interp = news.date) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003Cp class=\"news\"\u003E" + (null == (pug_interp = news.news) ? "" : pug_interp) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E";
 	    }
 	  }
 	}).call(this);
 
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003Csection class=\"p2-content\" id=\"sec2\"\u003E\u003Cdiv class=\"project-big-title\"\u003ESelected Project\u003C\u002Fdiv\u003E\u003Cdiv id=\"filter-button\"\u003E\u003Clabel for=\"idall\"\u003E\u003Cinput type=\"radio\" id=\"idall\" checked=\"checked\" name=\"xx\"\u003E\u003Cdiv id=\"but\" data-filter=\"all\"\u003EAll\u003C\u002Fdiv\u003E\u003C\u002Flabel\u003E";
-	// iterate data.content[1].projecttag
+	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003Csection class=\"right publication hide\"\u003E";
+	// iterate data.content[1].content
 	;(function(){
-	  var $$obj = data.content[1].projecttag;
+	  var $$obj = data.content[1].content;
+	  if ('number' == typeof $$obj.length) {
+	      for (var pug_index1 = 0, $$l = $$obj.length; pug_index1 < $$l; pug_index1++) {
+	        var item = $$obj[pug_index1];
+	pug_html = pug_html + "\u003Cp class=\"title\"\u003E" + (null == (pug_interp = item.title) ? "" : pug_interp) + "\u003C\u002Fp\u003E";
+	// iterate item.item
+	;(function(){
+	  var $$obj = item.item;
+	  if ('number' == typeof $$obj.length) {
+	      for (var pug_index2 = 0, $$l = $$obj.length; pug_index2 < $$l; pug_index2++) {
+	        var one = $$obj[pug_index2];
+	pug_html = pug_html + "\u003Cp class=\"text\"\u003E" + (null == (pug_interp = one) ? "" : pug_interp) + "\u003C\u002Fp\u003E";
+	      }
+	  } else {
+	    var $$l = 0;
+	    for (var pug_index2 in $$obj) {
+	      $$l++;
+	      var one = $$obj[pug_index2];
+	pug_html = pug_html + "\u003Cp class=\"text\"\u003E" + (null == (pug_interp = one) ? "" : pug_interp) + "\u003C\u002Fp\u003E";
+	    }
+	  }
+	}).call(this);
+
+	      }
+	  } else {
+	    var $$l = 0;
+	    for (var pug_index1 in $$obj) {
+	      $$l++;
+	      var item = $$obj[pug_index1];
+	pug_html = pug_html + "\u003Cp class=\"title\"\u003E" + (null == (pug_interp = item.title) ? "" : pug_interp) + "\u003C\u002Fp\u003E";
+	// iterate item.item
+	;(function(){
+	  var $$obj = item.item;
+	  if ('number' == typeof $$obj.length) {
+	      for (var pug_index3 = 0, $$l = $$obj.length; pug_index3 < $$l; pug_index3++) {
+	        var one = $$obj[pug_index3];
+	pug_html = pug_html + "\u003Cp class=\"text\"\u003E" + (null == (pug_interp = one) ? "" : pug_interp) + "\u003C\u002Fp\u003E";
+	      }
+	  } else {
+	    var $$l = 0;
+	    for (var pug_index3 in $$obj) {
+	      $$l++;
+	      var one = $$obj[pug_index3];
+	pug_html = pug_html + "\u003Cp class=\"text\"\u003E" + (null == (pug_interp = one) ? "" : pug_interp) + "\u003C\u002Fp\u003E";
+	    }
+	  }
+	}).call(this);
+
+	    }
+	  }
+	}).call(this);
+
+	pug_html = pug_html + "\u003C\u002Fsection\u003E\u003Csection class=\"project hide\"\u003E\u003Cdiv id=\"filter-button\"\u003E\u003Clabel for=\"idall\"\u003E\u003Cinput type=\"radio\" id=\"idall\" checked=\"checked\" name=\"xx\"\u003E\u003Cdiv id=\"but\" data-filter=\"all\"\u003EAll\u003C\u002Fdiv\u003E\u003C\u002Flabel\u003E";
+	// iterate data.content[2].projecttag
+	;(function(){
+	  var $$obj = data.content[2].projecttag;
 	  if ('number' == typeof $$obj.length) {
 	      for (var index = 0, $$l = $$obj.length; index < $$l; index++) {
 	        var tag = $$obj[index];
@@ -960,27 +976,27 @@
 	}).call(this);
 
 	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-list container\"\u003E";
-	// iterate data.content[1].project
+	// iterate data.content[2].project
 	;(function(){
-	  var $$obj = data.content[1].project;
+	  var $$obj = data.content[2].project;
 	  if ('number' == typeof $$obj.length) {
-	      for (var pug_index2 = 0, $$l = $$obj.length; pug_index2 < $$l; pug_index2++) {
-	        var project = $$obj[pug_index2];
+	      for (var pug_index5 = 0, $$l = $$obj.length; pug_index5 < $$l; pug_index5++) {
+	        var project = $$obj[pug_index5];
 	pug_html = pug_html + "\u003Cdiv" + (pug.attr("class", pug.classes(["project-list-item","mix",project.tag], [false,false,true]), false, true)+pug.attr("id", project.id, true, true)) + "\u003E \u003Cdiv class=\"project-list-album\"\u003E \u003Cimg" + (pug.attr("src", project.album, true, true)+" alt=\"\"") + "\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-list-name\"\u003E" + (pug.escape(null == (pug_interp = project.name) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-list-tag-wrap\"\u003E";
 	// iterate project.tag
 	;(function(){
 	  var $$obj = project.tag;
 	  if ('number' == typeof $$obj.length) {
-	      for (var pug_index3 = 0, $$l = $$obj.length; pug_index3 < $$l; pug_index3++) {
-	        var tag = $$obj[pug_index3];
-	pug_html = pug_html + "\u003Cdiv class=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
+	      for (var pug_index6 = 0, $$l = $$obj.length; pug_index6 < $$l; pug_index6++) {
+	        var tag = $$obj[pug_index6];
+	pug_html = pug_html + "\u003Cdiv class=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[2].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
 	      }
 	  } else {
 	    var $$l = 0;
-	    for (var pug_index3 in $$obj) {
+	    for (var pug_index6 in $$obj) {
 	      $$l++;
-	      var tag = $$obj[pug_index3];
-	pug_html = pug_html + "\u003Cdiv class=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
+	      var tag = $$obj[pug_index6];
+	pug_html = pug_html + "\u003Cdiv class=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[2].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
 	    }
 	  }
 	}).call(this);
@@ -989,24 +1005,24 @@
 	      }
 	  } else {
 	    var $$l = 0;
-	    for (var pug_index2 in $$obj) {
+	    for (var pug_index5 in $$obj) {
 	      $$l++;
-	      var project = $$obj[pug_index2];
+	      var project = $$obj[pug_index5];
 	pug_html = pug_html + "\u003Cdiv" + (pug.attr("class", pug.classes(["project-list-item","mix",project.tag], [false,false,true]), false, true)+pug.attr("id", project.id, true, true)) + "\u003E \u003Cdiv class=\"project-list-album\"\u003E \u003Cimg" + (pug.attr("src", project.album, true, true)+" alt=\"\"") + "\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-list-name\"\u003E" + (pug.escape(null == (pug_interp = project.name) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-list-tag-wrap\"\u003E";
 	// iterate project.tag
 	;(function(){
 	  var $$obj = project.tag;
 	  if ('number' == typeof $$obj.length) {
-	      for (var pug_index4 = 0, $$l = $$obj.length; pug_index4 < $$l; pug_index4++) {
-	        var tag = $$obj[pug_index4];
-	pug_html = pug_html + "\u003Cdiv class=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
+	      for (var pug_index7 = 0, $$l = $$obj.length; pug_index7 < $$l; pug_index7++) {
+	        var tag = $$obj[pug_index7];
+	pug_html = pug_html + "\u003Cdiv class=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[2].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
 	      }
 	  } else {
 	    var $$l = 0;
-	    for (var pug_index4 in $$obj) {
+	    for (var pug_index7 in $$obj) {
 	      $$l++;
-	      var tag = $$obj[pug_index4];
-	pug_html = pug_html + "\u003Cdiv class=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[1].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
+	      var tag = $$obj[pug_index7];
+	pug_html = pug_html + "\u003Cdiv class=\"project-list-tag\"\u003E" + (pug.escape(null == (pug_interp = data.content[2].projecttag[tag]) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E";
 	    }
 	  }
 	}).call(this);
@@ -1016,10 +1032,29 @@
 	  }
 	}).call(this);
 
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003Csection class=\"p3-content\" id=\"sec4\"\u003E\u003Cdiv id=\"meow-canvas\"\u003E\u003Cdiv id=\"meow\"\u003E(ฅ´ω`ฅ)\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"final\"\u003E\u003Cdiv class=\"content\" id=\"source\"\u003E\u003Cp\u003EThanks for scrolling all the way down here.\u003C\u002Fp\u003E\u003Cp\u003EMore about me???\u003C\u002Fp\u003E\u003Cp\u003EEmmmmmmmm...\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"content\" id=\"output-wrap\"\u003E\u003Cspan id=\"output\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"content\" id=\"rest\"\u003E\u003Cp\u003EI have a rarely updated \u003Ca class=\"highlight\" target=\"_blank\" href='https:\u002F\u002Faprilwang.me\u002Fblog'\u003Eblog\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\u003Cp\u003EOh, and a lovely cat named \u003Ca class=\"highlight\" href='#\u002Ftest' id='cat'\u003EAce\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\u003Cp\u003EI am in a ❤ relationship with \u003Ca class=\"highlight\" target=\"_blank\" href='https:\u002F\u002Fimsun.net\u002F'\u003Ethis guy\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\u003Cdiv id=\"two\"\u003E\u003Csvg version=\"1.1\" id=\"April-SVG\" xmlns=\"http:\u002F\u002Fwww.w3.org\u002F2000\u002Fsvg\" xmlns:xlink=\"http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxlink\" x=\"0px\"\n     y=\"0px\" viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\"\u003E\n\u003Cg id=\"April\"\u003E\n    \u003Cg id=\"Body\"\u003E\n        \u003Cg\u003E\n            \u003Cpath fill=\"#FFEBD7\" d=\"M100.7,165c0,0,6.8,14.4,40.8,14.4s41.6-10,41.6-10l16.8-49.2l-60-52.4l-55.2,36.8L100.7,165z\"\u002F\u003E\n            \u003Cpath fill=\"none\" d=\"M90.2,163.2c0,0,8.5,18,51,18s52-12.5,52-12.5l21-61.5l-75-65.5l-69,46L90.2,163.2z\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M126.2,14.3\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M140.1,12.4\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFEBD7\" d=\"M210.8,276.8c-2.9-41.1-11.7-83.1-40-86c-8,2.2-13.9,2.5-17.7,0.5\n                c-3.8-2-5.6-6.4-5.3-13.5l-13.5,1.5c-0.3,4-0.9,7.9-2.8,10.5c-2,2.6-5.4,4-11.7,3c-24.7,0.8-34.6,26.5-28,80L210.8,276.8z\"\u002F\u003E\n            \u003Cpath fill=\"#998675\" d=\"M210.8,274.8c-2.9-41.1-11.7-83.1-40-86c-22.2,0-44.2,2-51,2c-24.7,0.8-34.6,26.5-28,80L210.8,274.8z\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M78.8,257.8c0,7,12,10.1,12,10.1l-20,8.1h20c0,0,16-18.1,6-26.1S78.8,250.8,78.8,257.8z\"\n                \u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M238,199.8c0,7-15.6,9.3-15.6,9.3l-14.3,68.7l-10.3,3.3c0,0,12.3-81.3,22.3-89.3\n                S238,192.8,238,199.8z\"\u002F\u003E\n            \u003Cpath fill=\"#66473A\" d=\"M140.6,33.2C61.5,33.7,52.3,162,57.9,169.7c9.9,13.7,47.1,32,53.9,29.7c-11.3-20-19.4-58.4-13.9-79.9\n                c19.6-14.6,25.7-31.2,23.5-37.3c2.2,0.4,3.4,6,2.1,24.5c22.7-0.3,29.9-10.7,29.9-25.6c0.3,16.2,3.7,26.4,11.7,27.7\n                c9.8,2.9,14.4,3.8,18.1,4.3c2.3,42.8-0.9,72.6-4.3,85.3c29.5,2.9,46.3-18.2,49.1-32C232.1,157.3,214.2,32.7,140.6,33.2z\"\u002F\u003E\n            \u003Cg display=\"none\"\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M203.8,262.8h-10c-1.6,0-3-1.4-3-3v-14c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v14\n                        C206.8,261.4,205.4,262.8,203.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M217.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C220.8,261.4,219.4,262.8,217.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M187.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C190.8,261.4,189.4,262.8,187.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M103.8,262.8h-10c-1.7,0-3-1.4-3-3v-14c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v14\n                        C106.8,261.4,105.4,262.8,103.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M119.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C122.8,261.4,121.4,262.8,119.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M89.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C92.8,261.4,91.4,262.8,89.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n            \u003C\u002Fg\u003E\n        \u003C\u002Fg\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"208.2\" cy=\"259.8\" rx=\"16.8\" ry=\"16.7\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cg id=\"LeftHand\"\u003E\n        \u003Cpolygon fill=\"#A54C4C\" points=\"85.6,269.6 97.2,269 85.2,201 75.6,201.7         \"\u002F\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"92.8\" cy=\"257.8\" rx=\"15.7\" ry=\"15.3\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cpath id=\"Book_1_\" fill=\"#66473A\" d=\"M244,281H56c-1.1,0-2-0.9-2-2v-13.6c0-1.1,0.9-2,2-2h188c1.1,0,2,0.9,2,2V279\n        C246,280.1,245.1,281,244,281z\"\u002F\u003E\n\u003C\u002Fg\u003E\n\u003C\u002Fsvg\u003E\u003C?xml version=\"1.0\" encoding=\"utf-8\"?\u003E\n\u003C!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --\u003E\n\u003Csvg version=\"1.1\" id=\"Trevor-SVG\" xmlns=\"http:\u002F\u002Fwww.w3.org\u002F2000\u002Fsvg\" xmlns:xlink=\"http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\"\u003E\n\u003Cg id=\"Trevor\"\u003E\n\t\u003Cg id=\"Body\"\u003E\n\t\t\u003Cpath fill=\"#998675\" d=\"M211.8,269.2c-2.9-41.1-10.8-81-42-84c-13.2-1.8-43.1-1.2-49,0c-24.2,5-34.6,26.5-28,80L211.8,269.2z\"\u002F\u003E\n\t\t\u003Cg\u003E\n\t\t\t\u003Cpath fill=\"#FFE4C5\" d=\"M142.3,173.8c18.3,0,47.8-2.1,59.9-16.3c16-19,11.7-53.4,13.1-73.7c2.5-35.5-75-49.5-75-49.5\n\t\t\t\ts-69.5,9-69,46c0.3,20.1,0.6,53.9,15,73.3C98.4,169.9,122.8,173.8,142.3,173.8z\"\u002F\u003E\n\t\t\t\u003Cpath fill=\"#66473A\" d=\"M72.8,111.6c0,0-4-33.8-1-47.3s28-26.2,53.5-37l-10.8,14c10.4-15.8,26.2-11.3,39.1-23l-4.9,16\n\t\t\t\tc3.9-8.7,13.7-1.1,26-5l-5,8c0,0,36.5,7.5,42,19s2.3,57.3,2.3,57.3l-11.3-33.3c-43.4-26.1-96.1-8.1-116.5-4\n\t\t\t\tC86.3,76.2,80.5,97.2,72.8,111.6z\"\u002F\u003E\n\t\t\u003C\u002Fg\u003E\n\t\u003C\u002Fg\u003E\n\t\u003Cpath id=\"Keyboard\" fill=\"#66473A\" d=\"M244,280H56c-1.1,0-2-0.9-2-2v-13.6c0-1.1,0.9-2,2-2h188c1.1,0,2,0.9,2,2V278\n\t\tC246,279.1,245.1,280,244,280z\"\u002F\u003E\n\t\u003Cg id=\"RightHand\"\u003E\n\t\t\u003Cpath id=\"Finger6\" fill=\"#FFD0A0\" d=\"M197.8,263.8L197.8,263.8c-4.4,0-8-3.6-8-8v-4c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v4\n\t\t\tC205.8,260.1,202.2,263.8,197.8,263.8z\"\u002F\u003E\n\t\t\u003Cpath id=\"Finger5\" fill=\"#FFD0A0\" d=\"M213.3,263.8L213.3,263.8c-4.4,0-8-3.6-8-8v0c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v0\n\t\t\tC221.3,260.1,217.7,263.8,213.3,263.8z\"\u002F\u003E\n\t\t\u003Cpath id=\"Finger4\" fill=\"#FFD0A0\" d=\"M181.8,263.8L181.8,263.8c-4.4,0-8-3.6-8-8v0c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v0\n\t\t\tC189.8,260.1,186.2,263.8,181.8,263.8z\"\u002F\u003E\n\t\u003C\u002Fg\u003E\n\t\u003Cg id=\"LeftHand\"\u003E\n\t\t\u003Cpath id=\"Finger3\" fill=\"#FFD0A0\" d=\"M103.3,263.8L103.3,263.8c-4.4,0-8-3.6-8-8v-4c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v4\n\t\t\tC111.3,260.1,107.7,263.8,103.3,263.8z\"\u002F\u003E\n\t\t\u003Cpath id=\"Finger2\" fill=\"#FFD0A0\" d=\"M119.3,263.8L119.3,263.8c-4.4,0-8-3.6-8-8v0c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v0\n\t\t\tC127.3,260.1,123.7,263.8,119.3,263.8z\"\u002F\u003E\n\t\t\u003Cpath id=\"Finger1\" fill=\"#FFD0A0\" d=\"M89.3,263.8L89.3,263.8c-4.4,0-8-3.6-8-8v0c0-4.4,3.6-8,8-8h0c4.4,0,8,3.6,8,8v0\n\t\t\tC97.3,260.1,93.7,263.8,89.3,263.8z\"\u002F\u003E\n\t\u003C\u002Fg\u003E\n\u003C\u002Fg\u003E\n\u003C\u002Fsvg\u003E\n\u003C\u002Fdiv\u003E\u003Cdiv class=\"friends\"\u003E\u003Cp\u003EOne last thing, meet my squad!\u003C\u002Fp\u003E\u003Cdiv class=\"friendlist\"\u003E\u003C\u002Fdiv\u003E";
-	// iterate data.content[2].friends
+	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003Csection class=\"project-detail hide\"\u003E";
+	// iterate data.content[2].project
 	;(function(){
-	  var $$obj = data.content[2].friends;
+	  var $$obj = data.content[2].project;
+	  if ('number' == typeof $$obj.length) {
+	      for (var index = 0, $$l = $$obj.length; index < $$l; index++) {
+	        var project = $$obj[index];
+	pug_html = pug_html + "\u003Cdiv" + (pug.attr("class", pug.classes(["project-detail-item",project.id], [false,true]), false, true)) + "\u003E\u003Cdiv class=\"project-detail-bar\"\u003E\u003Ci class=\"fa fa-angle-left\"\u003E\u003C\u002Fi\u003E\u003Cdiv class=\"project-detail-list\"\u003Elist\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-detail-title\"\u003E" + (null == (pug_interp = project.name) ? "" : pug_interp) + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-detail-content\"\u003E" + (null == (pug_interp = project.html) ? "" : pug_interp) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+	      }
+	  } else {
+	    var $$l = 0;
+	    for (var index in $$obj) {
+	      $$l++;
+	      var project = $$obj[index];
+	pug_html = pug_html + "\u003Cdiv" + (pug.attr("class", pug.classes(["project-detail-item",project.id], [false,true]), false, true)) + "\u003E\u003Cdiv class=\"project-detail-bar\"\u003E\u003Ci class=\"fa fa-angle-left\"\u003E\u003C\u002Fi\u003E\u003Cdiv class=\"project-detail-list\"\u003Elist\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-detail-title\"\u003E" + (null == (pug_interp = project.name) ? "" : pug_interp) + "\u003C\u002Fdiv\u003E\u003Cdiv class=\"project-detail-content\"\u003E" + (null == (pug_interp = project.html) ? "" : pug_interp) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+	    }
+	  }
+	}).call(this);
+
+	pug_html = pug_html + "\u003C\u002Fsection\u003E\u003Csection class=\"more\"\u003E\u003Cdiv id=\"two\"\u003E\u003Csvg version=\"1.1\" id=\"April-SVG\" xmlns=\"http:\u002F\u002Fwww.w3.org\u002F2000\u002Fsvg\" xmlns:xlink=\"http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxlink\" x=\"0px\"\n     y=\"0px\" viewBox=\"0 0 300 300\" enable-background=\"new 0 0 300 300\" xml:space=\"preserve\"\u003E\n\u003Cg id=\"April\"\u003E\n    \u003Cg id=\"Body\"\u003E\n        \u003Cg\u003E\n            \u003Cpath fill=\"#FFEBD7\" d=\"M100.7,165c0,0,6.8,14.4,40.8,14.4s41.6-10,41.6-10l16.8-49.2l-60-52.4l-55.2,36.8L100.7,165z\"\u002F\u003E\n            \u003Cpath fill=\"none\" d=\"M90.2,163.2c0,0,8.5,18,51,18s52-12.5,52-12.5l21-61.5l-75-65.5l-69,46L90.2,163.2z\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M126.2,14.3\"\u002F\u003E\n            \u003Cpath fill=\"none\" stroke=\"#000000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\" d=\"\n                M140.1,12.4\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFEBD7\" d=\"M210.8,276.8c-2.9-41.1-11.7-83.1-40-86c-8,2.2-13.9,2.5-17.7,0.5\n                c-3.8-2-5.6-6.4-5.3-13.5l-13.5,1.5c-0.3,4-0.9,7.9-2.8,10.5c-2,2.6-5.4,4-11.7,3c-24.7,0.8-34.6,26.5-28,80L210.8,276.8z\"\u002F\u003E\n            \u003Cpath fill=\"#998675\" d=\"M210.8,274.8c-2.9-41.1-11.7-83.1-40-86c-22.2,0-44.2,2-51,2c-24.7,0.8-34.6,26.5-28,80L210.8,274.8z\"\u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M78.8,257.8c0,7,12,10.1,12,10.1l-20,8.1h20c0,0,16-18.1,6-26.1S78.8,250.8,78.8,257.8z\"\n                \u002F\u003E\n            \u003Cpath display=\"none\" fill=\"#FFD0A0\" d=\"M238,199.8c0,7-15.6,9.3-15.6,9.3l-14.3,68.7l-10.3,3.3c0,0,12.3-81.3,22.3-89.3\n                S238,192.8,238,199.8z\"\u002F\u003E\n            \u003Cpath fill=\"#66473A\" d=\"M140.6,33.2C61.5,33.7,52.3,162,57.9,169.7c9.9,13.7,47.1,32,53.9,29.7c-11.3-20-19.4-58.4-13.9-79.9\n                c19.6-14.6,25.7-31.2,23.5-37.3c2.2,0.4,3.4,6,2.1,24.5c22.7-0.3,29.9-10.7,29.9-25.6c0.3,16.2,3.7,26.4,11.7,27.7\n                c9.8,2.9,14.4,3.8,18.1,4.3c2.3,42.8-0.9,72.6-4.3,85.3c29.5,2.9,46.3-18.2,49.1-32C232.1,157.3,214.2,32.7,140.6,33.2z\"\u002F\u003E\n            \u003Cg display=\"none\"\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M203.8,262.8h-10c-1.6,0-3-1.4-3-3v-14c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v14\n                        C206.8,261.4,205.4,262.8,203.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M217.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C220.8,261.4,219.4,262.8,217.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M187.8,262.8h-10c-1.6,0-3-1.4-3-3v-10c0-1.6,1.4-3,3-3h10c1.6,0,3,1.4,3,3v10\n                        C190.8,261.4,189.4,262.8,187.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n                \u003Cg display=\"inline\"\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M103.8,262.8h-10c-1.7,0-3-1.4-3-3v-14c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v14\n                        C106.8,261.4,105.4,262.8,103.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M119.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C122.8,261.4,121.4,262.8,119.8,262.8z\"\u002F\u003E\n                    \u003Cpath fill=\"#FFD0A0\" d=\"M89.8,262.8h-10c-1.7,0-3-1.4-3-3v-10c0-1.6,1.3-3,3-3h10c1.7,0,3,1.4,3,3v10\n                        C92.8,261.4,91.4,262.8,89.8,262.8z\"\u002F\u003E\n                \u003C\u002Fg\u003E\n            \u003C\u002Fg\u003E\n        \u003C\u002Fg\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"208.2\" cy=\"259.8\" rx=\"16.8\" ry=\"16.7\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cg id=\"LeftHand\"\u003E\n        \u003Cpolygon fill=\"#A54C4C\" points=\"85.6,269.6 97.2,269 85.2,201 75.6,201.7         \"\u002F\u003E\n        \u003Cellipse fill=\"#FFD0A0\" cx=\"92.8\" cy=\"257.8\" rx=\"15.7\" ry=\"15.3\"\u002F\u003E\n    \u003C\u002Fg\u003E\n    \u003Cpath id=\"Book_1_\" fill=\"#66473A\" d=\"M244,281H56c-1.1,0-2-0.9-2-2v-13.6c0-1.1,0.9-2,2-2h188c1.1,0,2,0.9,2,2V279\n        C246,280.1,245.1,281,244,281z\"\u002F\u003E\n\u003C\u002Fg\u003E\n\u003C\u002Fsvg\u003E\u003C\u002Fdiv\u003E\u003Cp\u003ESay Hi~~~ \u003Ci class=\"fa fa-heart\"\u003E\u003C\u002Fi\u003E\u003C\u002Fp\u003E\u003Cp\u003ELet me tell you more about myself\u003C\u002Fp\u003E\u003Cp\u003EI have a rarely updated \u003Ca class=\"highlight\" target=\"_blank\" href='https:\u002F\u002Faprilwang.me\u002Fblog'\u003Eblog\u003C\u002Fa\u003E\u003C\u002Fp\u003E\u003Cp\u003EOh, and a lovely cat named Ace\u003C\u002Fp\u003E\u003Cdiv class=\"single-image\"\u003E\u003Cimg src=\".\u002Fassets\u002Face.jpg\" alt=\"\"\u003E\u003C\u002Fdiv\u003E\u003Cp\u003EI was fascinated in baking, but not any more...\u003C\u002Fp\u003E\u003Cdiv class=\"bakery\"\u003E\u003Cimg src=\".\u002Fassets\u002Fcake1.jpg\"\u003E\u003Cimg src=\".\u002Fassets\u002Fcake3.jpg\"\u003E\u003Cimg src=\".\u002Fassets\u002Fcake4.jpg\"\u003E\u003C\u002Fdiv\u003E\u003Cp\u003EI play table tennis since I was 8 years old\u003C\u002Fp\u003E\u003Cp\u003EBut still in the intermediate level \u003Ci class=\"fa fa-meh-o\"\u003E\u003C\u002Fi\u003E \u003C\u002Fp\u003E\u003Cp\u003EI love traveling \u003C\u002Fp\u003E\u003Cp\u003E \u003Ci class=\"fa fa-plane\"\u003E\u003C\u002Fi\u003E \u003Ci class=\"fa fa-plane\"\u003E\u003C\u002Fi\u003E \u003Ci class=\"fa fa-plane\"\u003E\u003C\u002Fi\u003E\u003C\u002Fp\u003E\u003Ciframe src=\"http:\u002F\u002Farcg.is\u002F2mVfJp1\" height=\"600\" width=\"1000\" frameborder=\"0\"\u003E\u003C\u002Fiframe\u003E\u003Cdiv class=\"friends\"\u003E\u003Cp\u003ENow that you have scrolled all the way down here (●′ω`●)\u003C\u002Fp\u003E\u003Cp\u003EOne last thing, meet my squad!\u003C\u002Fp\u003E\u003Cdiv class=\"friendlist\"\u003E";
+	// iterate data.content[3].friends
+	;(function(){
+	  var $$obj = data.content[3].friends;
 	  if ('number' == typeof $$obj.length) {
 	      for (var friend = 0, $$l = $$obj.length; friend < $$l; friend++) {
 	        var link = $$obj[friend];
@@ -1035,11 +1070,11 @@
 	  }
 	}).call(this);
 
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003Cfooter id=\"sec3\"\u003E \u003Ch1 id=\"small\"\u003E© April Y. Wang 2017\u003C\u002Fh1\u003E\u003C\u002Ffooter\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";}.call(this,"data" in locals_for_with?locals_for_with.data:typeof data!=="undefined"?data:undefined));;return pug_html;};
+	pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cfooter class=\"footer\"\u003E\u003Ch1 id=\"small\"\u003E© April Y. Wang 2017\u003C\u002Fh1\u003E\u003C\u002Ffooter\u003E\u003C\u002Fdiv\u003E";}.call(this,"data" in locals_for_with?locals_for_with.data:typeof data!=="undefined"?data:undefined));;return pug_html;};
 	module.exports = template;
 
 /***/ }),
-/* 7 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1272,7 +1307,7 @@
 	    throw err;
 	  }
 	  try {
-	    str = str || __webpack_require__(8).readFileSync(filename, 'utf8')
+	    str = str || __webpack_require__(6).readFileSync(filename, 'utf8')
 	  } catch (ex) {
 	    pug_rethrow(err, null, lineno)
 	  }
@@ -1299,25 +1334,128 @@
 
 
 /***/ }),
-/* 8 */
+/* 6 */
 /***/ (function(module, exports) {
 
 	/* (ignored) */
 
 /***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _id = __webpack_require__(8);
+
+	var _id2 = _interopRequireDefault(_id);
+
+	var _id3 = __webpack_require__(9);
+
+	var _id4 = _interopRequireDefault(_id3);
+
+	var _id5 = __webpack_require__(10);
+
+	var _id6 = _interopRequireDefault(_id5);
+
+	var _id7 = __webpack_require__(11);
+
+	var _id8 = _interopRequireDefault(_id7);
+
+	var _id9 = __webpack_require__(12);
+
+	var _id10 = _interopRequireDefault(_id9);
+
+	var _id11 = __webpack_require__(13);
+
+	var _id12 = _interopRequireDefault(_id11);
+
+	var _id13 = __webpack_require__(14);
+
+	var _id14 = _interopRequireDefault(_id13);
+
+	var _homepage = __webpack_require__(15);
+
+	var _homepage2 = _interopRequireDefault(_homepage);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	_homepage2.default.content[2].project[0].html = _id2.default;
+	// import id7 from '../assets/project-item/id7.html';
+	// import id8 from '../assets/project-item/id8.html';
+	// import id9 from '../assets/project-item/id9.html';
+
+	_homepage2.default.content[2].project[1].html = _id4.default;
+	_homepage2.default.content[2].project[2].html = _id6.default;
+	_homepage2.default.content[2].project[3].html = _id8.default;
+	_homepage2.default.content[2].project[4].html = _id10.default;
+	_homepage2.default.content[2].project[5].html = _id12.default;
+	_homepage2.default.content[2].project[6].html = _id14.default;
+	// homepage.content[2].project[7].html = id7;
+	// homepage.content[2].project[8].html = id8;
+	// homepage.content[2].project[9].html = id9;
+
+	exports.default = _homepage2.default;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+	module.exports = "<h2>Research Question</h2>\n<p>1. How do conversational programmers perceive the effectiveness of different programming learning resources? </p>\n<p>2. To what extent does learning programming  help conversational programmers’ on-the-job? </p>\n<p>3. What are conversational programmers’ attitudes towards learning programming? </p>\n\n<div class=\"center-image small-image\"><img src=\"./assets/conv_prog.jpg\" alt=\"\"></div>\n\n<h2>Background</h2>\n\n<p>The overall goal of our research is to shed light on the learning needs and strategies of conversational programmers and how they differ from artifact-creation needs of end-user programmers and professional developers. </p>\n<p><em>Conversational programmers</em> are people who do not have formal training in computer science and are working in non-engineering roles but try to learn programming to engage more effectively in technical conversations or to improve their job marketability [1]. Their goal is not necessarily to create artifacts or solve computational problems, but to use programming literacy as a mechanism for establishing common ground in technical conversations. </p>\n\n<p>[1] Parmit K. Chilana, Rishabh Singh, and Philip J. Guo. 2016. Understanding Conversational Programmers: A Perspective from the Software Industry. In Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems (CHI '16). ACM, New York, NY, USA, 1462-1472. \n</p>\n\n\n<h2>My Work</h2>\n<ul>\n  <li>Reviewed prior works on non-traditional learner populations and how people interact with formal and informal programming learning resources</li>\n  <li>Conducted interviews with 23 conversational programmers to investigate their learning strategies</li>\n  <li>Collected, coded, and analyzed data using ATLAS.ti</li>\n  <li>Used an inductive analysis approach and affinity diagrams to explore the themes</li>\n</ul>\n\n<h2>Collaborators</h2>\n<p><a target='_blank' href=\"http://hci.cs.sfu.ca/\">Prof. Parmit Chilana</a></p>\n<p><a target='_blank' href=\"http://www.pgbovine.net/\">Prof. Philip Guo</a></p>\n<p><strong>Ryan Mitts</strong></p>"
+
+/***/ }),
 /* 9 */
 /***/ (function(module, exports) {
 
-	module.exports = {"name":"April","title":"APRIL WANG","subtitle":"I study human computer interaction.","character":"./assets/april.svg","menu":["ABOUT","PROJECT","MORE","CONTACT"],"content":[{"name":"April Yi Wang","education":"MSc in HCI","affiliation":"Simon Fraser University","location":"TASC-8201","meat":[{"h":"About Me","p":"Hi, I'm <strong>April</strong>, aka <strong>王奕</strong>. I am a <strong>thesis-based MSc student</strong> in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>, advised by <a href='http://hci.cs.sfu.ca/' target='_blank'>Dr.Chilana</a>. My research interests focus on <strong>using HCI techniques to lower the learning barriers for people without professional knowledge in a particular subject</strong>. <br><br> Before starting my journey in HCI research, I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China. With a major in <strong>Digital Media and Network Technology</strong>, I received interdisciplinary training in multimedia processing, game engineering and human interface design. In addition, I have previously worked in <strong>Intel</strong> and <strong>Alibaba</strong> as a <strong>User Experience Design Intern</strong>, and <strong>NetEase Games</strong> as a <strong>Junior Software Developer</strong>."},{"h":"Publications","p":"<strong>PACM-CSCW 2017</strong>: Vermette, L., Dembla, S., Wang, A., McGrenere, J., & Chilana, P. 2017. Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications. Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW) [to appear]."},{"h":"Conference Posters","p":"<strong>ICER 2017</strong>: Wang, A., & Chilana, P. 2017. Investigating Learning Strategies of Conversational Programmers. ACM Conference on International Computing Education Research (ICER), Tacoma, WA, August 2017 [conference poster]."},{"h":"Teaching Experience","p":"CMPT363 User Interface Design &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Teaching Assistant &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spring 2017"}],"mail":"<a href='mailto:hi@aprilwang.me'>hi@aprilwang.me</a>","link":"Download CV"},{"projecttag":{"uxd":"#UX","d":"#Design","p":"#Programming","cg":"#Computer Graphics","g":"#Game"},"project":[{"id":"id0","name":"IoT Services Orchestration Layer","tag":["uxd","d"],"abstract":"Designing the user interface of a block-based programming solution for developing IoT applications.","album":"../assets/IoT-album.jpg","content":"UNDER CONSTRUCTION"},{"id":"id1","name":"Real-time Rendering of Subsurface Scattering of Translucent Material","tag":["cg","p"],"abstract":"Implementing real-time SSS rendering techniques on human skin.","album":"../assets/SSS-album.jpg"},{"id":"id2","name":"Wind Simulation in MMORPG","tag":["cg","p"],"abstract":"Improving the wind simulation system in <em>Tianyu Revelation Online.</em>","album":"../assets/wind-album.jpg"},{"id":"id3","name":"VR Game - Galaxy Destroyer","tag":["g","p","d"],"abstract":"A VR shooting game made with Unity3D. Available on Google Play.","album":"../assets/gd-album.jpg"},{"id":"id4","name":"Heuristic Evaluation of a Social Sharing Shopping Website","tag":["uxd","d"],"abstract":"Identifying usability problems to enhance user engagement in AiTaobao.","album":"../assets/aitaobao-album.jpg"},{"id":"id5","name":"Exploring Interactive Design Methods to Support an Organized Social Group","tag":["uxd","d"],"abstract":"Applying interactve design methods to study users and their context of use.","album":"../assets/pe-album.jpg"},{"id":"id6","name":"Designing the User Interface of Campus Information Retrival Systems","tag":["uxd","d"],"abstract":"Designing the user interface for campus information retrival mobile applications.","album":"../assets/isee-album.jpg"},{"id":"id7","name":"Animation and Graphic Design","tag":["d"],"abstract":"Selected digital design projects I have done in the past (e.g., flat animation, 3D animation, Logo design, illustrations).","album":"../assets/art-album.jpg"}]},{"h":"03 MORE","friends":{"Leo":"http://hi.leeleo.me/","Richard":"https://blog.hlyue.com/","Qusic":"https://qusic.me/","Robert":"https://blog.robotshell.org/","Senorsen":"https://www.senorsen.com/","XXJ":"https://itsxcy.net/"}}]}
+	module.exports = "<h2>Research Question</h2>\n\n<p>1. How do users perceive the usability and usefulness of Social CheatSheet - an interactive community-curated information overlay for web applications?</p>\n\n<h2>My Work</h2>\n<ul>\n  <li>Assisted running a weeklong field deployment using a task-based approach</li>\n  <li>Recruited 15 participants on campus</li>\n  <li>Designed deployment tasks on university’s learning management system</li>\n  <li>Made the demo video for this project</li>\n</ul>\n\n<h2>Collaborator</h2>\n<p><strong>Laton Vermette</strong></p>\n<p><a target='_blank' href=\"http://hci.cs.sfu.ca/\">Prof. Parmit Chilana</a></p>"
 
 /***/ }),
 /* 10 */
 /***/ (function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports = "<h2>Introduction</h2>\n<p>This is an open sourced solution that provides visual graphical programming for developing IoT applications. I was a team member of this project when I did the summer internship in Intel China Research Centre in 2015. Check the <a target='_blank' href='http://01org.github.io/intel-iot-services-orchestration-layer/#getstarted'>project page</a>.</p>\n\n<h2>My Work</h2>\n<ul>\n  <li>Assisted with gathering requirements</li>\n  <li>Conducted the pilot testing on the low fidelity prototypes made by Axure</li>\n  <li>Created high fidelity prototypes in Photoshop</li>\n  <li>Made three animated videos</li>\n</ul>\n\n<h2>How does it work?</h2>\n<h3>A story-telling introduction for IoT Orchestration Layer</h3>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/geDkapSDoTI?ecver=1\" frameborder=\"0\" gesture=\"media\" allowfullscreen></iframe>\n\n<h3>Demo video</h3>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FtJ2jPf0Cdg?ecver=1\" frameborder=\"0\" gesture=\"media\" allowfullscreen></iframe>\n\n<h3>An animation of IoTFS - the technique behind IoT Orchestration Layer</h3>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/loDu_AbhiYI?ecver=1\" frameborder=\"0\" gesture=\"media\" allowfullscreen></iframe>\n\n<h2>Selected Shots</h2>\n<div class=\"large-image\"><img src=\"./assets/hope_view_01.png\" alt=\"\"></div>\n<div class=\"large-image\"><img src=\"./assets/hope_view_02.png\" alt=\"\"></div>\n<div class=\"large-image\"><img src=\"./assets/hope_view_03.png\" alt=\"\"></div>\n\n\n"
 
 /***/ }),
 /* 11 */
+/***/ (function(module, exports) {
+
+	module.exports = "<h2>Introduction</h2>\n<p>This is the undergraduate capstone project I did in Zhejiang University. I explored real-time human skin rendering algorithms with realistic subsurface scattering(SSS) effect, under the guidance of Prof. Tianlei Hu. I implemented the <a target='_blank' href=\"https://github.com/LittleAprilFool/real-time-skin-rendering\">SSS rendering algorithms using OpenGL/C++ </a>.</p>\n\n<div class=\"center-image small-image\"><img src=\"./assets/sss-path.jpg\" alt=\"\"></div>\n\n<h2>Demo</h2>\n\n<div class=\"center-image\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5BsQELdnoSg?ecver=1\" frameborder=\"0\" gesture=\"media\" allowfullscreen></iframe></div>\n\n\n<h2>Final Result</h2>\n\n<div class=\"large-image\"><img src=\"./assets/SSS.png\" alt=\"\"></div>\n\n"
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+	module.exports = "<h2>Introduction</h2>\n<p>This is the internship project I did at Pangu Game Studio, NetEase Game. I improved the wind simulation algorithm and integrated it into <a target='_blank' href='https://tianyu.163.com/index.html'>Tianyu Revelation Online</a> using DX11. I also implemented the wind textual generator in Python/QT for designers to build the assets</p>\n\n<h2>Demo</h2>\n<div class=\"center-image\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/KLO_3b5u_zg?ecver=1\" frameborder=\"0\" gesture=\"media\" allowfullscreen></iframe></div>\n\n<h2>Wind Textual Generator</h2>\n<div class=\"center-image large-image\"><img src=\"./assets/windeditor.jpg\" alt=\"\"></div>"
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
+	module.exports = "<h2>Introduction</h2>\n\n<p>Galaxy Destroyer is a VR shooting game made with Unity 3D. It is available on <a target='_blank' href='https://play.google.com/store/apps/details?id=org.aprobert.GalaxyDestroyer&hl=en'>Google Play</a>. This Virtual Reality game should be played with a Google Cardboard (any compatible model with a functional magnetic trigger). We made this game for the weeklong Archiact Game Jam and we won the second place.</p>\n\n<h2>Collaborator</h2>\n<p><a target='_blank' href='https://blog.robotshell.org/'>Robert Ma</a></p>\n\n<h2>Screenshots</h2>\n<div class='large-image'><img src=\"./assets/gd0.png\" alt=\"\"></div>\n<div class='large-image'><img src=\"./assets/gd01.png\" alt=\"\"></div>\n<div class='large-image'><img src=\"./assets/gd02.png\" alt=\"\"></div>\n<div class='large-image'><img src=\"./assets/gd03.png\" alt=\"\"></div>"
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports) {
+
+	module.exports = "<h2>Introduction</h2>\n<p>This is an internship project I did in 2014 at Alibaba Corporation. I assisted with the heuristic evaluation of <a target='_blank' href='https://ai.taobao.com/'>Aitaobao</a>, a social sharing shopping website and identified several usability problems related with user engagement.</p>\n\n<div class=\"center-image small-image\"><img src=\"./assets/aitaobao233.jpg\" alt=\"\"></div>\n\n"
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+	module.exports = {"name":"April","title":"APRIL WANG","subtitle":"I study human computer interaction.","character":"./assets/april.svg","menu":["ABOUT","PROJECT","MORE","CONTACT"],"content":[{"name":"(April) Yi Wang","education":"MSc Student & HCI Researcher","affiliation":"Simon Fraser University","location":"TASC-8201","meat":[{"h":"About Me","p":"Hi, I'm <strong>April</strong>, aka <strong>王奕</strong>. I am a <strong>thesis-based MSc student</strong> in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>, advised by <a href='http://hci.cs.sfu.ca/' target='_blank'>Dr.Chilana</a>. My research interests focus on <strong>using HCI techniques to lower the learning barriers for people without professional knowledge in a particular subject</strong>. <br><br> Before starting my journey in HCI research, I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China. With a major in <strong>Digital Media and Network Technology</strong>, I received interdisciplinary training in multimedia processing, game engineering and human interface design. "},{"h":"News","p":[{"date":"10/2017","news":"I am currently applying to Ph.D. programs in Human-Computer Interaction!"},{"date":"09/2017","news":"Submitted my first CHI paper ; )"},{"date":"08/2017","news":"Presented our poster on conversational programmer at ICER'17, Tacoma WA"},{"date":"08/2017","news":"Volunteered at SFU FAS Outreach Program to give presentations at local elememtary schools to encourage girls into coding. The girls love my presentation <3"},{"date":"07/2017","news":"Our paper on Social Cheatsheet is accepted to CSCW2018!"},{"date":"04/2017","news":"Attended CRA Women Grad Cohort Workshop 2017, Washington DC"},{"date":"01/2017","news":"Served as the teaching assistant for CMPT363 User Interface Design"}]}],"mail":"<a href='mailto:hi@aprilwang.me'>hi@aprilwang.me</a>","link":"Download CV"},{"name":"Publication","content":[{"title":"Peer Reviewed Conference Papers","item":["<strong>PACM-CSCW 2018</strong>: Vermette, L., Dembla, S., <strong> Wang, A.</strong>, McGrenere, J., & Chilana, P. 2018. Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications. Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW) [to appear]."]},{"title":"Conference Posters","item":["<strong>ICER 2017</strong>: <strong>Wang, A.</strong>, & Chilana, P. 2017. Investigating Learning Strategies of Conversational Programmers. ACM Conference on International Computing Education Research (ICER), Tacoma, WA, August 2017."]}]},{"projecttag":{"r":"#Research","uxd":"#UX","d":"#Design","p":"#Programming","cg":"#Computer Graphics","g":"#Game"},"project":[{"id":"id0","name":"Investigating Learning Strategies of Conversational Programmers","tag":["r"],"abstract":"Conducting interviews with 23 conversational programmers to investigate their learning strategies","album":"../assets/conv-album.jpg","content":"UNDER CONSTRUCTION"},{"id":"id1","name":"Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications","tag":["r"],"abstract":"Assisting running a weeklong field deployment using a task-based approach.","album":"../assets/cheatsheet-album.jpg","content":"UNDER CONSTRUCTION"},{"id":"id2","name":"IoT Services Orchestration Layer","tag":["uxd","d"],"abstract":"Designing the user interface of a block-based programming solution for developing IoT applications.","album":"../assets/IoT-album.jpg","content":"UNDER CONSTRUCTION"},{"id":"id3","name":"Real-time Rendering of Subsurface Scattering of Translucent Material","tag":["cg","p"],"abstract":"Implementing real-time SSS rendering techniques on human skin.","album":"../assets/SSS-album.jpg"},{"id":"id4","name":"Wind Simulation in MMORPG","tag":["cg","p"],"abstract":"Improving the wind simulation system in <em>Tianyu Revelation Online.</em>","album":"../assets/wind-album.jpg"},{"id":"id5","name":"VR Game - Galaxy Destroyer","tag":["g","p","d"],"abstract":"A VR shooting game made with Unity3D. Available on Google Play.","album":"../assets/gd-album.jpg"},{"id":"id6","name":"Heuristic Evaluation of a Social Sharing Shopping Website","tag":["uxd","d"],"abstract":"Identifying usability problems to enhance user engagement in AiTaobao.","album":"../assets/aitaobao-album.jpg"}]},{"h":"03 MORE","friends":{"Imsun":"https://imsun.net/","Senorsen":"https://www.senorsen.com/","Leo":"http://hi.leeleo.me/","Richard":"https://blog.hlyue.com/","Qusic":"https://qusic.me/","Robert":"https://blog.robotshell.org/","XXJ":"https://itsxcy.net/"}}]}
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**!
@@ -11981,7 +12119,7 @@
 	})(window);
 
 /***/ }),
-/* 12 */
+/* 18 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -11994,6 +12132,7 @@
 	  };
 	  this.refresh = function () {
 	    var str = location.hash.slice(1) || '/';
+	    console.log(str);
 	    if (str.search('\\?') != -1) {
 	      this.path = str.slice(0, str.search('\\?'));
 	      this.param = str.slice(str.search('\\?') + 1);
