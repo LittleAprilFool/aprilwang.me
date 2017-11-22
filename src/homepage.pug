@@ -13,7 +13,7 @@ div.container
                 a(href='#/more') MORE
 
     div.pusher-container
-        div.personal-container.hide
+        div.personal-container
             div.personal
                 .info
                     div#avadiv
@@ -29,7 +29,7 @@ div.container
                     a(target="_blank" href='https://github.com/LittleAprilFool')
                         <i class="fa fa-github"></i>
         div.pusher
-            section.right.home.hide
+            section.right.home
                 p.title !{data.content[0].meat[0].h}
                 p.text !{data.content[0].meat[0].p}
                 p.title !{data.content[0].meat[1].h}
@@ -70,7 +70,7 @@ div.container
                             .project-detail-list list
                         .project-detail-title !{project.name}
                         .project-detail-content !{project.html}
-            section.more
+            section.more.hide
                 div#two
                     include ../assets/april.svg
                 p Say Hi~~~ <i class="fa fa-heart"></i>
