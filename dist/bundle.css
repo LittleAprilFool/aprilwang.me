@@ -94,6 +94,13 @@
   width: 700px;
   padding-top: 80px; }
 
+.paper-link {
+  color: #333;
+  font-weight: 300; }
+
+.paper-link:hover {
+  color: #333; }
+
 .project {
   text-align: center;
   margin: auto;
