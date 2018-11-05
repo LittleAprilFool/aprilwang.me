@@ -21,7 +21,8 @@ module.exports = {
         { test: /\.json$/, loader: 'json'},
         { test: /\.pug$/, loader: 'pug' },
         { test: /\.scss$/, loader: ExtractTextPlugin.extract('style-loader','css!sass')},
-        { test: /\.svg$/, loader: 'file-loader'} 
+        { test: /\.svg$/, loader: 'file-loader'},
+        { test: /\.html$/, loader: 'raw-loader'} 
 //        { test: /\.sass$/, loaders: ["style-loader", "css-loader", "sass-loader"]}
     ]},
     plugins: [
