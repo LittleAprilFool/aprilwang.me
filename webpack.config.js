@@ -1,11 +1,13 @@
 var webpack = require("webpack")
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
+const path = require('path')
+
 module.exports = {
     entry: [
         './index.js'
     ],
     output: {
-        path: 'dist',
+        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
         publicPath: '/dist/'
     },
@@ -16,20 +18,35 @@ module.exports = {
         progress: true
     },
     module: {
-        loaders:[
-        { test: /\.js$/, loader: 'babel-loader', exclude:/node_modules/, query:{presets:['es2015']}},
-        { test: /\.json$/, loader: 'json'},
-        { test: /\.pug$/, loader: 'pug' },
-        { test: /\.scss$/, loader: ExtractTextPlugin.extract('style-loader','css!sass')},
-        { test: /\.svg$/, loader: 'file-loader'},
-        { test: /\.html$/, loader: 'raw-loader'} 
-//        { test: /\.sass$/, loaders: ["style-loader", "css-loader", "sass-loader"]}
-    ]},
+        rules:[
+            { test: /\.js$/, loader: 'babel-loader', exclude:/node_modules/, query:{presets: ['@babel/preset-env']}},
+            { test: /\.pug$/, loader: 'pug-loader' },
+            { test: /\.svg$/, loader: 'file-loader'},
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader", // creates style nodes from JS strings
+                    "css-loader", // translates CSS into CommonJS
+                    "sass-loader" // compiles Sass to CSS, using Node Sass by default
+                ]
+            },
+            {
+                test: /\.(html)$/,
+                use: {
+                  loader: 'html-loader',
+                  options: {
+                    attrs: [':data-src']
+                  }
+                }
+            }
+        ]
+    },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin("bundle.css",  {allChunks: true})
     ],
     node: {
         fs: "empty"
-    }
+    },
+    mode: 'development'
 }
