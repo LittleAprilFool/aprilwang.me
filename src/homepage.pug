@@ -23,11 +23,11 @@ div.container
                     p.affli #{data.content[0].affiliation}   
                 .icons
                     a(href='mailto:ayw7@sfu.ca')
-                        <i class="fa fa-envelope-o"></i>
+                        <i class="fa fa-envelope"></i>
                     a(target="_blank" href='https://twitter.com/AprilWang95')
-                        <i class="fa fa-twitter"></i>
+                        <i class="fab fa-twitter"></i>
                     a(target="_blank" href='https://github.com/LittleAprilFool')
-                        <i class="fa fa-github"></i>
+                        <i class="fab fa-github"></i>
                     a(target="_blank" href='https://scholar.google.com/citations?user=yitS6coAAAAJ&hl=en')
                         <i class="fa fa-graduation-cap"></i>
         div.pusher
@@ -44,7 +44,9 @@ div.container
                 each item in data.content[1].content
                     p.title !{item.title}
                     each one in item.item
-                        p.text !{one}
+                        div.paper-item
+                            div.venue !{one.venue}
+                            div.text !{one.content}
             section.project.hide
                 div#filter-button
                         label(for="idall")
@@ -81,19 +83,11 @@ div.container
 
                 p I have a rarely updated <a class="highlight" target="_blank" href='https://aprilwang.me/blog'>blog</a>
                 
-                p Oh, and a lovely cat named Ace
+                p Oh, and two lovely cats named Ace and Emerson
                 
-                div.single-image
-                    img(src="./assets/ace.jpg", alt="")
-
-                p I was fascinated in baking, but not any more...
                 .bakery
-                    img(src="./assets/cake1.jpg")
-                    img(src="./assets/cake3.jpg")
-                    img(src="./assets/cake4.jpg")  
-
-                p I play table tennis since I was 8 years old
-                p But still in the intermediate level <i class="fa fa-meh-o"></i> 
+                    img(src="./assets/ace.jpg", alt="")
+                    img(src="./assets/emerson.jpg", alt="")
                 
                 p I love <a target='_blank' href='http://arcg.is/2mVfJp1'>traveling</a>
                 p  <i class="fa fa-plane"></i> <i class="fa fa-plane"></i> <i class="fa fa-plane"></i>
@@ -110,6 +104,6 @@ div.container
                                 //- include ../assets/trevor.svg
                         //- 
     footer.footer
-        h1#small © April Y. Wang 2017
+        h1#small © April Y. Wang 2018
             //- section.p4-content#sec4
             //-     h1 00000

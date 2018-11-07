@@ -73,17 +73,11 @@
   transition: opacity 2s ease;
 }
 
-.single-image{
-  margin: auto;
-  margin-top: 20px;
-  border: 10px solid $primary-lightgray;
-  width: 150px;
+.cat img{
   height: 150px;
-  margin-bottom: 20px;
-}
-
-.single-image img{
-  max-width: 150px;
+  border: 10px solid $primary-lightgray;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .more iframe{

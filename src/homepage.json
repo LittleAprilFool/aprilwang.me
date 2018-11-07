@@ -13,7 +13,7 @@
             "meat": [
                 {
                     "h": "About Me",
-                    "p": "Hi, I'm <strong>April</strong>, aka <strong>王奕</strong>. I am a <strong>PhD student</strong> at the University of Michigan, School of Information,  advised by <a href='http://from.so' target='_blank'>Dr. Steve Oney</a> and <a href='http://edtech.labs.si.umich.edu' target='_blank'>Dr. Christopher Brooks</a>. My research interests focus on <strong>end-user programming and educational technologies</strong>. My recent project is about exploring <strong>how data scientists collaborate in computational notebooks</strong>. <br><br> I spent two years as a thesis-based Master student in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong> with <a href='http://hci.cs.sfu.ca/' target='_blank'>Dr.Parmit Chilana</a>. Before starting my journey in HCI research, I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China. With a major in <strong>Digital Media and Network Technology</strong>, I received interdisciplinary training in multimedia processing, game engineering and human interface design. "
+                    "p": "Hi, I'm <strong>April</strong>, aka <strong>王奕</strong>. I am a <strong>PhD student</strong> at the University of Michigan, School of Information,  advised by <a href='http://from.so' target='_blank'>Dr. Steve Oney</a> and <a href='http://edtech.labs.si.umich.edu' target='_blank'>Dr. Christopher Brooks</a>. My research interests focus on <strong>end-user programming and educational technologies</strong>. My recent project is about exploring <strong>how data scientists collaborate in computational notebooks</strong>. <br><br> Previously, I spent two years as a thesis-based Master student in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>. I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China."
                 },
                 {
                     "h": "News",
@@ -33,7 +33,7 @@
                         ,
                         {
                             "date": "12/2017",
-                            "news": "Our paper, \"Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers\", got conditionally accepted to CHI 2018!"
+                            "news": "Our paper, \"Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers\", received the honorable mention award on CHI 2018!"
                         },
                         {
                             "date": "10/2017",
@@ -46,10 +46,6 @@
                         {
                             "date": "08/2017",
                             "news": "Presented our poster on conversational programmer at ICER'17, Tacoma WA"
-                        },
-                        {
-                            "date": "08/2017",
-                            "news": "Volunteered at SFU FAS Outreach Program to give presentations at local elememtary schools to encourage girls into coding. The girls love my presentation <3"
                         },
                         {
                             "date": "07/2017",
@@ -75,14 +71,23 @@
                 {
                     "title": "Peer Reviewed Conference Papers",
                     "item": [
-                        "<a href='https://dl.acm.org/citation.cfm?id=3174085' class='paper-link' target='_blank'><strong>CHI 2018</strong>: <strong>April Y. Wang</strong>, Ryan Mitts, Philip J. Guo and Parmit K. Chilana. 2018. Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers. Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI18).</a>",
-                        "<a href='https://dl.acm.org/citation.cfm?id=3134737' class='paper-link' target='_blank'><strong>PACM-CSCW 2018</strong>: Laton Vermette, Shruti Dembla, <strong> April Y. Wang</strong>, Joanna McGrenere and Parmit K. Chilana. 2018. Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications. Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW18).</a>"
+                        {
+                            "venue": "CHI 2018 &nbsp; <i class='fas fa-medal'></i>",
+                            "content": "<a href='https://dl.acm.org/citation.cfm?id=3174085' class='paper-link' target='_blank'><strong>April Y. Wang</strong>, Ryan Mitts, Philip J. Guo and Parmit K. Chilana. 2018. Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers. Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI18).</a>"
+                        },
+                        {
+                            "venue": "CSCW 2018",
+                            "content": "<a href='https://dl.acm.org/citation.cfm?id=3134737' class='paper-link' target='_blank'>Laton Vermette, Shruti Dembla, <strong> April Y. Wang</strong>, Joanna McGrenere and Parmit K. Chilana. 2018. Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications. Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW18).</a>"
+                        }
                     ]
                 },
                 {
                     "title": "Conference Posters",
                     "item": [
-                        "<strong>ICER 2017</strong>: <strong>April Y. Wang</strong> and Parmit K. Chilana. 2017. Investigating Learning Strategies of Conversational Programmers. ACM Conference on International Computing Education Research (ICER17), Tacoma, WA, August 2017."
+                        {
+                            "venue": "ICER 2017",
+                            "content": "<strong>April Y. Wang</strong> and Parmit K. Chilana. 2017. Investigating Learning Strategies of Conversational Programmers. ACM Conference on International Computing Education Research (ICER17), Tacoma, WA, August 2017."
+                        }
                     ]
                 }
             ]
