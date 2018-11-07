@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "bc8a82b6046db875329d";
+/******/ 	var hotCurrentHash = "08578a1bc8652d022a7f";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1003,7 +1003,7 @@ eval("var pug = __webpack_require__(/*! ../node_modules/pug-runtime/index.js */ 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = function Router() {\n  this.routes = {};\n  this.curUrl = '';\n\n  this.route = function (path, callback) {\n    this.routes[path] = callback || function () {};\n  };\n\n  this.refresh = function () {\n    var str = location.hash.slice(1) || '/';\n    console.log(str);\n\n    if (str.search('\\\\?') != -1) {\n      this.path = str.slice(0, str.search('\\\\?'));\n      this.param = str.slice(str.search('\\\\?') + 1);\n      this.routes[this.path](this.param);\n    } else this.routes[str]();\n  };\n\n  this.init = function () {\n    window.addEventListener('load', this.refresh.bind(this), false);\n    window.addEventListener('hashchange', this.refresh.bind(this), false);\n  };\n};\n\n//# sourceURL=webpack:///./src/router.js?");
+eval("module.exports = function Router() {\n  this.routes = {};\n  this.curUrl = '';\n\n  this.route = function (path, callback) {\n    this.routes[path] = callback || function () {};\n  };\n\n  this.refresh = function () {\n    var str = location.hash.slice(1) || '/';\n\n    if (str.search('\\\\?') != -1) {\n      this.path = str.slice(0, str.search('\\\\?'));\n      this.param = str.slice(str.search('\\\\?') + 1);\n      this.routes[this.path](this.param);\n    } else this.routes[str]();\n  };\n\n  this.init = function () {\n    window.addEventListener('load', this.refresh.bind(this), false);\n    window.addEventListener('hashchange', this.refresh.bind(this), false);\n  };\n};\n\n//# sourceURL=webpack:///./src/router.js?");
 
 /***/ }),
 
