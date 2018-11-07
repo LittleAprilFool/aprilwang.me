@@ -6,14 +6,14 @@
     "menu": ["ABOUT", "PROJECT", "MORE", "CONTACT"] ,
     "content": [
         {
-            "name": "(April) Yi Wang",
-            "education": "PhD Student & HCI Researcher",
-            "affiliation": "University of Michigan",
+            "name": "April Yi Wang",
+            "education": "Ph.D. Student",
+            "affiliation": "University of Michigan <br> School of Information",
             "location": "NQ-4446",
             "meat": [
                 {
                     "h": "About Me",
-                    "p": "Hi, I'm <strong>April</strong>, aka <strong>王奕</strong>. I am a <strong>PhD student</strong> at the University of Michigan, School of Information,  advised by <a href='http://from.so' target='_blank'>Dr. Steve Oney</a> and <a href='http://edtech.labs.si.umich.edu' target='_blank'>Dr. Christopher Brooks</a>. My research interests focus on <strong>end-user programming and educational technologies</strong>. My recent project is about exploring <strong>how data scientists collaborate in computational notebooks</strong>. <br><br> Previously, I spent two years as a thesis-based Master student in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>. I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China."
+                    "p": "Hi, I'm <strong>April</strong>, aka <strong>王奕</strong>. I am a <strong>Ph.D. student</strong> at the University of Michigan, School of Information,  advised by <a href='http://from.so' target='_blank'>Dr. Steve Oney</a> and <a href='http://edtech.labs.si.umich.edu' target='_blank'>Dr. Christopher Brooks</a>. My research interests focus on <strong>end-user programming and educational technologies</strong>. My recent project is about exploring <strong>how data scientists collaborate in computational notebooks</strong>. <br><br> Previously, I spent two years as a thesis-based Master student in the Human-Computer Interaction Lab at the School of Computing Science, <strong>Simon Fraser University</strong>. I finished my Bachelor's degree in College of Computer Science and Technology, <strong>Zhejiang Univerisity</strong>, China."
                 },
                 {
                     "h": "News",
