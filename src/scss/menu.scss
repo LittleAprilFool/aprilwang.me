@@ -1,13 +1,10 @@
 @import 'variable';
+@import 'neat/neat/';
+@import 'media';
+
 .menu{
-  position: fixed;
-  width: 100%;
-  top: 0px;
-  height: 6%;
-  padding-top: 1%;
-  margin: auto;
   background: white;
-  z-index: 1;
+  @include grid-container;
 }
 
 .sitetitle {
@@ -20,8 +17,9 @@
 }
 
 .menu ul{
-  display: inline;
-  padding-left: 60%;
+  margin-top:20px;
+  float: right;
+  margin-right: 100px;
 }
 
 .menu li{

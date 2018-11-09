@@ -12,7 +12,7 @@ div.container
             li#nav5 
                 a(href='#/more') MORE
 
-    div.pusher-container
+    div.content-container
         div.personal-container
             div.personal
                 .info
@@ -30,23 +30,26 @@ div.container
                         <i class="fab fa-github"></i>
                     a(target="_blank" href='https://scholar.google.com/citations?user=yitS6coAAAAJ&hl=en')
                         <i class="fa fa-graduation-cap"></i>
-        div.pusher
+        div.intro-container
             section.right.home
-                p.title !{data.content[0].meat[0].h}
-                p.text !{data.content[0].meat[0].p}
-                p.title !{data.content[0].meat[1].h}
-                .newslist
+                .intro.inside
+                    p.title !{data.content[0].meat[0].h}
+                    p.text !{data.content[0].meat[0].p}
+                .newslist.inside
+                    p.title !{data.content[0].meat[1].h}
                     each news in data.content[0].meat[1].p
                         .newsitem
                             p.date !{news.date}
                             p.news !{news.news}
             section.right.publication.hide
-                each item in data.content[1].content
-                    p.title !{item.title}
-                    each one in item.item
-                        div.paper-item
-                            div.venue !{one.venue}
-                            div.text !{one.content}
+                .inside
+                    each item in data.content[1].content
+                        p.title !{item.title}
+                        each one in item.item
+                            div.paper-item
+                                div.venue !{one.venue}
+                                div.text !{one.content}
+        div.one-container
             section.project.hide
                 div#filter-button
                         label(for="idall")
@@ -56,7 +59,7 @@ div.container
                             label(for='id'+index)
                                 input(type="radio" name="xx" id='id'+index)
                                 div#but(data-filter='.'+index) #{tag}
-                div.project-list.container
+                div.project-list
                     each project in data.content[2].project
                         div.project-list-item.mix(class=project.tag id=project.id) 
                             div.project-list-album 
@@ -103,7 +106,7 @@ div.container
                         
                                 //- include ../assets/trevor.svg
                         //- 
-    footer.footer
+    div.footer
         h1#small © April Y. Wang 2018
             //- section.p4-content#sec4
             //-     h1 00000

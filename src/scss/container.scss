@@ -4,20 +4,72 @@
 @import 'projectlist';
 @import 'projectdetail';
 @import 'more';
+@import 'neat/neat/';
+@import 'media';
 
 .container {
   position: relative;
-  overflow: scroll;
-  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  @include grid-container;
+  @include grid-collapse;
 }
 
-.pusher-container {
-  margin-top: 6%;
-  padding-bottom: 40px;
-  top: 0px;
+
+
+.menu{
+  @include grid-container;
+  @include grid-column;
+  height: 50px;
+}
+
+.content-container {
+  @include grid-container;
+  @include grid-column;
+  // @include grid-visual;
+  overflow: scroll;
+  height: 90%;
+}
+
+.one-container {
+  @include grid-column;
+}
+
+.personal-container {
+  @include grid-column(4);
+
+  @include grid-media($mobile-grid){
+    @include grid-column;
+  }
+}
+
+.inside {
+  @include grid-media($mobile-grid){
+    padding:50px;
+  }
+}
+
+.intro-container {
+  @include grid-column(8);
+  @include grid-container;
+
+  @include grid-media($mobile-grid){
+    @include grid-column;
+    @include grid-container;
+  }
 }
 
 .right {
-  margin-left: 450px;
+  @include grid-column(10);
+  @include grid-media($mobile-grid){
+    @include grid-column;
+    @include grid-container;
+  }
 }
 
+.footer {
+  background: $primary-highlight;
+  @include grid-column;
+  @include grid-container;
+  height: 30px;
+}

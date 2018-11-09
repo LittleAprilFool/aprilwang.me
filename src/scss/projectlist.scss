@@ -1,4 +1,7 @@
 @import 'variable';
+@import 'neat/neat/';
+@import 'media';
+
 .project {
   text-align: center;
   margin:auto;
@@ -68,6 +71,9 @@ input{
   margin-left: 10px;
   margin-bottom: 20px;
   cursor: pointer;
+  @include grid-media($mobile-grid){
+    width: 40%;
+  }
 }
 
 

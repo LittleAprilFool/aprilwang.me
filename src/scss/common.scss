@@ -3,7 +3,7 @@
 @import 'variable';
 @import 'container';
 @import 'menu';
-// @import "neat";
+@import "neat/neat";
 
 
 html {
@@ -31,10 +31,6 @@ strong {
     color: $primary-lightdark;
 }
 
-// ::-webkit-scrollbar{
-//     display: none;
-// }
-
 section {
     margin: 0;
 }
@@ -51,15 +47,6 @@ a:hover {
 
 a:visited {
   text-decoration: none;
-}
-
-
-footer {
-    position: absolute;
-    width: 100%;
-    height: 30px;
-    bottom: 0px;
-    background: $primary-highlight;
 }
 
 .p0-content {

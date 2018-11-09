@@ -1,12 +1,12 @@
 @import 'variable';
 .personal-container {
-  position: fixed;
-  display: block;
   text-align: center;
-  padding-top: 8%;
-  padding-bottom: 5%;
-  padding-left: 150px;
-  width: 200px;
+  padding-top: 5%;
+}
+
+.personal {
+  margin:auto;
+  width: 50%;
 }
 
 .info {
