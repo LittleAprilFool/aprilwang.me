@@ -1,5 +1,5 @@
 var webpack = require("webpack")
-var ExtractTextPlugin = require("extract-text-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const path = require('path')
 
 module.exports = {
@@ -25,7 +25,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    "style-loader", // creates style nodes from JS strings
+                    MiniCssExtractPlugin.loader, // creates style nodes from JS strings
                     "css-loader", // translates CSS into CommonJS
                     "sass-loader" // compiles Sass to CSS, using Node Sass by default
                 ]
@@ -38,12 +38,17 @@ module.exports = {
                     attrs: [':data-src']
                   }
                 }
-            }
+            },
         ]
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new ExtractTextPlugin("bundle.css",  {allChunks: true})
+        // new ExtractTextPlugin("bundle.css",  {allChunks: true})
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: "bundle.css",
+          })
     ],
     node: {
         fs: "empty"
