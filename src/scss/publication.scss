@@ -15,6 +15,20 @@
 }
 
 .paper-link:hover {
-  color: $primary-color;
-  
+}
+
+.paper-item{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.publication .venue{
+  float:left;
+  width:15%;
+  font-weight: 600;
+}
+
+.publication .text{
+  width: 80%;
+  display: inline-block;
 }

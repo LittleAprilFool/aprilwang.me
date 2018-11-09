@@ -6,7 +6,6 @@ module.exports = function Router() {
   }
   this.refresh = function() {
     var str = location.hash.slice(1) || '/'
-    console.log(str)
     if (str.search('\\?')!= -1) {
       this.path = str.slice(0, str.search('\\?'))
       this.param = str.slice(str.search('\\?')+1)
