@@ -11,24 +11,23 @@
   position: relative;
   height: 100%;
   overflow: hidden;
-  @include grid-container;
   @include grid-collapse;
 }
 
 
 
 .menu{
-  @include grid-container;
   @include grid-column;
+  @include grid-collapse;
   height: 50px;
 }
 
 .content-container {
-  @include grid-container;
   @include grid-column;
-  // @include grid-visual;
+  @include grid-collapse;
+  @include grid-visual;
   overflow: scroll;
-  height: 90%;
+  height: 95%;
 }
 
 .one-container {
@@ -69,7 +68,10 @@
 
 .footer {
   background: $primary-highlight;
-  @include grid-column;
-  @include grid-container;
+  width:calc(100% + 40px);
+  position:fixed;
+  bottom:0px;
+  // @include grid-column;
+  // @include grid-collapse;
   height: 30px;
 }
