@@ -449,7 +449,6 @@ input {
   margin-left: -20px;
   margin-right: -20px;
   width: calc(100% + 40px);
-  background-image: repeating-linear-gradient(to right, transparent, transparent 20px, rgba(0, 212, 255, 0.25) 20px, rgba(0, 212, 255, 0.25) calc(8.33333% - 21.66667px + 20px));
   overflow: scroll;
   height: 95%; }
 

@@ -25,7 +25,7 @@
 .content-container {
   @include grid-column;
   @include grid-collapse;
-  @include grid-visual;
+  // @include grid-visual;
   overflow: scroll;
   height: 95%;
 }
