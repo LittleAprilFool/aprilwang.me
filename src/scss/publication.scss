@@ -8,7 +8,9 @@
 
 .paper-link {
   color: $primary-color;
-  font-weight: 300;
+  font-style:italic;
+  font-weight: 400;
+  display:inline;
 }
 
 .paper-link:hover {
