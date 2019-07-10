@@ -19,8 +19,16 @@
                     "h": "News",
                     "p": [
                         {
+                            "date": "07/2019",
+                            "news": "Our paper, \"Designing Curated Conversation-Driven Explanations for Communicating Complex Technical Concepts\" was accepted to <a href='https://human-se.github.io/vlhcc2019/accepted-papers/'>VL/HCC 2019</a>."
+                        },
+                        {
                             "date": "05/2019",
-                            "news": "Traveling to CHI19, Glasgow. I will attend the workshop on <a href='https://husdatworkshop.github.io/'>Human-Centered Study of Data Science Work Practices</a>. I am also a student volunteer this year <3"
+                            "news": "Traveling to CHI19, Glasgow. I will attend the workshop on <a href='https://husdatworkshop.github.io/'>Human-Centered Study of Data Science Work Practices</a>. I am also a student volunteer this year."
+                        },
+                        {
+                            "date": "04/2019",
+                            "news": "Passed pre-candidacy milestone with distinction."
                         },
                         {
                             "date": "11/2018",
@@ -37,19 +45,19 @@
                         ,
                         {
                             "date": "12/2017",
-                            "news": "Our paper, \"Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers\", received the honorable mention award on CHI 2018!"
+                            "news": "Our paper, \"Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers\", received the honorable mention award on CHI 2018."
                         },
                         {
                             "date": "08/2017",
-                            "news": "Presented our poster on conversational programmer at ICER'17, Tacoma WA"
+                            "news": "Presented our poster on conversational programmer at ICER'17, Tacoma WA."
                         },
                         {
                             "date": "07/2017",
-                            "news": "Our paper on Social Cheatsheet was accepted to CSCW2018!"
+                            "news": "Our paper on Social Cheatsheet was accepted to CSCW2018."
                         },
                         {
                             "date": "04/2017",
-                            "news": "Attended CRA Women Grad Cohort Workshop 2017, Washington DC"
+                            "news": "Attended CRA Women Grad Cohort Workshop 2017, Washington DC."
                         }
                     ]
                 }
@@ -64,12 +72,17 @@
                     "title": "Peer Reviewed Conference Papers",
                     "item": [
                         {
+                            "venue": "VL/HCC 2019",
+                            "content": "<strong>April Y. Wang</strong> and Parmit K. Chilana. 2019. <a href=# class='paper-link' target='_blank'>Designing Curated Conversation-Driven Explanations for Communicating Complex Technical Concepts.</a> Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2019), to appear"
+
+                        },
+                        {
                             "venue": "CHI 2018 &nbsp; <i class='fas fa-medal'></i>",
-                            "content": "<strong>April Y. Wang</strong>, Ryan Mitts, Philip J. Guo and Parmit K. Chilana. 2018. <a href='https://dl.acm.org/citation.cfm?id=3174085' class='paper-link' target='_blank'>Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers.</a> Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI18)."
+                            "content": "<strong>April Y. Wang</strong>, Ryan Mitts, Philip J. Guo and Parmit K. Chilana. 2018. <a href='https://dl.acm.org/citation.cfm?id=3174085' class='paper-link' target='_blank'>Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers.</a> Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2018)."
                         },
                         {
                             "venue": "CSCW 2018",
-                            "content": "Laton Vermette, Shruti Dembla, <strong> April Y. Wang</strong>, Joanna McGrenere and Parmit K. Chilana. 2018. <a href='https://dl.acm.org/citation.cfm?id=3134737' class='paper-link' target='_blank'>Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications.</a> Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW18)."
+                            "content": "Laton Vermette, Shruti Dembla, <strong> April Y. Wang</strong>, Joanna McGrenere and Parmit K. Chilana. 2018. <a href='https://dl.acm.org/citation.cfm?id=3134737' class='paper-link' target='_blank'>Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications.</a> Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW 2018)."
                         }
                     ]
                 },
