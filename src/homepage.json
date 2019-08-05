@@ -13,11 +13,15 @@
             "meat": [
                 {
                     "h": "About Me",
-                    "p": "I am a first-year Ph.D. student at the School of Information at the University of Michigan, advised by <a href='http://from.so' target='_blank'>Professor Steve Oney</a> and <a href='http://edtech.labs.si.umich.edu' target='_blank'>Professor Christopher Brooks</a>. My broad research area is <strong>human-computer interaction (HCI)</strong>, with a focus on <strong>enabling and encouraging collaborations for end-user programming</strong>. My recent project involves improving computational notebook infrastructure (e.g., support real-time group collaboration, facilitate joint discourse over shared context) to better support collaborative data science. <br><br> I received my B.Eng. in Computer Science from <strong>Zhejiang University</strong> and M.Sc. degree in Computer Science from <strong>Simon Fraser University</strong>, where my master thesis investigated non-programmers learning computational literacy. "
+                    "p": "I am a Ph.D. student at the School of Information at the University of Michigan, advised by <a href='http://from.so' target='_blank'>Professor Steve Oney</a> and <a href='http://edtech.labs.si.umich.edu' target='_blank'>Professor Christopher Brooks</a>. My broad research area is <strong>human-computer interaction (HCI)</strong>, with a focus on <strong>enabling and encouraging collaborations for exploratory programming</strong>. My recent project involves improving computational notebook infrastructure (e.g., support real-time group collaboration, facilitate joint discourse over shared context) to better support collaborative data science. <br><br> I received my B.Eng. in Computer Science from <strong>Zhejiang University</strong> and M.Sc. degree in Computer Science from <strong>Simon Fraser University</strong>, where my master thesis investigated non-programmers learning computational literacy. "
                 },
                 {
                     "h": "News",
                     "p": [
+                        {
+                            "date": "07/2019",
+                            "news": "Our paper, \"How Data Scientists Use Computational Notebooks for Real-Time Collaboration\" was accepted to CSCW 2019."
+                        },
                         {
                             "date": "07/2019",
                             "news": "Our paper, \"Designing Curated Conversation-Driven Explanations for Communicating Complex Technical Concepts\" was accepted to <a href='https://human-se.github.io/vlhcc2019/accepted-papers/'>VL/HCC 2019</a>."
@@ -71,6 +75,11 @@
                 {
                     "title": "Peer Reviewed Conference Papers",
                     "item": [
+                        {
+                            "venue": "CSCW 2019",
+                            "content": "<strong>April Y. Wang</strong>, Anant Mittal, Christopher Brooks and Steve Oney. 2019. <a href=# class='paper-link' target='_blank'>How Data Scientists Use Computational Notebooks for Real-Time Collaboration.</a> Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2019), to appear"
+
+                        },
                         {
                             "venue": "VL/HCC 2019",
                             "content": "<strong>April Y. Wang</strong> and Parmit K. Chilana. 2019. <a href=# class='paper-link' target='_blank'>Designing Curated Conversation-Driven Explanations for Communicating Complex Technical Concepts.</a> Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2019), to appear"

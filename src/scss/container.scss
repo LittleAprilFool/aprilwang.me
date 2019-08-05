@@ -9,7 +9,7 @@
 
 .container {
   position: relative;
-  height: 100%;
+  // height: 100%;
   overflow: hidden;
   @include grid-collapse;
 }
@@ -20,6 +20,7 @@
   @include grid-column;
   @include grid-collapse;
   height: 50px;
+  position: fixed;
 }
 
 .content-container {
@@ -27,7 +28,10 @@
   @include grid-collapse;
   // @include grid-visual;
   overflow: scroll;
-  height: 95%;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  // height: calc(100%-80px);
 }
 
 .one-container {
