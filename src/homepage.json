@@ -19,6 +19,10 @@
                     "h": "News",
                     "p": [
                         {
+                            "date": "09/2019",
+                            "news": "Our paper, \"How Data Scientists Use Computational Notebooks for Real-Time Collaboration\" received the best paper award at CSCW 2019."
+                        },
+                        {
                             "date": "07/2019",
                             "news": "Our paper, \"How Data Scientists Use Computational Notebooks for Real-Time Collaboration\" was accepted to CSCW 2019."
                         },
@@ -76,22 +80,22 @@
                     "title": "Peer Reviewed Conference Papers",
                     "item": [
                         {
-                            "venue": "CSCW 2019",
-                            "content": "<strong>April Y. Wang</strong>, Anant Mittal, Christopher Brooks and Steve Oney. 2019. <a href=# class='paper-link' target='_blank'>How Data Scientists Use Computational Notebooks for Real-Time Collaboration.</a> Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2019), to appear"
+                            "venue": "CSCW 2019 &nbsp; <i class='fas fa-trophy'></i>",
+                            "content": "<strong>April Y. Wang</strong>, Anant Mittal, Christopher Brooks and Steve Oney. 2019. <a href='/assets/pubs/CSCW19_Collaborative_Data_Science.pdf' class='paper-link' target='_blank'>How Data Scientists Use Computational Notebooks for Real-Time Collaboration.</a> Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2019), to appear"
 
                         },
                         {
                             "venue": "VL/HCC 2019",
-                            "content": "<strong>April Y. Wang</strong> and Parmit K. Chilana. 2019. <a href=# class='paper-link' target='_blank'>Designing Curated Conversation-Driven Explanations for Communicating Complex Technical Concepts.</a> Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2019), to appear"
+                            "content": "<strong>April Y. Wang</strong> and Parmit K. Chilana. 2019. <a href='/assets/pubs/VLHCC19_JargonLite.pdf' class='paper-link' target='_blank'>Designing Curated Conversation-Driven Explanations for Communicating Complex Technical Concepts.</a> Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2019), to appear"
 
                         },
                         {
-                            "venue": "CHI 2018 &nbsp; <i class='fas fa-medal'></i>",
-                            "content": "<strong>April Y. Wang</strong>, Ryan Mitts, Philip J. Guo and Parmit K. Chilana. 2018. <a href='https://dl.acm.org/citation.cfm?id=3174085' class='paper-link' target='_blank'>Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers.</a> Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2018)."
+                            "venue": "CHI 2018 &nbsp; <i class='fas fa-award'></i>",
+                            "content": "<strong>April Y. Wang</strong>, Ryan Mitts, Philip J. Guo and Parmit K. Chilana. 2018. <a href='/assets/pubs/CHI18_Conversational_Programmer.pdf' class='paper-link' target='_blank'>Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers.</a> Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2018)."
                         },
                         {
                             "venue": "CSCW 2018",
-                            "content": "Laton Vermette, Shruti Dembla, <strong> April Y. Wang</strong>, Joanna McGrenere and Parmit K. Chilana. 2018. <a href='https://dl.acm.org/citation.cfm?id=3134737' class='paper-link' target='_blank'>Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications.</a> Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW 2018)."
+                            "content": "Laton Vermette, Shruti Dembla, <strong> April Y. Wang</strong>, Joanna McGrenere and Parmit K. Chilana. 2018. <a href='/assets/pubs/CSCW17_Social_CheatSheet.pdf' class='paper-link' target='_blank'>Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications.</a> Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW 2018)."
                         }
                     ]
                 },
@@ -100,11 +104,11 @@
                     "item": [
                         {
                             "venue": "CHI 2019",
-                            "content": "<strong>April Y. Wang</strong>, Steve Oney and Christopher Brooks. 2019. <p class='paper-link'>Redesigning Notebooks for Data Science Education.</p> Workshop on Human-Centered Study of Data Science Work Practices at ACM Conference on Human Factors in Computing Systems (CHI19), Glasgow, UK, May 2019."
+                            "content": "<strong>April Y. Wang</strong>, Steve Oney and Christopher Brooks. 2019. <a href='/assets/pubs/CHI19_HusData_DS_MOOCs.pdf' class='paper-link' target='_blank'>Redesigning Notebooks for Data Science Education.</a> Workshop on Human-Centered Study of Data Science Work Practices at ACM Conference on Human Factors in Computing Systems (CHI19), Glasgow, UK, May 2019."
                         },
                         {
                             "venue": "ICER 2017",
-                            "content": "<strong>April Y. Wang</strong> and Parmit K. Chilana. 2017. <p class='paper-link'>Investigating Learning Strategies of Conversational Programmers.</p> ACM Conference on International Computing Education Research (ICER17), Tacoma, WA, August 2017."
+                            "content": "<strong>April Y. Wang</strong> and Parmit K. Chilana. 2017. <a href='/assets/pubs/ICER17_Poster' class='paper-link' target='_blank'>Investigating Learning Strategies of Conversational Programmers.</a> ACM Conference on International Computing Education Research (ICER17), Tacoma, WA, August 2017."
                         }
                     ]
                 }
