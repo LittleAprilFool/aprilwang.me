@@ -19,6 +19,10 @@
                     "h": "News",
                     "p": [
                         {
+                            "date": "12/2019",
+                            "news": "Our paper, \"Capturing the Why by Connecting Conversations with Computational Narratives\" was accepted to CHI 2020 🌴."
+                        },
+                        {
                             "date": "09/2019",
                             "news": "Our paper, \"How Data Scientists Use Computational Notebooks for Real-Time Collaboration\" received the best paper award at CSCW 2019."
                         },
@@ -80,18 +84,23 @@
                     "title": "Peer Reviewed Conference Papers",
                     "item": [
                         {
+                            "venue": "CHI 2020",
+                            "content": "<strong>April Yi Wang</strong>, Zihan Wu, Christopher Brooks and Steve Oney. 2020. <a href=# class='paper-link' target='_blank'>Capturing the Why by Connecting Conversations with Computational Narratives</a> Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2020), to appear"
+
+                        },
+                        {
                             "venue": "CSCW 2019 &nbsp; <i class='fas fa-trophy'></i>",
-                            "content": "<strong>April Y. Wang</strong>, Anant Mittal, Christopher Brooks and Steve Oney. 2019. <a href='/assets/pubs/CSCW19_Collaborative_Data_Science.pdf' class='paper-link' target='_blank'>How Data Scientists Use Computational Notebooks for Real-Time Collaboration.</a> Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2019), to appear"
+                            "content": "<strong>April Yi Wang</strong>, Anant Mittal, Christopher Brooks and Steve Oney. 2019. <a href='/assets/pubs/CSCW19_Collaborative_Data_Science.pdf' class='paper-link' target='_blank'>How Data Scientists Use Computational Notebooks for Real-Time Collaboration.</a> Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2019)."
 
                         },
                         {
                             "venue": "VL/HCC 2019",
-                            "content": "<strong>April Y. Wang</strong> and Parmit K. Chilana. 2019. <a href='/assets/pubs/VLHCC19_JargonLite.pdf' class='paper-link' target='_blank'>Designing Curated Conversation-Driven Explanations for Communicating Complex Technical Concepts.</a> Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2019), to appear"
+                            "content": "<strong>April Yi Wang</strong> and Parmit K. Chilana. 2019. <a href='/assets/pubs/VLHCC19_JargonLite.pdf' class='paper-link' target='_blank'>Designing Curated Conversation-Driven Explanations for Communicating Complex Technical Concepts.</a> Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2019)."
 
                         },
                         {
                             "venue": "CHI 2018 &nbsp; <i class='fas fa-award'></i>",
-                            "content": "<strong>April Y. Wang</strong>, Ryan Mitts, Philip J. Guo and Parmit K. Chilana. 2018. <a href='/assets/pubs/CHI18_Conversational_Programmer.pdf' class='paper-link' target='_blank'>Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers.</a> Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2018)."
+                            "content": "<strong>April Yi Wang</strong>, Ryan Mitts, Philip J. Guo and Parmit K. Chilana. 2018. <a href='/assets/pubs/CHI18_Conversational_Programmer.pdf' class='paper-link' target='_blank'>Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers.</a> Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2018)."
                         },
                         {
                             "venue": "CSCW 2018",
@@ -104,7 +113,7 @@
                     "item": [
                         {
                             "venue": "CHI 2019",
-                            "content": "<strong>April Y. Wang</strong>, Steve Oney and Christopher Brooks. 2019. <a href='/assets/pubs/CHI19_HusData_DS_MOOCs.pdf' class='paper-link' target='_blank'>Redesigning Notebooks for Data Science Education.</a> Workshop on Human-Centered Study of Data Science Work Practices at ACM Conference on Human Factors in Computing Systems (CHI19), Glasgow, UK, May 2019."
+                            "content": "<strong>April Yi Wang</strong>, Steve Oney and Christopher Brooks. 2019. <a href='/assets/pubs/CHI19_HusData_DS_MOOCs.pdf' class='paper-link' target='_blank'>Redesigning Notebooks for Data Science Education.</a> Workshop on Human-Centered Study of Data Science Work Practices at ACM Conference on Human Factors in Computing Systems (CHI19), Glasgow, UK, May 2019."
                         },
                         {
                             "venue": "ICER 2017",
