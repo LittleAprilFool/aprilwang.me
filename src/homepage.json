@@ -19,6 +19,10 @@
                     "h": "News",
                     "p": [
                         {
+                            "date": "03/2020",
+                            "news": "Our Callisto paper received the honourable mention award on CHI 2020."
+                        },
+                        {
                             "date": "12/2019",
                             "news": "Our paper, \"Callisto: Capturing the Why by Connecting Conversations with Computational Narratives\" was accepted to CHI 2020 🌴."
                         },
@@ -57,7 +61,7 @@
                         ,
                         {
                             "date": "12/2017",
-                            "news": "Our paper, \"Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers\", received the honorable mention award on CHI 2018."
+                            "news": "Our paper, \"Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers\", received the honourable mention award on CHI 2018."
                         },
                         {
                             "date": "08/2017",
@@ -84,12 +88,12 @@
                     "title": "Peer Reviewed Conference Papers",
                     "item": [
                         {
-                            "venue": "CHI 2020",
+                            "venue": "CHI 2020&nbsp;<i class='fas fa-award'></i>",
                             "content": "<strong>April Yi Wang</strong>, Zihan Wu, Christopher Brooks and Steve Oney. 2020. <strong>Callisto: Capturing the Why by Connecting Conversations with Computational Narratives</strong> Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2020). <a href='/assets/pubs/CHI20_Callisto.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='/assets/pubs/CHI20_Callisto_Supplement.zip' class='paper-link' target='_blank'>[Supplemental Material]</a> <a href='https://youtu.be/Yq1wYNhTsGA' class='paper-link' target='_blank'>[Video]</a>"
 
                         },
                         {
-                            "venue": "CSCW 2019 &nbsp; <i class='fas fa-trophy'></i>",
+                            "venue": "CSCW 2019&nbsp;<i class='fas fa-trophy'></i>",
                             "content": "<strong>April Yi Wang</strong>, Anant Mittal, Christopher Brooks and Steve Oney. 2019. <strong>How Data Scientists Use Computational Notebooks for Real-Time Collaboration.</strong> Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2019). <a href='/assets/pubs/CSCW19_Collaborative_Data_Science.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='/assets/pubs/CSCW19_Slides.pdf' class='paper-link' target='_blank'>[Slides]</a>"
 
                         },
@@ -99,7 +103,7 @@
 
                         },
                         {
-                            "venue": "CHI 2018 &nbsp; <i class='fas fa-award'></i>",
+                            "venue": "CHI 2018&nbsp;<i class='fas fa-award'></i>",
                             "content": "<strong>April Yi Wang</strong>, Ryan Mitts, Philip J. Guo and Parmit K. Chilana. 2018. <strong>Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers.</strong> Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2018). <a href='/assets/pubs/CHI18_Conversational_Programmer.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='/assets/pubs/CHI18_Slides.pdf' class='paper-link' target='_blank'>[Slides]</a>"
                         },
                         {
