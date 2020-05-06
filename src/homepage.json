@@ -88,6 +88,10 @@
                     "title": "Peer Reviewed Conference Papers",
                     "item": [
                         {
+                            "venue": "VL/HCC 2020",
+                            "content": "Yan Chen, Jaylin Herskovitz, Gabriel Matute, <strong>April Wang</strong>, Sang Won Lee, and Steve Oney. 2020. <strong>EdCode: Towards Personalized Support at Scale for Remote Assistance in CS Education.</strong> Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2020)."
+                        },
+                        {
                             "venue": "CHI 2020&nbsp;<i class='fas fa-award'></i>",
                             "content": "<strong>April Yi Wang</strong>, Zihan Wu, Christopher Brooks and Steve Oney. 2020. <strong>Callisto: Capturing the Why by Connecting Conversations with Computational Narratives</strong> Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2020). <a href='/assets/pubs/CHI20_Callisto.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='/assets/pubs/CHI20_Callisto_Supplement.zip' class='paper-link' target='_blank'>[Supplemental Material]</a> <a href='https://youtu.be/Yq1wYNhTsGA' class='paper-link' target='_blank'>[Video]</a>"
 
