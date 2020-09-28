@@ -1,16 +1,16 @@
 div.container
-    div.menu
-        ul.nav
-            li#nav1 
-                a(href='#/home') HOME
-            li#nav2
-                a(href='#/publication') PUBLICATION
-            //- li#nav3
-            //-     a(href='#/project') PROJECT
-            li#nav4 
-                a(target='_blank' href='/assets/cv-general.pdf') CV
-            //- li#nav5 
-            //-     a(href='#/more') MORE
+    //- div.menu
+    //-     ul.nav
+    //-         li#nav1 
+    //-             a(href='#/home') HOME
+    //-         li#nav2
+    //-             a(href='#/publication') PUBLICATION
+    //-         //- li#nav3
+    //-         //-     a(href='#/project') PROJECT
+    //-         li#nav4 
+    //-             a(target='_blank' href='/assets/cv-general.pdf') CV
+    //-         //- li#nav5 
+    //-         //-     a(href='#/more') MORE
 
     div.content-container
         div.personal-container
@@ -30,25 +30,33 @@ div.container
                         <i class="fab fa-github"></i>
                     a(target="_blank" href='https://scholar.google.com/citations?user=yitS6coAAAAJ&hl=en')
                         <i class="fa fa-graduation-cap"></i>
+                    a(target='_blank' href='/assets/cv-general.pdf') CV
         div.intro-container
             section.right.home
                 .intro.inside
                     p.title !{data.content[0].meat[0].h}
                     p.text !{data.content[0].meat[0].p}
-                .newslist.inside
-                    p.title !{data.content[0].meat[1].h}
-                    each news in data.content[0].meat[1].p
-                        .newsitem
-                            p.date !{news.date}
-                            p.news !{news.news}
-            section.right.publication.hide
-                .inside
+                //- .newslist.inside
+                //-     p.title !{data.content[0].meat[1].h}
+                //-     each news in data.content[0].meat[1].p
+                //-         .newsitem
+                //-             p.date !{news.date}
+                //-             p.news !{news.news}
+                .publication.inside
                     each item in data.content[1].content
                         p.title !{item.title}
                         each one in item.item
                             div.paper-item
                                 div.venue !{one.venue}
                                 div.text !{one.content}
+            //- section.right.publication.hide
+            //-     .inside
+            //-         each item in data.content[1].content
+            //-             p.title !{item.title}
+            //-             each one in item.item
+            //-                 div.paper-item
+            //-                     div.venue !{one.venue}
+            //-                     div.text !{one.content}
         div.one-container
             section.project.hide
                 div#filter-button

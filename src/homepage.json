@@ -13,7 +13,7 @@
             "meat": [
                 {
                     "h": "About Me",
-                    "p": "I am a Ph.D. student at the School of Information at the University of Michigan, advised by <a href='http://from.so' target='_blank'>Professor Steve Oney</a> and <a href='http://edtech.labs.si.umich.edu' target='_blank'>Professor Christopher Brooks</a>. My broad research area is <strong>human-computer interaction (HCI)</strong>, with a focus on <strong>enabling and encouraging collaborations for exploratory programming</strong>. My recent project involves improving computational notebook infrastructure (e.g., support real-time group collaboration, facilitate joint discourse over shared context) to better support collaborative data science. <br><br> I received my B.Eng. in Computer Science from <strong>Zhejiang University</strong> and M.Sc. degree in Computer Science from <strong>Simon Fraser University</strong>, where my master thesis investigated non-programmers learning computational literacy. "
+                    "p": "I am a Ph.D. student at the School of Information at the University of Michigan, advised by <a href='http://from.so' target='_blank'>Professor Steve Oney</a> and <a href='http://edtech.labs.si.umich.edu' target='_blank'>Professor Christopher Brooks</a>. My research draws upon human-centered design techniques to explore challenges in shared sense-making in data scientists’ collaboration practices and reimagine programming interfaces to support collaboration. I conducted in-depth qualitative inquiries to understand how data scientists currently use computational notebooks for collaboration. I developed computational tools to facilitate shared sense-making in computational notebooks. <br><br> I received my B.Eng. in Computer Science from <strong>Zhejiang University</strong> and M.Sc. degree in Computer Science from <strong>Simon Fraser University</strong>, where my master thesis investigated non-programmers learning computational literacy. "
                 },
                 {
                     "h": "News",
@@ -88,7 +88,7 @@
                     "title": "Peer Reviewed Conference Papers",
                     "item": [
                         {
-                            "venue": "VL/HCC 2020",
+                            "venue": "VL/HCC 2020&nbsp;<i class='fas fa-award'></i>",
                             "content": "Yan Chen, Jaylin Herskovitz, Gabriel Matute, <strong>April Wang</strong>, Sang Won Lee, and Steve Oney. 2020. <strong>EdCode: Towards Personalized Support at Scale for Remote Assistance in CS Education.</strong> Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2020)."
                         },
                         {
