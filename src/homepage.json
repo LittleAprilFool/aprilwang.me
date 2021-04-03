@@ -89,19 +89,19 @@
                     "item": [
                         {
                             "venue": "IUI 2021",
-                            "content": "Soya Park, <strong>April Yi Wang</strong>, Ban Kawas, Q. Vera Liao, David Piorkowski, and Marina Danilevsky. 2021. <strong>Facilitating Knowledge Sharing from Domain Experts to Data Scientists for Building NLP Models. </strong> Proceedings of the 26th International Conference on Intelligent User Interfaces (IUI 2021). To appear"
+                            "content": "Soya Park, <strong>April Yi Wang</strong>, Ban Kawas, Q. Vera Liao, David Piorkowski, and Marina Danilevsky. 2021. <strong>Facilitating Knowledge Sharing from Domain Experts to Data Scientists for Building NLP Models. </strong> Proceedings of the 26th International Conference on Intelligent User Interfaces (IUI 2021). To appear. <a href='https://arxiv.org/pdf/2102.00036v1.pdf' class='paper-link' target='_blank'>[PDF]</a>"
                         },
                         {
                             "venue": "CSCW 2021",
-                            "content": "David Piorkowski, Soya Park, <strong>April Yi Wang</strong>, Dakuo Wang, Michael Muller, and Felix Portnoy. 2021. <strong>How AI Developers Overcome Communication Challenges in a Multidisciplinary Team: A Case Study. </strong> Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021). To appear"
+                            "content": "David Piorkowski, Soya Park, <strong>April Yi Wang</strong>, Dakuo Wang, Michael Muller, and Felix Portnoy. 2021. <strong>How AI Developers Overcome Communication Challenges in a Multidisciplinary Team: A Case Study. </strong> Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021). To appear. <a href='https://arxiv.org/pdf/2101.06098v1.pdf' class='paper-link' target='_blank'>[PDF]</a>"
                         },
                         {
                             "venue": "VL/HCC 2020&nbsp;<i class='fas fa-award'></i>",
-                            "content": "Yan Chen, Jaylin Herskovitz, Gabriel Matute, <strong>April Wang</strong>, Sang Won Lee, and Steve Oney. 2020. <strong>EdCode: Towards Personalized Support at Scale for Remote Assistance in CS Education.</strong> Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2020). <a href='./assets/pubs/VLHCC20_Edcode.pdf' class='paper-link' target='_blank'>[PDF]</a>"
+                            "content": "Yan Chen, Jaylin Herskovitz, Gabriel Matute, <strong>April Wang</strong>, Sang Won Lee, and Steve Oney. 2020. <strong>EdCode: Towards Personalized Support at Scale for Remote Assistance in CS Education.</strong> Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2020). <a href='https://chensivan.github.io/papers/VLHCC2020_Edcode.pdf' class='paper-link' target='_blank'>[PDF]</a>"
                         },
                         {
                             "venue": "CHI 2020&nbsp;<i class='fas fa-award'></i>",
-                            "content": "<strong>April Yi Wang</strong>, Zihan Wu, Christopher Brooks and Steve Oney. 2020. <strong>Callisto: Capturing the Why by Connecting Conversations with Computational Narratives</strong> Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2020). <a href='./assets/pubs/CHI20_Callisto.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='./assets/pubs/CHI20_Callisto_Supplement.zip' class='paper-link' target='_blank'>[Supplemental Material]</a> <a href='https://youtu.be/Yq1wYNhTsGA' class='paper-link' target='_blank'>[Video]</a>"
+                            "content": "<strong>April Yi Wang</strong>, Zihan Wu, Christopher Brooks and Steve Oney. 2020. <strong>Callisto: Capturing the Why by Connecting Conversations with Computational Narratives</strong> Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2020). <a href='./assets/pubs/CHI20_Callisto.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='./assets/pubs/CHI20_Callisto_Supplement.zip' class='paper-link' target='_blank'>[Supplemental Material]</a> <a href='https://youtu.be/Yq1wYNhTsGA' class='paper-link' target='_blank'>[Video]</a> <a href='./assets/pubs/CHI20_Callisto_Slide.pdf' class='paper-link' target='_blank'>[Slides]</a>"
 
                         },
                         {
@@ -128,12 +128,20 @@
                     "title": "Workshop Papers and Posters",
                     "item": [
                         {
+                            "venue": "CHI 2021",
+                            "content": "<strong>April Yi Wang </strong>, Dakuo Wang, Jaimie Drozdal, Xuye Liu, Soya Park, Steve Oney and Christopher Brooks. 2021. <strong>What Makes a Well-Documented Notebook? A Case Study of Data Scientists’ Documentation Practices in Kaggle.</strong> In CHI Conference on Human Factors in Computing Systems Extended Abstracts (CHI 2021 Extended Abstracts). <a href='./assets/pubs/CHILBW21_KaggleNotebooks.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='./assets/pubs/CHILBW21_KaggleNotebooks_Poster.pdf' class='paper-link' target='_blank'>[Poster]</a>"
+                        },
+                        {
+                            "venue": "IUI 2021",
+                            "content": "Michael Muller, <strong>April Yi Wang</strong>, Steven I. Ross, Justin D. Weisz, Mayank Agarwal, Kartik Talamadupula, Stephanie Houde, Fernando Martinez,  John Richards, Jaimie Drozdal, Xuye Liu, David Piorkowski and Dakuo Wang. 2021. <strong>How Data Scientists Improve Generated Code Documentation in Jupyter Notebooks</strong> Workshop on Human-AI Co-Creation with Generative Models at ACM Conference on Intelligent User Interface (IUI 2021). "
+                        },
+                        {
                             "venue": "CHI 2019",
-                            "content": "<strong>April Yi Wang</strong>, Steve Oney and Christopher Brooks. 2019. <strong>Redesigning Notebooks for Data Science Education.</strong> Workshop on Human-Centered Study of Data Science Work Practices at ACM Conference on Human Factors in Computing Systems (CHI19), Glasgow, UK, May 2019. <a href='./assets/pubs/CHI19_HusData_DS_MOOCs.pdf' class='paper-link' target='_blank'>[PDF]</a>"
+                            "content": "<strong>April Yi Wang</strong>, Steve Oney and Christopher Brooks. 2019. <strong>Redesigning Notebooks for Data Science Education.</strong> Workshop on Human-Centered Study of Data Science Work Practices at ACM Conference on Human Factors in Computing Systems (CHI 2019). <a href='./assets/pubs/CHI19_HusData_DS_MOOCs.pdf' class='paper-link' target='_blank'>[PDF]</a>"
                         },
                         {
                             "venue": "ICER 2017",
-                            "content": "<strong>April Y. Wang</strong> and Parmit K. Chilana. 2017. <strong>Investigating Learning Strategies of Conversational Programmers.</strong> ACM Conference on International Computing Education Research (ICER17), Tacoma, WA, August 2017. <a href='./assets/pubs/ICER17_Poster.pdf' class='paper-link' target='_blank'>[PDF]</a>"
+                            "content": "<strong>April Y. Wang</strong> and Parmit K. Chilana. 2017. <strong>Investigating Learning Strategies of Conversational Programmers.</strong> ACM Conference on International Computing Education Research (ICER 2017). <a href='./assets/pubs/ICER17_Poster.pdf' class='paper-link' target='_blank'>[PDF]</a>"
                         }
                     ]
                 }
