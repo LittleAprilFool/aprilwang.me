@@ -88,8 +88,12 @@
                     "title": "Peer Reviewed Conference Papers",
                     "item": [
                         {
+                            "venue": "CSCW 2021",
+                            "content": "<strong>April Yi Wang</strong>, Yan Chen, John Joon Young Chung, Christopher Brooks, and Steve Oney. <strong>PuzzleMe: Leveraging Peer Assessment for In-Class Programming Exercises.</strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021). To appear"
+                        },
+                        {
                             "venue": "IJCAI 2021",
-                            "content": "<strong>April Yi Wang</strong>, Dakuo Wang, Xuye Liu, and Lingfei Wu. <strong>Themisto: Towards an AI Partner that can Collaborates with Data Scientists to Generate Computational Narratives.</strong> In Proceedings of 30th International Joint Conferences on Artificial Intelligence (IJCAI 2021). To appear"
+                            "content": "<strong>April Yi Wang</strong>, Dakuo Wang, Xuye Liu, and Lingfei Wu. <strong>Graph-Augmented Code Summarization in Computational Notebooks.</strong> In Proceedings of 30th International Joint Conferences on Artificial Intelligence (IJCAI 2021). To appear"
                         },
                         {
                             "venue": "IUI 2021",
