@@ -89,11 +89,11 @@
                     "item": [
                         {
                             "venue": "CSCW 2021",
-                            "content": "<strong>April Yi Wang</strong>, Yan Chen, John Joon Young Chung, Christopher Brooks, and Steve Oney. <strong>PuzzleMe: Leveraging Peer Assessment for In-Class Programming Exercises.</strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021). To appear"
+                            "content": "<strong>April Yi Wang</strong>, Yan Chen, John Joon Young Chung, Christopher Brooks, and Steve Oney. <strong>PuzzleMe: Leveraging Peer Assessment for In-Class Programming Exercises.</strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021). <a href='./assets/pubs/CSCW21_PuzzleMe.pdf' class='paper-link' target='_blank'>[PDF]</a>"
                         },
                         {
                             "venue": "IJCAI 2021",
-                            "content": "<strong>April Yi Wang</strong>, Dakuo Wang, Xuye Liu, and Lingfei Wu. <strong>Graph-Augmented Code Summarization in Computational Notebooks.</strong> In Proceedings of 30th International Joint Conferences on Artificial Intelligence (IJCAI 2021). To appear"
+                            "content": "<strong>April Yi Wang</strong>, Dakuo Wang, Xuye Liu, and Lingfei Wu. <strong>Graph-Augmented Code Summarization in Computational Notebooks.</strong> In Proceedings of 30th International Joint Conferences on Artificial Intelligence (IJCAI 2021). <a href='https://www.ijcai.org/proceedings/2021/0717.pdf' class='paper-link' target='_blank'>[PDF]</a>"
                         },
                         {
                             "venue": "IUI 2021",
