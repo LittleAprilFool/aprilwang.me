@@ -7,13 +7,13 @@
     "content": [
         {
             "name": "April Yi Wang",
-            "education": "Ph.D. Student",
+            "education": "Ph.D. Candidate",
             "affiliation": "University of Michigan <br> School of Information",
             "location": "NQ-4446",
             "meat": [
                 {
                     "h": "About Me",
-                    "p": "I am a Ph.D. student at the School of Information at the University of Michigan, advised by <a href='http://from.so' target='_blank'>Professor Steve Oney</a> and <a href='http://edtech.labs.si.umich.edu' target='_blank'>Professor Christopher Brooks</a>. My research draws upon human-centered design techniques to explore challenges in shared sense-making in data scientists’ collaboration practices and reimagine programming interfaces to support collaboration. I conducted in-depth qualitative inquiries to understand how data scientists currently use computational notebooks for collaboration. I developed computational tools to facilitate shared sense-making in computational notebooks. <br><br> I received my B.Eng. in Computer Science from <strong>Zhejiang University</strong> and M.Sc. degree in Computer Science from <strong>Simon Fraser University</strong>, where my master thesis investigated non-programmers learning computational literacy. "
+                    "p": "I am a Ph.D. candidate at the School of Information at the University of Michigan, advised by <a href='http://from.so' target='_blank'>Professor Steve Oney</a> and <a href='http://edtech.labs.si.umich.edu' target='_blank'>Professor Christopher Brooks</a>. My research draws upon human-centered design techniques to explore challenges in shared sense-making in data scientists’ collaboration practices and reimagine programming interfaces to support collaboration. I conducted in-depth qualitative inquiries to understand how data scientists currently use computational notebooks for collaboration. I developed computational tools to facilitate shared sense-making in computational notebooks. <br><br> I received my B.Eng. in Computer Science from <strong>Zhejiang University</strong> and M.Sc. degree in Computer Science from <strong>Simon Fraser University</strong>, where my master thesis investigated non-programmers learning computational literacy. "
                 },
                 {
                     "h": "News",
@@ -88,20 +88,24 @@
                     "title": "Peer Reviewed Conference Papers",
                     "item": [
                         {
+                            "venue": "TOCHI 2021",
+                            "content": "<strong>April Yi Wang</strong>*, Dakuo Wang*, Jaimie Drozdal, Michael Muller, Soya Park, Justin D. Weisz, Xuye Liu, Lingfei Wu, and Casey Dugan. <strong>. Documentation Matters: Human-Centered AI System to Assist Data Science Code Documentation in Computational Notebooks</strong> ACM Transactions on Computer-Human Interaction (TOCHI 2021), to appear <a href='https://arxiv.org/abs/2102.12592' class='paper-link' target='_blank'>[arXiv]</a>"
+                        },
+                        {
+                            "venue": "EMNLP 2021",
+                            "content": "Xuye Liu*, Dakuo Wang*, <strong>April Yi Wang</strong>, Yufang Hou, and Lingfei Wu. <strong>. HAConvGNN: Hierarchical Attention Based Convolutional Graph Neural Network for Code Documentation Generation in Jupyter Notebooks</strong> In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing: Findings (EMNLP 2021), to appear <a href='https://arxiv.org/abs/2104.01002' class='paper-link' target='_blank'>[arXiv]</a>"
+                        },
+                        {
                             "venue": "CSCW 2021",
-                            "content": "<strong>April Yi Wang</strong>, Yan Chen, John Joon Young Chung, Christopher Brooks, and Steve Oney. <strong>PuzzleMe: Leveraging Peer Assessment for In-Class Programming Exercises.</strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021). <a href='./assets/pubs/CSCW21_PuzzleMe.pdf' class='paper-link' target='_blank'>[PDF]</a>"
-                        },
-                        {
-                            "venue": "IJCAI 2021",
-                            "content": "<strong>April Yi Wang</strong>, Dakuo Wang, Xuye Liu, and Lingfei Wu. <strong>Graph-Augmented Code Summarization in Computational Notebooks.</strong> In Proceedings of 30th International Joint Conferences on Artificial Intelligence (IJCAI 2021). <a href='https://www.ijcai.org/proceedings/2021/0717.pdf' class='paper-link' target='_blank'>[PDF]</a>"
-                        },
-                        {
-                            "venue": "IUI 2021",
-                            "content": "Soya Park, <strong>April Yi Wang</strong>, Ban Kawas, Q. Vera Liao, David Piorkowski, and Marina Danilevsky. 2021. <strong>Facilitating Knowledge Sharing from Domain Experts to Data Scientists for Building NLP Models. </strong> In Proceedings of the 26th International Conference on Intelligent User Interfaces (IUI 2021). <a href='https://dl.acm.org/doi/10.1145/3397481.3450637' class='paper-link' target='_blank'>[PDF]</a>"
+                            "content": "<strong>April Yi Wang</strong>*, Yan Chen*, John Joon Young Chung, Christopher Brooks, and Steve Oney. <strong>PuzzleMe: Leveraging Peer Assessment for In-Class Programming Exercises.</strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021), to appear <a href='./assets/pubs/CSCW21_PuzzleMe.pdf' class='paper-link' target='_blank'>[PDF]</a>"
                         },
                         {
                             "venue": "CSCW 2021",
                             "content": "David Piorkowski, Soya Park, <strong>April Yi Wang</strong>, Dakuo Wang, Michael Muller, and Felix Portnoy. 2021. <strong>How AI Developers Overcome Communication Challenges in a Multidisciplinary Team: A Case Study. </strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021). <a href='https://dl.acm.org/doi/abs/10.1145/3449205' class='paper-link' target='_blank'>[PDF]</a>"
+                        },
+                        {
+                            "venue": "IUI 2021",
+                            "content": "Soya Park, <strong>April Yi Wang</strong>, Ban Kawas, Q. Vera Liao, David Piorkowski, and Marina Danilevsky. 2021. <strong>Facilitating Knowledge Sharing from Domain Experts to Data Scientists for Building NLP Models. </strong> In Proceedings of the 26th International Conference on Intelligent User Interfaces (IUI 2021). <a href='https://dl.acm.org/doi/10.1145/3397481.3450637' class='paper-link' target='_blank'>[PDF]</a>"
                         },
                         {
                             "venue": "VL/HCC 2020&nbsp;<i class='fas fa-award'></i>",
@@ -133,15 +137,19 @@
                     ]
                 },
                 {
-                    "title": "Workshop Papers and Posters",
+                    "title": "Refereed Posters, Workshops, and Demos",
                     "item": [
+                        {
+                            "venue": "IJCAI 2021",
+                            "content": "<strong>April Yi Wang </strong>, Dakuo Wang, Xuye Liu, and Lingfei Wu. 2021. <strong>Graph-Augmented Code Summarization in Computational Notebooks.</strong> In Proceedings of 30th International Joint Conferences on Artificial Intelligence (IJCAI 2021). Demo Paper. <a href='https://www.ijcai.org/proceedings/2021/0717.pdf' class='paper-link' target='_blank'>[Link]</a>"
+                        },
                         {
                             "venue": "CHI 2021",
                             "content": "<strong>April Yi Wang </strong>, Dakuo Wang, Jaimie Drozdal, Xuye Liu, Soya Park, Steve Oney and Christopher Brooks. 2021. <strong>What Makes a Well-Documented Notebook? A Case Study of Data Scientists’ Documentation Practices in Kaggle.</strong> In CHI Conference on Human Factors in Computing Systems Extended Abstracts (CHI 2021 Extended Abstracts). <a href='./assets/pubs/CHILBW21_KaggleNotebooks.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='./assets/pubs/CHILBW21_KaggleNotebooks_Poster.pdf' class='paper-link' target='_blank'>[Poster]</a>"
                         },
                         {
                             "venue": "IUI 2021",
-                            "content": "Michael Muller, <strong>April Yi Wang</strong>, Steven I. Ross, Justin D. Weisz, Mayank Agarwal, Kartik Talamadupula, Stephanie Houde, Fernando Martinez,  John Richards, Jaimie Drozdal, Xuye Liu, David Piorkowski and Dakuo Wang. 2021. <strong>How Data Scientists Improve Generated Code Documentation in Jupyter Notebooks</strong> Workshop on Human-AI Co-Creation with Generative Models at ACM Conference on Intelligent User Interface (IUI 2021). "
+                            "content": "Michael Muller, <strong>April Yi Wang</strong>, Steven I. Ross, Justin D. Weisz, Mayank Agarwal, Kartik Talamadupula, Stephanie Houde, Fernando Martinez,  John Richards, Jaimie Drozdal, Xuye Liu, David Piorkowski and Dakuo Wang. 2021. <strong>How Data Scientists Improve Generated Code Documentation in Jupyter Notebooks</strong> Workshop on Human-AI Co-Creation with Generative Models at ACM Conference on Intelligent User Interface (IUI 2021). <a href='http://ceur-ws.org/Vol-2903/IUI21WS-HAIGEN-10.pdf' class='paper-link' target='_blank'>[Link]</a>"
                         },
                         {
                             "venue": "CHI 2019",
