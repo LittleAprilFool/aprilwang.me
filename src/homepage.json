@@ -88,16 +88,23 @@
                     "title": "Peer Reviewed Conference Papers",
                     "item": [
                         {
+                            "venue": "CHI 2022",
+                            "content": "<strong>April Yi Wang</strong>, Will Epperson, Robert DeLine, and Steven M. Drucker. <strong> Diff in the Loop: Supporting Data Comparison in Exploratory Data Analysis</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2022), to appear",
+                            "teaser": "./assets/teaser/chi22.png"
+                        },
+                        {
                             "venue": "TOCHI 2021",
-                            "content": "<strong>April Yi Wang</strong>*, Dakuo Wang*, Jaimie Drozdal, Michael Muller, Soya Park, Justin D. Weisz, Xuye Liu, Lingfei Wu, and Casey Dugan. <strong>. Documentation Matters: Human-Centered AI System to Assist Data Science Code Documentation in Computational Notebooks</strong> ACM Transactions on Computer-Human Interaction (TOCHI 2021), to appear <a href='https://arxiv.org/abs/2102.12592' class='paper-link' target='_blank'>[arXiv]</a>"
+                            "content": "<strong>April Yi Wang</strong>*, Dakuo Wang*, Jaimie Drozdal, Michael Muller, Soya Park, Justin D. Weisz, Xuye Liu, Lingfei Wu, and Casey Dugan. <strong>Documentation Matters: Human-Centered AI System to Assist Data Science Code Documentation in Computational Notebooks</strong> ACM Transactions on Computer-Human Interaction (TOCHI 2021), to appear <a href='https://arxiv.org/abs/2102.12592' class='paper-link' target='_blank'>[arXiv]</a>",
+                            "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "EMNLP 2021",
-                            "content": "Xuye Liu*, Dakuo Wang*, <strong>April Yi Wang</strong>, Yufang Hou, and Lingfei Wu. <strong>. HAConvGNN: Hierarchical Attention Based Convolutional Graph Neural Network for Code Documentation Generation in Jupyter Notebooks</strong> In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing: Findings (EMNLP 2021), to appear <a href='https://arxiv.org/abs/2104.01002' class='paper-link' target='_blank'>[arXiv]</a>"
+                            "content": "Xuye Liu*, Dakuo Wang*, <strong>April Yi Wang</strong>, Yufang Hou, and Lingfei Wu. <strong>HAConvGNN: Hierarchical Attention Based Convolutional Graph Neural Network for Code Documentation Generation in Jupyter Notebooks</strong> In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing: Findings (EMNLP 2021), to appear <a href='https://arxiv.org/abs/2104.01002' class='paper-link' target='_blank'>[arXiv]</a>",
+                            "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "CSCW 2021",
-                            "content": "<strong>April Yi Wang</strong>*, Yan Chen*, John Joon Young Chung, Christopher Brooks, and Steve Oney. <strong>PuzzleMe: Leveraging Peer Assessment for In-Class Programming Exercises.</strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021), to appear <a href='./assets/pubs/CSCW21_PuzzleMe.pdf' class='paper-link' target='_blank'>[PDF]</a>"
+                            "content": "<strong>April Yi Wang</strong>*, Yan Chen*, John Joon Young Chung, Christopher Brooks, and Steve Oney. <strong>PuzzleMe: Leveraging Peer Assessment for In-Class Programming Exercises.</strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021), to appear <a href='https://dl.acm.org/doi/10.1145/3479559' class='paper-link' target='_blank'>[PDF]</a>"
                         },
                         {
                             "venue": "CSCW 2021",
