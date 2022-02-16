@@ -93,7 +93,12 @@
                         },
                         {
                             "venue": "CHI 2022",
-                            "content": "<strong>April Yi Wang</strong>, Will Epperson, Robert DeLine, and Steven M. Drucker. <strong> Diff in the Loop: Supporting Data Comparison in Exploratory Data Analysis.</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2022), to appear",
+                            "content": "Chengbo Zheng, Dakuo Wang, <strong>April Yi Wang</strong>, Xiaojuan Ma. <strong> Telling Stories from Computational Notebooks: AI-Assisted Presentation Slides Creation for Presenting Data Science Work.</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2022), to appear.",
+                            "teaser": "./assets/teaser/chi22.png"
+                        },
+                        {
+                            "venue": "CHI 2022",
+                            "content": "<strong>April Yi Wang</strong>, Will Epperson, Robert DeLine, and Steven M. Drucker. <strong> Diff in the Loop: Supporting Data Comparison in Exploratory Data Analysis.</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2022), to appear. <a href='./assets/pubs/CHI22_DITL.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='https://youtu.be/hv997irOZ9s' class='paper-link' target='_blank'>[Talk]</a>",
                             "teaser": "./assets/teaser/chi22.png"
                         },
                         {
