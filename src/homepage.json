@@ -89,66 +89,73 @@
                     "item": [
                         {
                             "venue": "ICSE 2022",
-                            "content": "Will Epperson, <strong>April Yi Wang</strong>, Robert DeLine, and Steven M. Drucker. <strong>Strategies for Reuse and Sharing among Data Scientists in Software Teams.</strong> In Proceedings of the ACM/IEEE 44th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP 2022), to appear"
-                        },
-                        {
-                            "venue": "CHI 2022",
-                            "content": "Chengbo Zheng, Dakuo Wang, <strong>April Yi Wang</strong>, Xiaojuan Ma. <strong> Telling Stories from Computational Notebooks: AI-Assisted Presentation Slides Creation for Presenting Data Science Work.</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2022), to appear.",
+                            "content": "Will Epperson, <strong>April Yi Wang</strong>, Robert DeLine, and Steven M. Drucker. <strong>Strategies for Reuse and Sharing among Data Scientists in Software Teams.</strong> In Proceedings of the ACM/IEEE 44th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP 2022), to appear",
                             "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "CHI 2022",
-                            "content": "<strong>April Yi Wang</strong>, Will Epperson, Robert DeLine, and Steven M. Drucker. <strong> Diff in the Loop: Supporting Data Comparison in Exploratory Data Analysis.</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2022), to appear. <a href='./assets/pubs/CHI22_DITL.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='https://youtu.be/hv997irOZ9s' class='paper-link' target='_blank'>[Talk]</a>",
+                            "content": "Chengbo Zheng, Dakuo Wang, <strong>April Yi Wang</strong>, Xiaojuan Ma. <strong> Telling Stories from Computational Notebooks: AI-Assisted Presentation Slides Creation for Presenting Data Science Work.</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2022) <a href='https://dl.acm.org/doi/10.1145/3491102.3517615' class='paper-link' target='_blank'>[Paper]</a>",
+                            "teaser": "./assets/teaser/chi22.png"
+                        },
+                        {
+                            "venue": "CHI 2022",
+                            "content": "<strong>April Yi Wang</strong>, Will Epperson, Robert DeLine, and Steven M. Drucker. <strong> Diff in the Loop: Supporting Data Comparison in Exploratory Data Analysis.</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2022) <a href='https://dl.acm.org/doi/10.1145/3491102.3517615' class='paper-link' target='_blank'>[Paper]</a> <a href='https://youtu.be/hv997irOZ9s' class='paper-link' target='_blank'>[Talk]</a>",
                             "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "TOCHI 2021",
-                            "content": "<strong>April Yi Wang</strong>*, Dakuo Wang*, Jaimie Drozdal, Michael Muller, Soya Park, Justin D. Weisz, Xuye Liu, Lingfei Wu, and Casey Dugan. <strong>Documentation Matters: Human-Centered AI System to Assist Data Science Code Documentation in Computational Notebooks.</strong> ACM Transactions on Computer-Human Interaction (TOCHI 2021), to appear <a href='https://arxiv.org/abs/2102.12592' class='paper-link' target='_blank'>[arXiv]</a>",
+                            "content": "<strong>April Yi Wang</strong>*, Dakuo Wang*, Jaimie Drozdal, Michael Muller, Soya Park, Justin D. Weisz, Xuye Liu, Lingfei Wu, and Casey Dugan. <strong>Documentation Matters: Human-Centered AI System to Assist Data Science Code Documentation in Computational Notebooks.</strong> ACM Transactions on Computer-Human Interaction (TOCHI 2021) <a href='https://dl.acm.org/doi/10.1145/3489465' class='paper-link' target='_blank'>[Paper]</a>",
                             "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "EMNLP 2021",
-                            "content": "Xuye Liu*, Dakuo Wang*, <strong>April Yi Wang</strong>, Yufang Hou, and Lingfei Wu. <strong>HAConvGNN: Hierarchical Attention Based Convolutional Graph Neural Network for Code Documentation Generation in Jupyter Notebooks.</strong> In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing: Findings (EMNLP 2021), to appear <a href='https://arxiv.org/abs/2104.01002' class='paper-link' target='_blank'>[arXiv]</a>",
+                            "content": "Xuye Liu*, Dakuo Wang*, <strong>April Yi Wang</strong>, Yufang Hou, and Lingfei Wu. <strong>HAConvGNN: Hierarchical Attention Based Convolutional Graph Neural Network for Code Documentation Generation in Jupyter Notebooks.</strong> In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing: Findings (EMNLP 2021) <a href='https://aclanthology.org/2021.findings-emnlp.381/' class='paper-link' target='_blank'>[Paper]</a>",
                             "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "CSCW 2021",
-                            "content": "<strong>April Yi Wang</strong>*, Yan Chen*, John Joon Young Chung, Christopher Brooks, and Steve Oney. <strong>PuzzleMe: Leveraging Peer Assessment for In-Class Programming Exercises.</strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021). <a href='https://dl.acm.org/doi/10.1145/3479559' class='paper-link' target='_blank'>[PDF]</a>"
+                            "content": "<strong>April Yi Wang</strong>*, Yan Chen*, John Joon Young Chung, Christopher Brooks, and Steve Oney. <strong>PuzzleMe: Leveraging Peer Assessment for In-Class Programming Exercises.</strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021). <a href='https://dl.acm.org/doi/10.1145/3479559' class='paper-link' target='_blank'>[Paper]</a>",
+                            "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "CSCW 2021",
-                            "content": "David Piorkowski, Soya Park, <strong>April Yi Wang</strong>, Dakuo Wang, Michael Muller, and Felix Portnoy. 2021. <strong>How AI Developers Overcome Communication Challenges in a Multidisciplinary Team: A Case Study. </strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021). <a href='https://dl.acm.org/doi/abs/10.1145/3449205' class='paper-link' target='_blank'>[PDF]</a>"
+                            "content": "David Piorkowski, Soya Park, <strong>April Yi Wang</strong>, Dakuo Wang, Michael Muller, and Felix Portnoy. 2021. <strong>How AI Developers Overcome Communication Challenges in a Multidisciplinary Team: A Case Study. </strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2021). <a href='https://dl.acm.org/doi/abs/10.1145/3449205' class='paper-link' target='_blank'>[Paper]</a>",
+                            "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "IUI 2021",
-                            "content": "Soya Park, <strong>April Yi Wang</strong>, Ban Kawas, Q. Vera Liao, David Piorkowski, and Marina Danilevsky. 2021. <strong>Facilitating Knowledge Sharing from Domain Experts to Data Scientists for Building NLP Models. </strong> In Proceedings of the 26th International Conference on Intelligent User Interfaces (IUI 2021). <a href='https://dl.acm.org/doi/10.1145/3397481.3450637' class='paper-link' target='_blank'>[PDF]</a>"
+                            "content": "Soya Park, <strong>April Yi Wang</strong>, Ban Kawas, Q. Vera Liao, David Piorkowski, and Marina Danilevsky. 2021. <strong>Facilitating Knowledge Sharing from Domain Experts to Data Scientists for Building NLP Models. </strong> In Proceedings of the 26th International Conference on Intelligent User Interfaces (IUI 2021). <a href='https://dl.acm.org/doi/10.1145/3397481.3450637' class='paper-link' target='_blank'>[Paper]</a>",
+                            "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "VL/HCC 2020&nbsp;<i class='fas fa-award'></i>",
-                            "content": "Yan Chen, Jaylin Herskovitz, Gabriel Matute, <strong>April Wang</strong>, Sang Won Lee, and Steve Oney. 2020. <strong>EdCode: Towards Personalized Support at Scale for Remote Assistance in CS Education.</strong> In Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2020). <a href='https://chensivan.github.io/papers/VLHCC2020_Edcode.pdf' class='paper-link' target='_blank'>[PDF]</a>"
+                            "content": "Yan Chen, Jaylin Herskovitz, Gabriel Matute, <strong>April Wang</strong>, Sang Won Lee, and Steve Oney. 2020. <strong>EdCode: Towards Personalized Support at Scale for Remote Assistance in CS Education.</strong> In Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2020). <a href='https://ieeexplore.ieee.org/document/9127260' class='paper-link' target='_blank'>[Paper]</a>",
+                            "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "CHI 2020&nbsp;<i class='fas fa-award'></i>",
-                            "content": "<strong>April Yi Wang</strong>, Zihan Wu, Christopher Brooks and Steve Oney. 2020. <strong>Callisto: Capturing the Why by Connecting Conversations with Computational Narratives</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2020). <a href='./assets/pubs/CHI20_Callisto.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='./assets/pubs/CHI20_Callisto_Supplement.zip' class='paper-link' target='_blank'>[Supplemental Material]</a> <a href='https://youtu.be/Yq1wYNhTsGA' class='paper-link' target='_blank'>[Video]</a> <a href='./assets/pubs/CHI20_Callisto_Slide.pdf' class='paper-link' target='_blank'>[Slides]</a>"
-
+                            "content": "<strong>April Yi Wang</strong>, Zihan Wu, Christopher Brooks and Steve Oney. 2020. <strong>Callisto: Capturing the Why by Connecting Conversations with Computational Narratives</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2020). <a href='https://dl.acm.org/doi/10.1145/3313831.3376740' class='paper-link' target='_blank'>[Paper]</a> <a href='./assets/pubs/CHI20_Callisto_Supplement.zip' class='paper-link' target='_blank'>[Supplemental Material]</a> <a href='https://youtu.be/Yq1wYNhTsGA' class='paper-link' target='_blank'>[Video]</a> <a href='./assets/pubs/CHI20_Callisto_Slide.pdf' class='paper-link' target='_blank'>[Slides]</a>",
+                            "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "CSCW 2019&nbsp;<i class='fas fa-trophy'></i>",
-                            "content": "<strong>April Yi Wang</strong>, Anant Mittal, Christopher Brooks and Steve Oney. 2019. <strong>How Data Scientists Use Computational Notebooks for Real-Time Collaboration.</strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2019). <a href='./assets/pubs/CSCW19_Collaborative_Data_Science.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='./assets/pubs/CSCW19_Slides.pdf' class='paper-link' target='_blank'>[Slides]</a>"
-
+                            "content": "<strong>April Yi Wang</strong>, Anant Mittal, Christopher Brooks and Steve Oney. 2019. <strong>How Data Scientists Use Computational Notebooks for Real-Time Collaboration.</strong> In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2019). <a href='./assets/pubs/CSCW19_Collaborative_Data_Science.pdf' class='paper-link' target='_blank'>[Paper]</a> <a href='./assets/pubs/CSCW19_Slides.pdf' class='paper-link' target='_blank'>[Slides]</a>",
+                            "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "VL/HCC 2019",
-                            "content": "<strong>April Yi Wang</strong> and Parmit K. Chilana. 2019. <strong>Designing Curated Conversation-Driven Explanations for Communicating Complex Technical Concepts.</strong> In Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2019). <a href='./assets/pubs/VLHCC19_JargonLite.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='./assets/pubs/VL_HCC19_Slides.pdf' class='paper-link' target='_blank'>[Slides]</a>"
-
+                            "content": "<strong>April Yi Wang</strong> and Parmit K. Chilana. 2019. <strong>Designing Curated Conversation-Driven Explanations for Communicating Complex Technical Concepts.</strong> In Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2019). <a href='./assets/pubs/VLHCC19_JargonLite.pdf' class='paper-link' target='_blank'>[Paper]</a> <a href='./assets/pubs/VL_HCC19_Slides.pdf' class='paper-link' target='_blank'>[Slides]</a>",
+                            "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "CHI 2018&nbsp;<i class='fas fa-award'></i>",
-                            "content": "<strong>April Yi Wang</strong>, Ryan Mitts, Philip J. Guo and Parmit K. Chilana. 2018. <strong>Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers.</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2018). <a href='./assets/pubs/CHI18_Conversational_Programmer.pdf' class='paper-link' target='_blank'>[PDF]</a> <a href='./assets/pubs/CHI18_Slides.pdf' class='paper-link' target='_blank'>[Slides]</a>"
+                            "content": "<strong>April Yi Wang</strong>, Ryan Mitts, Philip J. Guo and Parmit K. Chilana. 2018. <strong>Mismatch of Expectations: How Modern Learning Resources Fail Conversational Programmers.</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2018). <a href='./assets/pubs/CHI18_Conversational_Programmer.pdf' class='paper-link' target='_blank'>[Paper]</a> <a href='./assets/pubs/CHI18_Slides.pdf' class='paper-link' target='_blank'>[Slides]</a>",
+                            "teaser": "./assets/teaser/chi22.png"
                         },
                         {
                             "venue": "CSCW 2018",
-                            "content": "Laton Vermette, Shruti Dembla, <strong> April Y. Wang</strong>, Joanna McGrenere and Parmit K. Chilana. 2018. <strong>Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications.</strong> In Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW 2018). <a href='./assets/pubs/CSCW17_Social_CheatSheet.pdf' class='paper-link' target='_blank'>[PDF]</a>"
+                            "content": "Laton Vermette, Shruti Dembla, <strong> April Y. Wang</strong>, Joanna McGrenere and Parmit K. Chilana. 2018. <strong>Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications.</strong> In Proceedings of the ACM : Human-Computer Interaction (1,1), Computer-Supported Cooperative Work and Social Computing (CSCW 2018). <a href='./assets/pubs/CSCW17_Social_CheatSheet.pdf' class='paper-link' target='_blank'>[Paper]</a>",
+                            "teaser": "./assets/teaser/chi22.png"
                         }
                     ]
                 },
@@ -157,6 +164,8 @@
                     "item": [
                         {
                             "venue": "IJCAI 2021",
+                            "title": "",
+                            "authors": "<strong>April Yi Wang </strong>, Dakuo Wang, Xuye Liu, and Lingfei Wu.",
                             "content": "<strong>April Yi Wang </strong>, Dakuo Wang, Xuye Liu, and Lingfei Wu. 2021. <strong>Graph-Augmented Code Summarization in Computational Notebooks.</strong> In Proceedings of 30th International Joint Conferences on Artificial Intelligence (IJCAI 2021). Demo Paper. <a href='https://www.ijcai.org/proceedings/2021/0717.pdf' class='paper-link' target='_blank'>[Link]</a>"
                         },
                         {
