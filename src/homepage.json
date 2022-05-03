@@ -99,7 +99,7 @@
                         },
                         {
                             "venue": "CHI 2022",
-                            "content": "<strong>April Yi Wang</strong>, Will Epperson, Robert DeLine, and Steven M. Drucker. <strong> Diff in the Loop: Supporting Data Comparison in Exploratory Data Analysis.</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2022) <a href='https://dl.acm.org/doi/10.1145/3491102.3517615' class='paper-link' target='_blank'>[Paper]</a> <a href='https://youtu.be/hv997irOZ9s' class='paper-link' target='_blank'>[Talk]</a>",
+                            "content": "<strong>April Yi Wang</strong>, Will Epperson, Robert DeLine, and Steven M. Drucker. <strong> Diff in the Loop: Supporting Data Comparison in Exploratory Data Analysis.</strong> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2022) <a href='https://dl.acm.org/doi/10.1145/3491102.3502123' class='paper-link' target='_blank'>[Paper]</a> <a href='https://youtu.be/hv997irOZ9s' class='paper-link' target='_blank'>[Talk]</a>",
                             "teaser": "./assets/teaser/chi22.png"
                         },
                         {
