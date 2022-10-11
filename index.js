@@ -1,4 +1,4 @@
-import {addListeners, loadHome, loadPublication,loadProject, loadMore} from './src/app.js'
+import {loadHome, loadPublication, loadCV} from './src/app.js'
 import template from './src/homepage.pug'
 import data from './src/homepage.js'
 import style from './src/scss/common.scss'
@@ -9,28 +9,27 @@ var R = new Router();
 let html = template({data:data})
 document.querySelector("#app").innerHTML = html;
 setTimeout(function(){
-  addListeners()
+  // addListeners()
   R.init();
-  var mixer = mixitup('.container')
   
   R.route('/', function(id){
     console.log("home!!")
+    loadHome()
   })
   
-  R.route('/project', function(id){
-    loadProject(id)
-  })
 
+  R.route('/cv', function(){
+    console.log("cv!!")
+    loadCV();
+  })
   R.route('/home', function(id){
     loadHome()
   })
 
   R.route('/publication', function(id){
+    console.log("cv!!")
     loadPublication()
   })
 
-  R.route('/more', function(id){
-    loadMore()
-  })
 }, 500)
 

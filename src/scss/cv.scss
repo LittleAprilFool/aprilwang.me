@@ -1,0 +1,104 @@
+@import 'variable';
+.cv-title {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.cv {
+  display: grid;
+  font-family: "Amiri", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: black;
+  padding: 30px 0px;
+}
+
+.cv section {
+  padding: 0.5rem 0rem;
+}
+
+.cv > * {
+    color: black; 
+}
+
+.cv strong {
+    color: black;
+    font-weight: bold;
+}
+
+.cv p{
+    margin: 20px 0px;
+}
+
+.downloadpdf{
+    // border:1px solid $primary-lightdark;
+    display: block;
+    width: 100px;
+    background: $text-background-yellow;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: $text-secondary-yellow;
+}
+
+.downloadpdf > i {
+    margin-right: 8px;
+}
+
+.cv-address {
+    margin-top: 20px;
+}
+.address {
+    grid-column: 1/4;
+}
+
+.contact {
+    grid-column: 4/9;
+    justify-self: right;
+}
+
+.right {
+    grid-column: 3/9;
+  }
+
+  .full {
+    grid-column: 1/9;
+  }
+  .left {
+    grid-column: 1/3;
+    text-align: right;
+    justify-self: right;
+  }
+
+  .cvitem-timerange {
+    font-style: italic;
+  }
+
+  .cvitem-location {
+    font-style: italic;
+  }
+
+  .cv .container {
+    grid-column-gap: 2rem;
+    grid-row-gap: .8rem;
+    grid-auto-rows: minmax(0rem, auto);
+  }
+
+  .cv h3 {
+    font-weight: normal;
+    padding: 5px 0px;
+    border-bottom: 1px solid black;
+    margin: 0px auto;
+  }
+
+  .cv .cvitem-venue{
+    font-style: italic;
+  }
+
+  .cvitem-number{
+    font-style: italic;
+  }
+
+  .cvitem-talktitle{
+    font-style: italic;
+  }

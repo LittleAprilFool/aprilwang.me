@@ -1,24 +1,220 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="./dist/bundle.css">
-        <title>April Yi Wang | PhD Student in University of Michigan, School of Information</title>
-        <script src="//use.edgefonts.net/passion-one;muli;lato.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    </head>
-    <body>
-        <div id="app"></div>
-        <script src="./dist/bundle.js" type="text/javascript"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89701026-2"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./dist/bundle.css" />
+    <title>
+      April Yi Wang | PhD Student in University of Michigan, School of
+      Information
+    </title>
+    <script src="//use.edgefonts.net/passion-one;muli;lato.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.6.0/two.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./dist/bundle.js" type="text/javascript"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-89701026-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-            gtag('config', 'UA-89701026-2');
-        </script>
+      gtag("config", "UA-89701026-2");
+    </script>
+    <script>
+      const makeCircle = (element) => {
+        this.createCircle = (array, color, bgcolor, lineWidth = 3, type) => {
+          const SEGMENTS = 30;
+          const DIF = 360 / SEGMENTS;
+          for (let i = 0; i < SEGMENTS; i++) {
+            let angle = DIF * i;
+            angle = (angle * Math.PI) / 180;
+            let xoff, yoff;
+            if (type == 1) {
+              xoff = 50;
+              yoff = 0;
+            }
+            if (type == 2) {
+              xoff = -50;
+              yoff = 0;
+            }
+            if (type == 3) {
+              xoff = 0;
+              yoff = -80;
+            }
+            const x = 150 + xoff + Math.cos(angle) * 80;
+            const y = 180 + yoff + Math.sin(angle) * 80;
+            const anchor = new Two.Anchor(x, y, x, y, x, y);
+            anchor.originalX = x;
+            anchor.originalY = y;
+            array.push(anchor);
+          }
 
-    </body>
+          let circle = new Two.Path(array, true, true);
+          circle.stroke = color;
+          circle.linewidth = lineWidth;
+          circle.fill = bgcolor;
+          this.circlesContainer.add(circle);
+          this.two.update();
+        };
+
+        this.onMouseMove = (e) => {
+          if (e.touches) {
+            // e.preventDefault();
+            // e.stopPropagation();
+            const rect = e.target.getBoundingClientRect();
+            const center = {
+              x: rect.left + rect.width / 2,
+              y: rect.top + rect.height / 2,
+            };
+            this.mouseX = (e.touches[0].clientX - center.x) / center.x;
+            this.mouseY = (e.touches[0].clientY - center.y) / center.y;
+            this.mouseX = -this.mouseX;
+            this.mouseY = -this.mouseY;
+            this.mouseX = 150 + this.mouseX * 40;
+            this.mouseY = 180 + this.mouseY * 40;
+          } else {
+            this.mouseX = e.offsetX == undefined ? e.layerX : e.offsetX;
+            this.mouseY = e.offsetY == undefined ? e.layerY : e.offsetY;
+          }
+          this.mouseX = Math.max(0, Math.min(this.mouseX, 150));
+          this.mouseY = Math.max(0, Math.min(this.mouseY, 180));
+          this.drawCircle(this.blackPoints, 40, 0.2);
+          this.drawCircle(this.yellowPoints, 40, 0.2, Quint.easeOut, 1, {
+            x: (this.mouseX - 150) / 7,
+            y: (this.mouseY - 220) / 7,
+          });
+          this.drawCircle(this.pinkPoints, 40, 0.2, Quint.easeOut, 1, {
+            x: -(this.mouseX - 150) / 7,
+            y: -(this.mouseY - 0) / 7,
+          });
+          this.drawCircle(
+            this.bluePoints,
+            40,
+            0.1,
+            Quint.easeOut,
+            1,
+            { x: (this.mouseX - 150) / 7, y: -(this.mouseY - 0) / 7 },
+            true
+          );
+        };
+
+        this.onMouseOut = (event) => {
+          this.mouseX = this.mouseY = 0;
+          this.drawCircle(this.blackPoints, 20, 0, Back.easeOut, 1, {
+            x: this.mouseX + 0,
+            y: this.mouseY + 0,
+          });
+          this.drawCircle(this.yellowPoints, 20, 0, Back.easeOut, 1, {
+            x: this.mouseX - 50,
+            y: this.mouseY + 0,
+          });
+          this.drawCircle(this.pinkPoints, 20, 0, Back.easeOut, 1, {
+            x: this.mouseX + 0,
+            y: this.mouseY - 80,
+          });
+          this.drawCircle(
+            this.bluePoints,
+            20,
+            0,
+            Back.easeOut,
+            1,
+            { x: this.mouseX + 50, y: this.mouseY - 0 },
+            true,
+            true
+          );
+        };
+
+        updateTwo = () => {
+          this.two.update();
+        };
+
+        this.drawCircle = (
+          points,
+          minCoef,
+          multiplier,
+          ease = Quint.easeOut,
+          time = 1,
+          centerOffset = { x: 0, y: 0 },
+          update = false,
+          out = false
+        ) => {
+          let mouseAngle =
+            (Math.atan2(this.mouseY - 100, this.mouseX - 100) * 180) / Math.PI;
+          if (mouseAngle < 0) {
+            mouseAngle = 360 + mouseAngle;
+          }
+          const distance = Math.sqrt(
+            Math.pow(this.mouseX - 100, 150) + Math.pow(this.mouseY - 100, 150)
+          );
+          const SEGMENTS = points.length;
+          const DIF = 360 / SEGMENTS;
+          for (let i = 0; i < SEGMENTS; i++) {
+            let pointAngle = DIF * i;
+            const anchor = points[i];
+            pointAngle = (pointAngle * Math.PI) / 180;
+            let radius = 40;
+            const distanceToPoint = Math.sqrt(
+              Math.pow(this.mouseX - anchor.originalX, 2) +
+                Math.pow(this.mouseY - anchor.originalY, 2)
+            );
+            radius = minCoef + distanceToPoint * multiplier;
+            radius = Math.max(80, Math.min(radius, 100));
+            const x = 150 + centerOffset.x + Math.cos(pointAngle) * radius;
+            const y = 180 + centerOffset.y + Math.sin(pointAngle) * radius;
+            TweenMax.to(anchor, time, {
+              x,
+              y,
+              lx: x,
+              ly: y,
+              rx: x,
+              ry: y,
+              ease: ease,
+              onUpdate: update ? this.updateTwo : null,
+            });
+          }
+        };
+
+        this.two = new Two({ width: 300, height: 300 }).appendTo(element);
+        this.circlesContainer = this.two.makeGroup();
+        this.blackPoints = [];
+        this.bluePoints = [];
+        this.pinkPoints = [];
+        this.yellowPoints = [];
+        this.createCircle(this.bluePoints, "#AACFDA", "#AACFDA22", 2, 1);
+        this.createCircle(this.yellowPoints, "#EAC983", "#EAC98322", 2, 2);
+        this.createCircle(this.pinkPoints, "#F48B7B", "#F48B7B22", 2, 3);
+        this.createCircle(this.blackPoints, "#000", 0);
+        element.addEventListener("mouseout", this.onMouseOut);
+        element.addEventListener("mousemove", this.onMouseMove);
+        element.addEventListener("touchend", this.onMouseOut);
+        element.addEventListener("touchmove", this.onMouseMove);
+        TweenMax.fromTo(
+          element,
+          0.5,
+          { scaleX: 0.2 },
+          { scaleX: 1, ease: Back.easeOut }
+        );
+        TweenMax.fromTo(
+          element,
+          0.8,
+          { scaleY: 0.2 },
+          { scaleY: 1, ease: Back.easeOut, delay: 0.1 }
+        );
+      };
+    </script>
+  </body>
 </html>

@@ -1,0 +1,115 @@
+div.container
+    //- div.menu
+    //-     ul.nav
+    //-         li#nav1 
+    //-             a(href='#/home') HOME
+    //-         li#nav2
+    //-             a(href='#/publication') PUBLICATION
+    //-         //- li#nav3
+    //-         //-     a(href='#/project') PROJECT
+    //-         li#nav4 
+    //-             a(target='_blank' href='/assets/cv-general.pdf') CV
+    //-         //- li#nav5 
+    //-         //-     a(href='#/more') MORE
+
+    div.content-container
+        div.personal-container
+            div.personal
+                .info
+                    div#avadiv
+                        img(src="./assets/avatar3.jpg", id="avatar")
+                    p.name #{data.content[0].name}
+                    p.edu #{data.content[0].education}
+                    p.affli !{data.content[0].affiliation}   
+                .icons
+                    a(href='mailto:aprilww@umich.edu')
+                        <i class="fa fa-envelope"></i>
+                    a(target="_blank" href='https://twitter.com/AprilWang95')
+                        <i class="fab fa-twitter"></i>
+                    a(target="_blank" href='https://github.com/LittleAprilFool')
+                        <i class="fab fa-github"></i>
+                    a(target="_blank" href='https://scholar.google.com/citations?user=yitS6coAAAAJ&hl=en')
+                        <i class="fa fa-graduation-cap"></i>
+                    a(target='_blank' href='./assets/cv_awang.pdf') CV
+        div.intro-container
+            section.right.home
+                .intro.inside
+                    p.title !{data.content[0].meat[0].h}
+                    p.text !{data.content[0].meat[0].p}
+                //- .newslist.inside
+                //-     p.title !{data.content[0].meat[1].h}
+                //-     each news in data.content[0].meat[1].p
+                //-         .newsitem
+                //-             p.date !{news.date}
+                //-             p.news !{news.news}
+                .publication.inside
+                    each item in data.content[1].content
+                        p.title !{item.title}
+                        each one in item.item
+                            div.paper-item
+                                div.venue !{one.venue}
+                                div.text !{one.content}
+            //- section.right.publication.hide
+            //-     .inside
+            //-         each item in data.content[1].content
+            //-             p.title !{item.title}
+            //-             each one in item.item
+            //-                 div.paper-item
+            //-                     div.venue !{one.venue}
+            //-                     div.text !{one.content}
+        div.one-container
+            section.project.hide
+                div#filter-button
+                        label(for="idall")
+                            input(type="radio" id="idall" checked="checked" name="xx")    
+                            div#but(data-filter="all") All
+                        each tag,index in data.content[2].projecttag
+                            label(for='id'+index)
+                                input(type="radio" name="xx" id='id'+index)
+                                div#but(data-filter='.'+index) #{tag}
+                div.project-list
+                    each project in data.content[2].project
+                        div.project-list-item.mix(class=project.tag id=project.id) 
+                            div.project-list-album 
+                                img(src=project.album, alt="")
+                            div.project-list-name #{project.name}
+                            div.project-list-tag-wrap
+                                each tag in project.tag
+                                    div.project-list-tag #{data.content[2].projecttag[tag]}
+                            div.project-list-abstract !{project.abstract}
+            section.project-detail.hide
+                each project, index in data.content[2].project
+                    .project-detail-item(class=project.id)
+                        .project-detail-bar
+                            <i class="fa fa-angle-left"></i>
+                            .project-detail-list list
+                        .project-detail-title !{project.name}
+                        .project-detail-content !{project.html}
+            section.more.hide
+                div#two
+                    include ../assets/april.svg
+                p Say Hi~~~ <i class="fa fa-heart"></i>
+                
+                p Let me tell you more about myself
+
+                p I have a rarely updated <a class="highlight" target="_blank" href='https://aprilwang.me/blog'>blog</a>
+                
+                p Oh, let me introduce my roommate Emerson
+                
+                .bakery
+                    img(src="./assets/emerson3.jpg", alt="")
+                    img(src="./assets/emerson2.jpg", alt="")
+                    img(src="./assets/emerson.jpg", alt="")
+                
+                p I love <a target='_blank' href='http://arcg.is/2mVfJp1'>traveling</a>
+                p  <i class="fa fa-plane"></i> <i class="fa fa-plane"></i> <i class="fa fa-plane"></i>
+                
+                div.friends
+                    p Now that you have scrolled all the way down here (●′ω`●)
+                    p One last thing, meet my squad!
+                    div.friendlist
+                        each link, friend in data.content[3].friends
+                            a(href=link target="_blank" class="friend") #{friend}
+
+    div.footer
+        h1#small © April Y. Wang 2021

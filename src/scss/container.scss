@@ -1,81 +1,381 @@
-@import 'personal';
-@import 'about';
-@import 'publication';
-@import 'projectlist';
-@import 'projectdetail';
-@import 'more';
-@import 'neat/neat/';
-@import 'media';
+@import 'variable';
 
 .container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 4rem;
+  grid-auto-rows: minmax(3rem, auto);
+  grid-row-gap: .5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 2rem 0rem 1rem 0rem;
+  background: $section-red;
+}
+
+.header_bio {
+  grid-column: 3 / 9;
+}
+
+.header_photo {
+  grid-column: 1 / 4;
+  text-align: center;
+  justify-self: right;
+}
+
+#avatar {
+  width: 100%
+}
+
+#avadiv {
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+.announcement {
+  padding: 10px 15px;
+  border-radius: 6px;
+  background: $secondary-highlight-background;
+  margin-top:20px;
+  color: $primary-dark;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 800;
+  color: $primary-dark;
+  padding: 10px 0px;
+  display: inline;
+}
+
+.cname {
+  font-size: 18px;
+  padding: 5px 0px;
+  margin-left:20px;
+}
+
+.icons a {
+  color: $primary-highlight;
+  margin: 5px;
+}
+
+.header_photo p {
+  margin: 5px;
+}
+
+.feature {
+  border-top: 1px solid $primary-highlight-light;
+  grid-column: 3/9;
+}
+
+.feature > .title {
+  grid-column: 1/9;
+}
+.projects{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  grid-column: 1/9;
+  grid-column-gap: 2rem;
+}
+.project {
+  background: $primary-lightgray;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 22px;
+  color: #3a04047d;
+}
+
+.project > img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-title {
+  font-weight: bold;
+  color: $primary-highlight; 
+}
+
+.pubs {
+  grid-column: 1/9;
+}
+
+.news {
+  grid-column: 1/3;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+// .panel {
+//   margin-top: 2rem;
+//   border-top: 1px solid $primary-highlight-light; 
+// }
+
+.paper-title {
+  font-weight: bold;
+  color: $primary-dark;
+}
+
+.paper-abstract {
+  line-height: 20px;
+  color: $secondary-color;
+}
+
+.paper-item {
+  line-height: 22px;
+  padding-bottom: 40px;
+}
+
+.nav > li {
+  text-decoration: none;
+  margin-right: 15px;
+  background: $text-background-yellow;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+  padding: 0px;
+}
+
+.header_info > p {
+  margin: 5px 0px;
+}
+
+.header_menu {
+  grid-column: 6/9;
+  justify-self: end;
+}
+
+.header_exp {
+  display: grid;
+  grid-column: 1/9;
+}
+
+.header_avatar {
+  grid-column: 2/5;
+}
+
+.header_info {
+  grid-column: 5/9;
+}
+
+.attending-date {
+  display: inline;
+  background-color: $secondary-highlight-background;
+  padding: 3px 5px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.attending-event {
+  display: inline;
+}
+
+.attending-item {
+  padding-bottom: 10px;
+}
+
+.ispast {
+  color: $primary-lightdark;
+}
+
+.ispast a {
+  color: $primary-lightdark;
+}
+
+.ispast > .attending-date {
+  background-color: $primary-lightgray;
+}
+
+.all {
+  float: right;
+  background-color: $secondary-highlight-background;
+  font-weight: normal;
+  padding: 0px 10px;
+  border-radius: 6px;
+}
+
+.hide {
+  display: none;
+}
+
+.publication {
+  display: grid;
+}
+
+.header_title {
+  grid-column: 4/9;
+}
+
+.about {
+  background:$section-yellow;
+}
+
+.deco{
+  max-width: 60px;
+  margin-bottom: 10px;
+}
+
+.attendinglist{
+  padding-top:10px;
+}
+
+.paper-link {
+  padding:5px 0px;
+  margin-top: 5px;
+}
+.paper-venue {
+  font-weight: 400;
+}
+
+.category-title{
+  text-transform: uppercase;
+    font-weight: 600;
+    color: $medium-red;
+    padding: 20px 0px;
+    font-size: 15px;
+}
+
+.paper-figure > img {
+  width: 100%
+}
+
+.paper-figure > .video {
+  width:100%;
+}
+.video > iframe {
+  width: 100%;
+  height: auto;
+}
+
+.paper-left {
+  grid-column: 1/3;
+}
+
+.paper-right {
+  grid-column: 3/9;
+}
+
+.paper-right > div {
+  padding:0px 0px 5px 0px;
+}
+
+.paper-link > a {
+  background-color: $text-background-yellow;
+  margin-right: 5px;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.RoundedButton {
+	width: 300px;
+	height: 300px;
+	display: block;
+	outline: none;
+	-webkit-appearance: none;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+}
+.ButtonGroup {
+	position: absolute;
+	top: 20px;
+	left: 50px;
+}
+
+#button1 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.label {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.label1 {
+	position: absolute;
+	top: 70px;
+	left: 160px;
+	color: #F48B7B; 
+}
+
+.label2 {
+	position: absolute;
+	top: 213px;
+	left: 70px;
+	transform: rotate(60deg);
+	color: #EAC983;
+}
+
+.label3 {
+	position: absolute;
+	top: 220px;
+	left: 260px;
+	transform: rotate(-60deg);
+	color: #AACFDA
+}
+
+.venn-pub-list {
+	font-size:12px;
+	line-height: 18px;
+	color: #666;
+	position: absolute;
+}
+.cp {
+		top: 30px;
+    left: -20px;
+}
+.ce {
+	top: 60px;
+	left: 380px;
+}
+.pe {
+	top: 280px;
+	left: 220px;
+}
+.venn-pub-list > ul > li {
+	text-decoration: none;
+	text-align: right;
+}
+.venn-pub-list > ul {
+	list-style: none;
+	width:210px;
+}
+
+.venn-pub-list > ul > li > a {
+  color: $secondary-color;
+}
+
+.Venn {
+	position: absolute;
+	left:200px;
+}
+
+.VennDiagram{
   position: relative;
-  // height: 100%;
-  overflow: hidden;
-  @include grid-collapse;
+  left: -30px;
 }
 
-
-
-.menu{
-  @include grid-column;
-  @include grid-collapse;
-  height: 50px;
-  position: fixed;
+.venn-container {
+  height: 320px;
 }
 
-.content-container {
-  @include grid-column;
-  @include grid-collapse;
-  // @include grid-visual;
-  overflow: scroll;
-  height: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  // height: calc(100%-80px);
-}
-
-.one-container {
-  @include grid-column;
-}
-
-.personal-container {
-  @include grid-column(4);
-
-  @include grid-media($mobile-grid){
-    @include grid-column;
-  }
-}
-
-.inside {
-  @include grid-media($mobile-grid){
-    padding:50px;
-  }
-}
-
-.intro-container {
-  @include grid-column(8);
-  @include grid-container;
-
-  @include grid-media($mobile-grid){
-    @include grid-column;
-    @include grid-container;
-  }
-}
-
-.right {
-  @include grid-column(10);
-  @include grid-media($mobile-grid){
-    @include grid-column;
-    @include grid-container;
-  }
+.edu {
+  padding: 2px 0px;
 }
 
 .footer {
-  background: $primary-highlight;
-  width:calc(100% + 40px);
-  position:fixed;
-  bottom:0px;
-  // @include grid-column;
-  // @include grid-collapse;
-  height: 30px;
+  color: $primary-color;
+  border-top: solid 1px $primary-color;
 }

@@ -2,8 +2,8 @@
 // @import 'drawer';
 @import 'variable';
 @import 'container';
-@import 'menu';
-@import "neat/neat";
+@import 'cv';
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 
 html {
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    color: $primary-color;
+    color: $secondary-color;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -20,6 +20,15 @@ body {
     overflow: scroll;
     overflow-x: hidden;
     cursor: default;
+    line-height: 25px;
+    font-family: lato, sans-serif;
+    // font-family: 'Crimson', serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+main {
+     border-top: 5px solid #d1b7b1;
 }
 
 #app{
@@ -28,21 +37,22 @@ body {
 
 strong {
     font-weight: 600;
-    color: $primary-lightdark;
+    color: #B95C50;
 }
 
 section {
     margin: 0;
+    padding: 2rem 0rem;
 }
 
 a {
   text-decoration: none;
-  color: $primary-highlight;
+  color: $text-yellow;
   font-weight: 400;
 }
 
 a:hover {
-    color: $primary-highlight-light;
+    color: $text-secondary-yellow;
 }
 
 a:visited {
@@ -56,39 +66,24 @@ a:visited {
     cursor:default;
 }
 
-.tit {
-    font-family: passion-one, sans-serif;
-    font-size: 15px;
-    color: black;
-}
+// .tit {
+//     font-family: passion-one, sans-serif;
+//     font-size: 15px;
+//     color: black;
+// }
 
-p {
-    font-family: lato, sans-serif;
-    font-size: 14px;
-}
 
-div {
-    font-family: lato, sans-serif;
-    font-size: 14px;
-}
 
-#title {
-    font-family: passion-one, sans-serif;
-    font-size: 80px;
-    color: $primary-highlight;
-    margin: 10px;
-}
-
-ul {
-    font-family: lato, sans-serif;
-}
+// ul {
+//     font-family: lato, sans-serif;
+// }
 
 li {
     text-decoration: none;
 }
 
 #subtitle {
-    font-family: muli, sans-serif;
+    // font-family: muli, sans-serif;
     font-size: 20px;
     margin:auto;
     color: $primary-darkgray;
@@ -96,7 +91,7 @@ li {
 
 #enter {
     cursor: pointer;
-    font-family: passion-one, sans-serif;
+    // font-family: passion-one, sans-serif;
     font-size: 20px;
     border-bottom: 2px solid black;
     width: 5%;
@@ -121,13 +116,14 @@ li {
     text-align:center;
     font-family: lato, sans-serif;
     font-size: 12px;
-    color: $primary-lightgray;
     margin: 0;
     padding-top:5px;
+    grid-column: 1/9;
 }
 
 p {
     cursor: default;
+    margin: 0px;
 }
 
 .hide {
@@ -135,10 +131,13 @@ p {
   }
 
 .title {
-    font-family: lato, sans-serif;
+    // font-family: lato, sans-serif;
     font-size: 15px;
     font-weight: bold;
     color: $primary-highlight; 
-    margin-top: 5%;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+.text {
+    padding:10px 0px;
 }

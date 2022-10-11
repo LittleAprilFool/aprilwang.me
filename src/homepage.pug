@@ -1,115 +1,331 @@
-div.container
-    //- div.menu
-    //-     ul.nav
-    //-         li#nav1 
-    //-             a(href='#/home') HOME
-    //-         li#nav2
-    //-             a(href='#/publication') PUBLICATION
-    //-         //- li#nav3
-    //-         //-     a(href='#/project') PROJECT
-    //-         li#nav4 
-    //-             a(target='_blank' href='/assets/cv-general.pdf') CV
-    //-         //- li#nav5 
-    //-         //-     a(href='#/more') MORE
+header.header
+    .container
+        .header_photo
+            .info
+                #avadiv
+                    img(src=data.bio.avatar, id="avatar")
+        .header_title
+            p.name #{data.bio.name}
+            span.cname #{data.bio.cname}
+            p.edu #{data.bio.education} at !{data.bio.affiliation}
+            .icons
+                a(href='mailto:aprilww@umich.edu')
+                    <i class="fa fa-envelope"></i>
+                a(target="_blank" href='https://twitter.com/AprilWang95')
+                    <i class="fab fa-twitter"></i>
+                a(target="_blank" href='https://github.com/LittleAprilFool')
+                    <i class="fab fa-github"></i>
+                a(target="_blank" href='https://scholar.google.com/citations?user=yitS6coAAAAJ&hl=en')
+                    <i class="fa fa-graduation-cap"></i>
+            .header_menu
+                ul.nav
+                    li#nav1
+                        a(href='#/home') Home
+                    li#nav2
+                        a(href='#/cv') CV
+                    li#nav3
+                        a(href='#publications') Publications
+main
+    .home
+        section.about
+            .container
+                .news.panel
+                    p.title Attending
+                    .deco
+                        <svg id="__1Dm1det__dd6d3b5d-736e-4112-a978-d559f0ef793b" data-name="70f8052d-3d8c-41fb-92d4-1085a59c667f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.39 3.6"><title>seperator</title><path d="M.35,1.9a3.73,3.73,0,0,0,2.7,1.2c3.5,0,2.3-2.6,5.8-2.6,2.9,0,3.1,2.6,5.8,2.6,3,0,2.6-2.6,5.7-2.6,2.8,0,3.3,2.6,5.8,2.6,3,0,2.8-2.6,5.8-2.6a4.37,4.37,0,0,1,3.1,1.4" style="fill: none;stroke: #da9533;stroke-miterlimit: 10;stroke-dashoffset: 2e-05;stroke-dasharray: none;"></path></svg>
+                    .attendinglist
+                        each val in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                            if data.attending[val].ispast
+                                .attending-item.ispast
+                                    .attending-date !{data.attending[val].date}
+                                    .attending-event !{data.attending[val].event}
+                            else
+                                .attending-item
+                                    .attending-date !{data.attending[val].date}
+                                    .attending-event !{data.attending[val].event}                        
+                .header_bio
+                    p.title About Me
+                    .deco
+                        <svg id="__1Dm1det__dd6d3b5d-736e-4112-a978-d559f0ef793b" data-name="70f8052d-3d8c-41fb-92d4-1085a59c667f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.39 3.6"><title>seperator</title><path d="M.35,1.9a3.73,3.73,0,0,0,2.7,1.2c3.5,0,2.3-2.6,5.8-2.6,2.9,0,3.1,2.6,5.8,2.6,3,0,2.6-2.6,5.7-2.6,2.8,0,3.3,2.6,5.8,2.6,3,0,2.8-2.6,5.8-2.6a4.37,4.37,0,0,1,3.1,1.4" style="fill: none;stroke: #da9533;stroke-miterlimit: 10;stroke-dashoffset: 2e-05;stroke-dasharray: none;"></path></svg>
+                    p.text !{data.bio.about}
+                    p.text !{data.bio.bio}
+                    .announcement !{data.bio.announcement}
+                    .venn-container
+                        .VennDiagram
+                            .Venn
+                                .ButtonGroup
+                                    button#button1.RoundedButton
+                                .label1.label collaboration
+                                .label2.label programming
+                                .label3.label education
+                            .venn-pub-list.cp
+                                ul
+                                    li 
+                                        a(href='#ICSE2022') Reuse analysis code, ICSE&rsquo;22
+                                    li 
+                                        a(href='#CHI2022a') DITL, CHI&rsquo;22
+                                    li 
+                                        a(href='#CHI2022b') NB2Slide, CHI&rsquo;22
+                                    li 
+                                        a(href='#TOCHI2021') Themisto, TOCHI&rsquo;21
+                                    li 
+                                        a(href='#CSCW2021b') Multidisciplinary teams, CSCW&rsquo;21
+                                    li 
+                                        a(href='#IUI2021') Ziva, IUI&apos;21
+                                    li 
+                                        a(href='#CHI2020') Callisto, CHI&rsquo;20 <i class='fas fa-award'></i>
+                                    li 
+                                        a(href='#CSCW2019') Synchronize editing, CSCW&rsquo;19 <i class='fas fa-trophy'></i>
+                            .venn-pub-list.ce
+                                ul
+                                    li 
+                                        a(href='#CSCW2021a') PuzzleMe, CSCW&rsquo;21
+                                    li 
+                                        a(href='#VLHCC2020') EdCode, VL/HCC&rsquo;20 <i class='fas fa-award'></i>
+                            .venn-pub-list.pe
+                                ul
+                                    li 
+                                        a(href='#VLHCC2019') JargonLite, VL/HCC&rsquo;19
+                                    li 
+                                        a(href='#CHI2018') Conversational programmers, CHI&rsquo;18 <i class='fas fa-award'></i>
+        section
+            .pubnnews.container
+                .pubs.panel
+                    p.title#publications 
+                        span Publications
+                        .deco
+                            <svg id="__1Dm1det__dd6d3b5d-736e-4112-a978-d559f0ef793b" data-name="70f8052d-3d8c-41fb-92d4-1085a59c667f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.39 3.6"><title>seperator</title><path d="M.35,1.9a3.73,3.73,0,0,0,2.7,1.2c3.5,0,2.3-2.6,5.8-2.6,2.9,0,3.1,2.6,5.8,2.6,3,0,2.6-2.6,5.7-2.6,2.8,0,3.3,2.6,5.8,2.6,3,0,2.8-2.6,5.8-2.6a4.37,4.37,0,0,1,3.1,1.4" style="fill: none;stroke: #da9533;stroke-miterlimit: 10;stroke-dashoffset: 2e-05;stroke-dasharray: none;"></path></svg>
+                        //- span.all 
+                        //-     a(href='#/publication') SEE ALL
+                    -
+                        var category = data.publications[0]
+                    //- each category in data.publications
+                    .category
+                        //- p.category-title !{category.category}
+                        each item in category.item
+                            .paper-item.container(id=item.id)
+                                .paper-left 
+                                    .paper-figure
+                                        if item.video_teaser
+                                            .video !{item.video_teaser}
+                                        else
+                                            img(src=item.teaser)
+                                .paper-right
+                                    .paper-title !{item.title}
+                                    .paper-authors !{item.authors}
+                                    .paper-venue !{item.venue}
+                                    .paper-abstract !{item.abstract}
+                                    //- .paper-venue-full !{item.venue_full}
+                                    .paper-link !{item.links}
+                //- .news.panel
+                //-     p.title Attending
+                //-     each val in [0, 1, 2, 3, 4, 5, 6, 7, 8]
+                //-         if data.attending[val].ispast
+                //-             .attending-item.ispast
+                //-                 .attending-date !{data.attending[val].date}
+                //-                 .attending-event !{data.attending[val].event}
+                //-         else
+                //-             .attending-item
+                //-                 .attending-date !{data.attending[val].date}
+                //-                 .attending-event !{data.attending[val].event}                        
 
-    div.content-container
-        div.personal-container
-            div.personal
-                .info
-                    div#avadiv
-                        img(src="./assets/avatar3.jpg", id="avatar")
-                    p.name #{data.content[0].name}
-                    p.edu #{data.content[0].education}
-                    p.affli !{data.content[0].affiliation}   
-                .icons
-                    a(href='mailto:aprilww@umich.edu')
-                        <i class="fa fa-envelope"></i>
-                    a(target="_blank" href='https://twitter.com/AprilWang95')
-                        <i class="fab fa-twitter"></i>
-                    a(target="_blank" href='https://github.com/LittleAprilFool')
-                        <i class="fab fa-github"></i>
-                    a(target="_blank" href='https://scholar.google.com/citations?user=yitS6coAAAAJ&hl=en')
-                        <i class="fa fa-graduation-cap"></i>
-                    a(target='_blank' href='./assets/cv_awang.pdf') CV
-        div.intro-container
-            section.right.home
-                .intro.inside
-                    p.title !{data.content[0].meat[0].h}
-                    p.text !{data.content[0].meat[0].p}
-                //- .newslist.inside
-                //-     p.title !{data.content[0].meat[1].h}
-                //-     each news in data.content[0].meat[1].p
-                //-         .newsitem
-                //-             p.date !{news.date}
-                //-             p.news !{news.news}
-                .publication.inside
-                    each item in data.content[1].content
-                        p.title !{item.title}
-                        each one in item.item
-                            div.paper-item
-                                div.venue !{one.venue}
-                                div.text !{one.content}
-            //- section.right.publication.hide
-            //-     .inside
-            //-         each item in data.content[1].content
-            //-             p.title !{item.title}
-            //-             each one in item.item
-            //-                 div.paper-item
-            //-                     div.venue !{one.venue}
-            //-                     div.text !{one.content}
-        div.one-container
-            section.project.hide
-                div#filter-button
-                        label(for="idall")
-                            input(type="radio" id="idall" checked="checked" name="xx")    
-                            div#but(data-filter="all") All
-                        each tag,index in data.content[2].projecttag
-                            label(for='id'+index)
-                                input(type="radio" name="xx" id='id'+index)
-                                div#but(data-filter='.'+index) #{tag}
-                div.project-list
-                    each project in data.content[2].project
-                        div.project-list-item.mix(class=project.tag id=project.id) 
-                            div.project-list-album 
-                                img(src=project.album, alt="")
-                            div.project-list-name #{project.name}
-                            div.project-list-tag-wrap
-                                each tag in project.tag
-                                    div.project-list-tag #{data.content[2].projecttag[tag]}
-                            div.project-list-abstract !{project.abstract}
-            section.project-detail.hide
-                each project, index in data.content[2].project
-                    .project-detail-item(class=project.id)
-                        .project-detail-bar
-                            <i class="fa fa-angle-left"></i>
-                            .project-detail-list list
-                        .project-detail-title !{project.name}
-                        .project-detail-content !{project.html}
-            section.more.hide
-                div#two
-                    include ../assets/april.svg
-                p Say Hi~~~ <i class="fa fa-heart"></i>
-                
-                p Let me tell you more about myself
+    .cv.hide
+        .container
+            section.right
+                h1.cv-title !{data.bio.name}
+                p !{data.subtitle}
+                //- p !{data.bio.bio}
+                .cv-icons
+                .cv-address.container
+                    .address !{data.cv.address}
+                    .contact
+                        div
+                            a(href=data.cv.website) !{data.cv.website}
+                        div
+                            a(href='mailto:aprilww@umich.edu') !{data.cv.email}
+                        div
+                            .downloadpdf
+                                <i class="fas fa-file-pdf"></i>
+                                a(target='_blank' href='./assets/cv_awang.pdf') Download CV
 
-                p I have a rarely updated <a class="highlight" target="_blank" href='https://aprilwang.me/blog'>blog</a>
-                
-                p Oh, let me introduce my roommate Emerson
-                
-                .bakery
-                    img(src="./assets/emerson3.jpg", alt="")
-                    img(src="./assets/emerson2.jpg", alt="")
-                    img(src="./assets/emerson.jpg", alt="")
-                
-                p I love <a target='_blank' href='http://arcg.is/2mVfJp1'>traveling</a>
-                p  <i class="fa fa-plane"></i> <i class="fa fa-plane"></i> <i class="fa fa-plane"></i>
-                
-                div.friends
-                    p Now that you have scrolled all the way down here (●′ω`●)
-                    p One last thing, meet my squad!
-                    div.friendlist
-                        each link, friend in data.content[3].friends
-                            a(href=link target="_blank" class="friend") #{friend}
+            section.right
+                h2 Research Interests
+                p !{data.cv.research_interests}
+            section.full
+                .container
+                    .right 
+                        h2 Education
+                    each item in data.cv.education 
+                        .left
+                            .cvitem-timerange !{item.time}
+                            .cvitem-location !{item.location}
+                        .right
+                            .cvitem-content !{item.content}
+            section.full
+                .container 
+                    .right 
+                        h2 Professional Experience 
+                    each item in data.cv.experience 
+                        .left
+                            .cvitem-timerange !{item.time}
+                            .cvitem-location !{item.location}
+                        .right
+                            .cvitem-content !{item.content}
+            section.full
+                .container 
+                    .right 
+                        h2 Awards 
+                    each item in data.cv.award 
+                        .left
+                            .cvitem-timerange !{item.time}
+                        .right
+                            .cvitem-content !{item.content} 
+            section.full
+                .container 
+                    .right 
+                        h2 Publications
+                        h3 Heavily-reviewed Journal Manuscripts (J)
+                    -
+                        index = 0
+                    each item in data.publications[0].item
+                        if item.is_journal
+                            -
+                                index = index + 1
+                            .full
+                                .container
+                                    .left
+                                        if index < 10
+                                            .cvitem-number J.0!{index}
+                                        else
+                                            .cvitem-number J.!{index}
+                                    .right 
+                                        .cvitem-content !{item.authors}. !{item.title}. 
+                                            span.cvitem-venue !{item.venue_full}
+            section.full
+                .container 
+                    .right 
+                        h3 Heavily-reviewed Conference Papers (C)
+                    -
+                        index = 0
+                    each item in data.publications[0].item
+                        if !item.is_journal
+                            -
+                                index = index + 1
+                            .full
+                                .container
+                                    .left
+                                        if index < 10
+                                            .cvitem-number C.0!{index}
+                                        else
+                                            .cvitem-number C.!{index}
+                                    .right 
+                                        .cvitem-content !{item.authors}. !{item.title}. 
+                                            span.cvitem-venue !{item.venue_full}
+            section.full
+                .container 
+                    .right 
+                        h3 Refereed Posters and Workshops (P)
+                    -
+                        index = 0
+                    each item in data.publications[1].item
+                        -
+                            index = index + 1
+                        .full
+                            .container
+                                .left
+                                    if index < 10
+                                        .cvitem-number P.0!{index}
+                                    else
+                                        .cvitem-number P.!{index}
+                                .right 
+                                    .cvitem-content !{item.authors}. !{item.title}. 
+                                        span.cvitem-venue !{item.venue_full}
+            section.full
+                .container 
+                    .right 
+                        h3 Thesis (T)
+                    -
+                        index = 0
+                    each item in data.publications[2].item
+                        -
+                            index = index + 1
+                        .full
+                            .container
+                                .left
+                                    if index < 10
+                                        .cvitem-number T.0!{index}
+                                    else
+                                        .cvitem-number T.!{index}
+                                .right 
+                                    .cvitem-content !{item.authors}. !{item.title}. 
+                                        span.cvitem-venue !{item.venue_full}
+            section.full
+                .container 
+                    .right 
+                        h2 Invited Talks 
+                    each item in data.invited_talks  
+                        .left 
+                            .cvitem-timerange !{item.time}
+                        .right
+                            .cvitem-content
+                                .cvitem-talktitle !{item.title}
+                                .cvitem-talklocation !{item.location}
+            section.full 
+                .container 
+                    .right 
+                        h2 Service
+                        h3 Program Committee
+                    each item in data.service.pc
+                        .left
+                            .cvitem-timerange !{item.time}
+                        .right
+                            .cvitem-content !{item.content}
+            section.full 
+                .container 
+                    .right 
+                        h3 Peer Review
+                    each item in data.service.review
+                        .left
+                            .cvitem-timerange !{item.time}
+                        .right
+                            .cvitem-content !{item.content}
+            section.full 
+                .container 
+                    .right 
+                        h3 Operations Committee
+                    each item in data.service.oc
+                        .left
+                            .cvitem-timerange !{item.time}
+                        .right
+                            .cvitem-content !{item.content}
+            section.full 
+                .container 
+                    .right 
+                        h3 UMSI
+                    each item in data.service.umsi
+                        .left
+                            .cvitem-timerange !{item.time}
+                        .right
+                            .cvitem-content !{item.content}
+            section.full
+                .container
+                    .right 
+                        h2 Teaching
+                        h3 University of Michigan
+                    each item in data.teaching[0].item
+                        .left 
+                            .cvitem-timerange !{item.time}
+                        .right
+                            .cvitem-content !{item.content}
+            section.full
+                .container
+                    .right 
+                        h3 Simon Fraser University
+                    each item in data.teaching[1].item
+                        .left 
+                            .cvitem-timerange !{item.time}
+                        .right
+                            .cvitem-content !{item.content}
 
-    div.footer
-        h1#small © April Y. Wang 2021
+    .footer.container
+        h1#small © April Y. Wang 2022
