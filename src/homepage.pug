@@ -23,8 +23,8 @@ header.header
                         a(href='#/home') Home
                     li#nav2
                         a(href='#/cv') CV
-                    li#nav3
-                        a(href='#publications') Publications
+                    //- li#nav3
+                    //-     a(href='#publications') Publications
 main
     .home
         section.about
@@ -195,9 +195,9 @@ main
                                 .container
                                     .left
                                         if index < 10
-                                            .cvitem-number J.0!{index}
+                                            .cvitem-number(id='j0'+index) J.0!{index}
                                         else
-                                            .cvitem-number J.!{index}
+                                            .cvitem-number(id='j'+index) J.!{index}
                                     .right 
                                         .cvitem-content !{item.authors}. !{item.title}. 
                                             span.cvitem-venue !{item.venue_full}
@@ -215,9 +215,9 @@ main
                                 .container
                                     .left
                                         if index < 10
-                                            .cvitem-number C.0!{index}
+                                            .cvitem-number(id='c0'+index) C.0!{index}
                                         else
-                                            .cvitem-number C.!{index}
+                                            .cvitem-number(id='c'+index) C.!{index}
                                     .right 
                                         .cvitem-content !{item.authors}. !{item.title}. 
                                             span.cvitem-venue !{item.venue_full}
@@ -234,9 +234,9 @@ main
                             .container
                                 .left
                                     if index < 10
-                                        .cvitem-number P.0!{index}
+                                        .cvitem-number(id='p0'+index) P.0!{index}
                                     else
-                                        .cvitem-number P.!{index}
+                                        .cvitem-number(id='p'+index) P.!{index}
                                 .right 
                                     .cvitem-content !{item.authors}. !{item.title}. 
                                         span.cvitem-venue !{item.venue_full}
@@ -253,9 +253,9 @@ main
                             .container
                                 .left
                                     if index < 10
-                                        .cvitem-number T.0!{index}
+                                        .cvitem-number(id='t0'+index) T.0!{index}
                                     else
-                                        .cvitem-number T.!{index}
+                                        .cvitem-numbe(id='t'+index) T.!{index}
                                 .right 
                                     .cvitem-content !{item.authors}. !{item.title}. 
                                         span.cvitem-venue !{item.venue_full}
