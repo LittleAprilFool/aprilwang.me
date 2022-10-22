@@ -257,7 +257,7 @@
   "attending": [
     {
       "date": "Dec 7, 2022",
-      "event": "Guest Lecture at <a href='https://docs.google.com/document/d/19icrT54F4fFdTCL7GFnjp6B3uQiIbcZwCH26IRnZWkc/edit#'>UPenn</a> (Virtual)",
+      "event": "Invited Talk at <a href='https://docs.google.com/document/d/19icrT54F4fFdTCL7GFnjp6B3uQiIbcZwCH26IRnZWkc/edit#'>UPenn</a> (Virtual)",
       "ispast": false
     },
     {
@@ -268,7 +268,12 @@
 
     {
       "date": "Nov 3, 2022",
-      "event": "Guest Lecture at Vanderbilt University",
+      "event": "Invited Talk at Vanderbilt University",
+      "ispast": false
+    },
+    {
+      "date": "Oct 31-Nov 2, 2022",
+      "event": "UIST 2022 at Bend",
       "ispast": false
     },
     {
@@ -279,17 +284,17 @@
     {
       "date": "Oct 17, 2022",
       "event": "Rising Stars Speaker Series at UWaterloo",
-      "ispast": false
+      "ispast": true
     },
     {
       "date": "Oct 14, 2022",
       "event": "<a href='https://rohanalexander.com/toronto_data_workshop.html' target='_blank'>Toronto Data Workshop</a> at UToronto",
-      "ispast": false
+      "ispast": true
     },
     {
       "date": "Oct 12, 2022",
-      "event": "Guest Lecture at <a href='https://sites.google.com/view/cse60427-fall2022/home' target='_blank'>Notre Dame</a>",
-      "ispast": false
+      "event": "Invited Talk at <a href='https://sites.google.com/view/cse60427-fall2022/home' target='_blank'>Notre Dame</a>",
+      "ispast": true
     },
     {
       "date": "Sep 18-23, 2022",

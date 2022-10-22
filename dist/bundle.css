@@ -313,6 +313,10 @@ header {
   color: #3b0404c2;
   border-top: solid 1px #3b0404c2; }
 
+.footnote > p {
+  display: inline;
+  padding: 10px; }
+
 .cv-title {
   font-size: 3rem;
   font-weight: 400; }

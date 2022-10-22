@@ -379,3 +379,8 @@ header {
   color: $primary-color;
   border-top: solid 1px $primary-color;
 }
+
+.footnote > p{
+  display: inline;
+  padding: 10px;
+}
