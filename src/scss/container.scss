@@ -229,6 +229,12 @@ header {
   padding:5px 0px;
   margin-top: 5px;
 }
+
+.pdf-link::after {
+  font-family: "Font Awesome 5 Free";
+  content: '\f1c1';
+  margin-left: 4px;
+}
 .paper-venue {
   font-weight: 400;
 }
