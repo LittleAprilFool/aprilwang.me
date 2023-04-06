@@ -37,7 +37,7 @@
       "category": "Peer Reviewed Conference Papers",
       "item": [
         {
-          "venue": "CHI 2023",
+          "venue": "CHI 2023&nbsp;<i class='fas fa-award'></i>",
           "id": "CHI2023",
           "title": "Colaroid: A Literate Programming Approach for Authoring Explorable Multi-Stage Tutorials",
           "authors": "<strong>April Yi Wang</strong>, Andrew Head, Ashley Zhang, Steve Oney, and Christopher Brooks",
@@ -440,6 +440,10 @@
         }
     ],
     "award": [
+        {
+        "time": "2023",
+        "content": "Honourable Mention Award, ACM CHI"
+        }, 
         {
             "time": "2022",
             "content": "Rising Stars in EECS"
