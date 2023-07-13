@@ -1,4 +1,4 @@
-import {loadHome, loadPublication, loadCV} from './src/app.js'
+import {loadHome, loadPublication, loadCV, loadSection} from './src/app.js'
 import template from './src/homepage.pug'
 import data from './src/homepage.js'
 import style from './src/scss/common.scss'
@@ -13,23 +13,24 @@ setTimeout(function(){
   R.init();
   
   R.route('/', function(id){
-    console.log("home!!")
     loadHome()
   })
   
 
   R.route('/cv', function(){
-    console.log("cv!!")
-    loadCV();
+    loadSection('.cv');
   })
   R.route('/home', function(id){
     loadHome()
   })
 
   R.route('/publication', function(id){
-    console.log("cv!!")
-    loadPublication()
+     loadSection('.publication')
   })
+
+  R.route('/team', function(id){
+    loadSection('.team')
+ })
 
 }, 500)
 

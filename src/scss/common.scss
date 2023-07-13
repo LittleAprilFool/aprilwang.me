@@ -13,31 +13,27 @@ html {
 
 body {
     color: $secondary-color;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: scroll;
-    overflow-x: hidden;
-    cursor: default;
     line-height: 25px;
-    font-family: lato, sans-serif;
+    font-family: $font-family;
     // font-family: 'Crimson', serif;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 main {
-     border-top: 5px solid #d1b7b1;
+     border-top: solid;
+     border-top-color: $section-header-linebreak;
+     border-top-width: $section-header-ol;
 }
 
 #app{
     height: 100%;
+    padding: 10px;
 }
 
 strong {
     font-weight: 600;
-    color: #B95C50;
+    color: $primary-highlight;
 }
 
 section {
@@ -47,12 +43,12 @@ section {
 
 a {
   text-decoration: none;
-  color: $text-yellow;
+  color: $link;
   font-weight: 400;
 }
 
 a:hover {
-    color: $text-secondary-yellow;
+    color: $link-secondary;
 }
 
 a:visited {

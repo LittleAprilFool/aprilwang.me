@@ -19,6 +19,7 @@
     "html-loader": "^0.5.5",
     "jade-bootstrap": "^1.0.14",
     "json-loader": "^0.5.7",
+    "jstransformer-markdown-it": "^3.0.0",
     "mixitup": "^3.3.1",
     "node-sass": "^4.14.1",
     "pug": "^2.0.3",

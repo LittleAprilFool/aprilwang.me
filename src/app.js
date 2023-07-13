@@ -4,13 +4,15 @@ function clean(dom) {
 }
 
 function cleanAll() {
-  var home = document.querySelector('.home')
-  var publication = document.querySelector('.publication')
-  var cv = document.querySelector('.cv')
+  const home = document.querySelector('.home')
+  const publication = document.querySelector('.publication')
+  const cv = document.querySelector('.cv')
+  const team = document.querySelector('.team')
   clean(home)
   clean(publication)
   clean(cv)
-  const button = document.querySelector("#button1");
+  clean(team)
+  const button = document.querySelector("#button-venn");
   if(button && button.firstChild) button.removeChild(button.firstChild);
 }
 
@@ -19,23 +21,15 @@ function setVisible(dom) {
 }
 
 export function loadHome(){
-  var home = document.querySelector('.home')
+  let home = document.querySelector('.home')
   cleanAll()
   setVisible(home)
-  const button = document.querySelector("#button1");
+  const button = document.querySelector("#button-venn");
   makeCircle(button);
 }
 
-export function loadPublication(){
-  var publication = document.querySelector('.publication')
+export function loadSection(name){
+  const section = document.querySelector(name)
   cleanAll()
-  setVisible(publication) 
-}
-
-
-export function loadCV(){
-  console.log('load cv')
-  var cv = document.querySelector('.cv')
-  cleanAll()
-  setVisible(cv)
+  setVisible(section) 
 }

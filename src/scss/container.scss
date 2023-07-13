@@ -1,22 +1,18 @@
-@import 'variable';
+@import 'variable-eth';
 
 .container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-column-gap: 4rem;
+  grid-column-gap: 40px;
   grid-auto-rows: minmax(3rem, auto);
   grid-row-gap: .5rem;
-  max-width: 900px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
 header {
   padding: 2rem 0rem 1rem 0rem;
-  background: $section-red;
-}
-
-.header_bio {
-  grid-column: 3 / 9;
+  background: $section-header-bg;
 }
 
 .header_photo {
@@ -30,14 +26,14 @@ header {
 }
 
 #avadiv {
-  max-width: 100px;
+  max-width: 120px;
   margin: 0 auto;
 }
 
 .announcement {
   padding: 10px 15px;
   border-radius: 6px;
-  background: $secondary-highlight-background;
+  background: $announcement-board-bg;
   margin-top:20px;
   color: $primary-dark;
 }
@@ -102,16 +98,21 @@ header {
   grid-column: 1/9;
 }
 
-.news {
-  grid-column: 1/3;
+.left-panel {
   font-size: 12px;
   line-height: 20px;
 }
 
-// .panel {
-//   margin-top: 2rem;
-//   border-top: 1px solid $primary-highlight-light; 
-// }
+.attending{
+ margin-bottom: 20px;
+}
+
+.left-panel{
+  grid-column: 1/3;  
+}
+.right-panel {
+  grid-column: 3 / 9;
+}
 
 .paper-title {
   font-weight: bold;
@@ -131,7 +132,7 @@ header {
 .nav > li {
   text-decoration: none;
   margin-right: 15px;
-  background: $text-background-yellow;
+  background: $button-bg;
   border-radius: 5px;
   padding: 0px 10px;
 }
@@ -189,7 +190,7 @@ header {
 }
 
 .ispast > .attending-date {
-  background-color: $primary-lightgray;
+  background-color: $button-bg;
 }
 
 .all {
@@ -213,7 +214,7 @@ header {
 }
 
 .about {
-  background:$section-yellow;
+  background:$section-about-bg;
 }
 
 .deco{
@@ -272,7 +273,7 @@ header {
 }
 
 .paper-link > a {
-  background-color: $text-background-yellow;
+  background-color: $button-bg;
   margin-right: 5px;
   padding: 5px 8px;
   border-radius: 5px;
@@ -298,7 +299,7 @@ header {
 	left: 50px;
 }
 
-#button1 {
+#button-venn {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -356,7 +357,7 @@ header {
 }
 .venn-pub-list > ul {
 	list-style: none;
-	width:210px;
+	width:220px;
 }
 
 .venn-pub-list > ul > li > a {
@@ -382,11 +383,34 @@ header {
 }
 
 .footer {
-  color: $primary-color;
-  border-top: solid 1px $primary-color;
+  color: $primary-highlight;
+  border-top: solid 1px $section-header-linebreak;
 }
 
 .footnote > p{
   display: inline;
   padding: 10px;
 }
+
+@media screen and (max-width: 600px) {
+  .left-panel{
+    display: none;
+  }
+  .right-panel {
+    grid-column: 1 / 9;
+  }
+  .venn-container {
+    display: none;
+  }
+  .paper-left {
+    display: none;
+  }
+  .paper-right{
+    grid-column: 1 / 9;
+  }
+  .cv-title{
+    font-size: 2rem;
+  }
+}
+
+img[alt=zurich] { width: 100%; }

@@ -7,7 +7,8 @@ header.header
         .header_title
             p.name #{data.bio.name}
             span.cname #{data.bio.cname}
-            p.edu #{data.bio.education} at !{data.bio.affiliation}
+            p.edu #{data.bio.education} 
+            p.edu #{data.bio.affiliation}
             .icons
                 a(href='mailto:aprilww@umich.edu')
                     <i class="fa fa-envelope"></i>
@@ -24,29 +25,44 @@ header.header
                     li#nav2
                         a(href='#/cv') CV
                     //- li#nav3
+                    //-     a(href='#/publication') Publications
+                    li#nav4
+                        a(href='#/team') Team
+                    //- li#nav3
                     //-     a(href='#publications') Publications
 main
     .home
         section.about
             .container
-                .news.panel
-                    p.title Attending
-                    .deco
-                        <svg id="__1Dm1det__dd6d3b5d-736e-4112-a978-d559f0ef793b" data-name="70f8052d-3d8c-41fb-92d4-1085a59c667f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.39 3.6"><title>seperator</title><path d="M.35,1.9a3.73,3.73,0,0,0,2.7,1.2c3.5,0,2.3-2.6,5.8-2.6,2.9,0,3.1,2.6,5.8,2.6,3,0,2.6-2.6,5.7-2.6,2.8,0,3.3,2.6,5.8,2.6,3,0,2.8-2.6,5.8-2.6a4.37,4.37,0,0,1,3.1,1.4" style="fill: none;stroke: #da9533;stroke-miterlimit: 10;stroke-dashoffset: 2e-05;stroke-dasharray: none;"></path></svg>
-                    .attendinglist
-                        each val in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                            if data.attending[val].ispast
-                                .attending-item.ispast
-                                    .attending-date !{data.attending[val].date}
-                                    .attending-event !{data.attending[val].event}
-                            else
+                .left-panel
+                    .attending
+                        p.title Attending
+                        .deco
+                            <svg id="__1Dm1det__dd6d3b5d-736e-4112-a978-d559f0ef793b" data-name="70f8052d-3d8c-41fb-92d4-1085a59c667f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.39 3.6"><title>seperator</title><path d="M.35,1.9a3.73,3.73,0,0,0,2.7,1.2c3.5,0,2.3-2.6,5.8-2.6,2.9,0,3.1,2.6,5.8,2.6,3,0,2.6-2.6,5.7-2.6,2.8,0,3.3,2.6,5.8,2.6,3,0,2.8-2.6,5.8-2.6a4.37,4.37,0,0,1,3.1,1.4" style="fill: none;stroke: #d16d6d;stroke-miterlimit: 10;stroke-dashoffset: 2e-05;stroke-dasharray: none;"></path></svg>
+                        .attendinglist
+                            each val in [0, 1, 2, 3, 4]
+                                if data.attending[val].ispast
+                                    .attending-item.ispast
+                                        .attending-date !{data.attending[val].date}
+                                        .attending-event !{data.attending[val].event}
+                                else
+                                    .attending-item
+                                        .attending-date !{data.attending[val].date}
+                                        .attending-event !{data.attending[val].event}
+                    .news
+                        p.title News 
+                        .deco
+                            <svg id="__1Dm1det__dd6d3b5d-736e-4112-a978-d559f0ef793b" data-name="70f8052d-3d8c-41fb-92d4-1085a59c667f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.39 3.6"><title>seperator</title><path d="M.35,1.9a3.73,3.73,0,0,0,2.7,1.2c3.5,0,2.3-2.6,5.8-2.6,2.9,0,3.1,2.6,5.8,2.6,3,0,2.6-2.6,5.7-2.6,2.8,0,3.3,2.6,5.8,2.6,3,0,2.8-2.6,5.8-2.6a4.37,4.37,0,0,1,3.1,1.4" style="fill: none;stroke: #d16d6d;stroke-miterlimit: 10;stroke-dashoffset: 2e-05;stroke-dasharray: none;"></path></svg>   
+                        .newslist
+                            each val in [0, 1, 2, 3, 4]
                                 .attending-item
-                                    .attending-date !{data.attending[val].date}
-                                    .attending-event !{data.attending[val].event}                        
-                .header_bio
+                                    .attending-date !{data.news[val].date}
+                                    .attending-event !{data.news[val].news}
+                   
+                .header_bio.right-panel
                     p.title About Me
                     .deco
-                        <svg id="__1Dm1det__dd6d3b5d-736e-4112-a978-d559f0ef793b" data-name="70f8052d-3d8c-41fb-92d4-1085a59c667f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.39 3.6"><title>seperator</title><path d="M.35,1.9a3.73,3.73,0,0,0,2.7,1.2c3.5,0,2.3-2.6,5.8-2.6,2.9,0,3.1,2.6,5.8,2.6,3,0,2.6-2.6,5.7-2.6,2.8,0,3.3,2.6,5.8,2.6,3,0,2.8-2.6,5.8-2.6a4.37,4.37,0,0,1,3.1,1.4" style="fill: none;stroke: #da9533;stroke-miterlimit: 10;stroke-dashoffset: 2e-05;stroke-dasharray: none;"></path></svg>
+                        <svg id="__1Dm1det__dd6d3b5d-736e-4112-a978-d559f0ef793b" data-name="70f8052d-3d8c-41fb-92d4-1085a59c667f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.39 3.6"><title>seperator</title><path d="M.35,1.9a3.73,3.73,0,0,0,2.7,1.2c3.5,0,2.3-2.6,5.8-2.6,2.9,0,3.1,2.6,5.8,2.6,3,0,2.6-2.6,5.7-2.6,2.8,0,3.3,2.6,5.8,2.6,3,0,2.8-2.6,5.8-2.6a4.37,4.37,0,0,1,3.1,1.4" style="fill: none;stroke: #d16d6d;stroke-miterlimit: 10;stroke-dashoffset: 2e-05;stroke-dasharray: none;"></path></svg>
                     p.text !{data.bio.about}
                     p.text !{data.bio.bio}
                     .announcement !{data.bio.announcement}
@@ -54,7 +70,7 @@ main
                         .VennDiagram
                             .Venn
                                 .ButtonGroup
-                                    button#button1.RoundedButton
+                                    button#button-venn.RoundedButton
                                 .label1.label collaboration
                                 .label2.label programming
                                 .label3.label education
@@ -90,11 +106,11 @@ main
                                         a(href='#CHI2018') Conversational programmers, CHI&rsquo;18 <i class='fas fa-award'></i>
         section
             .pubnnews.container
-                .pubs.panel
+                .pubs
                     p.title#publications 
                         span Publications
                         .deco
-                            <svg id="__1Dm1det__dd6d3b5d-736e-4112-a978-d559f0ef793b" data-name="70f8052d-3d8c-41fb-92d4-1085a59c667f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.39 3.6"><title>seperator</title><path d="M.35,1.9a3.73,3.73,0,0,0,2.7,1.2c3.5,0,2.3-2.6,5.8-2.6,2.9,0,3.1,2.6,5.8,2.6,3,0,2.6-2.6,5.7-2.6,2.8,0,3.3,2.6,5.8,2.6,3,0,2.8-2.6,5.8-2.6a4.37,4.37,0,0,1,3.1,1.4" style="fill: none;stroke: #da9533;stroke-miterlimit: 10;stroke-dashoffset: 2e-05;stroke-dasharray: none;"></path></svg>
+                            <svg id="__1Dm1det__dd6d3b5d-736e-4112-a978-d559f0ef793b" data-name="70f8052d-3d8c-41fb-92d4-1085a59c667f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.39 3.6"><title>seperator</title><path d="M.35,1.9a3.73,3.73,0,0,0,2.7,1.2c3.5,0,2.3-2.6,5.8-2.6,2.9,0,3.1,2.6,5.8,2.6,3,0,2.6-2.6,5.7-2.6,2.8,0,3.3,2.6,5.8,2.6,3,0,2.8-2.6,5.8-2.6a4.37,4.37,0,0,1,3.1,1.4" style="fill: none;stroke: #d16d6d;stroke-miterlimit: 10;stroke-dashoffset: 2e-05;stroke-dasharray: none;"></path></svg>
                         //- span.all 
                         //-     a(href='#/publication') SEE ALL
                     -
@@ -120,18 +136,7 @@ main
                     .footnote
                         p * Equal Contribution
                         p <i class='fas fa-award'></i> Honorable Mention Award
-                        p <i class='fas fa-trophy'></i> Best Paper Award
-                //- .news.panel
-                //-     p.title Attending
-                //-     each val in [0, 1, 2, 3, 4, 5, 6, 7, 8]
-                //-         if data.attending[val].ispast
-                //-             .attending-item.ispast
-                //-                 .attending-date !{data.attending[val].date}
-                //-                 .attending-event !{data.attending[val].event}
-                //-         else
-                //-             .attending-item
-                //-                 .attending-date !{data.attending[val].date}
-                //-                 .attending-event !{data.attending[val].event}                        
+                        p <i class='fas fa-trophy'></i> Best Paper Award                        
 
     .cv.hide
         .container
@@ -330,6 +335,94 @@ main
                             .cvitem-timerange !{item.time}
                         .right
                             .cvitem-content !{item.content}
+    //- .publication.hide
+    //-     .container
+    //-         .pubs
+    //-             p.title#publications 
+    //-                 span Publications
+    //-                 .deco
+    //-                     <svg id="__1Dm1det__dd6d3b5d-736e-4112-a978-d559f0ef793b" data-name="70f8052d-3d8c-41fb-92d4-1085a59c667f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.39 3.6"><title>seperator</title><path d="M.35,1.9a3.73,3.73,0,0,0,2.7,1.2c3.5,0,2.3-2.6,5.8-2.6,2.9,0,3.1,2.6,5.8,2.6,3,0,2.6-2.6,5.7-2.6,2.8,0,3.3,2.6,5.8,2.6,3,0,2.8-2.6,5.8-2.6a4.37,4.37,0,0,1,3.1,1.4" style="fill: none;stroke: #d16d6d;stroke-miterlimit: 10;stroke-dashoffset: 2e-05;stroke-dasharray: none;"></path></svg>
+    //-                 //- span.all 
+    //-                 //-     a(href='#/publication') SEE ALL
+    //-             -
+    //-                 var category = data.publications[0]
+    //-             //- each category in data.publications
+    //-             .category
+    //-                 //- p.category-title !{category.category}
+    //-                 each item in category.item
+    //-                     .paper-item.container(id=item.id)
+    //-                         .paper-left 
+    //-                             .paper-figure
+    //-                                 if item.video_teaser
+    //-                                     .video !{item.video_teaser}
+    //-                                 else
+    //-                                     img(src=item.teaser)
+    //-                         .paper-right
+    //-                             .paper-title !{item.title}
+    //-                             .paper-authors !{item.authors}
+    //-                             .paper-venue !{item.venue}
+    //-                             .paper-abstract !{item.abstract}
+    //-                             //- .paper-venue-full !{item.venue_full}
+    //-                             .paper-link !{item.links}
+    //-             .footnote
+    //-                 p * Equal Contribution
+    //-                 p <i class='fas fa-award'></i> Honorable Mention Award
+    //-                 p <i class='fas fa-trophy'></i> Best Paper Award
+
+    .team.hide
+        .container
+            section.full
+                :markdown-it(linkify langPrefix='highlight-')
+                    ## Join Me
+
+                    I will be joining [ETH Zurich, the Department of Computer Science](https://ethz.ch/en/news-and-events/eth-news/news/2023/07/ten-professors-appointed.html) as a tenure-track assistant professor, starting in Spring 2024. 
+                    I am actively seeking enthusiastic students to become part of my research lab --- the **P**rogramming, **E**ducation, **a**nd **C**omputer-**H**uman Interaction Lab (PEACH Lab). 
+                    Candidates with strong competencies in fields such as human-computer interaction, educational technology, and software engineering are highly preferred.
+
+                    ### Application Materials
+
+                    Before making contact, kindly review the research projects listed on my website to ensure that your research interests align with ours. Please note that due to the volume of inquiries, we may not be able to respond to each email. Prospective candidates are encouraged to [contact me](mailto:aprilww@umich.edu?subject=Prospective-Student) directly with the following details:
+
+                    - Your CV
+                    - A brief paragraph outlining your background (e.g., skills in design and programming, reasons for wanting to join the lab)
+                    - A brief paragraph detailing your research interests (e.g., any previous research experience, and how your interests coincide with our work)
+                    - Examples of your publications or writing samples (optional)
+                    - The names and contacts of two references for your application (optional)
+
+                    ### PhD Positions
+                    
+                    #### Direct Doctorate PhD Positions (for bachelor graduates)
+                    ETH Zurich's Department of Computer Science provides a [Direct Doctorate PhD Program](https://inf.ethz.ch/doctorate/direct-doctorate-computer-science.html), designed for extraordinary undergraduate applicants. We encourage you to reach out before applying via the Direct Doctorate admissions portal.
+                    
+                    Please note, applications for the Direct Doctorate will be accepted from November 15 to December 15, 2023.                    
+
+                    #### PhD Positions (for master graduates)
+                    If you're a strong candidate who has already completed a master's degree, or you're about to, we invite you to get in touch directly. 
+                    
+                    Given that ETH does not limit the enrollment periods for PhD students, we can be flexible with the starting dates.
+
+                    #### PhD Fellowships
+                    Stay tuned for more details!
+
+                    ### Postdoc Positions
+                    We invite highly qualified postdoctoral candidates to become part of our lab. We are particularly interested in those who focus on developing collaborative and educational programming tools. We anticipate that the successful candidates will aim to publish their research in academic communities such as CHI, CSCW, L@S, AIED or other related platforms. Please feel free to reach out to us directly. We also provide support for Postdoc applicants when applying for the [ETH Zurich Postdoctoral Fellowship](https://ai.ethz.ch/education/phd-and-postdoc-programs/postdoc-fellowships.html).
+
+                    ### Undergraduate and Master Students at ETH Zurich 
+                    I'm thrilled to collaborate with undergraduates and master students at ETH Zurich who have an interest in the type of research I conduct. Many of the students I've worked with have gone on to co-author papers with me, and a significant number are now enrolled in prestigious graduate schools or working in leading industries. There's often an opportunity for students who have experience or interest in areas like software development, data science, or UX research to join in on projects.
+
+
+                    ### Research Internship
+                    Stay tuned for more details!
+
+                    ## About ETH Zurich
+                    ETH Zurich is one of the leading international universities for technology and the natural sciences. 
+                    It is well-known for its excellent education, ground-breaking fundamental research and for putting its new findings directly into practice. 
+                    It offers researchers an inspiring working environment and its students a comprehensive education.
+                    
+                    - [History of ETH Zurich](https://ethz.ch/en/the-eth-zurich/portrait/history.html)
+                    - [Student Life](https://ethz.ch/en/studies/master/prospective-students/student-life.html)
+
+                    ![zurich](./assets/zurich.jpg)
 
     .footer.container
-        h1#small © April Y. Wang 2022
+        h1#small © April Y. Wang 2023
