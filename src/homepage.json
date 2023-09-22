@@ -1,15 +1,15 @@
 {
   "name": "April",
   "title": "APRIL WANG",
-  "subtitle": "Ph.D. Candidate at the School of Information, University of Michigan",
+  "subtitle": "Assistant Professor at ETH Zurich, the Department of Computer Science",
   "character": "./assets/april.svg",
   "menu": ["ABOUT", "PROJECT", "MORE", "CONTACT"],
   "bio": {
     "name": "April Yi Wang",
     "cname": "王奕",
-    "education": "Ph.D. Candidate",
-    "affiliation": "University of Michigan",
-    "location": "NQ-4446",
+    "education": "Assistant Professor",
+    "affiliation": "ETH Zurich",
+    "location": "TBD",
     "avatar": "./assets/avatar_2023_rec.jpg",
     "announcement": "📣 I am joining <a href='https://ethz.ch/en/news-and-events/eth-news/news/2023/07/ten-professors-appointed.html' target='_blank'>ETH Zurich, the Department of Computer Science</a> as a tenure-track assistant professor starting in Spring 2024. I am actively looking for enthusiastic undergrads, MS, PhDs, and postdocs to reimagine the future of programming tools for collaboration and learning. Please check the <a href='/#/team'>team page</a> for more details!",
     "about": "I am a Ph.D. candidate at the School of Information, University of Michigan, advised by <a href='https://from.so' target='_blank'>Steve Oney</a> and <a href='https://christopherbrooks.ca/' target='_blank'>Christopher Brooks</a>. My main area of research is in human-computer interaction (HCI).",
@@ -261,11 +261,21 @@
                 "title": "Understanding and Lowering the Learning Barriers for Conversational Programmers",
                 "venue_full": "SFU M.Sc Thesis, Burnaby, Canada",
                 "authors": "<strong>April Yi Wang</strong>"
-            }
+            },
+            {
+              "title": "Interactive Programming Interfaces for Data Science Collaboration and Learning",
+              "venue_full": "Umich Ph.D. Thesis, Ann Arbor, MI",
+              "authors": "<strong>April Yi Wang</strong>"
+          }
         ]
     }
   ],
   "attending": [
+    {
+      "date": "Oct 25-29, 2023",
+      "event": "TUM Campus Heilbronn Global Technology Forum, Heilbronn, Germany",
+      "ispast": false
+    },
     {
       "date": "Sep 26-29, 2023",
       "event": "<a href='https://ghc.anitab.org/'>GHC 2023</a>, Orlando, FL",
@@ -340,16 +350,16 @@
   ],
   "news": [
     {
+      "date": "09/2023",
+      "news": "I am invited as a speaker at the Grace Hopper Celebration 2023."
+    },
+    {
       "date": "07/2023",
       "news": "I am joining ETH Zurich as an assistant professor in Spring 2024!"
     },
     {
       "date": "07/2023",
       "news": "I will defend my dissertation at 14:30 EST, August 3. Save the <a href='https://umich.zoom.us/j/92980570550' target='_blank'>Zoom link</a>!"
-    },
-    {
-      "date": "07/2023",
-      "news": "I am invited as a speaker at the Grace Hopper Celebration 2023."
     },
     {
       "date": "07/2023",
@@ -420,12 +430,12 @@
     "research_interests": "Human-Computer Interaction; Programming Support; Collaborative Data Science",
     "address": "3376 North Quadrangle<br>105 South State Street<br>Ann Arbor, MI 48109",
     "website": "https://aprilwang.me",
-    "email": "aprilww@umich.edu",
+    "email": "april.wang@inf.ethz.ch",
     "education": [
         {
-            "time": "09/2018 – present",
+            "time": "09/2018 – 08/2023",
             "location": "Ann Arbor, MI",
-            "content": "<strong>University of Michigan</strong> <br>Ph.D. in Information Science <br>Advisors: Steve Oney and Christopher Brooks<br>Committee: Cyrus Omar, Philip Guo, and Steven Drucker"
+            "content": "<strong>University of Michigan</strong> <br>Ph.D. in Information Science (thesis <a href='#t02'>T.02</a> below) <br>Advisors: Steve Oney and Christopher Brooks<br>Committee: Cyrus Omar, Philip Guo, and Steven Drucker"
         },
         {
             "time": "09/2016 – 07/2018",
@@ -439,8 +449,13 @@
         }
     ],
     "experience": [
-        {
-            "time":"09/2018 – present",
+      {
+        "time":"11/2023 – present",
+        "location": "Zurich, Switzerland",
+        "content": "<strong>The Department of Computer Science, ETH Zurich</strong><br>Assistant Professor"
+    },
+      {
+            "time":"09/2018 – 08/2023",
             "location": "Ann Arbor, MI",
             "content": "<strong>School of Information, University of Michigan</strong><br>Graduate Student Researcher"
         },

@@ -14,14 +14,30 @@ module.exports = {
     devServer: {
         port: '8080',
         hot: true,
-        inline: true,
-        progress: true
+        client: {
+            progress: true,
+        },
+        static: {
+            directory: path.join(__dirname),
+        },
     },
     module: {
-        rules:[
-            { test: /\.js$/, loader: 'babel-loader', exclude:/node_modules/, query:{presets: ['@babel/preset-env']}},
-            { test: /\.pug$/, loader: 'pug-loader' },
-            { test: /\.svg$/, loader: 'file-loader'},
+        rules: [
+            {
+                test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/, options: {
+                    presets: [
+                        ['@babel/preset-env']
+                    ]
+                }
+            },
+            {
+                test: /\.pug$/,
+                loader: '@webdiscus/pug-loader',
+                options: {
+                    method: 'compile'
+                }
+            },
+            { test: /\.svg$/, loader: 'file-loader' },
             {
                 test: /\.scss$/,
                 use: [
@@ -33,10 +49,10 @@ module.exports = {
             {
                 test: /\.(html)$/,
                 use: {
-                  loader: 'html-loader',
-                  options: {
-                    attrs: [':data-src']
-                  }
+                    loader: 'html-loader',
+                    options: {
+                        attrs: [':data-src']
+                    }
                 }
             },
         ]
@@ -48,10 +64,7 @@ module.exports = {
             // Options similar to the same options in webpackOptions.output
             // both options are optional
             filename: "bundle.css",
-          })
+        })
     ],
-    node: {
-        fs: "empty"
-    },
     mode: 'development'
 }
