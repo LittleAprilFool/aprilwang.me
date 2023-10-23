@@ -11,8 +11,8 @@
     "affiliation": "ETH Zurich",
     "location": "TBD",
     "avatar": "./assets/avatar_2023_rec.jpg",
-    "announcement": "📣 I am joining <a href='https://ethz.ch/en/news-and-events/eth-news/news/2023/07/ten-professors-appointed.html' target='_blank'>ETH Zurich, the Department of Computer Science</a> as a tenure-track assistant professor starting in Spring 2024. I am actively looking for enthusiastic undergrads, MS, PhDs, and postdocs to reimagine the future of programming tools for collaboration and learning. Please check the <a href='/#/team'>team page</a> for more details!",
-    "about": "I am a Ph.D. candidate at the School of Information, University of Michigan, advised by <a href='https://from.so' target='_blank'>Steve Oney</a> and <a href='https://christopherbrooks.ca/' target='_blank'>Christopher Brooks</a>. My main area of research is in human-computer interaction (HCI).",
+    "announcement": "📣 I am joining <a href='https://ethz.ch/en/news-and-events/eth-news/news/2023/07/ten-professors-appointed.html' target='_blank'>ETH Zurich, the Department of Computer Science</a> as a tenure-track assistant professor starting from 11/2023. I am actively looking for enthusiastic undergrads, MS, PhDs, and postdocs to reimagine the future of programming tools for collaboration and learning. Please check the <a href='/#/team'>team page</a> for more details!",
+    "about": "I am an assistant professor in the <a href='https://inf.ethz.ch/'>Department of Computer Science</a> at <a href='https://ethz.ch'>ETH Zurich</a>, directing the Programming, Education, and Computer-Human Interaction Lab (PEACH Lab). I am also in the <a href='https://iis.inf.ethz.ch/'>Institute for Intelligent Interactive Systems</a>. My main area of research is in human-computer interaction (HCI) and educational technology.",
     "bio": "With the growing complexity and interdisciplinary of the data science field, data science workers must embrace effective collaboration to improve the quality and efficiency of the work. My work aims to <strong>understand different collaboration needs and challenges around data science, and design better programming tools to support collaborative data science</strong>. My work has been published at top-tier HCI venues (e.g., CHI, TOCHI, CSCW), and has received several paper awards."
   },
   "featured_project": [
@@ -272,14 +272,19 @@
   ],
   "attending": [
     {
+      "date": "Dec 2, 2023",
+      "event": "CCF ChinaSoft 2023, Shanghai, China",
+      "ispast": false
+    },
+    {
       "date": "Oct 25-29, 2023",
-      "event": "TUM Campus Heilbronn Global Technology Forum, Heilbronn, Germany",
+      "event": "TUM Global Technology Forum, Heilbronn, Germany",
       "ispast": false
     },
     {
       "date": "Sep 26-29, 2023",
       "event": "<a href='https://ghc.anitab.org/'>GHC 2023</a>, Orlando, FL",
-      "ispast": false
+      "ispast": true
     },
     {
       "date": "April23-28, 2023",
