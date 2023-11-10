@@ -19,9 +19,9 @@
     "json-loader": "^0.5.7",
     "jstransformer-markdown-it": "^3.0.0",
     "mixitup": "^3.3.1",
-    "node-sass": "^9.0.0",
     "pug": "^3.0.2",
     "pug-bootstrap": "^0.0.16",
+    "sass": "^1.69.5",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3"
   },

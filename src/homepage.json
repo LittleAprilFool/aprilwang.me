@@ -1,18 +1,18 @@
 {
   "name": "April",
   "title": "APRIL WANG",
-  "subtitle": "Assistant Professor at ETH Zurich, the Department of Computer Science",
+  "subtitle": "Assistant Professor at ETH Zürich, the Department of Computer Science",
   "character": "./assets/april.svg",
   "menu": ["ABOUT", "PROJECT", "MORE", "CONTACT"],
   "bio": {
     "name": "April Yi Wang",
     "cname": "王奕",
     "education": "Assistant Professor",
-    "affiliation": "ETH Zurich",
+    "affiliation": "ETH Zürich",
     "location": "TBD",
     "avatar": "./assets/avatar_2023_rec.jpg",
-    "announcement": "📣 I am joining <a href='https://ethz.ch/en/news-and-events/eth-news/news/2023/07/ten-professors-appointed.html' target='_blank'>ETH Zurich, the Department of Computer Science</a> as a tenure-track assistant professor starting from 11/2023. I am actively looking for enthusiastic undergrads, MS, PhDs, and postdocs to reimagine the future of programming tools for collaboration and learning. Please check the <a href='/#/team'>team page</a> for more details!",
-    "about": "I am an assistant professor in the <a href='https://inf.ethz.ch/'>Department of Computer Science</a> at <a href='https://ethz.ch'>ETH Zurich</a>, directing the Programming, Education, and Computer-Human Interaction Lab (PEACH Lab). I am also in the <a href='https://iis.inf.ethz.ch/'>Institute for Intelligent Interactive Systems</a>. My main area of research is in human-computer interaction (HCI) and educational technology.",
+    "announcement": "📣 I am joining <a href='https://ethz.ch/en/news-and-events/eth-news/news/2023/07/ten-professors-appointed.html' target='_blank'>ETH Zürich, the Department of Computer Science</a> as a tenure-track assistant professor starting from 11/2023. I am actively looking for enthusiastic undergrads, MS, PhDs, and postdocs to reimagine the future of programming tools for collaboration and learning. Please check the <a href='/#/team'>team page</a> for more details!",
+    "about": "I am an assistant professor in the <a href='https://inf.ethz.ch/'>Department of Computer Science</a> at <a href='https://ethz.ch'>ETH Zürich</a>, directing the Programming, Education, and Computer-Human Interaction Lab (PEACH Lab). I am also in the <a href='https://iis.inf.ethz.ch/'>Institute for Intelligent Interactive Systems</a>. My main area of research is in human-computer interaction (HCI) and educational technology.",
     "bio": "With the growing complexity and interdisciplinary of the data science field, data science workers must embrace effective collaboration to improve the quality and efficiency of the work. My work aims to <strong>understand different collaboration needs and challenges around data science, and design better programming tools to support collaborative data science</strong>. My work has been published at top-tier HCI venues (e.g., CHI, TOCHI, CSCW), and has received several paper awards."
   },
   "featured_project": [
@@ -272,14 +272,24 @@
   ],
   "attending": [
     {
+      "date": "Dec 12, 2023",
+      "event": "Invited Talk at the <a href='https://www.turing.ac.uk/research/interest-groups/visualization'>Alan Turing Institute</a>, Virtual",
+      "ispast": false
+    },
+    {
       "date": "Dec 2, 2023",
       "event": "CCF ChinaSoft 2023, Shanghai, China",
       "ispast": false
     },
     {
+      "date": "Nov 17, 2023",
+      "event": "<a href='https://teaching.siplab.org/human_computer_interaction/2023/'>Guest Lecture</a> for HCI at ETHZ",
+      "ispast": false
+    },
+    {
       "date": "Oct 25-29, 2023",
       "event": "TUM Global Technology Forum, Heilbronn, Germany",
-      "ispast": false
+      "ispast": true
     },
     {
       "date": "Sep 26-29, 2023",
@@ -355,20 +365,24 @@
   ],
   "news": [
     {
-      "date": "09/2023",
-      "news": "I am invited as a speaker at the Grace Hopper Celebration 2023."
+      "date": "11/2023",
+      "news": "Relocated to Zürich 🏔️"
+    },
+    {
+      "date": "08/2023",
+      "news": "Officially a Dr.Wang 🎓"
     },
     {
       "date": "07/2023",
-      "news": "I am joining ETH Zurich as an assistant professor in Spring 2024!"
+      "news": "I am <a href='https://ethz.ch/en/news-and-events/eth-news/news/2023/07/ten-professors-appointed.html'>joining ETH Zürich as an assistant professor</a> in Nov 2023!"
     },
     {
       "date": "07/2023",
-      "news": "I will defend my dissertation at 14:30 EST, August 3. Save the <a href='https://umich.zoom.us/j/92980570550' target='_blank'>Zoom link</a>!"
+      "news": "I will <a href='https://www.si.umich.edu/about-umsi/events/dissertation-defense-april-yi-wang'>defend my dissertation</a> at 14:30 EST, August 3."
     },
     {
       "date": "07/2023",
-      "news": "Honored to receive the Gary M. Olson Award by UMSI."
+      "news": "Honored to <a href='https://www.si.umich.edu/about-umsi/news/umsi-awards-honors-september-2023'>receive the Gary M. Olson Award</a> by UMSI."
     },
     {
       "date": "04/2023",
@@ -433,7 +447,7 @@
   ],
   "cv":{
     "research_interests": "Human-Computer Interaction; Programming Support; Collaborative Data Science",
-    "address": "3376 North Quadrangle<br>105 South State Street<br>Ann Arbor, MI 48109",
+    "address": "ETH Zürich / CAB F 15.2<br>Universitätstrasse 6<br>Zürich, 8006",
     "website": "https://aprilwang.me",
     "email": "april.wang@inf.ethz.ch",
     "education": [
@@ -456,8 +470,8 @@
     "experience": [
       {
         "time":"11/2023 – present",
-        "location": "Zurich, Switzerland",
-        "content": "<strong>The Department of Computer Science, ETH Zurich</strong><br>Assistant Professor"
+        "location": "Zürich, Switzerland",
+        "content": "<strong>The Department of Computer Science, ETH Zürich</strong><br>Assistant Professor"
     },
       {
             "time":"09/2018 – 08/2023",
