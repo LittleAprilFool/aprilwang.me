@@ -414,3 +414,22 @@ header {
 }
 
 img[alt=zurich] { width: 100%; }
+
+.example-project-trigger{
+  background-color: $button-bg;
+  margin-right: 5px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  color: $link;
+  font-weight: 400;
+  border: 1px $link solid;
+  margin-top: 10px;
+}
+
+.example-project-content > iframe{
+  width: 100%;
+  border: 1px $link solid;
+  border-radius: 5px;
+  margin-top:10px;
+  height:800px;
+}

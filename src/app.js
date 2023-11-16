@@ -20,6 +20,23 @@ function setVisible(dom) {
   if(dom) dom.classList.remove('hide')
 }
 
+function initProjectTrigger() {
+  const triggerBtn = document.querySelector('.example-project-trigger');
+  const content = document.querySelector('.example-project-content');
+  if(content)
+    content.classList.add('hide');
+  if(triggerBtn){
+    triggerBtn.removeEventListener('click', onToggleExampleProject);
+    triggerBtn.addEventListener('click', onToggleExampleProject)
+  }
+}
+
+function onToggleExampleProject(){
+  const content = document.querySelector('.example-project-content');
+  if(content)
+  content.classList.toggle('hide');
+}
+
 export function loadHome(){
   let home = document.querySelector('.home')
   cleanAll()
@@ -31,5 +48,6 @@ export function loadHome(){
 export function loadSection(name){
   const section = document.querySelector(name)
   cleanAll()
-  setVisible(section) 
+  setVisible(section)
+  initProjectTrigger()
 }
