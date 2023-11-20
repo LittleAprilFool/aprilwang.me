@@ -28,9 +28,13 @@ setTimeout(function(){
      loadSection('.publication')
   })
 
-  R.route('/team', function(id){
-    loadSection('.team')
- })
+  R.route('/join', function(id){
+    loadSection('.join')
+  })
+
+  R.route('/peach', function(id){
+    loadSection('.peach')
+  })
 
 }, 500)
 

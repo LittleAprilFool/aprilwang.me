@@ -22,12 +22,14 @@ header.header
                 ul.nav
                     li#nav1
                         a(href='#/home') Home
-                    li#nav2
-                        a(href='#/cv') CV
                     //- li#nav3
                     //-     a(href='#/publication') Publications
+                    li#nav2
+                        a(href='#/peach') Peach Lab
+                    li#nav3
+                        a(href='#/join') Join Us
                     li#nav4
-                        a(href='#/team') Team
+                        a(href='#/cv') CV
                     //- li#nav3
                     //-     a(href='#publications') Publications
 main
@@ -111,14 +113,13 @@ main
                         span Publications
                         .deco
                             <svg id="__1Dm1det__dd6d3b5d-736e-4112-a978-d559f0ef793b" data-name="70f8052d-3d8c-41fb-92d4-1085a59c667f" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.39 3.6"><title>seperator</title><path d="M.35,1.9a3.73,3.73,0,0,0,2.7,1.2c3.5,0,2.3-2.6,5.8-2.6,2.9,0,3.1,2.6,5.8,2.6,3,0,2.6-2.6,5.7-2.6,2.8,0,3.3,2.6,5.8,2.6,3,0,2.8-2.6,5.8-2.6a4.37,4.37,0,0,1,3.1,1.4" style="fill: none;stroke: #d16d6d;stroke-miterlimit: 10;stroke-dashoffset: 2e-05;stroke-dasharray: none;"></path></svg>
-                        //- span.all 
-                        //-     a(href='#/publication') SEE ALL
                     -
                         var category = data.publications[0]
                     //- each category in data.publications
                     .category
                         //- p.category-title !{category.category}
                         each item in category.item
+                            //- if item.is_featured
                             .paper-item.container(id=item.id)
                                 .paper-left 
                                     .paper-figure
@@ -133,6 +134,11 @@ main
                                     .paper-abstract !{item.abstract}
                                     //- .paper-venue-full !{item.venue_full}
                                     .paper-link !{item.links}
+                                            span.all 
+                    //- .all-pubs.paper-item.container    
+                    //-     .paper-left                  
+                    //-     .paper-right
+                    //-        a(href='#/publication') SEE ALL PUBLICATIONS
                     .footnote
                         p * Equal Contribution
                         p <i class='fas fa-award'></i> Honorable Mention Award
@@ -369,12 +375,45 @@ main
     //-                 p <i class='fas fa-award'></i> Honorable Mention Award
     //-                 p <i class='fas fa-trophy'></i> Best Paper Award
 
-    .team.hide
+    .peach.hide 
         .container
             section.full
                 :markdown-it(linkify langPrefix='highlight-')
 
-                    I am actively seeking enthusiastic students to become part of my research lab --- the **P**rogramming, **E**ducation, **a**nd **C**omputer-**H**uman Interaction Lab (PEACH Lab). 
+                    ## PEACH Lab
+
+                    We are the **P**rogramming, **E**ducation, **a**nd **C**omputer-**H**uman Interaction Lab (PEACH Lab). 
+                    At the PEACH Lab, we are dedicated to creating collaborative, intelligent, and human-centric programming environments that cater to the evolving educational and professional spheres. Our research spans across human-computer interaction, educational technology, human-AI collaboration, and empirical software engineering.
+
+                    To stay in the loop with all the cool stuff we're doing in the lab, feel free to sign up for our mailing list to get all the newsletters --- [friends.peachlab](https://lists.inf.ethz.ch/mailman/listinfo/friends.peachlab). We'd love to keep you posted!
+
+            section.full.memberlist
+                h2 Current Members
+                .memberlist-container
+                    each item in data.members
+                        if item.status==='current'
+                            .member-container
+                                img(src=item.avatar)
+                                p.member-name !{item.name}
+                                p.member-title !{item.title}
+                                p.member-affiliation !{item.affiliation}
+                                p.member-location !{item.office}
+                                .member-reachout
+                                    if item.email
+                                        a(href='mailto:'+item.email)
+                                            <i class="fa fa-envelope"></i>
+                                    if item.link
+                                        a(target="_blank" href=item.link)
+                                            <i class="fa fa-home"></i>
+
+
+                    
+    .join.hide
+        .container
+            section.full
+                :markdown-it(linkify langPrefix='highlight-')
+
+                    I am actively seeking enthusiastic students to become part of my research lab. 
                     Candidates with strong competencies in fields such as human-computer interaction, educational technology, and software engineering are highly preferred.
 
                     ## Application Materials
@@ -407,8 +446,9 @@ main
 
                     ## Postdoc Positions
                     We invite highly qualified postdoctoral candidates to become part of our lab. We are particularly interested in those who focus on developing collaborative and educational programming tools. We anticipate that the successful candidates will aim to publish their research in academic communities such as CHI, CSCW, L@S, AIED or other related platforms. Please feel free to reach out to us directly. We currently take Postdoc applicants through the following fellowships: 
-                    - [ETH Zürich Postdoctoral Fellowship](https://ethz.ch/en/research/research-promotion/eth-fellowships.html). The submission deadlines are 1 March and 1 September.
-                    - [ETH AI Center Postdoctoral Fellowship](https://ai.ethz.ch/education/phd-and-postdoc-programs.html). The submission deadline is November 22.
+                    - [ETH Zürich Postdoctoral Fellowship](https://ethz.ch/en/research/research-promotion/eth-fellowships.html). Deadline: March 1 and September 1
+                    - [ETH AI Center Postdoctoral Fellowship](https://ai.ethz.ch/education/phd-and-postdoc-programs.html). Deadline: November 22
+                    - [SNSF Swiss Postdoctoral Fellowship](https://www.snf.ch/en/m1NtWp4nTELQixlu/funding/horizon-europe-swiss-postdoctoral-fellowships). Deadline: December 1
 
                     ## Undergraduate and Master Students at ETH Zürich 
                     I'm thrilled to collaborate with undergraduates and master students at ETH Zürich who have an interest in the type of research I conduct. Many of the students I've worked with have gone on to co-author papers with me, and a significant number are now enrolled in prestigious graduate schools or working in leading industries. There's often an opportunity for students who have experience or interest in areas like software development, data science, or UX research to join in on projects.
@@ -423,8 +463,8 @@ main
                     ## Research Internship for Students Outside of ETH Zürich
                     For outstanding students not currently enrolled at ETH Zürich but interested in pursuing a research internship in our lab, we recommend exploring the following opportunities:
                     
-                    - [ETH SSRF](https://inf.ethz.ch/studies/summer-research-fellowship.html) is a two-month summer internship program open to all undergraduate and graduate students worldwide.
-                    - [ThinkSwiss](https://thinkswiss.org/research-scholarship/) is a three-months summer research scholarship open to undergraduate and graduate students who are currently enrolled in a U.S. or Canadian university. 
+                    - [ETH SSRF](https://inf.ethz.ch/studies/summer-research-fellowship.html) is a two-month summer internship program open to all undergraduate and graduate students worldwide. Deadline: Dec 15
+                    - [ThinkSwiss](https://thinkswiss.org/research-scholarship/) is a three-months summer research scholarship open to undergraduate and graduate students who are currently enrolled in a U.S. or Canadian university. Deadline: Dec 31
 
                     ## About ETH Zürich
                     ETH Zürich is one of the leading international universities for technology and the natural sciences.

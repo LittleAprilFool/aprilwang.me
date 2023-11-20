@@ -7,11 +7,13 @@ function cleanAll() {
   const home = document.querySelector('.home')
   const publication = document.querySelector('.publication')
   const cv = document.querySelector('.cv')
-  const team = document.querySelector('.team')
+  const join = document.querySelector('.join')
+  const peach = document.querySelector('.peach')
   clean(home)
   clean(publication)
   clean(cv)
-  clean(team)
+  clean(join)
+  clean(peach)
   const button = document.querySelector("#button-venn");
   if(button && button.firstChild) button.removeChild(button.firstChild);
 }

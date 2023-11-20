@@ -556,6 +556,68 @@ img[alt=zurich] {
   height: 800px;
 }
 
+.all-pubs {
+  padding-bottom: 0px !important;
+  line-height: 10px;
+}
+
+.all-pubs > .paper-right > a {
+  border: 1px solid #d16d6d;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.memberlist {
+  padding-top: 0px;
+}
+
+.memberlist-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 40px;
+  grid-auto-rows: minmax(3rem, auto);
+  grid-row-gap: 0.5rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.member-container {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  background: #eeeeee;
+  border-radius: 10px;
+}
+
+.member-container > img {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 180px;
+}
+
+.member-name {
+  padding: 10px 0px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  .memberlist-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    grid-auto-rows: minmax(3rem, auto);
+    grid-row-gap: 0.5rem;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+.member-reachout > a {
+  padding: 0px 5px;
+}
+
 html {
   height: 100%;
   font-weight: 300;
