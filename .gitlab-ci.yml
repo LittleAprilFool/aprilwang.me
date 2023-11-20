@@ -1,0 +1,47 @@
+stages:
+  - build
+  - deploy
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH =~ /^main$/
+    - if: $FORCE_DEPLOY
+      when: always
+    - when: never
+
+build:
+  stage: build
+  image: node:21-alpine3.18
+  artifacts:
+    paths:
+      - dist/
+      - assets/
+  before-script:
+    - |-
+      npm install
+  script:
+    - |-
+      npm run build
+
+deploy_prod:
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'main'
+  before_script:
+    - |-
+      mkdir -pm 700 ~/.ssh
+      base64 -d "${CI_KNOWN_HOSTS}" >~/.ssh/known_hosts
+      eval $(ssh-agent -s)
+      base64 -d "${CI_KEY}" | ssh-add -
+      git config --global user.name "${GITLAB_USER_NAME}"
+      git config --global user.email "${GITLAB_USER_EMAIL}"
+      git config --global safe.directory '*'
+  script:
+    - |-
+      git clone --single-branch --branch release/prod --depth 1 git@${CI_SERVER_HOST}:/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}.git build-release
+      rsync -av dist/ build-release/
+      rsync -av assets/ build-release/assets/
+      cd build-release
+      git add --all
+      git commit --allow-empty --message "GitLab Runner Push from ${CI_PROJECT_URL}, commit ${CI_COMMIT_SHA}"
+      git push
