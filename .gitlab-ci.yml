@@ -38,7 +38,7 @@ deploy_prod:
       git config --global safe.directory '*'
   script:
     - |-
-      git clone --single-branch --branch release/prod --depth 1 git@${CI_SERVER_HOST}:/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}.git build-release
+      git clone --single-branch --branch release --depth 1 git@${CI_SERVER_HOST}:/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}.git build-release
       rsync -av dist/ build-release/
       rsync -av assets/ build-release/assets/
       cd build-release
