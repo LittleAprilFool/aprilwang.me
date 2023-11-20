@@ -16,7 +16,7 @@ build:
     paths:
       - dist/
       - assets/
-  before-script:
+  before_script:
     - |-
       npm install
   script:
