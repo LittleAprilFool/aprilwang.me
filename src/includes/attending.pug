@@ -1,0 +1,14 @@
+.attending
+    p.title Attending
+    .deco
+        include deco.pug
+    .attendinglist
+        each val in [0, 1, 2, 3, 4]
+            if data.attending[val].ispast
+                .attending-item.ispast
+                    .attending-date !{data.attending[val].date}
+                    .attending-event !{data.attending[val].event}
+            else
+                .attending-item
+                    .attending-date !{data.attending[val].date}
+                    .attending-event !{data.attending[val].event}

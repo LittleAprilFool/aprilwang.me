@@ -1,0 +1,30 @@
+.container
+    section.full
+        div
+            :markdown-it(linkify langPrefix='highlight-')
+
+                ## PEACH Lab
+
+                We are the **P**rogramming, **E**ducation, **a**nd **C**omputer-**H**uman Interaction Lab (PEACH Lab). 
+                At the PEACH Lab, we are dedicated to creating collaborative, intelligent, and human-centric programming environments that cater to the evolving educational and professional spheres. Our research spans across human-computer interaction, educational technology, human-AI collaboration, and empirical software engineering.
+
+        .announcement 📮 To stay in the loop with all the cool stuff we're doing in the lab, sign up for our mailing list to get the newsletters --- <a href='https://lists.inf.ethz.ch/mailman/listinfo/friends.peachlab' target=_blank>friends.peachlab</a>. We'd love to keep you posted!
+
+    section.full.memberlist
+        h2 Current Members
+        .memberlist-container
+            each item in data.members
+                if item.status==='current'
+                    .member-container
+                        img(src=item.avatar)
+                        p.member-name !{item.name}
+                        p.member-title !{item.title}
+                        p.member-affiliation !{item.affiliation}
+                        p.member-location !{item.office}
+                        .member-reachout
+                            if item.email
+                                a(href='mailto:'+item.email)
+                                    <i class="fa fa-envelope"></i>
+                            if item.link
+                                a(target="_blank" href=item.link)
+                                    <i class="fa fa-home"></i>

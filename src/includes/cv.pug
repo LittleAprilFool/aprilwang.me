@@ -1,0 +1,196 @@
+.container
+    section.right
+        h1.cv-title !{data.bio.name}
+        p !{data.subtitle}
+        //- p !{data.bio.bio}
+        .cv-icons
+        .cv-address.container
+            .address !{data.cv.address}
+            .contact
+                div
+                    a(href=data.cv.website) !{data.cv.website}
+                div
+                    a(href='mailto:aprilww@umich.edu') !{data.cv.email}
+                div
+                    .downloadpdf
+                        <i class="fas fa-file-pdf"></i>
+                        a(target='_blank' href='./assets/cv_awang.pdf') Download CV
+
+    section.right
+        h2 Research Interests
+        p !{data.cv.research_interests}
+    section.full
+        .container
+            .right 
+                h2 Education
+            each item in data.cv.education 
+                .left
+                    .cvitem-timerange !{item.time}
+                    .cvitem-location !{item.location}
+                .right
+                    .cvitem-content !{item.content}
+    section.full
+        .container 
+            .right 
+                h2 Professional Experience 
+            each item in data.cv.experience 
+                .left
+                    .cvitem-timerange !{item.time}
+                    .cvitem-location !{item.location}
+                .right
+                    .cvitem-content !{item.content}
+    section.full
+        .container 
+            .right 
+                h2 Awards 
+            each item in data.cv.award 
+                .left
+                    .cvitem-timerange !{item.time}
+                .right
+                    .cvitem-content !{item.content} 
+    section.full
+        .container 
+            .right 
+                h2 Publications
+                h3 Heavily-reviewed Journal Manuscripts (J)
+            -
+                index = 0
+            each item in data.publications[0].item
+                if item.is_journal
+                    -
+                        index = index + 1
+                    .full
+                        .container
+                            .left
+                                if index < 10
+                                    .cvitem-number(id='j0'+index) J.0!{index}
+                                else
+                                    .cvitem-number(id='j'+index) J.!{index}
+                            .right 
+                                .cvitem-content !{item.authors}. !{item.title}. 
+                                    span.cvitem-venue !{item.venue_full}
+    section.full
+        .container 
+            .right 
+                h3 Heavily-reviewed Conference Papers (C)
+            -
+                index = 0
+            each item in data.publications[0].item
+                if !item.is_journal
+                    -
+                        index = index + 1
+                    .full
+                        .container
+                            .left
+                                if index < 10
+                                    .cvitem-number(id='c0'+index) C.0!{index}
+                                else
+                                    .cvitem-number(id='c'+index) C.!{index}
+                            .right 
+                                .cvitem-content !{item.authors}. !{item.title}. 
+                                    span.cvitem-venue !{item.venue_full}
+    section.full
+        .container 
+            .right 
+                h3 Refereed Posters and Workshops (P)
+            -
+                index = 0
+            each item in data.publications[1].item
+                -
+                    index = index + 1
+                .full
+                    .container
+                        .left
+                            if index < 10
+                                .cvitem-number(id='p0'+index) P.0!{index}
+                            else
+                                .cvitem-number(id='p'+index) P.!{index}
+                        .right 
+                            .cvitem-content !{item.authors}. !{item.title}. 
+                                span.cvitem-venue !{item.venue_full}
+    section.full
+        .container 
+            .right 
+                h3 Thesis (T)
+            -
+                index = 0
+            each item in data.publications[2].item
+                -
+                    index = index + 1
+                .full
+                    .container
+                        .left
+                            if index < 10
+                                .cvitem-number(id='t0'+index) T.0!{index}
+                            else
+                                .cvitem-numbe(id='t'+index) T.!{index}
+                        .right 
+                            .cvitem-content !{item.authors}. !{item.title}. 
+                                span.cvitem-venue !{item.venue_full}
+    section.full
+        .container 
+            .right 
+                h2 Invited Talks 
+            each item in data.invited_talks  
+                .left 
+                    .cvitem-timerange !{item.time}
+                .right
+                    .cvitem-content
+                        .cvitem-talktitle !{item.title}
+                        .cvitem-talklocation !{item.location}
+    section.full 
+        .container 
+            .right 
+                h2 Service
+                h3 Program Committee
+            each item in data.service.pc
+                .left
+                    .cvitem-timerange !{item.time}
+                .right
+                    .cvitem-content !{item.content}
+    section.full 
+        .container 
+            .right 
+                h3 Peer Review
+            each item in data.service.review
+                .left
+                    .cvitem-timerange !{item.time}
+                .right
+                    .cvitem-content !{item.content}
+    section.full 
+        .container 
+            .right 
+                h3 Operations Committee
+            each item in data.service.oc
+                .left
+                    .cvitem-timerange !{item.time}
+                .right
+                    .cvitem-content !{item.content}
+    section.full 
+        .container 
+            .right 
+                h3 UMSI
+            each item in data.service.umsi
+                .left
+                    .cvitem-timerange !{item.time}
+                .right
+                    .cvitem-content !{item.content}
+    section.full
+        .container
+            .right 
+                h2 Teaching
+                h3 University of Michigan
+            each item in data.teaching[0].item
+                .left 
+                    .cvitem-timerange !{item.time}
+                .right
+                    .cvitem-content !{item.content}
+    section.full
+        .container
+            .right 
+                h3 Simon Fraser University
+            each item in data.teaching[1].item
+                .left 
+                    .cvitem-timerange !{item.time}
+                .right
+                    .cvitem-content !{item.content}

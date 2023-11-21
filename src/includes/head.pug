@@ -1,0 +1,33 @@
+.container
+    .header_photo
+        .info
+            #avadiv
+                img(src=data.bio.avatar, id="avatar")
+    .header_title
+        p.name #{data.bio.name}
+        span.cname #{data.bio.cname}
+        p.edu #{data.bio.education} 
+        p.edu #{data.bio.affiliation}
+        .icons
+            a(href='mailto:april.wang@inf.ethz.ch')
+                <i class="fa fa-envelope"></i>
+            a(target="_blank" href='https://twitter.com/AprilWang95')
+                <i class="fab fa-twitter"></i>
+            a(target="_blank" href='https://github.com/LittleAprilFool')
+                <i class="fab fa-github"></i>
+            a(target="_blank" href='https://scholar.google.com/citations?user=yitS6coAAAAJ&hl=en')
+                <i class="fa fa-graduation-cap"></i>
+        .header_menu
+            ul.nav
+                li#nav1
+                    a(href='#/home') Home
+                //- li#nav3
+                //-     a(href='#/publication') Publications
+                li#nav2
+                    a(href='#/peach') Peach Lab
+                li#nav3
+                    a(href='#/join') Join Us
+                li#nav4
+                    a(href='#/cv') CV
+                //- li#nav3
+                //-     a(href='#publications') Publications

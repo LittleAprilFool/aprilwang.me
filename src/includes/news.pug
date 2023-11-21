@@ -1,0 +1,9 @@
+.news
+    p.title News 
+    .deco
+        include deco.pug
+    .newslist
+        each val in [0, 1, 2, 3, 4]
+            .attending-item
+                .attending-date !{data.news[val].date}
+            .attending-event !{data.news[val].news}
