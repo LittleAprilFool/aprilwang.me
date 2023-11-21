@@ -484,12 +484,21 @@ img[alt=zurich] { width: 100%; }
 @media screen and (max-width: 600px) {
   .memberlist-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-column-gap: 40px;
     grid-auto-rows: minmax(3rem, auto);
-    grid-row-gap: .5rem;
-    max-width: 1024px;
+    grid-row-gap: 1.5rem;
+    max-width: 300px;
     margin: 0 auto;
+  }
+  .header_menu > ul {
+    display: block;
+  }
+  .header_menu > ul > li {
+    width: 80px;
+    margin:5px 10px 5px 0px;
+    display: inline-block;
+    text-align: center;
   }
 }
 
