@@ -505,3 +505,14 @@ img[alt=zurich] { width: 100%; }
 .member-reachout > a{
   padding:0px 5px;
 }
+
+.toolbox{
+  float:left;
+  position: fixed;
+  left: 30px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  padding: 5px;
+  background: $secondary-highlight-background;
+}

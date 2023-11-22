@@ -627,6 +627,17 @@ img[alt=zurich] {
   padding: 0px 5px;
 }
 
+.toolbox {
+  float: left;
+  position: fixed;
+  left: 30px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  padding: 5px;
+  background: rgba(225, 160, 160, 0.2509803922);
+}
+
 html {
   height: 100%;
   font-weight: 300;
