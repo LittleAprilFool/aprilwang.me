@@ -39,8 +39,8 @@ deploy_prod:
   script:
     - |-
       git clone --single-branch --branch release --depth 1 git@${CI_SERVER_HOST}:/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}.git build-release
-      rsync -av dist/ build-release/dist/
-      rsync -av assets/ build-release/assets/
+      rsync -av --delete dist/ build-release/dist/
+      rsync -av --delete assets/ build-release/assets/
       rsync -av index.html build-release/
       cd build-release
       git add --all
