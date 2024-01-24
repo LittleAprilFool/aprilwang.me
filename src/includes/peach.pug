@@ -28,3 +28,13 @@
                             if item.link
                                 a(target="_blank" href=item.link)
                                     <i class="fa fa-home"></i>
+    section.full.memberlist
+        h2 Alumni
+        .alumnilist-container
+            each item in data.members
+                .alumni-container
+                    if item.status==='left'
+                        p.member-name
+                            a(target="_blank" href=item.link) !{item.name}
+                        p.member-title !{item.title}
+                        p.member-affiliation !{item.affiliation}

@@ -11,8 +11,8 @@
     "affiliation": "ETH Zürich",
     "location": "TBD",
     "avatar": "./assets/avatar_2023_rec.jpg",
-    "announcement": "📣 I am actively looking for enthusiastic undergrads, MS, PhDs, and postdocs to reimagine the future of programming tools for collaboration and learning. Please check the <a href='/#/join'>join us page</a> for more details!",
-    "about": "I am a tenure-track assistant professor in the <a href='https://inf.ethz.ch/'>Department of Computer Science</a> at <a href='https://ethz.ch'>ETH Zürich</a>, directing the Programming, Education, and Computer-Human Interaction Lab (PEACH Lab). I am a core faculty member at the <a href='https://iis.inf.ethz.ch/'>Institute for Intelligent Interactive Systems</a>, and associated with the <a href='https://ai.ethz.ch/''>ETH AI Center</a>. My main area of research is in human-computer interaction (HCI) and educational technology.",
+    "announcement": "📣 I am actively looking for enthusiastic undergrads, MS, and PhDs to reimagine the future of programming tools for collaboration and learning. Please check the <a href='/#/join'>join us page</a> for more details!",
+    "about": "I am a tenure-track assistant professor in the <a href='https://inf.ethz.ch/'>Department of Computer Science</a> at <a href='https://ethz.ch'>ETH Zürich</a>, directing the Programming, Education, and Computer-Human Interaction Lab (PEACH Lab). I am a core faculty member at the <a href='https://iis.inf.ethz.ch/'>Institute for Intelligent Interactive Systems</a>, and associated with the <a href='https://ai.ethz.ch/''>ETH AI Center</a>. I am also part of <a href='https://hci.ethz.ch/'>ETH HCI</a>, <a href='https://swisschi.acm.org/groups/'>Swiss CHI</a>. My main area of research is in human-computer interaction (HCI) and educational technology.",
     "bio": "I work on creating <strong>collaborative, intelligent, and human-centric programming environments</strong> that cater to the <strong>evolving educational and professional spheres</strong>. I view programming as a tool for instructing computers to aid human tasks, and my research is focused on making programming more accessible beyond traditional code writing. My goal is to enhance the daily work efficiency of the general public by making programming tools user-friendly for a diverse usage cases. Recognizing the importance of computational literacy in our technology-driven world, my research also aims to enhance the effectiveness of teaching innovations in computer science classrooms. To achieve this, I develop tools that make programming classrooms more engaging, scalable, and accessible. My work has been published at top-tier HCI venues (e.g., CHI, TOCHI, CSCW), and has received several paper awards."
   },
   "featured_project": [
@@ -287,14 +287,24 @@
   ],
   "attending": [
     {
+      "date": "May 11-16, 2024",
+      "event": "CHI'24🏄, Honolulu, US",
+      "ispast": false
+    },
+    {
+      "date": "Apr 12, 2024",
+      "event": "The <a href='https://ide-workshop.github.io/'>IDE Workshop</a> at ICSE'24, Lisbon, Portugal",
+      "ispast": false
+    },
+    {
       "date": "Dec 19, 2023",
       "event": "Invited Talk at Tongji University, <a href='https://idvxlab.com/'>IDVX Lab</a>, Shanghai, China",
-      "ispast": false
+      "ispast": true
     },
     {
       "date": "Dec 18, 2023",
       "event": "Invited Talk at Fudan University, <a href='https://fduvis.net/'>FDU-VIS Lab</a>, Shanghai, China",
-      "ispast": false
+      "ispast": true
     },
     {
       "date": "Dec 13, 2023",
@@ -399,6 +409,10 @@
       }
   ],
   "news": [
+    {
+      "date": "1/2024",
+      "news": "I'm co-organizing the <a href='https://humannotebookinteractions.github.io/'>Human-Notebook Interaction Workshop</a> on CHI."
+    },
     {
       "date": "11/2023",
       "news": "Relocated to Zürich 🏔️"
@@ -987,13 +1001,23 @@
     },
     {
       "name": "Shuai Ma",
-      "status": "current",
-      "title": "Visiting Student",
+      "status": "left",
+      "title": "Visiting Student from 11/23 - 01/24",
       "affiliation":"PhD Candidate at HKUST",
       "office": "CAB F16",
       "avatar": "https://shuaima.cc/personal_webpage_files/Me.jpg",
       "link": "https://shuaima.cc/",
       "email": "shuai.ma@connect.ust.hk"
+    },
+    {
+      "name": "Junling Wang",
+      "status": "current",
+      "title": "Research Assistant",
+      "affiliation": "Master Student at ETH Zürich",
+      "office": "CAB F16",
+      "avatar": "https://junlingwang0512.github.io/assets/img/prof_pic-480.webp",
+      "link": "https://junlingwang0512.github.io/",
+      "email": "junling.wang@gess.ethz.ch"
     }
   ]
 }

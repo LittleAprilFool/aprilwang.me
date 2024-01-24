@@ -468,6 +468,11 @@ img[alt=zurich] { width: 100%; }
   border-radius: 10px;
 }
 
+.alumni-container > p {
+  display:inline-block;
+  padding-right: 20px;
+}
+
 .member-container > img {
   object-fit: cover;
   width: 150px;
