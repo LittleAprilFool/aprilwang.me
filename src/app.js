@@ -9,11 +9,13 @@ function cleanAll() {
   const cv = document.querySelector('.cv')
   const join = document.querySelector('.join')
   const peach = document.querySelector('.peach')
+  const teaching = document.querySelector('.teaching')
   clean(home)
   clean(publication)
   clean(cv)
   clean(join)
   clean(peach)
+  clean(teaching)
   const button = document.querySelector("#button-venn");
   if(button && button.firstChild) button.removeChild(button.firstChild);
 }

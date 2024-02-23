@@ -36,5 +36,9 @@ setTimeout(function(){
     loadSection('.peach')
   })
 
+  R.route('/teaching', function(id){
+    loadSection('.teaching')
+  })
+
 }, 500)
 

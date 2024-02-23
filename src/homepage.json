@@ -991,6 +991,30 @@
   ],
   "members": [
     {
+      "name": "Lilian  Lopez",
+      "status": "bachelor",
+      "title": "Undergraduate@D-INFK, ETHZ",
+      "office": "CAB F16"
+    },
+    {
+      "name": "Kiara Chau",
+      "status": "bachelor",
+      "title": "Undergraduate@D-INFK, ETHZ",
+      "office": "CAB F16"
+    },
+    {
+      "name": "Oliver Lehmann",
+      "status": "bachelor",
+      "title": "Undergraduate@D-INFK, ETHZ",
+      "office": "CAB F16"
+    },
+    {
+      "name": "Pascal Linder",
+      "status": "bachelor",
+      "title": "Undergraduate@D-INFK, ETHZ",
+      "project": "Designing a Jupyter Document Type for Programming Exercises"
+    },
+    {
       "name": "Dr. Angélica Herrera Loyo",
       "status": "current",
       "title": "Lab Administrative Assistant",
@@ -1002,8 +1026,8 @@
     {
       "name": "Shuai Ma",
       "status": "left",
-      "title": "Visiting Student from 11/23 - 01/24",
-      "affiliation":"PhD Candidate at HKUST",
+      "comment": "Visiting Student from 11.23 - 01.24",
+      "title":"PhD Candidate@HKUST",
       "office": "CAB F16",
       "avatar": "https://shuaima.cc/personal_webpage_files/Me.jpg",
       "link": "https://shuaima.cc/",
