@@ -32,7 +32,7 @@
         h2 Thesis Project Students 
         ul.alumnilist-container
             each item in data.members
-                if item.status==='bachelor'
+                if item.status==='thesis'
                     li.alumni-container
                         p.member-name
                             a(target="_blank" href=item.link) !{item.name}

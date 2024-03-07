@@ -991,26 +991,32 @@
   ],
   "members": [
     {
+      "name": "Shu Wang",
+      "status": "thesis",
+      "title": "Master@D-INFK, ETHZ",
+      "project": "Designing a Jupyter Document Type for Programming Exercises"
+    },
+    {
       "name": "Lilian  Lopez",
-      "status": "bachelor",
+      "status": "thesis",
       "title": "Undergraduate@D-INFK, ETHZ",
       "office": "CAB F16"
     },
     {
       "name": "Kiara Chau",
-      "status": "bachelor",
+      "status": "thesis",
       "title": "Undergraduate@D-INFK, ETHZ",
       "office": "CAB F16"
     },
     {
       "name": "Oliver Lehmann",
-      "status": "bachelor",
+      "status": "thesis",
       "title": "Undergraduate@D-INFK, ETHZ",
       "office": "CAB F16"
     },
     {
       "name": "Pascal Linder",
-      "status": "bachelor",
+      "status": "thesis",
       "title": "Undergraduate@D-INFK, ETHZ",
       "project": "Designing a Jupyter Document Type for Programming Exercises"
     },
@@ -1039,7 +1045,7 @@
       "title": "Research Assistant",
       "affiliation": "Master Student at ETH Zürich",
       "office": "CAB F16",
-      "avatar": "https://junlingwang0512.github.io/assets/img/prof_pic-480.webp",
+      "avatar": "https://junlingwang0512.github.io/images/profile2.png",
       "link": "https://junlingwang0512.github.io/",
       "email": "junling.wang@gess.ethz.ch"
     }
