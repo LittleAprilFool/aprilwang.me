@@ -589,10 +589,6 @@ img[alt=zurich] {
   border-radius: 10px;
 }
 
-.member-container:hover {
-  background: #eeeeee;
-}
-
 .alumni-container > p {
   display: inline-block;
   padding-right: 20px;
