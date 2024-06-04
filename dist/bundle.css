@@ -607,6 +607,10 @@ img[alt=zurich] {
   border-radius: 180px;
 }
 
+.member-comment {
+  font-size: smaller;
+}
+
 .member-name {
   padding: 0px 10px;
   font-weight: 600;
