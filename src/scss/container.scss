@@ -454,7 +454,7 @@ img[alt=zurich] { width: 100%; }
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 40px;
   grid-auto-rows: minmax(3rem, auto);
-  grid-row-gap: .5rem;
+  grid-row-gap: 1.5rem;
   max-width: 1024px;
   margin: 0 auto;
 }
@@ -464,13 +464,22 @@ img[alt=zurich] { width: 100%; }
   padding:20px;
   font-size: 14px;
   line-height: 24px;
-  background: $primary-lightgray;
   border-radius: 10px;
+}
+
+.member-container:hover {
+  background: $primary-lightgray;
 }
 
 .alumni-container > p {
   display:inline-block;
   padding-right: 20px;
+}
+
+.alumnilist-container {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 }
 
 .member-container > img {
@@ -484,6 +493,14 @@ img[alt=zurich] { width: 100%; }
   padding: 0px 10px;
   font-weight: 600;
   font-size:14px;
+}
+
+.member-title {
+  font-size: smaller;
+}
+
+.member-affiliation {
+  font-size: smaller;
 }
 
 @media screen and (max-width: 600px) {

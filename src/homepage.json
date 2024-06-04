@@ -13,7 +13,7 @@
     "avatar": "./assets/avatar_2023_rec.jpg",
     "announcement": "📣 I am actively looking for enthusiastic undergrads, MS, and PhDs to reimagine the future of programming tools for collaboration and learning. Please check the <a href='/#/join'>join us page</a> for more details!",
     "about": "I am a tenure-track assistant professor in the <a href='https://inf.ethz.ch/'>Department of Computer Science</a> at <a href='https://ethz.ch'>ETH Zürich</a>, directing the Programming, Education, and Computer-Human Interaction Lab (PEACH Lab). I am a core faculty member at the <a href='https://iis.inf.ethz.ch/'>Institute for Intelligent Interactive Systems</a>, and associated with the <a href='https://ai.ethz.ch/''>ETH AI Center</a>. I am also part of <a href='https://hci.ethz.ch/'>ETH HCI</a>, <a href='https://swisschi.acm.org/groups/'>Swiss CHI</a>. My main area of research is in human-computer interaction (HCI) and educational technology.",
-    "bio": "I work on creating <strong>collaborative, intelligent, and human-centric programming environments</strong> that cater to the <strong>evolving educational and professional spheres</strong>. I view programming as a tool for instructing computers to aid human tasks, and my research is focused on making programming more accessible beyond traditional code writing. My goal is to enhance the daily work efficiency of the general public by making programming tools user-friendly for a diverse usage cases. Recognizing the importance of computational literacy in our technology-driven world, my research also aims to enhance the effectiveness of teaching innovations in computer science classrooms. To achieve this, I develop tools that make programming classrooms more engaging, scalable, and accessible. My work has been published at top-tier HCI venues (e.g., CHI, TOCHI, CSCW), and has received several paper awards."
+    "bio": "I work on creating <strong>collaborative, intelligent, and human-centric programming environments</strong> that cater to the <strong>evolving educational and professional spheres</strong>. I view programming as a tool for instructing computers to aid human tasks, and my research is focused on making programming more accessible beyond traditional code writing. To achieve this, I develop tools that make programming classrooms more engaging, scalable, and accessible. My work has been published at top-tier HCI venues (e.g., CHI, TOCHI, CSCW), and has received several paper awards."
   },
   "featured_project": [
     {
@@ -36,6 +36,18 @@
     {
       "category": "Peer Reviewed Conference Papers",
       "item": [
+        {
+          "venue": "DIS 2024",
+          "id": "DIS2024",
+          "title": "Towards Feature Engineering with Human and AI's Knowledge: Understanding Data Science Practitioners' Perceptions in Human&AI-Assisted Feature Engineering Design.",
+          "authors": "Qian Zhu, Dakuo Wang, Shuai Ma, <strong>April Yi Wang</strong>, Zixin Chen, Udayan Khurana, Xiaojuan Ma",
+          "venue_full": "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2023)",
+          "links": "<a href='https://arxiv.org/pdf/2405.14107' class='paper-link' target='_blank'>Paper</a>",
+          "abstract": "Feature engineering is the process of deriving features from input data for a data model. In this paper, we propose a human-AI collaboration model that collectively utilizes and integrates both human and AI resources to enhance feature engineering.",
+          "teaser": "./assets/teaser/dis24.png",
+          "is_journal": false,
+          "is_featured": true
+        },
         {
           "venue": "CHI 2023&nbsp;<i class='fas fa-award'></i>",
           "id": "CHI2023",
@@ -287,14 +299,19 @@
   ],
   "attending": [
     {
+      "date": "Oct 1, 2024",
+      "event": "Inaugural lecture, Zürich",
+      "ispast": false
+    },
+    {
       "date": "May 11-16, 2024",
       "event": "CHI'24🏄, Honolulu, US",
-      "ispast": false
+      "ispast": true
     },
     {
       "date": "Apr 12, 2024",
       "event": "The <a href='https://ide-workshop.github.io/'>IDE Workshop</a> at ICSE'24, Lisbon, Portugal",
-      "ispast": false
+      "ispast": true
     },
     {
       "date": "Dec 19, 2023",
@@ -410,7 +427,11 @@
   ],
   "news": [
     {
-      "date": "1/2024",
+      "date": "05/2024",
+      "news": "I am serving on the organizational board of ACM SwissCHI local chapter."
+    },
+    {
+      "date": "01/2024",
       "news": "I'm co-organizing the <a href='https://humannotebookinteractions.github.io/'>Human-Notebook Interaction Workshop</a> on CHI."
     },
     {
@@ -991,6 +1012,26 @@
   ],
   "members": [
     {
+      "name": "Xiaotian Su",
+      "status": "current",
+      "title": "Doctorate Student",
+      "affiliation": "ETH Zürich",
+      "office": "CAB F16",
+      "avatar": "./assets/members/su.jpeg",
+      "link": "https://www.linkedin.com/in/xiaotiansu/",
+      "email": "xiaotian.su@inf.ethz.ch"
+    },
+    {
+      "name": "Jannik Gartmann",
+      "status": "thesis",
+      "title": "Master@D-INFK, ETHZ"
+    },
+    {
+      "name": "Catherine Schmit",
+      "status": "thesis",
+      "title": "Master@D-INFK, ETHZ"
+    },
+    {
       "name": "Shu Wang",
       "status": "thesis",
       "title": "Master@D-INFK, ETHZ",
@@ -1042,12 +1083,85 @@
     {
       "name": "Junling Wang",
       "status": "current",
-      "title": "Research Assistant",
-      "affiliation": "Master Student at ETH Zürich",
+      "title": "Incoming Doctorate Student",
+      "affiliation": "ETH AI Center",
       "office": "CAB F16",
       "avatar": "https://junlingwang0512.github.io/images/profile2.png",
       "link": "https://junlingwang0512.github.io/",
-      "email": "junling.wang@gess.ethz.ch"
+      "email": "wangjun@student.ethz.ch"
+    },
+    {
+      "name": "Zeyu Xiong",
+      "status": "current",
+      "title": "Incoming Doctorate Student",
+      "affiliation": "ETH Zürich",
+      "office": "CAB F16",
+      "avatar": "https://www.zeyuxiong.com/authors/admin/avatar_hub5020f7b2daf395ae59a69be204bb535_456911_270x270_fill_q75_lanczos_center.jpg",
+      "link": "https://www.zeyuxiong.com/",
+      "email": "zxiong666@connect.hkust-gz.edu.cn"
+    },
+    {
+      "name": "Soroush Jahanzad",
+      "status": "current",
+      "title": "Research Assistant",
+      "affiliation": "ETH Zürich",
+      "avatar": "./assets/members/soroush.jpeg",
+      "link": "https://www.linkedin.com/in/soroush-jahanzad/",
+      "email": "sjahanzad@student.ethz.ch"
+    },
+    {
+      "name": "Rasan Younis",
+      "status": "current",
+      "title": "Research Assistant",
+      "affiliation": "ETH Zürich",
+      "avatar": "./assets/members/rasan.jpeg",
+      "link": "https://www.linkedin.com/in/rasan-younis-187652218",
+      "email": "ryounis@student.ethz.ch"
+    },
+    {
+      "name": "Eliot Ullmo",
+      "status": "current",
+      "title": "Research Assistant",
+      "affiliation": "ETH Zürich",
+      "avatar": "./assets/members/eliot.jpeg",
+      "link": "https://www.linkedin.com/in/eliot-ullmo-a4507a236",
+      "email": "eullmo@student.ethz.ch"
+    },
+    {
+      "name": "Mamoun Chami",
+      "status": "current",
+      "title": "Research Assistant",
+      "affiliation": "ETH Zürich",
+      "avatar": "./assets/members/mamoun.jpeg",
+      "link": "https://www.linkedin.com/in/mamoun-chami/",
+      "email": "chamim@student.ethz.ch"
+    },
+    {
+      "name": "Jiawen Zhu",
+      "status": "current",
+      "title": "Visiting Student",
+      "affiliation": "University of Waterloo",
+      "avatar": "https://stef-zjw.github.io/assets/img/profile_pic.jpg",
+      "link": "https://stef-zjw.github.io/",
+      "email": "jiawen.zhu@uwaterloo.ca"
+    },
+    {
+      "name": "Matin Yarmand",
+      "status": "current",
+      "title": "Visiting Student",
+      "affiliation": "UCSD",
+      "avatar": "https://designlab.ucsd.edu/wp-content/uploads/2019/10/Matin-Yarmand-e1681298743972.png",
+      "link": "https://www.matinyarmand.com/",
+      "email": "myarmand@ucsd.edu"
+    },
+    {
+      "name": "Dinara Talypova",
+      "status": "current",
+      "title": "ETH Summer Research Fellow",
+      "affiliation": "TU Wien",
+      "avatar": "./assets/members/dina.jpeg",
+      "link": "https://www.linkedin.com/in/dinatal/",
+      "email": "dina.talypova@gmail.com"
     }
   ]
 }
