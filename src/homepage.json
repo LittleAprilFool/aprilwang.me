@@ -1012,6 +1012,16 @@
   ],
   "members": [
     {
+      "name": "Dr. Gustavo Umbelino",
+      "status": "current",
+      "title": "Postdoc",
+      "affiliation": "ETH Zürich",
+      "office": "CAB F16",
+      "avatar": "https://gumbel.in/assets/face.png",
+      "link": "https://gumbel.in/",
+      "email": "gus.umbelino@inf.ethz.ch"
+    },
+    {
       "name": "Xiaotian Su",
       "status": "current",
       "title": "Doctoral Student",
@@ -1039,13 +1049,13 @@
     },
     {
       "name": "Lilian  Lopez",
-      "status": "thesis",
+      "status": "ra",
       "title": "Undergraduate@D-INFK, ETHZ",
       "office": "CAB F16"
     },
     {
       "name": "Kiara Chau",
-      "status": "thesis",
+      "status": "ra",
       "title": "Undergraduate@D-INFK, ETHZ",
       "office": "CAB F16"
     },
@@ -1056,19 +1066,35 @@
       "office": "CAB F16"
     },
     {
+      "name": "Yinuo Yang",
+      "status": "collaborator",
+      "title": "Undergraduate, Umich",
+      "office": "CAB F16"
+    },
+    {
+      "name": "Nan Li",
+      "status": "collaborator",
+      "title": "Master, UZH",
+      "office": "CAB F16"
+    },
+    {
+      "name": "Yang Wu",
+      "status": "collaborator",
+      "title": "Master, HUST",
+      "office": "CAB F16"
+    },
+    {
       "name": "Pascal Linder",
-      "status": "thesis",
+      "status": "left",
       "title": "Undergraduate@D-INFK, ETHZ",
       "project": "Designing a Jupyter Document Type for Programming Exercises"
     },
     {
-      "name": "Dr. Angélica Herrera Loyo",
-      "status": "current",
+      "name": "Manuela Hass",
+      "status": "manager",
       "title": "Lab Administrative Assistant",
       "office": "CAB F15.1",
-      "avatar": "https://inf.ethz.ch/people/person-detail.person_image.jpeg?persid=MTk2Njcw",
-      "link": "https://inf.ethz.ch/people/person-detail.MTk2Njcw.TGlzdC8zMDQsLTg3NDc3NjI0MQ==.html",
-      "email": "angelica.herrera@inf.ethz.ch"
+      "email": "manuela.haas@mavt.ethz.ch"
     },
     {
       "name": "Shuai Ma",
@@ -1093,7 +1119,7 @@
     {
       "name": "Zeyu Xiong",
       "status": "current",
-      "title": "Incoming Doctoral Student",
+      "title": "Doctoral Student",
       "affiliation": "ETH Zürich",
       "office": "CAB F16",
       "avatar": "https://www.zeyuxiong.com/authors/admin/avatar_hub5020f7b2daf395ae59a69be204bb535_456911_270x270_fill_q75_lanczos_center.jpg",
@@ -1102,8 +1128,8 @@
     },
     {
       "name": "Soroush Jahanzad",
-      "status": "current",
-      "title": "Research Assistant",
+      "status": "ra",
+      "title": "Master@D-INFK, ETHZ",
       "affiliation": "ETH Zürich",
       "avatar": "./assets/members/soroush.jpeg",
       "link": "https://www.linkedin.com/in/soroush-jahanzad/",
@@ -1111,8 +1137,8 @@
     },
     {
       "name": "Rasan Younis",
-      "status": "current",
-      "title": "Research Assistant",
+      "status": "ra",
+      "title": "Master@D-INFK, ETHZ",
       "affiliation": "ETH Zürich",
       "avatar": "./assets/members/rasan.jpeg",
       "link": "https://www.linkedin.com/in/rasan-younis-187652218",
@@ -1120,8 +1146,8 @@
     },
     {
       "name": "Eliot Ullmo",
-      "status": "current",
-      "title": "Research Assistant",
+      "status": "ra",
+      "title": "Master@D-INFK, ETHZ",
       "affiliation": "ETH Zürich",
       "avatar": "./assets/members/eliot.jpeg",
       "link": "https://www.linkedin.com/in/eliot-ullmo-a4507a236",
@@ -1129,8 +1155,8 @@
     },
     {
       "name": "Mamoun Chami",
-      "status": "current",
-      "title": "Research Assistant",
+      "status": "ra",
+      "title": "Master@D-INFK, ETHZ",
       "affiliation": "ETH Zürich",
       "avatar": "./assets/members/mamoun.jpeg",
       "link": "https://www.linkedin.com/in/mamoun-chami/",
@@ -1138,12 +1164,21 @@
     },
     {
       "name": "Jiawen Zhu",
-      "status": "current",
+      "status": "left",
       "title": "Visiting Student",
       "affiliation": "University of Waterloo",
       "avatar": "https://stef-zjw.github.io/assets/img/profile_pic.jpg",
       "link": "https://stef-zjw.github.io/",
       "email": "jiawen.zhu@uwaterloo.ca"
+    },
+    {
+      "name": "Yi-Hung Chou",
+      "status": "current",
+      "title": "Visiting Student",
+      "affiliation": "UC Irvine",
+      "avatar": "https://yihungchou.com/en/authors/admin/avatar_hubf9f326d86a53dc1beac785de241ace3_285428_270x270_fill_q75_lanczos_center.jpg",
+      "link": "https://yihungchou.com/en/",
+      "email": "yihungc1@uci.edu"
     },
     {
       "name": "Matin Yarmand",
@@ -1156,7 +1191,7 @@
     },
     {
       "name": "Dinara Talypova",
-      "status": "current",
+      "status": "left",
       "title": "ETH Summer Research Fellow",
       "affiliation": "TU Wien",
       "avatar": "./assets/members/dina.jpeg",

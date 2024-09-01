@@ -573,7 +573,7 @@ img[alt=zurich] {
 
 .memberlist-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 40px;
   grid-auto-rows: minmax(3rem, auto);
   grid-row-gap: 1.5rem;

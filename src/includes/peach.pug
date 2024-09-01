@@ -36,10 +36,28 @@
                                 a(target="_blank" href=item.link)
                                     <i class="fa fa-home"></i>
     section.full.memberlist
+        h2 Research Assistants 
+        ul.alumnilist-container
+            each item in data.members
+                if item.status==='ra'
+                    li.alumni-container
+                        p.member-name
+                            a(target="_blank" href=item.link) !{item.name}
+                        p.member-title !{item.title}
+    section.full.memberlist
         h2 Thesis Project Students 
         ul.alumnilist-container
             each item in data.members
                 if item.status==='thesis'
+                    li.alumni-container
+                        p.member-name
+                            a(target="_blank" href=item.link) !{item.name}
+                        p.member-title !{item.title}
+    section.full.memberlist
+        h2 External Student Collaborators 
+        ul.alumnilist-container
+            each item in data.members
+                if item.status==='collaborator'
                     li.alumni-container
                         p.member-name
                             a(target="_blank" href=item.link) !{item.name}
