@@ -2,6 +2,9 @@ stages:
   - build
   - deploy
 
+default:
+  image: registry.inf.ethz.ch/isg/rhel8-ci:latest
+
 workflow:
   rules:
     - if: $CI_COMMIT_BRANCH =~ /^main$/
