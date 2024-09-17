@@ -1,4 +1,4 @@
-import {loadHome, loadPublication, loadCV, loadSection} from './src/app.js'
+import {loadHome, loadPublication, loadCV, loadPage, loadSection} from './src/app.js'
 import template from './src/homepage.pug'
 import data from './src/homepage.js'
 import style from './src/scss/common.scss'

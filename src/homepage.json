@@ -1012,6 +1012,15 @@
   ],
   "members": [
     {
+      "name": "Manuela Haas",
+      "status": "current",
+      "title": "Office Manager",
+      "affiliation": "ETH Zürich",
+      "office": "CAB F15.1",
+      "email": "haasm@ethz.ch",
+      "avatar": "https://ca.slack-edge.com/T06AYDEK963-U07FM1A8TH7-2baf68abf2b3-512"
+    },
+    {
       "name": "Dr. Gustavo Umbelino",
       "status": "current",
       "title": "Postdoc",
@@ -1090,13 +1099,6 @@
       "project": "Designing a Jupyter Document Type for Programming Exercises"
     },
     {
-      "name": "Manuela Hass",
-      "status": "manager",
-      "title": "Lab Administrative Assistant",
-      "office": "CAB F15.1",
-      "email": "manuela.haas@mavt.ethz.ch"
-    },
-    {
       "name": "Shuai Ma",
       "status": "left",
       "comment": "Visiting Student from 11.23 - 01.24",
@@ -1107,6 +1109,16 @@
       "email": "shuai.ma@connect.ust.hk"
     },
     {
+      "name": "Zeyu Xiong",
+      "status": "current",
+      "title": "Doctoral Student",
+      "affiliation": "ETH Zürich",
+      "office": "CAB F16",
+      "avatar": "https://www.zeyuxiong.com/authors/admin/avatar_hub5020f7b2daf395ae59a69be204bb535_456911_270x270_fill_q75_lanczos_center.jpg",
+      "link": "https://www.zeyuxiong.com/",
+      "email": "zeyu.xiong@inf.ethz.ch"
+    },
+    {
       "name": "Junling Wang",
       "status": "current",
       "title": "Doctoral Student",
@@ -1115,16 +1127,6 @@
       "avatar": "https://junlingwang0512.github.io/images/profile2.png",
       "link": "https://junlingwang0512.github.io/",
       "email": "wangjun@student.ethz.ch"
-    },
-    {
-      "name": "Zeyu Xiong",
-      "status": "current",
-      "title": "Doctoral Student",
-      "affiliation": "ETH Zürich",
-      "office": "CAB F16",
-      "avatar": "https://www.zeyuxiong.com/authors/admin/avatar_hub5020f7b2daf395ae59a69be204bb535_456911_270x270_fill_q75_lanczos_center.jpg",
-      "link": "https://www.zeyuxiong.com/",
-      "email": "zxiong666@connect.hkust-gz.edu.cn"
     },
     {
       "name": "Soroush Jahanzad",
@@ -1182,7 +1184,7 @@
     },
     {
       "name": "Matin Yarmand",
-      "status": "current",
+      "status": "left",
       "title": "Visiting Student",
       "affiliation": "UCSD",
       "avatar": "https://designlab.ucsd.edu/wp-content/uploads/2019/10/Matin-Yarmand-e1681298743972.png",

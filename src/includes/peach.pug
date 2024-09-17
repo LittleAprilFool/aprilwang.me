@@ -24,17 +24,21 @@
                 if item.status==='current'
                     .member-container
                         img(src=item.avatar)
-                        p.member-name !{item.name}
+                        if item.link
+                                a(target="_blank" href=item.link)
+                                    p.member-name !{item.name}
+                        else
+                            p.member0name !{item.name}
                         p.member-title !{item.title}
                         p.member-affiliation !{item.affiliation}
                         p.member-location !{item.office}
-                        .member-reachout
-                            if item.email
-                                a(href='mailto:'+item.email)
-                                    <i class="fa fa-envelope"></i>
-                            if item.link
-                                a(target="_blank" href=item.link)
-                                    <i class="fa fa-home"></i>
+                        //- .member-reachout
+                        //-     if item.email
+                        //-         a(href='mailto:'+item.email)
+                        //-             <i class="fa fa-envelope"></i>
+                        //-     if item.link
+                        //-         a(target="_blank" href=item.link)
+                        //-             <i class="fa fa-home"></i>
     section.full.memberlist
         h2 Research Assistants 
         ul.alumnilist-container
