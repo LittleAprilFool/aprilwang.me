@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CHI20_Callisto_Supplement">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/assets/pubs/CHI20_Callisto_Supplement.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
