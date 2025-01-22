@@ -9,11 +9,12 @@
     "cname": "王奕",
     "education": "Assistant Professor",
     "affiliation": "ETH Zürich",
-    "location": "TBD",
+    "email": "april [dot] wang [at] inf [dot] ethz [dot] ch",
+    "location": "CAB F63.1",
     "avatar": "./assets/avatar_2023_rec.jpg",
     "announcement": "📣 I am actively looking for enthusiastic undergrads, MS, and PhDs to reimagine the future of programming tools for collaboration and learning. Please check the <a href='/#/join'>join us page</a> for more details!",
-    "about": "I am a tenure-track assistant professor in the <a href='https://inf.ethz.ch/'>Department of Computer Science</a> at <a href='https://ethz.ch'>ETH Zürich</a>, directing the Programming, Education, and Computer-Human Interaction Lab (PEACH Lab). I am a core faculty member at the <a href='https://iis.inf.ethz.ch/'>Institute for Intelligent Interactive Systems</a>, and associated with the <a href='https://ai.ethz.ch/''>ETH AI Center</a>. I am also part of <a href='https://hci.ethz.ch/'>ETH HCI</a>, <a href='https://swisschi.acm.org/groups/'>Swiss CHI</a>. My main area of research is in human-computer interaction (HCI) and educational technology.",
-    "bio": "I work on creating <strong>collaborative, intelligent, and human-centric programming environments</strong> that cater to the <strong>evolving educational and professional spheres</strong>. I view programming as a tool for instructing computers to aid human tasks, and my research is focused on making programming more accessible beyond traditional code writing. To achieve this, I develop tools that make programming classrooms more engaging, scalable, and accessible. My work has been published at top-tier HCI venues (e.g., CHI, TOCHI, CSCW), and has received several paper awards."
+    "about": "I am a tenure-track assistant professor in the <a href='https://inf.ethz.ch/'>Department of Computer Science</a> at <a href='https://ethz.ch'>ETH Zürich</a>, directing the Programming, Education, and Computer-Human Interaction Lab (PEACH Lab). I am a core faculty member at the <a href='https://iis.inf.ethz.ch/'>Institute for Intelligent Interactive Systems</a>, and associated with the <a href='https://ai.ethz.ch/''>ETH AI Center</a>. I am also a member of <a href='https://hci.ethz.ch/'>ETH HCI</a>, and <a href='https://swisschi.acm.org/groups/'>Swiss CHI</a>. I received my PhD from <a href='https://www.si.umich.edu/'>School of Information</a> at <a href='https://umich.edu/'>University of Michigan</a>, advised by professors <a href='https://from.so/'>Steve Oney</a> and <a href='https://edtech.labs.si.umich.edu/'>Christopher Brooks</a>. My main area of research is in human-computer interaction (HCI) and educational technology. My work seeks to help people communicate about programming more effectively by redesigning literate programming environments both in professional and educational contexts.",
+    "bio": "Programming is a social activity that heavily relies on collaboration and communication. Can programming be more than just a set of instructions for machines? What if we viewed programming as a form of literature, written not only to communicate with computers but also with people? This shift in perspective -- from programming as machine-oriented to human-centered -- has the potential to fundamentally transform how we design, write, teach, and understand code. By rethinking in the space of literate programming, my work explores ways to make programming more natural and intuitive to communicate beyond tools like {IDEs, computational notebooks, documentation, tutorials} that we have today. To do so, my work investigates creative ways to represent code, including {text, shapes, animations, interactive explorables, editing histories, everyday objects, metaphors, and more}. For more about this vision, check out my <a href='https://video.ethz.ch/speakers/lecture/82526477-003a-4ffb-9e82-154616e9ef34.html'>inaugural lecture</a>."
   },
   "featured_project": [
     {
@@ -37,9 +38,57 @@
       "category": "Peer Reviewed Conference Papers",
       "item": [
         {
+          "venue": "CHI 2025",
+          "id": "CHI2025c",
+          "title": "DBox: Scaffolding Algorithmic Programming Learning through Learner-LLM Co-Decomposition",
+          "authors": "Shuai Ma, Junling Wang, Yuanhao Zhang, Xiaojuan Ma, <strong>April Yi Wang</strong>",
+          "venue_full": "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2025)",
+          "links": "<a>To Appear</a>",
+          "abstract": "Decomposition Box --- an LLM-based interactive system that helps learners in algorithmic programming by scaffolding personalized step-tree construction, providing adaptive support to improve learning and critical thinking",
+          "teaser": "./assets/teaser/chi25c.png",
+          "is_journal": false,
+          "is_featured": true
+        },
+        {
+          "venue": "CHI 2025",
+          "id": "CHI2025b",
+          "title": "Dialogic and On-Demand Metaphors for Interdisciplinary Reading",
+          "authors": "Matin Yarmand, Udayan Tandon, Courtney Reed, Eric Hekler, Nadir Weibel, <strong>April Yi Wang</strong>",
+          "venue_full": "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2025)",
+          "links": "<a>To Appear</a>",
+          "abstract": "We investigated how metaphors and LLMs can support interdisciplinary engagement between Science and Technology Studies (STS) and System HCI.",
+          "teaser": "./assets/teaser/chi25b.png",
+          "is_journal": false,
+          "is_featured": true
+        },
+        {
+          "venue": "CHI 2025",
+          "id": "CHI2025a",
+          "title": "Do It For Me vs. Do It With Me: Investigating User Perceptions of Different Levels of Automation in Copilots for Feature-Rich Software",
+          "authors": "Anjali Khurana, Xiaotian Su, <strong>April Yi Wang</strong>, Parmit Chilana",
+          "venue_full": "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2025)",
+          "links": "<a>To Appear</a>",
+          "abstract": "We designed and compared two LLM-based copilots—one fully automated and one semi-automatic with step-by-step guidance—exploring their impact on task completion and user experience.",
+          "teaser": "./assets/teaser/chi25a.png",
+          "is_journal": false,
+          "is_featured": true
+        },
+        {
+          "venue": "MSR 2025",
+          "id": "MSR2025",
+          "title": " Learning from Mistakes: Understanding Ad-hoc Logs through  Analyzing Accidental Commits",
+          "authors": "Yi-Hung Chou, Yiyang Min, <strong>April Yi Wang</strong>, James Jones",
+          "venue_full": "In Proceedings of the 21st International Conference on Mining Software Repositories (MSR 2025)",
+          "links": "<a href='https://arxiv.org/abs/2501.09892'>Paper</a>",
+          "abstract": "Developers often use temporary ad-hoc logs like print or console.log to debug code, but these logs are rarely studied due to their ephemeral nature. We analyzed 27GB of accidental commits removing 548K logs and live coding streams to uncover when, where, and why they're used—insights for better tools and debugging practices.",
+          "teaser": "./assets/teaser/msr25.png",
+          "is_journal": false,
+          "is_featured": true
+        },
+        {
           "venue": "DIS 2024",
           "id": "DIS2024",
-          "title": "Towards Feature Engineering with Human and AI's Knowledge: Understanding Data Science Practitioners' Perceptions in Human&AI-Assisted Feature Engineering Design.",
+          "title": "Towards Feature Engineering with Human and AI's Knowledge: Understanding Data Science Practitioners' Perceptions in Human&AI-Assisted Feature Engineering Design",
           "authors": "Qian Zhu, Dakuo Wang, Shuai Ma, <strong>April Yi Wang</strong>, Zixin Chen, Udayan Khurana, Xiaojuan Ma",
           "venue_full": "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2023)",
           "links": "<a href='https://arxiv.org/pdf/2405.14107' class='paper-link' target='_blank'>Paper</a>",
@@ -299,9 +348,24 @@
   ],
   "attending": [
     {
+      "date": "April 30, 2024",
+      "event": "CHI 2025, Yokohama",
+      "ispast": false
+    },
+    {
+      "date": "Feb 17, 2024",
+      "event": "PLATEAU 2025, Boston",
+      "ispast": false
+    },
+    {
       "date": "Oct 1, 2024",
       "event": "Inaugural lecture, Zürich",
-      "ispast": false
+      "ispast": true
+    },
+    {
+      "date": "Sept 25, 2024",
+      "event": "UZH IfI Colloquium",
+      "ispast": true
     },
     {
       "date": "May 11-16, 2024",
@@ -426,6 +490,18 @@
       }
   ],
   "news": [
+    {
+      "date": "1/2025",
+      "news": "Three papers accepted to CHI25, on the topic of AI for {software automation, learning algorithmic programming, and interdisciplinary reading}."
+    },
+    {
+      "date": "1/2025",
+      "news": "Our paper on adhoc log analysis was accepted to MSR25."
+    },
+    {
+      "date": "12/2024",
+      "news": "Our lab moved to CAB F66."
+    },
     {
       "date": "05/2024",
       "news": "I am serving on the organizational board of ACM SwissCHI local chapter."
@@ -1016,16 +1092,18 @@
       "status": "current",
       "title": "Office Manager",
       "affiliation": "ETH Zürich",
-      "office": "CAB F15.1",
+      "link": "https://ethz.ch/staffnet/en/utils/search.MTI5MDk3.html",
+      "hobby": "⛰️",
+      "office": "CAB F63.2",
       "email": "haasm@ethz.ch",
       "avatar": "https://ca.slack-edge.com/T06AYDEK963-U07FM1A8TH7-2baf68abf2b3-512"
     },
     {
       "name": "Dr. Gustavo Umbelino",
-      "status": "current",
+      "status": "left",
       "title": "Postdoc",
       "affiliation": "ETH Zürich",
-      "office": "CAB F16",
+      "office": "CAB F66",
       "avatar": "https://gumbel.in/assets/face.png",
       "link": "https://gumbel.in/",
       "email": "gus.umbelino@inf.ethz.ch"
@@ -1035,85 +1113,49 @@
       "status": "current",
       "title": "Doctoral Student",
       "affiliation": "ETH Zürich",
-      "office": "CAB F16",
-      "avatar": "https://xiaotiansu.github.io/assets/img/prof_pic-480.webp",
+      "topics": "Code Comprehension",
+      "hobby": "💃",
+      "office": "CAB F66",
+      "avatar": "./assets/members/su.jpeg",
       "link": "https://xiaotiansu.github.io",
       "email": "xiaotian.su@inf.ethz.ch"
     },
     {
-      "name": "Jannik Gartmann",
-      "status": "thesis",
-      "title": "Master@D-INFK, ETHZ"
-    },
-    {
-      "name": "Catherine Schmit",
-      "status": "thesis",
-      "title": "Master@D-INFK, ETHZ"
-    },
-    {
-      "name": "Shu Wang",
-      "status": "thesis",
-      "title": "Master@D-INFK, ETHZ",
-      "project": "Designing a Jupyter Document Type for Programming Exercises"
-    },
-    {
-      "name": "Lilian  Lopez",
-      "status": "ra",
-      "title": "Undergraduate@D-INFK, ETHZ",
-      "office": "CAB F16"
-    },
-    {
-      "name": "Kiara Chau",
-      "status": "ra",
-      "title": "Undergraduate@D-INFK, ETHZ",
-      "office": "CAB F16"
-    },
-    {
-      "name": "Oliver Lehmann",
-      "status": "thesis",
-      "title": "Undergraduate@D-INFK, ETHZ",
-      "office": "CAB F16"
-    },
-    {
-      "name": "Yinuo Yang",
+      "name": "Peng Kuang",
       "status": "collaborator",
-      "title": "Undergraduate, Umich",
-      "office": "CAB F16"
+      "title": "Academic Guest from Lund University",
+      "office": "CAB F66",
+      "link": "https://portal.research.lu.se/en/persons/peng-kuang"
     },
     {
-      "name": "Nan Li",
+      "name": "Eunyoung Ko",
       "status": "collaborator",
-      "title": "Master, UZH",
-      "office": "CAB F16"
+      "title": "Academic Guest from KAIST",
+      "office": "CAB F66",
+      "link": "https://eunyoungko.com/"
     },
     {
       "name": "Yang Wu",
       "status": "collaborator",
-      "title": "Master, HUST",
-      "office": "CAB F16"
+      "title": "Mobility Student from HUST",
+      "office": "CAB F66",
+      "link": "https://yang-emily.github.io/"
     },
     {
-      "name": "Pascal Linder",
-      "status": "left",
-      "title": "Undergraduate@D-INFK, ETHZ",
-      "project": "Designing a Jupyter Document Type for Programming Exercises"
-    },
-    {
-      "name": "Shuai Ma",
-      "status": "left",
-      "comment": "Visiting Student from 11.23 - 01.24",
-      "title":"PhD Candidate@HKUST",
-      "office": "CAB F16",
-      "avatar": "https://shuaima.cc/personal_webpage_files/Me.jpg",
-      "link": "https://shuaima.cc/",
-      "email": "shuai.ma@connect.ust.hk"
+      "name": "Yinuo Yang",
+      "status": "collaborator",
+      "title": "Remote Collaborator, Undergraduate from Umich",
+      "office": "CAB F66",
+      "link": "https://inonnno.github.io/Yinuo.me/"
     },
     {
       "name": "Zeyu Xiong",
       "status": "current",
       "title": "Doctoral Student",
       "affiliation": "ETH Zürich",
-      "office": "CAB F16",
+      "topics": "Youth AI Literacy",
+      "hobby":"🎵",
+      "office": "CAB F66",
       "avatar": "https://www.zeyuxiong.com/authors/admin/avatar_hub5020f7b2daf395ae59a69be204bb535_456911_270x270_fill_q75_lanczos_center.jpg",
       "link": "https://www.zeyuxiong.com/",
       "email": "zeyu.xiong@inf.ethz.ch"
@@ -1122,61 +1164,36 @@
       "name": "Junling Wang",
       "status": "current",
       "title": "Doctoral Student",
+      "topics": "Visual-based ITS",
+      "hobby": "🏓",
       "affiliation": "ETH AI Center (co-advised with Mrinmaya Sachan)",
-      "office": "CAB F16",
+      "office": "CAB F66",
       "avatar": "https://junlingwang0512.github.io/images/profile2.png",
       "link": "https://junlingwang0512.github.io/",
       "email": "wangjun@student.ethz.ch"
     },
     {
-      "name": "Soroush Jahanzad",
-      "status": "ra",
-      "title": "Master@D-INFK, ETHZ",
-      "affiliation": "ETH Zürich",
-      "avatar": "./assets/members/soroush.jpeg",
-      "link": "https://www.linkedin.com/in/soroush-jahanzad/",
-      "email": "sjahanzad@student.ethz.ch"
-    },
-    {
-      "name": "Rasan Younis",
-      "status": "ra",
-      "title": "Master@D-INFK, ETHZ",
-      "affiliation": "ETH Zürich",
-      "avatar": "./assets/members/rasan.jpeg",
-      "link": "https://www.linkedin.com/in/rasan-younis-187652218",
-      "email": "ryounis@student.ethz.ch"
-    },
-    {
-      "name": "Eliot Ullmo",
-      "status": "ra",
-      "title": "Master@D-INFK, ETHZ",
-      "affiliation": "ETH Zürich",
-      "avatar": "./assets/members/eliot.jpeg",
-      "link": "https://www.linkedin.com/in/eliot-ullmo-a4507a236",
-      "email": "eullmo@student.ethz.ch"
-    },
-    {
-      "name": "Mamoun Chami",
-      "status": "ra",
-      "title": "Master@D-INFK, ETHZ",
-      "affiliation": "ETH Zürich",
-      "avatar": "./assets/members/mamoun.jpeg",
-      "link": "https://www.linkedin.com/in/mamoun-chami/",
-      "email": "chamim@student.ethz.ch"
-    },
-    {
       "name": "Jiawen Zhu",
       "status": "left",
-      "title": "Visiting Student",
+      "title": "Mobility Student from University of Waterloo",
       "affiliation": "University of Waterloo",
       "avatar": "https://stef-zjw.github.io/assets/img/profile_pic.jpg",
       "link": "https://stef-zjw.github.io/",
       "email": "jiawen.zhu@uwaterloo.ca"
     },
     {
+      "name": "Dinara Talypova",
+      "status": "left",
+      "title": "<a href='https://inf.ethz.ch/studies/summer-research-fellowship.html'>ETH Summer Research Fellow</a> from TU Wien",
+      "affiliation": "ETH Summer Research Fellow from TU Wien",
+      "avatar": "./assets/members/dina.jpeg",
+      "link": "https://www.linkedin.com/in/dinatal/",
+      "email": "dina.talypova@gmail.com"
+    },
+    {
       "name": "Yi-Hung Chou",
-      "status": "current",
-      "title": "Visiting Student",
+      "status": "left",
+      "title": "Academic Guest from UCI, led to MSR25 publication on Adhoc Logs",
       "affiliation": "UC Irvine",
       "avatar": "https://yihungchou.com/en/authors/admin/avatar_hubf9f326d86a53dc1beac785de241ace3_285428_270x270_fill_q75_lanczos_center.jpg",
       "link": "https://yihungchou.com/en/",
@@ -1185,20 +1202,20 @@
     {
       "name": "Matin Yarmand",
       "status": "left",
-      "title": "Visiting Student",
-      "affiliation": "UCSD",
+      "title": "Academic Guest from UCSD through <a href='https://thinkswiss.org/research-scholarship/'>ThinkSwiss</a>, led to CHI25 publication on metaphor",
+      "affiliation": "Academic Guest from UCSD",
       "avatar": "https://designlab.ucsd.edu/wp-content/uploads/2019/10/Matin-Yarmand-e1681298743972.png",
       "link": "https://www.matinyarmand.com/",
       "email": "myarmand@ucsd.edu"
     },
     {
-      "name": "Dinara Talypova",
+      "name": "Shuai Ma",
       "status": "left",
-      "title": "ETH Summer Research Fellow",
-      "affiliation": "TU Wien",
-      "avatar": "./assets/members/dina.jpeg",
-      "link": "https://www.linkedin.com/in/dinatal/",
-      "email": "dina.talypova@gmail.com"
+      "title":"Academic Guest from HKUST, led to CHI25 publication DBox",
+      "office": "CAB F16",
+      "avatar": "https://shuaima.cc/personal_webpage_files/Me.jpg",
+      "link": "https://shuaima.cc/",
+      "email": "shuai.ma@connect.ust.hk"
     }
   ]
 }

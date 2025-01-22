@@ -10,6 +10,36 @@
   margin: 0 auto;
 }
 
+.peachsection-container{
+  padding: 0px 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-auto-rows: minmax(3rem, auto);
+  grid-row-gap: .5rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.peachunit{
+  text-align: center;
+  vertical-align: bottom;
+  margin:auto;
+  align-items: center;
+  width: 120px;
+}
+
+.peachunit > img{
+  max-height: 100px;
+}
+
+.member-topic > span{
+  background: #edededba;
+  padding: 4px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
 header {
   padding: 2rem 0rem 1rem 0rem;
   background: $section-header-bg;
@@ -41,7 +71,6 @@ header {
 .name {
   font-size: 20px;
   font-weight: 800;
-  color: $primary-dark;
   padding: 10px 0px;
   display: inline;
 }
@@ -116,7 +145,6 @@ header {
 
 .paper-title {
   font-weight: bold;
-  color: $primary-dark;
 }
 
 .paper-abstract {
@@ -218,9 +246,10 @@ header {
 }
 
 .deco{
-  max-width: 60px;
+  max-width: 40px;
   margin-bottom: 10px;
 }
+
 
 .attendinglist{
   padding-top:10px;
@@ -389,6 +418,9 @@ header {
 
 .footnote > p{
   display: inline;
+}
+
+.peachintro li {
   padding: 10px;
 }
 
@@ -451,7 +483,7 @@ img[alt=zurich] { width: 100%; }
 
 .memberlist-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 40px;
   grid-auto-rows: minmax(3rem, auto);
   grid-row-gap: 1.5rem;
@@ -459,12 +491,24 @@ img[alt=zurich] { width: 100%; }
   margin: 0 auto;
 }
 
+
+
 .member-container {
+  max-width: 1024px;
   text-align: center;
-  padding:20px;
+  padding:10px;
   font-size: 14px;
   line-height: 24px;
   border-radius: 10px;
+  font-size: smaller;
+}
+
+.member-container .member-name {
+  font-size: 15px;
+}
+
+.member-right {
+  grid-column:2/4;
 }
 
 .alumni-container > p {
@@ -473,34 +517,46 @@ img[alt=zurich] { width: 100%; }
 }
 
 .alumnilist-container {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
+  columns: 1;
+  -webkit-columns: 1;
+  -moz-columns: 1;
 }
 
-.member-container > img {
+.peachlogo{
+  height: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.peachlogo > img{
+  height: 100%;
+}
+
+.member-container img {
   object-fit: cover;
   width: 150px;
   height: 150px;
   border-radius: 180px;
 }
 
-.member-comment {
+.member-right {
+  padding-top:10px;
   font-size: smaller;
 }
 
-.member-name {
-  padding: 0px 10px;
+.member-right > .member-name > a {
+  font-size: 16px;
+}
+
+.member-name > a {
   font-weight: 600;
   font-size:14px;
+  margin-bottom: 10px;
+  color: $secondary-color;
 }
 
-.member-title {
-  font-size: smaller;
-}
-
-.member-affiliation {
-  font-size: smaller;
+.member-name > a:hover {
+  color: $primary-highlight;
 }
 
 @media screen and (max-width: 600px) {

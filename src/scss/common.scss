@@ -76,6 +76,7 @@ a:visited {
 
 li {
     text-decoration: none;
+    padding: 2px 0px;
 }
 
 #subtitle {
@@ -130,7 +131,7 @@ p {
     // font-family: lato, sans-serif;
     font-size: 15px;
     font-weight: bold;
-    color: $primary-highlight; 
+    color: $secondary-color; 
     margin-bottom: 0px;
 }
 

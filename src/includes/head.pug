@@ -8,13 +8,13 @@
     .header_title
         p.name #{data.bio.name}
         span.cname #{data.bio.cname}
+        p.edu #{data.bio.email}
+        p.edu #{data.bio.location}
         p.edu #{data.bio.education} 
         p.edu #{data.bio.affiliation}
         .icons
-            a(href='mailto:april.wang@inf.ethz.ch')
-                <i class="fa fa-envelope"></i>
-            a(target="_blank" href='https://twitter.com/AprilWang95')
-                <i class="fab fa-twitter"></i>
+            a(target="_blank" href='https://www.linkedin.com/in/april-yi-wang-76397b80/')
+                <i class="fab fa-linkedin"></i>
             a(target="_blank" href='https://github.com/LittleAprilFool')
                 <i class="fab fa-github"></i>
             a(target="_blank" href='https://scholar.google.com/citations?user=yitS6coAAAAJ&hl=en')
@@ -29,9 +29,9 @@
                     a(href='#/peach') Team
                 li#nav3
                     a(href='#/join') Join Us
-                //- li#nav4
-                //-     a(href='#/cv') CV
                 li#nav5
-                    a(href='#/teaching') Teaching
+                    a(href='#/teaching') Teaching and Theses
+                li#nav4
+                    a(href='./assets/cv_awang.pdf' target='_blank') CV
                 //- li#nav3
                 //-     a(href='#publications') Publications

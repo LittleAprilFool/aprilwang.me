@@ -46,7 +46,7 @@ export function loadHome(){
   cleanAll()
   setVisible(home)
   const button = document.querySelector("#button-venn");
-  makeCircle(button);
+  if(button) makeCircle(button);
 }
 
 export function loadSection(name){

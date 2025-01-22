@@ -1,78 +1,79 @@
 .container
-    section.full
-        div
-            :markdown-it(linkify langPrefix='highlight-')
+  section.full
+    .peachlogo
+      img(src='./assets/lab/banner.png')
+    div.peachintro
+      :markdown-it(linkify langPrefix='highlight-')
 
-                ## PEACH Lab
+        At the Programming, Education, and Computer-Human Interaction Lab (PEACH), our mission is to create expressive, intelligent, and human-centered systems that make technical topics—like programming, data, and AI—more accessible and engaging. We research novel interface designs to effectively communicate abstract concepts and logical reasoning processes, allowing learners to better understand and apply these ideas in real-world contexts. We are interested in a variety of topics:
 
-                We are the **P**rogramming, **E**ducation, **a**nd **C**omputer-**H**uman Interaction Lab (PEACH). 
-                Our mission is to enable collaborative exploration, understanding, and communication in a data-centric world.
-                Our research covers human-computer interaction, educational technology, computer-supported collaborative work, empirical software engineering, and human-AI collaboration.             
-                Here are some exciting topics that we are currently working on:
-                
-                - **AI-Assisted Learning**: Developing AI tools that provide personalized learning experiences and support for learners of all levels.
-                - **Teaching Programming at Scale**: Creating scalable methods and technologies for teaching programming to large and diverse groups of students.
-                - **Promoting Data Literacy for All**: Designing educational interventions and tools that help individuals develop critical data literacy skills.
-                - **Collaboration Technology for Data-Centric Programming**: Building and evaluating technologies that facilitate collaborative programming and data analysis in professional and educational contexts.
+        - **Natural Language for Programming**: We explore ways to make programming workflows more intuitive and collaborative by tightly integrating documentation, discussion, and code. Our goal is to simplify communication in data science and beyond, helping teams work more efficiently and avoid misunderstandings.
 
-        .announcement 📮 To stay in the loop with all the cool stuff we're doing in the lab, sign up for our mailing list to get the newsletters --- <a href='https://lists.inf.ethz.ch/mailman/listinfo/friends.peachlab' target=_blank>friends.peachlab</a>. We'd love to keep you posted!
+        - **Visual Language for Programming**: Visual tools are essential for explaining complex programming ideas. We design interactive tutorial platforms that let learners experiment in real time, encouraging hands-on learning and deeper understanding. For professionals, such visual and interactive explanations allow them to better understand code for productivity -- whether it is created by past themselves, collaborators, or AI.
 
-    section.full.memberlist
-        h2 Current Members
-        .memberlist-container
-            each item in data.members
-                if item.status==='current'
-                    .member-container
-                        img(src=item.avatar)
-                        if item.link
-                                a(target="_blank" href=item.link)
-                                    p.member-name !{item.name}
-                        else
-                            p.member0name !{item.name}
-                        p.member-title !{item.title}
-                        p.member-affiliation !{item.affiliation}
-                        p.member-location !{item.office}
-                        //- .member-reachout
-                        //-     if item.email
-                        //-         a(href='mailto:'+item.email)
-                        //-             <i class="fa fa-envelope"></i>
-                        //-     if item.link
-                        //-         a(target="_blank" href=item.link)
-                        //-             <i class="fa fa-home"></i>
-    section.full.memberlist
-        h2 Research Assistants 
-        ul.alumnilist-container
-            each item in data.members
-                if item.status==='ra'
-                    li.alumni-container
-                        p.member-name
-                            a(target="_blank" href=item.link) !{item.name}
-                        p.member-title !{item.title}
-    section.full.memberlist
-        h2 Thesis Project Students 
-        ul.alumnilist-container
-            each item in data.members
-                if item.status==='thesis'
-                    li.alumni-container
-                        p.member-name
-                            a(target="_blank" href=item.link) !{item.name}
-                        p.member-title !{item.title}
-    section.full.memberlist
-        h2 External Student Collaborators 
-        ul.alumnilist-container
-            each item in data.members
-                if item.status==='collaborator'
-                    li.alumni-container
-                        p.member-name
-                            a(target="_blank" href=item.link) !{item.name}
-                        p.member-title !{item.title}
-    section.full.memberlist
-        h2 Alumni
-        ul.alumnilist-container
-            each item in data.members
-                if item.status==='left'
-                    li.alumni-container
-                        p.member-name
-                            a(target="_blank" href=item.link) !{item.name}
-                        p.member-title !{item.title}
-                        p.member-comment !{item.comment}
+        - **Embodied Language for Programming**: We go beyond traditional interfaces by connecting abstract programming concepts to tangible, relatable experiences. This includes using metaphors, physical objects, and augmented reality to make programming and data more engaging.
+
+        - **Supporting Diverse User Needs**: We use empirical methods to explore how factors such as task type, learning goals, team size, and collaboration style influence programming experiences and study the design of tools and representations that adapt to users' diverse needs.
+
+        - **Balancing Automation with Agency**: We are interested in building intelligent systems to help people communicate technical topics. And such systems should augment the target users instead of replacing them, ensuring that the users can understand and direct systems' behaviors to make informed decisions.
+
+    .peachsection-container
+      .peachunit
+        img(src='./assets/lab/peacha.jpg')
+        p Expressiveness
+
+      .peachunit
+        img(src='./assets/lab/peachb.jpg')
+        p Adaptiveness
+
+      .peachunit
+        img(src='./assets/lab/peachc.jpg')
+        p Agency
+    .announcement 📮 To stay in the loop with all the cool stuff we're doing in the lab, sign up for our mailing list to get the newsletters --- <a href='https://lists.inf.ethz.ch/mailman/listinfo/friends.peachlab' target=_blank>friends.peachlab</a>. We'd love to keep you posted!
+
+  section.full.memberlist
+    h2 Core Members
+    .memberlist-container
+      each item in data.members
+        if item.status==='current'
+          .member-container
+            img(src=item.avatar)
+            if item.link
+              p.member-name 
+                a(target="_blank" href=item.link) !{item.name}
+            else
+              p.member-name !{item.name}
+            p.member-title !{item.title}
+            p.member-affiliation !{item.affiliation}
+            //- p.member-location !{item.office}
+            if item.topics
+              .member-topic
+                span !{item.topics}
+            //- if item.hobby
+            //-     .member-hobby Hobby: !{item.hobby}
+            //- .member-reachout
+            //-     if item.email
+            //-         a(href='mailto:'+item.email)
+            //-             <i class="fa fa-envelope"></i>
+            //-     if item.link
+            //-         a(target="_blank" href=item.link)
+            //-             <i class="fa fa-home"></i>
+  section.full.memberlist
+    h2 Affiliated Members 
+    ul.alumnilist-container
+      each item in data.members
+        if item.status==='collaborator'
+          li.alumni-container
+            p.member-name
+              a(target="_blank" href=item.link) !{item.name}
+            p.member-title !{item.title}
+  section.full.memberlist
+    h2 Alumni
+    ul.alumnilist-container
+      each item in data.members
+        if item.status==='left'
+          li.alumni-container
+            p.member-name
+              a(target="_blank" href=item.link) !{item.name}
+            p.member-title !{item.title}
+            p.member-comment !{item.comment}
