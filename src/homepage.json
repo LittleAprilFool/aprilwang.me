@@ -38,6 +38,18 @@
       "category": "Peer Reviewed Conference Papers",
       "item": [
         {
+          "venue": "CSCW 2025",
+          "id": "CSCW2025",
+          "title": "Emotionally Aware Moderation: The Potential of Emotion Monitoring in Shaping Healthier Social Media Conversations",
+          "authors": "Xiaotian Su, Naim Zierau, Soomin Kim, <strong>April Yi Wang</strong>, Thiemo Wambsganss",
+          "venue_full": "In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2025)",
+          "links": "<a>To Appear</a>",
+          "abstract": "Proactive moderation on social media platforms can face criticism for fostering censorship and ignoring the root causes of incivility. We propose and evaluate emotion monitoring mechanisms that enhance users' emotional awareness and mitigate hate speech.",
+          "teaser": "./assets/teaser/cscw2025.png",
+          "is_journal": true,
+          "is_featured": true
+        },
+        {
           "venue": "CHI 2025",
           "id": "CHI2025c",
           "title": "DBox: Scaffolding Algorithmic Programming Learning through Learner-LLM Co-Decomposition",
@@ -82,6 +94,18 @@
           "links": "<a href='https://arxiv.org/abs/2501.09892'>Paper</a>",
           "abstract": "Developers often use temporary ad-hoc logs like print or console.log to debug code, but these logs are rarely studied due to their ephemeral nature. We analyzed 27GB of accidental commits removing 548K logs and live coding streams to uncover when, where, and why they're used—insights for better tools and debugging practices.",
           "teaser": "./assets/teaser/msr25.png",
+          "is_journal": false,
+          "is_featured": true
+        },
+        {
+          "venue": "arXiv Preprint",
+          "id": "arxiv2024",
+          "title": " EDBooks: AI-Enhanced Interactive Narratives for Programming Education",
+          "authors": "Steve Oney, Yue Shen, Fei Wu, Young Suh Hong, Ziang Wang, Yamini Khajekar, Jiacheng Zhang, <strong>April Yi Wang</strong>",
+          "venue_full": "arXiv preprint arXiv:2411.10687",
+          "links": "<a href='https://arxiv.org/abs/2411.10687'>Paper</a>",
+          "abstract": "we propose ways to combine large language models with \"traditional\" learning materials (like e-books) to give readers the benefits of working with LLMs (the ability to ask personally interesting questions and receive personalized answers) with the benefits of a traditional e-book (having a structure and content that is pedagogically sound.",
+          "teaser": "./assets/teaser/arxiv24.jpg",
           "is_journal": false,
           "is_featured": true
         },
