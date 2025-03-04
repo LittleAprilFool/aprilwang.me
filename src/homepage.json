@@ -38,6 +38,18 @@
       "category": "Peer Reviewed Conference Papers",
       "item": [
         {
+          "venue": "ITiCSE 2025",
+          "id": "ITiCSE2025",
+          "title": "datAR: A Situated Learning Approach for Data Literacy Through Everyday Objects",
+          "authors": "Lilian Lopez, Zeyu Xiong, Kiara Chau, Gustavo Umbelino, Zihan Wu, <strong>April Yi Wang</strong>",
+          "venue_full": "In Proceedings of the 2025 on Innovation and Technology in Computer Science Education (ITiCSE 2025)",
+          "links": "<a>To Appear</a>",
+          "abstract": "How can we make data literacy more engaging for high school students? This work introduces datAR, an augmented reality tool that brings data into the real world using tangible analysis blocks. A case study shows how students explored nutrition data from everyday snacks, making abstract concepts more interactive and accessible.",
+          "teaser": "./assets/teaser/iticse25.png",
+          "is_journal": false,
+          "is_featured": true
+        },
+        {
           "venue": "CSCW 2025",
           "id": "CSCW2025",
           "title": "Emotionally Aware Moderation: The Potential of Emotion Monitoring in Shaping Healthier Social Media Conversations",
@@ -56,7 +68,7 @@
           "authors": "Shuai Ma, Junling Wang, Yuanhao Zhang, Xiaojuan Ma, <strong>April Yi Wang</strong>",
           "venue_full": "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2025)",
           "links": "<a href='./assets/pubs/CHI25_dbox.pdf' class='pdf-link' target='_blank'>PDF</a>",
-          "abstract": "Decomposition Box --- an LLM-based interactive system that helps learners in algorithmic programming by scaffolding personalized step-tree construction, providing adaptive support to improve learning and critical thinking",
+          "abstract": "Decomposition Box --- an LLM-based interactive system that helps learners in algorithmic programming by scaffolding personalized step-tree construction, providing adaptive support to improve learning and critical thinking.",
           "teaser": "./assets/teaser/chi25c.png",
           "is_journal": false,
           "is_featured": true
