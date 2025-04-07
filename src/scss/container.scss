@@ -427,7 +427,7 @@ header {
 
 @media screen and (max-width: 600px) {
   .left-panel{
-    display: none;
+    grid-column: 1 / 9;
   }
   .right-panel {
     grid-column: 1 / 9;

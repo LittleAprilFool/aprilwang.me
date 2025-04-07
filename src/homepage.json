@@ -38,6 +38,18 @@
       "category": "Peer Reviewed Conference Papers",
       "item": [
         {
+          "venue": "CHIWORK 2025",
+          "id": "CHIWORK2025",
+          "title": "Are Six Minutes of Focus Enough? An Exploratory Study of Multitasking Patterns in Workplace Environments",
+          "authors": "Dinara Talypova, Aku Visuri, Ambika Shahu, <strong>April Wang</strong>, Philipp Wintersberger",
+          "venue_full": "In Proceedings of the 2025 Symposium on Human-Computer Interaction for Work (CHIWORK 2025)",
+          "links": "<a>To Appear</a>",
+          "abstract": "The modern workplace presents numerous distractions, leading to fragmented workflows and frequent multitasking. We conducted a naturalistic study in real-world settings to examine how and why knowledge workers switch between main, on-task, and off-task activities.",
+          "teaser": "./assets/teaser/chiwork25.png",
+          "is_journal": false,
+          "is_featured": true
+        },
+        {
           "venue": "ITiCSE 2025",
           "id": "ITiCSE2025",
           "title": "datAR: A Situated Learning Approach for Data Literacy Through Everyday Objects",
@@ -384,14 +396,30 @@
   ],
   "attending": [
     {
-      "date": "April 30, 2024",
-      "event": "CHI 2025, Yokohama",
+      "date": "July 22, 2025",
+      "event": "L@S 2025, Palermo",
       "ispast": false
     },
     {
-      "date": "Feb 17, 2024",
-      "event": "PLATEAU 2025, Boston",
+      "date": "June 30, 2025",
+      "event": "ITiCSE 2025, Nijmegen",
       "ispast": false
+    },
+    {
+      "date": "April 30, 2025",
+      "event": "CHI 2025, Yokohama, <a href='https://doodle.com/bp/aprilwang/aprilchi2025' target='_blank'>grab a slot</a> to chat -- open to new and familiar faces 🌸",
+      "ispast": false
+    },
+
+    {
+      "date": "March 12, 2025",
+      "event": "SwissCHI Winter Meeting, Lugano",
+      "ispast": true
+    },
+    {
+      "date": "Feb 17, 2025",
+      "event": "PLATEAU 2025, Boston",
+      "ispast": true
     },
     {
       "date": "Oct 1, 2024",
@@ -527,6 +555,22 @@
   ],
   "news": [
     {
+      "date": "4/2025",
+      "news": "Our <a href='https://madbeamer.github.io/coducate-project-page/' target='_blank'>Coducate project</a> got sponsored by the <a href='https://ethz.ch/en/the-eth-zurich/education/innovedum/innovedum-fund.html' target='_blank'>innovedum funding</a>."
+    },
+    {
+      "date": "2/2025",
+      "news": "Our paper on learning data literacy through everyday objects is accepted to ITiCSE. See you in Nijmegen!"
+    },
+    {
+      "date": "2/2025",
+      "news": "Our paper on emotion monitoring is accepted to CSCW."
+    },
+    {
+      "date": "1/2025",
+      "news": "I am serving on the UIST PC"
+    },
+    {
       "date": "1/2025",
       "news": "Three papers accepted to CHI25, on the topic of AI for {software automation, learning algorithmic programming, and interdisciplinary reading}."
     },
@@ -537,6 +581,10 @@
     {
       "date": "12/2024",
       "news": "Our lab moved to CAB F66."
+    },
+    {
+      "date": "09/2024",
+      "news": "I am serving on the CHI PC, subcommittee engineering interactive systems."
     },
     {
       "date": "05/2024",
@@ -1158,14 +1206,14 @@
     },
     {
       "name": "Peng Kuang",
-      "status": "collaborator",
+      "status": "left",
       "title": "Academic Guest from Lund University",
       "office": "CAB F66",
       "link": "https://portal.research.lu.se/en/persons/peng-kuang"
     },
     {
       "name": "Eunyoung Ko",
-      "status": "collaborator",
+      "status": "left",
       "title": "Academic Guest from KAIST",
       "office": "CAB F66",
       "link": "https://eunyoungko.com/"
@@ -1220,7 +1268,7 @@
     {
       "name": "Dinara Talypova",
       "status": "left",
-      "title": "<a href='https://inf.ethz.ch/studies/summer-research-fellowship.html'>ETH Summer Research Fellow</a> from TU Wien",
+      "title": "<a href='https://inf.ethz.ch/studies/summer-research-fellowship.html'>ETH Summer Research Fellow</a> from TU Wien, led to CHIWORK25 publication on multitasking",
       "affiliation": "ETH Summer Research Fellow from TU Wien",
       "avatar": "./assets/members/dina.jpeg",
       "link": "https://www.linkedin.com/in/dinatal/",
