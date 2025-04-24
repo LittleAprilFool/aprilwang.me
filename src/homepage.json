@@ -38,6 +38,18 @@
       "category": "Peer Reviewed Conference Papers",
       "item": [
         {
+          "venue": "GI 2025",
+          "id": "GI2025",
+          "title": "MRISA: A Visual Analytics Approach of Locomotion Policies Comparison for Robotics Training",
+          "authors": "Nan Li, Fan Shi, Xiaoyu Zhang, <strong>April Wang</strong>",
+          "venue_full": "In Proceedings of the 2025 ACM Graphics Interface Conference (GI '25).",
+          "links": "<a>To Appear</a>",
+          "abstract": "we introduce MRISA, an interactive tool designed to support exploratory analysis on pre-trained locomotion policies. MRISA integrates features including direct observation of one or multiple robots' behaviors in a simulator, trajectories visualization with customized anchors, key measurement inspection in a timeline view, and key frames capturing.",
+          "teaser": "./assets/teaser/gi25.png",
+          "is_journal": false,
+          "is_featured": true
+        },
+        {
           "venue": "CHIWORK 2025",
           "id": "CHIWORK2025",
           "title": "Are Six Minutes of Focus Enough? An Exploratory Study of Multitasking Patterns in Workplace Environments",
