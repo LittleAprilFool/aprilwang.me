@@ -38,13 +38,37 @@
       "category": "Peer Reviewed Conference Papers",
       "item": [
         {
+          "venue": "ACL 2025 Findings",
+          "id": "ACL2025b",
+          "title": "Math2Visual: A Framework for Generating Pedagogically Meaningful Visuals for Teaching Math Word Problems",
+          "authors": "Junling Wang, Anna Rutkiewicz, <strong>April Wang</strong>, Mrinmaya Sachan",
+          "venue_full": "Findings of the Association for Computational Linguistics: ACL 2025 (ACL '25 Findings).",
+          "links": "<a>To Appear</a>",
+          "abstract": "In this paper, we present Math2Visual, an automatic framework for generating pedagogically meaningful visuals from text descriptions of Math Word Problems. Math2Visual leverages a pre-defined visual language and a structured design space for visualsn to effectively capture the essential mathematical relationships in textual descriptions.",
+          "teaser": "./assets/teaser/acl25b.png",
+          "is_journal": false,
+          "is_featured": true
+        },
+        {
+          "venue": "ACL 2025 Findings",
+          "id": "ACL2025a",
+          "title": "Sign2Vis: Automated Data Visualization from Sign Language",
+          "authors": "Yao Wan, Yang Wu, Zhen Li, Guobiao Zhang, Hongyu Zhang, Zhou Zhao, Hai Jin, <strong>April Wang</strong>",
+          "venue_full": "Findings of the Association for Computational Linguistics: ACL 2025 (ACL '25 Findings).",
+          "links": "<a>To Appear</a>",
+          "abstract": "Sign languages are the primary means of communication for over 70 million Deaf and Hard-of-Hearing individuals, yet are completely unsupported in today’s data visualization tools. We introduce Sign2Vis, the first sign-language interface for generating data visualizations, enabling DHH users to interact with data using natural signing gestures.",
+          "teaser": "./assets/teaser/acl25a.png",
+          "is_journal": false,
+          "is_featured": true
+        },
+        {
           "venue": "GI 2025",
           "id": "GI2025",
           "title": "MRISA: A Visual Analytics Approach of Locomotion Policies Comparison for Robotics Training",
           "authors": "Nan Li, Fan Shi, Xiaoyu Zhang, <strong>April Wang</strong>",
           "venue_full": "In Proceedings of the 2025 ACM Graphics Interface Conference (GI '25).",
           "links": "<a>To Appear</a>",
-          "abstract": "we introduce MRISA, an interactive tool designed to support exploratory analysis on pre-trained locomotion policies. MRISA integrates features including direct observation of one or multiple robots' behaviors in a simulator, trajectories visualization with customized anchors, key measurement inspection in a timeline view, and key frames capturing.",
+          "abstract": "We introduce MRISA, an interactive tool designed to support exploratory analysis on pre-trained locomotion policies. MRISA integrates features including direct observation of one or multiple robots' behaviors in a simulator, trajectories visualization with customized anchors, key measurement inspection in a timeline view, and key frames capturing.",
           "teaser": "./assets/teaser/gi25.png",
           "is_journal": false,
           "is_featured": true
