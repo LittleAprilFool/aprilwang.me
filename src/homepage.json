@@ -3,7 +3,12 @@
   "title": "APRIL WANG",
   "subtitle": "Assistant Professor at ETH Zürich, the Department of Computer Science",
   "character": "./assets/april.svg",
-  "menu": ["ABOUT", "PROJECT", "MORE", "CONTACT"],
+  "menu": [
+    "ABOUT",
+    "PROJECT",
+    "MORE",
+    "CONTACT"
+  ],
   "bio": {
     "name": "April Yi Wang",
     "cname": "王奕",
@@ -38,12 +43,26 @@
       "category": "Peer Reviewed Conference Papers",
       "item": [
         {
+          "venue": "VL/HCC 2025",
+          "id": "vlhcc2025",
+          "slug": "spark",
+          "year": "2025",
+          "title": "SPARK: Real-Time Monitoring of Multi-Faceted Programming Exercises",
+          "authors": "Yinuo Yang, Ashley Ge Zhang, Steve Oney, <strong>April Yi Wang</strong>",
+          "venue_full": "In Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2025)",
+          "abstract": "SPARK enables instructors to monitor students' progress in multi-faceted, non-linear programming exercises in real-time. It provides an easy way for instructors to customize criterias for monitoring progress and identifying potential misunderstandings.",
+          "teaser": "/assets/teaser/spark.png",
+          "links": "<a href='https://inonnno.github.io/Academic-project-page-Spark/' target='_blank'>Project</a>",
+          "is_journal": false,
+          "is_featured": true
+        },
+        {
           "venue": "ACL 2025 Findings",
           "id": "ACL2025b",
           "title": "Math2Visual: A Framework for Generating Pedagogically Meaningful Visuals for Teaching Math Word Problems",
           "authors": "Junling Wang, Anna Rutkiewicz, <strong>April Wang</strong>, Mrinmaya Sachan",
           "venue_full": "Findings of the Association for Computational Linguistics: ACL 2025 (ACL '25 Findings).",
-          "links": "<a>To Appear</a>",
+          "links": "<a href='https://aclanthology.org/2025.findings-acl.586/' target='_blank'>Paper</a>",
           "abstract": "In this paper, we present Math2Visual, an automatic framework for generating pedagogically meaningful visuals from text descriptions of Math Word Problems. Math2Visual leverages a pre-defined visual language and a structured design space for visualsn to effectively capture the essential mathematical relationships in textual descriptions.",
           "teaser": "./assets/teaser/acl25b.png",
           "is_journal": false,
@@ -55,7 +74,7 @@
           "title": "Sign2Vis: Automated Data Visualization from Sign Language",
           "authors": "Yao Wan, Yang Wu, Zhen Li, Guobiao Zhang, Hongyu Zhang, Zhou Zhao, Hai Jin, <strong>April Wang</strong>",
           "venue_full": "Findings of the Association for Computational Linguistics: ACL 2025 (ACL '25 Findings).",
-          "links": "<a>To Appear</a>",
+          "links": "<a href='https://aclanthology.org/2025.findings-acl.918/' target='_blank'>Paper</a>",
           "abstract": "Sign languages are the primary means of communication for over 70 million Deaf and Hard-of-Hearing individuals, yet are completely unsupported in today’s data visualization tools. We introduce Sign2Vis, the first sign-language interface for generating data visualizations, enabling DHH users to interact with data using natural signing gestures.",
           "teaser": "./assets/teaser/acl25a.png",
           "is_journal": false,
@@ -79,7 +98,7 @@
           "title": "Are Six Minutes of Focus Enough? An Exploratory Study of Multitasking Patterns in Workplace Environments",
           "authors": "Dinara Talypova, Aku Visuri, Ambika Shahu, <strong>April Wang</strong>, Philipp Wintersberger",
           "venue_full": "In Proceedings of the 2025 Symposium on Human-Computer Interaction for Work (CHIWORK 2025)",
-          "links": "<a>To Appear</a>",
+          "links": "<a href='https://dl.acm.org/doi/10.1145/3729176.3729198' target='_blank'>Paper</a>",
           "abstract": "The modern workplace presents numerous distractions, leading to fragmented workflows and frequent multitasking. We conducted a naturalistic study in real-world settings to examine how and why knowledge workers switch between main, on-task, and off-task activities.",
           "teaser": "./assets/teaser/chiwork25.png",
           "is_journal": false,
@@ -91,7 +110,7 @@
           "title": "datAR: A Situated Learning Approach for Data Literacy Through Everyday Objects",
           "authors": "Lilian Lopez, Zeyu Xiong, Kiara Chau, Gustavo Umbelino, Zihan Wu, <strong>April Yi Wang</strong>",
           "venue_full": "In Proceedings of the 2025 on Innovation and Technology in Computer Science Education (ITiCSE 2025)",
-          "links": "<a>To Appear</a>",
+          "links": "<a href='https://dl.acm.org/doi/10.1145/3724363.3729047' target='_blank'>Paper</a>",
           "abstract": "How can we make data literacy more engaging for high school students? This work introduces datAR, an augmented reality tool that brings data into the real world using tangible analysis blocks. A case study shows how students explored nutrition data from everyday snacks, making abstract concepts more interactive and accessible.",
           "teaser": "./assets/teaser/iticse25.png",
           "is_journal": false,
@@ -103,7 +122,7 @@
           "title": "Emotionally Aware Moderation: The Potential of Emotion Monitoring in Shaping Healthier Social Media Conversations",
           "authors": "Xiaotian Su, Naim Zierau, Soomin Kim, <strong>April Yi Wang</strong>, Thiemo Wambsganss",
           "venue_full": "In Proceedings of the ACM : Human-Computer Interaction, Computer-Supported Cooperative Work and Social Computing (CSCW 2025)",
-          "links": "<a>To Appear</a>",
+          "links": "<a href='https://arxiv.org/abs/2507.21089' target='_blank'>Paper</a>",
           "abstract": "Proactive moderation on social media platforms can face criticism for fostering censorship and ignoring the root causes of incivility. We propose and evaluate emotion monitoring mechanisms that enhance users' emotional awareness and mitigate hate speech.",
           "teaser": "./assets/teaser/cscw2025.png",
           "is_journal": true,
@@ -124,7 +143,7 @@
         {
           "venue": "CHI 2025",
           "id": "CHI2025b",
-          "title": "Dialogic and On-Demand Metaphors for Interdisciplinary Reading",
+          "title": "Towards Dialogic and On-Demand Metaphors for Interdisciplinary Reading",
           "authors": "Matin Yarmand, Udayan Tandon, Courtney Reed, Eric Hekler, Nadir Weibel, <strong>April Yi Wang</strong>",
           "venue_full": "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2025)",
           "links": "<a href='./assets/pubs/CHI25_metaphor.pdf' class='pdf-link' target='_blank'>PDF</a>",
@@ -136,7 +155,7 @@
         {
           "venue": "CHI 2025",
           "id": "CHI2025a",
-          "title": "Do It For Me vs. Do It With Me: Investigating User Perceptions of Different Levels of Automation in Copilots for Feature-Rich Software",
+          "title": "Do It For Me vs. Do It With Me: Investigating User Perceptions of Different Paradigms of Automation in Copilots for Feature-Rich Software",
           "authors": "Anjali Khurana, Xiaotian Su, <strong>April Yi Wang</strong>, Parmit Chilana",
           "venue_full": "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2025)",
           "links": "<a href='./assets/pubs/CHI25_automation.pdf' class='pdf-link' target='_blank'>PDF</a>",
@@ -244,7 +263,7 @@
         },
         {
           "venue": "EMNLP 2021 Findings",
-          "id":"EMNLP2021",
+          "id": "EMNLP2021",
           "title": "HAConvGNN: Hierarchical Attention Based Convolutional Graph Neural Network for Code Documentation Generation in Jupyter Notebooks.",
           "authors": "Xuye Liu*, Dakuo Wang*, <strong>April Yi Wang</strong>, Yufang Hou, and Lingfei Wu",
           "venue_full": "In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing: Findings (EMNLP 2021)",
@@ -281,7 +300,7 @@
         },
         {
           "venue": "IUI 2021",
-          "id":"IUI2021",
+          "id": "IUI2021",
           "title": "Facilitating Knowledge Sharing from Domain Experts to Data Scientists for Building NLP Models",
           "authors": "Soya Park, <strong>April Yi Wang</strong>, Ban Kawas, Q. Vera Liao, David Piorkowski, and Marina Danilevsky",
           "venue_full": "In Proceedings of the 26th International Conference on Intelligent User Interfaces (IUI 2021)",
@@ -293,7 +312,7 @@
         },
         {
           "venue": "VL/HCC 2020&nbsp;<i class='fas fa-award'></i>",
-          "id":"VLHCC2020",
+          "id": "VLHCC2020",
           "title": "EdCode: Towards Personalized Support at Scale for Remote Assistance in CS Education",
           "authors": "Yan Chen, Jaylin Herskovitz, Gabriel Matute, <strong>April Wang</strong>, Sang Won Lee, and Steve Oney",
           "venue_full": "In Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2020)",
@@ -312,7 +331,7 @@
           "links": "<a href='./assets/pubs/CHI20_Callisto.pdf' class='pdf-link' target='_blank'>PDF</a><a href='https://dl.acm.org/doi/10.1145/3313831.3376740' class='paper-link' target='_blank'>Paper</a> <a href='./assets/pubs/CHI20_Callisto_Supplement.zip' class='paper-link' target='_blank'>Supplemental Material</a> <a href='https://youtu.be/Yq1wYNhTsGA' class='paper-link' target='_blank'>Video</a> <a href='./assets/pubs/CHI20_Callisto_Slide.pdf' class='paper-link' target='_blank'>Slides</a>",
           "abstract": "Proposed Callisto, an extension to computational notebooks that captures and stores contextual links between discussion messages and notebook elements with minimal effort from users.",
           "teaser": "./assets/teaser/chi22.png",
-          "video_teaser":"<iframe width='560' height='315' src='https://www.youtube.com/embed/Yq1wYNhTsGA' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+          "video_teaser": "<iframe width='560' height='315' src='https://www.youtube.com/embed/Yq1wYNhTsGA' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
           "is_journal": false,
           "is_featured": true
         },
@@ -370,10 +389,10 @@
       "category": "Refereed Posters and Workshops",
       "item": [
         {
-            "venue": "VL/HCC 2022",
-            "title": "Improving Real-time Collaborative Data Science Through Context-Aware Mechanisms",
-            "authors": "<strong>April Yi Wang</strong>",
-            "venue_full": "In Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2022), Graduate Consortium. 2022"
+          "venue": "VL/HCC 2022",
+          "title": "Improving Real-time Collaborative Data Science Through Context-Aware Mechanisms",
+          "authors": "<strong>April Yi Wang</strong>",
+          "venue_full": "In Proceedings of the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2022), Graduate Consortium. 2022"
         },
         {
           "venue": "IJCAI 2021",
@@ -415,38 +434,47 @@
       ]
     },
     {
-        "category": "Thesis",
-        "item": [
-            {
-                "title": "Understanding and Lowering the Learning Barriers for Conversational Programmers",
-                "venue_full": "SFU M.Sc Thesis, Burnaby, Canada",
-                "authors": "<strong>April Yi Wang</strong>"
-            },
-            {
-              "title": "Interactive Programming Interfaces for Data Science Collaboration and Learning",
-              "venue_full": "Umich Ph.D. Thesis, Ann Arbor, MI",
-              "authors": "<strong>April Yi Wang</strong>"
-          }
-        ]
+      "category": "Thesis",
+      "item": [
+        {
+          "title": "Understanding and Lowering the Learning Barriers for Conversational Programmers",
+          "venue_full": "SFU M.Sc Thesis, Burnaby, Canada",
+          "authors": "<strong>April Yi Wang</strong>"
+        },
+        {
+          "title": "Interactive Programming Interfaces for Data Science Collaboration and Learning",
+          "venue_full": "Umich Ph.D. Thesis, Ann Arbor, MI",
+          "authors": "<strong>April Yi Wang</strong>"
+        }
+      ]
     }
   ],
   "attending": [
     {
+      "date": "Oct 19, 2025",
+      "event": "CSCW 2025, Bergen",
+      "ispast": false
+    },
+    {
       "date": "July 22, 2025",
       "event": "L@S 2025, Palermo",
-      "ispast": false
+      "ispast": true
     },
     {
       "date": "June 30, 2025",
       "event": "ITiCSE 2025, Nijmegen",
-      "ispast": false
+      "ispast": true
+    },
+    {
+      "date": "June 11, 2025",
+      "event": "JDPLS Spring School",
+      "ispast": true
     },
     {
       "date": "April 30, 2025",
       "event": "CHI 2025, Yokohama, <a href='https://doodle.com/bp/aprilwang/aprilchi2025' target='_blank'>grab a slot</a> to chat -- open to new and familiar faces 🌸",
-      "ispast": false
+      "ispast": true
     },
-
     {
       "date": "March 12, 2025",
       "event": "SwissCHI Winter Meeting, Lugano",
@@ -537,7 +565,6 @@
       "event": "Invited Talk at <a href='https://www.dfki.de/en/web/'>DFKI</a> (Virtual)",
       "ispast": true
     },
-
     {
       "date": "Nov 3, 2022",
       "event": "Invited Talk at Vanderbilt University",
@@ -579,15 +606,15 @@
       "ispast": true
     },
     {
-        "date": "Aug 5, 2022",
-        "event": "<a href='https://tinyurl.com/HCI-workshop-2022-schedule' target='_blank'>Syracuse University HCI Summer Workshop</a> (Virtual)",
-        "ispast": true
-      },
-      {
-        "date": "June 19-23, 2022",
-        "event": "<a href='https://hcic.org/hcic2022/include/index.phtml' target='_blank'>HCIC 2022</a> at Lake Geneva, WI",
-        "ispast": true
-      }
+      "date": "Aug 5, 2022",
+      "event": "<a href='https://tinyurl.com/HCI-workshop-2022-schedule' target='_blank'>Syracuse University HCI Summer Workshop</a> (Virtual)",
+      "ispast": true
+    },
+    {
+      "date": "June 19-23, 2022",
+      "event": "<a href='https://hcic.org/hcic2022/include/index.phtml' target='_blank'>HCIC 2022</a> at Lake Geneva, WI",
+      "ispast": true
+    }
   ],
   "news": [
     {
@@ -711,237 +738,237 @@
       "news": "Attended CRA Women Grad Cohort Workshop 2017, Washington DC."
     }
   ],
-  "cv":{
+  "cv": {
     "research_interests": "Human-Computer Interaction; Programming Support; Collaborative Data Science",
     "address": "ETH Zürich / CAB F 15.2<br>Universitätstrasse 6<br>Zürich, 8006",
     "website": "https://aprilwang.me",
     "email": "april.wang@inf.ethz.ch",
     "education": [
-        {
-            "time": "09/2018 – 08/2023",
-            "location": "Ann Arbor, MI",
-            "content": "<strong>University of Michigan</strong> <br>Ph.D. in Information Science (thesis <a href='#t02'>T.02</a> below) <br>Advisors: Steve Oney and Christopher Brooks<br>Committee: Cyrus Omar, Philip Guo, and Steven Drucker"
-        },
-        {
-            "time": "09/2016 – 07/2018",
-            "location": "Burnaby, Canada",
-            "content": "<strong>Simon Fraser University</strong> <br> MSc in Computer Science (thesis <a href='#t01'>T.01</a> below) <br> Advisor: Parmit Chilana <br>Committee: Philip Guo and Lyn Bartram"
-        },
-        {
-            "time": "09/2013 – 07/2016",
-            "location": "Hangzhou, China",
-            "content": "<strong>Zhejiang University</strong><br>B.Eng in the College of Computer Science & Chu Kochen Honors College"
-        }
+      {
+        "time": "09/2018 – 08/2023",
+        "location": "Ann Arbor, MI",
+        "content": "<strong>University of Michigan</strong> <br>Ph.D. in Information Science (thesis <a href='#t02'>T.02</a> below) <br>Advisors: Steve Oney and Christopher Brooks<br>Committee: Cyrus Omar, Philip Guo, and Steven Drucker"
+      },
+      {
+        "time": "09/2016 – 07/2018",
+        "location": "Burnaby, Canada",
+        "content": "<strong>Simon Fraser University</strong> <br> MSc in Computer Science (thesis <a href='#t01'>T.01</a> below) <br> Advisor: Parmit Chilana <br>Committee: Philip Guo and Lyn Bartram"
+      },
+      {
+        "time": "09/2013 – 07/2016",
+        "location": "Hangzhou, China",
+        "content": "<strong>Zhejiang University</strong><br>B.Eng in the College of Computer Science & Chu Kochen Honors College"
+      }
     ],
     "experience": [
       {
-        "time":"11/2023 – present",
+        "time": "11/2023 – present",
         "location": "Zürich, Switzerland",
         "content": "<strong>The Department of Computer Science, ETH Zürich</strong><br>Assistant Professor"
-    },
+      },
       {
-            "time":"09/2018 – 08/2023",
-            "location": "Ann Arbor, MI",
-            "content": "<strong>School of Information, University of Michigan</strong><br>Graduate Student Researcher"
-        },
-        {
-            "time": "05/2021 – 08/2021",
-            "location": "Redmond, WA",
-            "content": "<strong>Microsoft Research</strong><br>Research Summer Intern at the Visualization and Interactive Data Analytics (VIDA) Group<br>Mentors: Steven Drucker and Rob DeLine"
-        },
-        {
-            "time": "05/2020 – 08/2020",
-            "location": "Cambridge, MA",
-            "content": "<strong>IBM Research</strong><br>Research Summer Intern at the AI Experience Group<br>Mentors: Dakuo Wang and Michael Muller"
-        },
-        {
-            "time": "09/2016 – 07/2018",
-            "location": "Burnaby, Canada",
-            "content": "<strong>School of Computing Science, Simon Fraser University</strong><br>Graduate Student Researcher"
-        }
+        "time": "09/2018 – 08/2023",
+        "location": "Ann Arbor, MI",
+        "content": "<strong>School of Information, University of Michigan</strong><br>Graduate Student Researcher"
+      },
+      {
+        "time": "05/2021 – 08/2021",
+        "location": "Redmond, WA",
+        "content": "<strong>Microsoft Research</strong><br>Research Summer Intern at the Visualization and Interactive Data Analytics (VIDA) Group<br>Mentors: Steven Drucker and Rob DeLine"
+      },
+      {
+        "time": "05/2020 – 08/2020",
+        "location": "Cambridge, MA",
+        "content": "<strong>IBM Research</strong><br>Research Summer Intern at the AI Experience Group<br>Mentors: Dakuo Wang and Michael Muller"
+      },
+      {
+        "time": "09/2016 – 07/2018",
+        "location": "Burnaby, Canada",
+        "content": "<strong>School of Computing Science, Simon Fraser University</strong><br>Graduate Student Researcher"
+      }
     ],
     "award": [
       {
         "time": "2023",
         "content": "Gary M. Olson Award, UMSI"
-        }, 
-        {
+      },
+      {
         "time": "2023",
         "content": "Honourable Mention Award, ACM CHI"
-        }, 
-        {
-            "time": "2022",
-            "content": "Rising Stars in EECS"
-        },
-        {
-            "time": "2022",
-            "content": "Heidelberg Laureate Forum Young Researcher"
-        },
-        {
-            "time": "2019-2022",
-            "content": "Special Recognitions for Outstanding Reviews, ACM CSCW and CHI"
-        },
-        {
-            "time": "2020",
-            "content": "Best Short Paper Award, IEEE VL/HCC"
-        },
-        {
-            "time": "2020",
-            "content": "Honourable Mention Award, ACM CHI"
-        },
-        {
-            "time": "2019",
-            "content": "Best Paper Award, ACM CSCW"
-        },
-        {
-            "time": "2018",
-            "content": "Honourable Mention Award, ACM CHI"
-        },
-        {
-            "time": "2019",
-            "content": "UMSI Pre-candidacy Project Milestone Distinction Award"
-        },
-        {
-            "time": "2021",
-            "content": "Rackham Graduate Student Research Grant"
-        },
-        {
-            "time": "2016, 2018",
-            "content": "Computing Science Graduate Fellowship, Simon Fraser University"
-        }
+      },
+      {
+        "time": "2022",
+        "content": "Rising Stars in EECS"
+      },
+      {
+        "time": "2022",
+        "content": "Heidelberg Laureate Forum Young Researcher"
+      },
+      {
+        "time": "2019-2022",
+        "content": "Special Recognitions for Outstanding Reviews, ACM CSCW and CHI"
+      },
+      {
+        "time": "2020",
+        "content": "Best Short Paper Award, IEEE VL/HCC"
+      },
+      {
+        "time": "2020",
+        "content": "Honourable Mention Award, ACM CHI"
+      },
+      {
+        "time": "2019",
+        "content": "Best Paper Award, ACM CSCW"
+      },
+      {
+        "time": "2018",
+        "content": "Honourable Mention Award, ACM CHI"
+      },
+      {
+        "time": "2019",
+        "content": "UMSI Pre-candidacy Project Milestone Distinction Award"
+      },
+      {
+        "time": "2021",
+        "content": "Rackham Graduate Student Research Grant"
+      },
+      {
+        "time": "2016, 2018",
+        "content": "Computing Science Graduate Fellowship, Simon Fraser University"
+      }
     ]
   },
   "invited_talks": [
     {
-        "time": "2022",
-        "title": "Designing Future Computational Notebooks for Collaboration and Learning",
-        "location": "<strong>German Research Center for Artificial Intelligence (DFKI)</strong>, Virtual<br><strong>University of Pennsylvania @ Guest Lecture, Live and Literate Programming</strong>, Virtual<br><strong>Vanderbilt University @ Guest Lecture</strong>, Advanced Topics in SE, Nashville, TN<br><strong>University of Waterloo @ Rising Stars Speaker Series</strong>, Ontario, Canada<br><strong>University of Toronto @ Toronto Data Workshop</strong>, Ontario, Canada<br><strong>University of Notre Dame @ HCI seminars</strong>, Notre Dame, IN<br><strong>Syracuse University @ Syracuse HCI Summer Workshop</strong>, Virtual"
+      "time": "2022",
+      "title": "Designing Future Computational Notebooks for Collaboration and Learning",
+      "location": "<strong>German Research Center for Artificial Intelligence (DFKI)</strong>, Virtual<br><strong>University of Pennsylvania @ Guest Lecture, Live and Literate Programming</strong>, Virtual<br><strong>Vanderbilt University @ Guest Lecture</strong>, Advanced Topics in SE, Nashville, TN<br><strong>University of Waterloo @ Rising Stars Speaker Series</strong>, Ontario, Canada<br><strong>University of Toronto @ Toronto Data Workshop</strong>, Ontario, Canada<br><strong>University of Notre Dame @ HCI seminars</strong>, Notre Dame, IN<br><strong>Syracuse University @ Syracuse HCI Summer Workshop</strong>, Virtual"
     }
   ],
   "service": {
     "pc": [
-        {
-            "time": "2023",
-            "content": "International Conference on Learning Analytics And Knowledge (LAK)"
-        },
-        {
-            "time": "2023",
-            "content": "ACM Conference on Human Factors in Computing Systems (CHI), Late Breaking Work"
-        },
-        {
-            "time": "2022",
-            "content": "Human Centered AI Workshop at NeurIPS (Neural Information Processing Systems) 2022"
-        },
-        {
-            "time": "2022",
-            "content": "ACM Conference on Human Factors in Computing Systems (CHI), Late Breaking Work"
-        },
-        {
-            "time": "2022",
-            "content": "International Conference on Learning Analytics And Knowledge (LAK)"
-        },
-        {
-            "time": "2021",
-            "content": "ACM Conference on Human Factors in Computing Systems (CHI), Late Breaking Work"
-        },
-        {
-            "time": "2020",
-            "content": "Artificial Intelligence in Education(AIED)"
-        }
+      {
+        "time": "2023",
+        "content": "International Conference on Learning Analytics And Knowledge (LAK)"
+      },
+      {
+        "time": "2023",
+        "content": "ACM Conference on Human Factors in Computing Systems (CHI), Late Breaking Work"
+      },
+      {
+        "time": "2022",
+        "content": "Human Centered AI Workshop at NeurIPS (Neural Information Processing Systems) 2022"
+      },
+      {
+        "time": "2022",
+        "content": "ACM Conference on Human Factors in Computing Systems (CHI), Late Breaking Work"
+      },
+      {
+        "time": "2022",
+        "content": "International Conference on Learning Analytics And Knowledge (LAK)"
+      },
+      {
+        "time": "2021",
+        "content": "ACM Conference on Human Factors in Computing Systems (CHI), Late Breaking Work"
+      },
+      {
+        "time": "2020",
+        "content": "Artificial Intelligence in Education(AIED)"
+      }
     ],
     "review": [
-        {
-            "time": "2019-2022",
-            "content": "ACM Conference on Human Factors in Computing Systems (CHI)"
-        },
-        {
-            "time": "2019-2022",
-            "content": "ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW)"
-        },
-        {
-            "time": "2020-2022",
-            "content": "ACM Symposium on User Interface Software and Technology (UIST)"
-        },
-        {
-            "time": "2021-2022",
-            "content": "ACM Transactions on Computer-Human Interaction (TOCHI)"
-        },
-        {
-            "time": "2020-2022",
-            "content": "IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)"
-        },
-        {
-            "time": "2022",
-            "content": "The Journal of Computer Languages (COLA)"
-        },
-        {
-            "time": "2020",
-            "content": "ACM Transactions on Interactive Intelligent Systems (TiiS)"
-        },
-        {
-            "time": "2019",
-            "content": "ACM Conference on Tangible, Embedded, and Embodied Interactions (TEI)"
-        },
-        {
-            "time": "2019-2020",
-            "content": "Artificial Intelligence in Education(AIED)"
-        },
-        {
-            "time": "2022-2023",
-            "content": "International Conference on Learning Analytics And Knowledge (LAK)"
-        }
+      {
+        "time": "2019-2022",
+        "content": "ACM Conference on Human Factors in Computing Systems (CHI)"
+      },
+      {
+        "time": "2019-2022",
+        "content": "ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW)"
+      },
+      {
+        "time": "2020-2022",
+        "content": "ACM Symposium on User Interface Software and Technology (UIST)"
+      },
+      {
+        "time": "2021-2022",
+        "content": "ACM Transactions on Computer-Human Interaction (TOCHI)"
+      },
+      {
+        "time": "2020-2022",
+        "content": "IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)"
+      },
+      {
+        "time": "2022",
+        "content": "The Journal of Computer Languages (COLA)"
+      },
+      {
+        "time": "2020",
+        "content": "ACM Transactions on Interactive Intelligent Systems (TiiS)"
+      },
+      {
+        "time": "2019",
+        "content": "ACM Conference on Tangible, Embedded, and Embodied Interactions (TEI)"
+      },
+      {
+        "time": "2019-2020",
+        "content": "Artificial Intelligence in Education(AIED)"
+      },
+      {
+        "time": "2022-2023",
+        "content": "International Conference on Learning Analytics And Knowledge (LAK)"
+      }
     ],
     "oc": [
-        {
-            "time": "2021",
-            "content": "ACM CHI session chair"
-        },
-        {
-            "time": "2021",
-            "content": "Conference on Neural Information Processing Systems(NeurIPS) student volunteer"
-        },
-        {
-            "time": "2019, 2021, 2022",
-            "content": "ACM CHI student volunteer"
-        },
-        {
-            "time": "2020",
-            "content": "ACM UIST student volunteer"
-        }
+      {
+        "time": "2021",
+        "content": "ACM CHI session chair"
+      },
+      {
+        "time": "2021",
+        "content": "Conference on Neural Information Processing Systems(NeurIPS) student volunteer"
+      },
+      {
+        "time": "2019, 2021, 2022",
+        "content": "ACM CHI student volunteer"
+      },
+      {
+        "time": "2020",
+        "content": "ACM UIST student volunteer"
+      }
     ],
     "umsi": [
-        {
-            "time":"2022-2023",
-            "content": "University of Michigan Interactive and Social Computing (MISC) Student Coordinator"
-        },
-        {
-            "time":"2022",
-            "content": "Organizer of the UMSI Annual CHI Peer Review event"
-        }
+      {
+        "time": "2022-2023",
+        "content": "University of Michigan Interactive and Social Computing (MISC) Student Coordinator"
+      },
+      {
+        "time": "2022",
+        "content": "Organizer of the UMSI Annual CHI Peer Review event"
+      }
     ]
   },
   "teaching": [
     {
-        "title": "University of Michigan",
-        "item": [
-            {
-                "time": "Winter 2021",
-                "content": "Graduate Student Instructor -- SI 579 (Building Interactive Applications)"
-            }
-        ]
+      "title": "University of Michigan",
+      "item": [
+        {
+          "time": "Winter 2021",
+          "content": "Graduate Student Instructor -- SI 579 (Building Interactive Applications)"
+        }
+      ]
     },
     {
-        "title": "Simon Fraser University",
-        "item": [
-            {
-                "time": "Spring 2018",
-                "content": "Teaching Assistant -- CMPT 363 (User Interface Design)"
-            },
-            {
-                "time": "Spring 2017",
-                "content": "Teaching Assistant -- CMPT 363 (User Interface Design)"
-            }
-        ]
+      "title": "Simon Fraser University",
+      "item": [
+        {
+          "time": "Spring 2018",
+          "content": "Teaching Assistant -- CMPT 363 (User Interface Design)"
+        },
+        {
+          "time": "Spring 2017",
+          "content": "Teaching Assistant -- CMPT 363 (User Interface Design)"
+        }
+      ]
     }
   ],
   "content": [
@@ -1140,7 +1167,9 @@
         {
           "id": "id0",
           "name": "Investigating Learning Strategies of Conversational Programmers",
-          "tag": ["r"],
+          "tag": [
+            "r"
+          ],
           "abstract": "Conducting interviews with 23 conversational programmers to investigate their learning strategies",
           "album": "../assets/conv-album.jpg",
           "content": "UNDER CONSTRUCTION"
@@ -1148,7 +1177,9 @@
         {
           "id": "id1",
           "name": "Social CheatSheet: An Interactive Community-Curated Information Overlay for Web Applications",
-          "tag": ["r"],
+          "tag": [
+            "r"
+          ],
           "abstract": "Assisting running a weeklong field deployment using a task-based approach.",
           "album": "../assets/cheatsheet-album.jpg",
           "content": "UNDER CONSTRUCTION"
@@ -1156,7 +1187,10 @@
         {
           "id": "id2",
           "name": "IoT Services Orchestration Layer",
-          "tag": ["uxd", "d"],
+          "tag": [
+            "uxd",
+            "d"
+          ],
           "abstract": "Designing the user interface of a block-based programming solution for developing IoT applications.",
           "album": "../assets/IoT-album.jpg",
           "content": "UNDER CONSTRUCTION"
@@ -1164,28 +1198,41 @@
         {
           "id": "id3",
           "name": "Real-time Rendering of Subsurface Scattering of Translucent Material",
-          "tag": ["cg", "p"],
+          "tag": [
+            "cg",
+            "p"
+          ],
           "abstract": "Implementing real-time SSS rendering techniques on human skin.",
           "album": "../assets/SSS-album.jpg"
         },
         {
           "id": "id4",
           "name": "Wind Simulation in MMORPG",
-          "tag": ["cg", "p"],
+          "tag": [
+            "cg",
+            "p"
+          ],
           "abstract": "Improving the wind simulation system in <em>Tianyu Revelation Online.</em>",
           "album": "../assets/wind-album.jpg"
         },
         {
           "id": "id5",
           "name": "VR Game - Galaxy Destroyer",
-          "tag": ["g", "p", "d"],
+          "tag": [
+            "g",
+            "p",
+            "d"
+          ],
           "abstract": "A VR shooting game made with Unity3D. Available on Google Play.",
           "album": "../assets/gd-album.jpg"
         },
         {
           "id": "id6",
           "name": "Heuristic Evaluation of a Social Sharing Shopping Website",
-          "tag": ["uxd", "d"],
+          "tag": [
+            "uxd",
+            "d"
+          ],
           "abstract": "Identifying usability problems to enhance user engagement in AiTaobao.",
           "album": "../assets/aitaobao-album.jpg"
         }
@@ -1216,7 +1263,31 @@
       "hobby": "⛰️",
       "office": "CAB F63.2",
       "email": "haasm@ethz.ch",
-      "avatar": "https://ca.slack-edge.com/T06AYDEK963-U07FM1A8TH7-2baf68abf2b3-512"
+      "avatar": "./assets/members/manuela.jpg"
+    },
+    {
+      "name": "Dr. Lahari Goswami",
+      "status": "current",
+      "title": "Postdoc",
+      "affiliation": "ETH Zürich",
+      "link": "https://laharigoswami.com/",
+      "hobby": "⛰️",
+      "office": "CAB F63.2",
+      "email": "haasm@ethz.ch",
+      "topics": "Collaborative Learning",
+      "avatar": "./assets/members/lahari.jpg"
+    },
+        {
+      "name": "Dr. Heejin Do",
+      "status": "current",
+      "title": "Postdoc",
+      "affiliation": "ETH AI Center (co-advised with Mrinmaya Sachan)",
+      "link": "https://laharigoswami.com/",
+      "hobby": "⛰️",
+      "office": "CAB F63.2",
+      "topics": "Automated Essay Assessment",
+      "email": "haasm@ethz.ch",
+      "avatar": "./assets/members/heejin.jpg"
     },
     {
       "name": "Dr. Gustavo Umbelino",
@@ -1268,13 +1339,43 @@
       "office": "CAB F66",
       "link": "https://inonnno.github.io/Yinuo.me/"
     },
+      {
+    "name": "Irene Hou",
+    "status": "collaborator",
+    "title": "Academic Guest from UCSD",
+    "link": "https://houirene.github.io/"
+  },
+  {
+    "name": "Ziming Wang",
+    "status": "collaborator",
+    "title": "Academic Guest from Chalmers University",
+    "link": "https://research.chalmers.se/person/ziming"
+  },
+  {
+    "name": "Renn Su",
+    "status": "collaborator",
+    "title": "ETH SSRF 2025 Fellow from Stanford",
+    "email": "rrsu@stanford.edu"
+  },
+  {
+    "name": "Thrisha Ramesh",
+    "status": "collaborator",
+    "title": "Mobility Student from University of Washington",
+    "link": "https://www.linkedin.com/in/thrisha-ramesh-2060521b2/"
+  },
+  {
+    "name": "Evan Stonestreet",
+    "status": "collaborator",
+    "title": "Mobility Student from Purdue University",
+    "link": "https://www.linkedin.com/in/evanstonestreet/"
+  },
     {
       "name": "Zeyu Xiong",
       "status": "current",
       "title": "Doctoral Student",
       "affiliation": "ETH Zürich",
       "topics": "Youth AI Literacy",
-      "hobby":"🎵",
+      "hobby": "🎵",
       "office": "CAB F66",
       "avatar": "https://www.zeyuxiong.com/authors/admin/avatar_hub5020f7b2daf395ae59a69be204bb535_456911_270x270_fill_q75_lanczos_center.jpg",
       "link": "https://www.zeyuxiong.com/",
@@ -1331,7 +1432,7 @@
     {
       "name": "Shuai Ma",
       "status": "left",
-      "title":"Academic Guest from HKUST, led to CHI25 publication DBox",
+      "title": "Academic Guest from HKUST, led to CHI25 publication DBox",
       "office": "CAB F16",
       "avatar": "https://shuaima.cc/personal_webpage_files/Me.jpg",
       "link": "https://shuaima.cc/",
